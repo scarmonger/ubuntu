@@ -1,12 +1,49 @@
+systemctl suspend -i
+sudo flatpak override com.wps.Office --filesystem=/home/andry/Downloads
+
 sudo apt update && sudo apt upgrade
 
 # Install app
 sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli 
 
+sudo apt-get install fonts-powerline
+
+
 ** Rubah bin bash menjadi zsh **
 chsh -s /usr/bin/zsh
 
-lsd
+
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSHCUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+---
+
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.config/powerlevel10k
+echo 'source ~/.config/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+
+1.) Download a Nerd Font
+
+2.) Unzip and copy to ~/.fonts
+
+3.) Run the command `fc-cache -fv` to manually rebuild the font cache
+
+https://github.com/wting/autojump/blob/master/docs/install.md
+> git clone https://github.com/wting/autojump.git
+> cd autojump
+> ./install.py
+
+```
+https://christitus.com/zsh/
+https://zsh.sourceforge.io/Guide/zshguide.html
+https://wiki.archlinux.org/title/zsh
+https://github.com/ChrisTitusTech/zsh/blob/master/aliasrc
+https://github.com/sdaschner/dotfiles/blob/master/.aliases
+https://github.com/ohmyzsh/ohmyzsh
+https://www.thorsten-hans.com/5-types-of-zsh-aliases
+https://gist.github.com/dogrocker/1efb8fd9427779c827058f873b94df95
+
 
 ## Alacritty
 sudo add-apt-repository ppa:aslatter/ppa -y
@@ -22,7 +59,6 @@ pip install castero
 https://github.com/mhinz/neovim-remote
 pip3 install neovim-remote
 pip3 install neovim-remote --break-system-packages
-pip3 install --upgrade dmenu_extended --break-system-packages
 
 > pyperclip for custom script insys & sfsupport
 
@@ -41,9 +77,14 @@ curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/lates
 tar xf lazygit.tar.gz lazygit
 sudo install lazygit /usr/local/bin
 
+## Install veracrypt
+sudo add-apt-repository ppa:unit193/encryption -y
+sudo apt  install veracrypt
+
 ## Download .deb installer 
 sudo dpkg -i ~/Dropbox/Archive/installer/thorium-browser_117.0.5938.157_amd64.deb
 
+lsd
 dropbox
 thorium
 vscode
@@ -74,6 +115,7 @@ flatpak install -y flathub com.obsproject.Studio
 flatpak install -y flathub org.libreoffice.LibreOffice
 flatpak install -y flathub org.mozilla.Thunderbird
 flatpak install -y flathub com.anydesk.Anydesk
+flatpak install -y flathub org.keepassxc.KeePassXC
 
 # Snapd
 sudo snap install projectlibre
@@ -178,8 +220,37 @@ https://wiki.archlinux.org/title/TigerVNC
 # symlink
 ```
 rm -Rf ~/.config/ranger
-ln -ivs ~/marc/github/dotfiles/config/nvim ~/.config/
-ln -ivs ~/marc/github/dotfiles/config/nvim_old ~/.config/
 ln -ivs ~/Documents/GitHub/ubuntu/config/ranger ~/.config/
+rm -Rf ~/.config/nvim
+ln -ivs ~/Documents/GitHub/ubuntu/config/nvim ~/.config/
+ln -ivs ~/Documents/GitHub/ubuntu/config/nvim_old ~/.config/
+ln -ivs ~/Documents/GitHub/ubuntu/config/lf ~/.config/
+ln -ivs ~/Documents/GitHub/ubuntu/config/sxiv ~/.config/
+ln -ivs ~/Documents/GitHub/ubuntu/config/castero ~/.config/
+ln -ivs ~/marc/github/dotfiles/local/bin/custom ~/.local/bin
+ln -ivs ~/marc/github/dotfiles/config/lf-ueberzugrc/lf-ueberzug ~/marc/github/dotfiles/local/bin/custom/
+ln -ivs ~/marc/github/dotfiles/config/moc/config ~/.moc/
+ln -ivs ~/marc/github/dotfiles/config/moc/my_keymap ~/.moc/
+ln -s ~/marc/github/dotfiles/bashrc ~/.bashrc
+cp -iv ~/github/dotfile/.oh-my-zsh/custom/autocomplete.zsh ~/.oh-my-zsh/custom/autocomplete.zsh
+cp -iv ~/github/dotfile/.oh-my-zsh/custom/shortcuts.zsh ~/.oh-my-zsh/custom/shortcuts.zsh
 
+ln -s ~/Documents/GitHub/ubuntu/zshrc ~/.zshrc
+
+mkdir -p ~/.config/tmux-plugins
+ln -ivs ~/marc/github/dotfiles/config/tmux ~/.config/
+rm -Rf ~/marc/github/dotfiles/config/tmux/plugins/
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux-plugins/tpm
+ctrl + space + capital I = install plugin
+
+ln -ivs ~/Dropbox/Dataon/.thunderbird ~/
 ```
+
+
+# Setup Qutebrowser
+
+set url.searchengines '{"DEFAULT": "https://duckduckgo.com/?q={}", "aw": "https://wiki.archlinux.org/?search={}", "cf": "https://cfdocs.org/{}", "mdb": "https://mariadb.com/kb/en/+search/?q={}", "sf": "https://sfsupport.dataon.com/app/ticket/forms/{}", "yts": "https://www.youtube.com/results?search_query={}", "yu": "https://yufid.com/result_yufid.html?search={}"}'
+
+set auto_save.session true
+bind gh tab-focus last
+https://github.com/sarfraznawaz2005/quran-cli

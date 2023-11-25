@@ -1,0 +1,10 @@
+tmux rename-window nvim
+nvim
+
+#tmux new-window -c -n nvim
+#tmux new-window -c 
+#tmux rename-window nvim
+#nvim
+#tmux new-window -c 
+#tmux prev-window 
+
