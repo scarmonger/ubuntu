@@ -123,6 +123,7 @@ Setelah dapat token, coba git push, login dengan user dan password di isi dengan
 sempat masih belum coba gh auth login lagi, setelah berhasil coba jalanin syntax dibawah ini
 yang didapat setelah berhasil login di gh auth login:
 `gh config set -h github.com git_protocol https`
+
 # Mount partition to marc directory
 mkdir marc
 chown mc:mc marc
