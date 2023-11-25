@@ -1,0 +1,26 @@
+font:
+  normal:
+    #family: JetBrains Mono Nerd Font 
+    family: Single Day
+    style: Regular
+
+  bold:
+    #family: JetBrains Mono Nerd Font 
+    family: Single Day
+    style: Bold
+
+  italic:
+    #family: JetBrains Mono Nerd Font 
+    family: Single Day
+    style: Italic
+
+  bold_italic:
+    #family: JetBrains Mono Nerd Font 
+    family: Single Day
+    style: Bold Italic
+
+  size: 13
+
+  import:
+    - ~/.config/alacritty/themes/themes/argonaut.yaml
+    #- ~/.config/alacritty/themes/themes/atom_one_light.yaml

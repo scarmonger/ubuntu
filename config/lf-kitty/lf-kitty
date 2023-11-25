@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#dir="$(realpath "$(dirname -- "$0")")"
+dir="/home/mc/marc/github/dotfiles/config/lf-kitty"
+
+cleanup() {
+	lf-kitty-cleaner
+	rm -rf "$LF_KITTY_TEMPDIR"
+}
+trap cleanup INT HUP
+
+export LF_KITTY_TEMPDIR="$(mktemp -d -t lf-kitty-XXXXXX)"
+export LF_KITTY_IMAGE_ID=1234
+export PATH="$dir:$PATH"
+#export PATH="$PATH:${ZSH_ARGZERO:A:h}"
+#lf -config "$dir/lfrc-kitty" "$dir/examples"
+lf -config "$dir/lfrc-kitty" "${1:-"${pwd}"}"
+#lf -config "${ZSH_ARGZERO:A:h}/lfrc-kitty" "${1:-"${pwd}"}"
+cleanup

@@ -1,0 +1,8 @@
+clear mod1
+clear mod4
+keycode 108 = Super_L
+add mod4 = Super_L
+add mod4 = Super_R
+add mod4 = Hyper_L
+add mod1 = Alt_L
+add mod1 = Meta_L

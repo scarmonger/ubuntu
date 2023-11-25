@@ -1,0 +1,28 @@
+# Speed up scrolling for skype
+"^Skype$"
+  None, Up, Button4, 3
+  None, Down, Button5, 3
+
+# Speed up scrolling for chromium and pass unchanged for zoom
+"^chromium$"
+    None, Up, Button4, 3
+    None, Down, Button5, 3
+
+# Speed up scrolling for qutebrowser
+"^Google-chrome$"
+    None, Up, Button4, 3
+    None, Down, Button5, 3
+
+# Speed up scrolling for obsidian
+"^obsidian$"
+    None, Up, Button4, 4
+    None, Down, Button5, 4
+
+# Speed up scrolling for the document viewer
+"^org\.pwmt\.zathura$"
+    None, Up, Button4, 9
+    None, Down, Button5, 9
+
+"^org\.qutebrowser\.qutebrowser$"
+    None, Up, Button4, 9
+    None, Down, Button5, 9
