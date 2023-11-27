@@ -4,7 +4,8 @@ sudo flatpak override com.wps.Office --filesystem=/home/andry/Downloads
 sudo apt update && sudo apt upgrade
 
 # Install app
-sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli 
+sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar
+
 
 sudo apt-get install fonts-powerline
 
@@ -84,6 +85,7 @@ sudo apt  install veracrypt
 ## Download .deb installer 
 sudo dpkg -i ~/Dropbox/Archive/installer/thorium-browser_117.0.5938.157_amd64.deb
 
+realvnc viewer
 lsd
 dropbox
 thorium
@@ -91,6 +93,8 @@ vscode
 virtualbox
 >sudo apt install libqt5help5
 >sudo apt --fix-broken install
+
+
 ## appimage
 ksnip
 chmod +x ./*.AppImage
@@ -116,6 +120,8 @@ flatpak install -y flathub org.libreoffice.LibreOffice
 flatpak install -y flathub org.mozilla.Thunderbird
 flatpak install -y flathub com.anydesk.Anydesk
 flatpak install -y flathub org.keepassxc.KeePassXC
+flatpak install -y flathub org.remmina.Remmina
+flatpak install -y flathub org.tigervnc.vncviewer
 
 # Snapd
 sudo snap install projectlibre
@@ -254,3 +260,23 @@ set url.searchengines '{"DEFAULT": "https://duckduckgo.com/?q={}", "aw": "https:
 set auto_save.session true
 bind gh tab-focus last
 https://github.com/sarfraznawaz2005/quran-cli
+
+
+# connect 
+sudo tailscale up
+sudo tailscale dowa
+
+# fonts
+
+google fonts - Arabic
+google fonts - Single Day
+google fonts - Korea
+google fonts - Chinese
+nerdfonts - JetBrains Mono Nerd Font
+
+
+# install vncserver
+https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-22-04
+
+# Next
+portainer docker
