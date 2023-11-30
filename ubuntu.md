@@ -121,8 +121,7 @@ flatpak install -y flathub org.mozilla.Thunderbird
 flatpak install -y flathub com.anydesk.Anydesk
 flatpak install -y flathub org.keepassxc.KeePassXC
 flatpak install -y flathub org.remmina.Remmina
-flatpak install -y flathub org.tigervnc.vncviewer
-
+flatpak install -y flathub com.github.tchx84.Flatseal
 # Snapd
 sudo snap install projectlibre
 
@@ -215,13 +214,15 @@ https://github.com/bk138/gromit-mpx - Annotation tool
 https://wiki.archlinux.org/title/NetworkManager - Install SIM Driver, mobile broadband support
 https://extensions.gnome.org/extension/1460/vitals/
 https://itsfoss.com/flatpak-tips-tweaks/
+https://www.makeuseof.com/disable-automatic-updates-in-ubuntu/
+https://www.anyviewer.com/how-to/how-to-get-out-of-remote-desktop-full-screen-0427.html
+
+cat /etc/update-manager/release-upgrades - Awal
+
 
 Remote clients:
 remmina, realvnc viewer
 
-Remote Server:
-TigerVNC
-https://wiki.archlinux.org/title/TigerVNC
 
 # symlink
 ```
@@ -264,7 +265,7 @@ https://github.com/sarfraznawaz2005/quran-cli
 
 # connect 
 sudo tailscale up
-sudo tailscale dowa
+sudo tailscale down
 
 # fonts
 
@@ -280,3 +281,35 @@ https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vn
 
 # Next
 portainer docker
+
+# change mac address
+sudo apt install macchanger
+sudo macchanger -s enp0s31f6
+sudo macchanger -m 6c:0b:84:22:be:c4 enp0s31f6
+sudo EDITOR=nvim crontab -e
+
+# select editor
+sudo select-editor
+select-editor
+sudo update-alternatives --config editor
+
+# Thorium keepassxc
+The problem is that Thorium and Chromium are "the same browser" so keepass is detecting the NativeMessagingHosts for chromium, so in Browser integration -> Advanced we need to override the location of the proxy.
+
+Enable "use custom proxy", select browser type: "Chrome", and for the location, put this
+/Users/sergio/Library/Application Support/Thorium/NativeMessagingHosts
+
+instead of
+/Users/sergio/Library/Application Support/Chromium/NativeMessagingHosts
+
+And that's it!
+
+/home/mc/.config/thorium/NativeMessagingHosts
+
+# Time shift
+https://dev.to/rahedmir/how-to-use-timeshift-from-command-line-in-linux-1l9b
+
+sudo timeshift --create --comments "A new backup" --tags D
+
+sudo timeshift --restore
+
