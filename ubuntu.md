@@ -1,16 +1,46 @@
+systemctl --user status gnome-remote-desktop.service
+systemctl --user start gnome-remote-desktop.service
+systemctl --user restart gnome-remote-desktop
+
+https://gitlab.gnome.org/GNOME/gnome-control-center/-/issues/1775
+https://bugs.launchpad.net/ubuntu/+source/gnome-control-center/+bug/1969619
+
 systemctl suspend -i
 sudo flatpak override com.wps.Office --filesystem=/home/andry/Downloads
 
-sudo apt update && sudo apt upgrade
+sudo apt update 
+
+# change mac address
+sudo apt install macchanger
+sudo macchanger -s enp0s31f6
+sudo macchanger -m 6c:0b:84:22:be:c4 enp0s31f6
+
+sudo EDITOR=nano crontab -e
+@reboot macchanger -m 6c:0b:84:22:be:c4 enp0s31f6
+@reboot tailscale up
+
+sudo apt upgrade
+
+# Check UUID (blkid)
+lsblk
+
+ll /dev/disk/by-uuid
+
+nvim /etc/fstab
+
+UUID=8f4825e2-0016-43c2-994a-bb2830ddaea9 /home/mc/marc/               ext4    errors=remount-ro 0       1
+
+sudo mount -a
+
 
 # Install app
-sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar
+sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar fonts-powerline neofetch xclip ssh lf
 
+systemctl status ssh
+systemctl start ssh
+systemctl enable ssh
 
-sudo apt-get install fonts-powerline
-
-
-** Rubah bin bash menjadi zsh **
+** Rubah bin bash menjadi zsh (harus logout) **
 chsh -s /usr/bin/zsh
 
 
@@ -29,6 +59,8 @@ echo 'source ~/.config/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 2.) Unzip and copy to ~/.fonts
 
 3.) Run the command `fc-cache -fv` to manually rebuild the font cache
+
+check fonts with `fc-list`
 
 https://github.com/wting/autojump/blob/master/docs/install.md
 > git clone https://github.com/wting/autojump.git
@@ -63,11 +95,6 @@ pip3 install neovim-remote --break-system-packages
 
 > pyperclip for custom script insys & sfsupport
 
-# Install neovim
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-chmod u+x nvim.appimage
-./nvim.appimage
-
 sudo apt-get install ripgrep fd-find gcc lua5.4 npm 
 sudo apt install -y npm 
 npm install tree-sitter-cli
@@ -82,28 +109,22 @@ sudo install lazygit /usr/local/bin
 sudo add-apt-repository ppa:unit193/encryption -y
 sudo apt  install veracrypt
 
-## Download .deb installer 
-sudo dpkg -i ~/Dropbox/Archive/installer/thorium-browser_117.0.5938.157_amd64.deb
-
-realvnc viewer
-lsd
-dropbox
-thorium
-vscode
-virtualbox
->sudo apt install libqt5help5
->sudo apt --fix-broken install
-
-
-## appimage
+# appimage
 ksnip
 chmod +x ./*.AppImage
 
-AppImageLauncher
+# Install neovim
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+chmod u+x nvim.appimage
+./nvim.appimage
+
+## AppImageLauncher
 sudo apt install software-properties-common
 sudo add-apt-repository ppa:appimagelauncher-team/stable
 sudo apt update
 sudo apt install appimagelauncher
+
+Run App : appimagelauncher
 
 ## Add flatpak to gnome
 sudo apt install -y flatpak gnome-software-plugin-flatpak
@@ -122,19 +143,10 @@ flatpak install -y flathub com.anydesk.Anydesk
 flatpak install -y flathub org.keepassxc.KeePassXC
 flatpak install -y flathub org.remmina.Remmina
 flatpak install -y flathub com.github.tchx84.Flatseal
+
 # Snapd
 sudo snap install projectlibre
 
-# Check UUID (blkid)
-lsblk
-
-ll /dev/disk/by-uuid
-
-nvim /etc/fstab
-
-UUID=8f4825e2-0016-43c2-994a-bb2830ddaea9 /home/mc/marc/               ext4    errors=remount-ro 0       1
-
-sudo mount -a
 
 # github-cli authentication
 
@@ -227,13 +239,14 @@ remmina, realvnc viewer
 # symlink
 ```
 rm -Rf ~/.config/ranger
-ln -ivs ~/Documents/GitHub/ubuntu/config/ranger ~/.config/
+ln -ivs ~/marc/GitHub/ubuntu/config/ranger ~/.config/
 rm -Rf ~/.config/nvim
-ln -ivs ~/Documents/GitHub/ubuntu/config/nvim ~/.config/
-ln -ivs ~/Documents/GitHub/ubuntu/config/nvim_old ~/.config/
-ln -ivs ~/Documents/GitHub/ubuntu/config/lf ~/.config/
-ln -ivs ~/Documents/GitHub/ubuntu/config/sxiv ~/.config/
-ln -ivs ~/Documents/GitHub/ubuntu/config/castero ~/.config/
+ln -ivs ~/marc/GitHub/ubuntu/config/nvim ~/.config/
+ln -ivs ~/marc/GitHub/ubuntu/config/nvim_old ~/.config/
+
+ln -ivs ~/marc/GitHub/ubuntu/config/lf ~/.config/
+ln -ivs ~/marc/GitHub/ubuntu/config/sxiv ~/.config/
+ln -ivs ~/marc/GitHub/ubuntu/config/castero ~/.config/
 ln -ivs ~/marc/github/dotfiles/local/bin/custom ~/.local/bin
 ln -ivs ~/marc/github/dotfiles/config/lf-ueberzugrc/lf-ueberzug ~/marc/github/dotfiles/local/bin/custom/
 ln -ivs ~/marc/github/dotfiles/config/moc/config ~/.moc/
@@ -242,7 +255,9 @@ ln -s ~/marc/github/dotfiles/bashrc ~/.bashrc
 cp -iv ~/github/dotfile/.oh-my-zsh/custom/autocomplete.zsh ~/.oh-my-zsh/custom/autocomplete.zsh
 cp -iv ~/github/dotfile/.oh-my-zsh/custom/shortcuts.zsh ~/.oh-my-zsh/custom/shortcuts.zsh
 
-ln -s ~/Documents/GitHub/ubuntu/zshrc ~/.zshrc
+ln -s ~/marc/GitHub/ubuntu/zshrc ~/.zshrc
+ln -ivs ~/marc/appimagefile/ksnip ~/.local/bin/ksnip
+ln -ivs ~/marc/appimagefile/nvim ~/.local/bin/nvim
 
 mkdir -p ~/.config/tmux-plugins
 ln -ivs ~/marc/github/dotfiles/config/tmux ~/.config/
@@ -282,12 +297,6 @@ https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vn
 # Next
 portainer docker
 
-# change mac address
-sudo apt install macchanger
-sudo macchanger -s enp0s31f6
-sudo macchanger -m 6c:0b:84:22:be:c4 enp0s31f6
-sudo EDITOR=nvim crontab -e
-
 # select editor
 sudo select-editor
 select-editor
@@ -312,4 +321,18 @@ https://dev.to/rahedmir/how-to-use-timeshift-from-command-line-in-linux-1l9b
 sudo timeshift --create --comments "A new backup" --tags D
 
 sudo timeshift --restore
+
+## Download .deb installer 
+sudo dpkg -i ~/Dropbox/Archive/installer/thorium-browser_117.0.5938.157_amd64.deb
+
+realvnc viewer
+lsd
+dropbox > python3-gpg libpango1.0-0
+thorium
+vscode
+virtualbox
+>sudo apt install libqt5help5
+>sudo apt --fix-broken install
+
+
 

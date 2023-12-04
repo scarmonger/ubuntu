@@ -15,7 +15,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 
-source ~/Documents/GitHub/ubuntu/aliases
+source ~/marc/GitHub/ubuntu/aliases
 
 function findfilecwd(){
     cd $(dirname "$(fzf)")
@@ -45,8 +45,8 @@ bindkey "^[[1;5D" backward-word
 
 export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
 export PATH="$PATH:${$(find ~/.local/bin -type l -printf %p:)%%:}"
-export PATH="$PATH:${$(find ~/Documents/GitHub/ubuntu/local/bin/custom -type d -printf %p:)%%:}"
-export PATH="$PATH:${$(find ~/.script -type d -printf %p:)%%:}"
+#export PATH="$PATH:${$(find ~/Documents/GitHub/ubuntu/local/bin/custom -type d -printf %p:)%%:}"
+export PATH="$PATH:${$(find ~/.config/script -type d -printf %p:)%%:}"
 
 #zstyle ':completion:*' completer _expand_alias _complete _ignored
 #unsetopt PROMPT_SP

@@ -1,0 +1,222 @@
+[control-center]
+last-panel='keyboard'
+
+[desktop/a11y/applications]
+screen-keyboard-enabled=false
+
+[desktop/app-folders]
+folder-children=['Utilities', 'YaST']
+
+[desktop/app-folders/folders/Utilities]
+apps=['gnome-abrt.desktop', 'gnome-system-log.desktop', 'nm-connection-editor.desktop', 'org.gnome.baobab.desktop', 'org.gnome.Connections.desktop', 'org.gnome.DejaDup.desktop', 'org.gnome.Dictionary.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.eog.desktop', 'org.gnome.Evince.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.fonts.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.Usage.desktop', 'vinagre.desktop']
+categories=['X-GNOME-Utilities']
+name='X-GNOME-Utilities.directory'
+translate=true
+
+[desktop/app-folders/folders/YaST]
+categories=['X-SuSE-YaST']
+name='suse-yast.directory'
+translate=true
+
+[desktop/background]
+color-shading-type='solid'
+picture-options='zoom'
+picture-uri='file:///usr/share/backgrounds/jj_light_by_Hiking93.jpg'
+picture-uri-dark='file:///usr/share/backgrounds/canvas_by_roytanck.jpg'
+primary-color='#000000'
+secondary-color='#000000'
+
+[desktop/datetime]
+automatic-timezone=true
+
+[desktop/input-sources]
+per-window=false
+sources=[('xkb', 'us')]
+xkb-options=@as []
+
+[desktop/interface]
+color-scheme='prefer-dark'
+gtk-theme='Yaru-dark'
+icon-theme='Yaru'
+toolkit-accessibility=false
+
+[desktop/notifications]
+application-children=['gnome-network-panel', 'snap-store-ubuntu-software', 'org-gnome-gedit', 'firefox-firefox', 'apport-gtk', 'gnome-control-center', 'gnome-datetime-panel']
+
+[desktop/notifications/application/apport-gtk]
+application-id='apport-gtk.desktop'
+
+[desktop/notifications/application/firefox-firefox]
+application-id='firefox_firefox.desktop'
+
+[desktop/notifications/application/gnome-control-center]
+application-id='gnome-control-center.desktop'
+
+[desktop/notifications/application/gnome-datetime-panel]
+application-id='gnome-datetime-panel.desktop'
+
+[desktop/notifications/application/gnome-network-panel]
+application-id='gnome-network-panel.desktop'
+
+[desktop/notifications/application/org-gnome-gedit]
+application-id='org.gnome.gedit.desktop'
+
+[desktop/notifications/application/org-gnome-nautilus]
+application-id='org.gnome.Nautilus.desktop'
+
+[desktop/notifications/application/org-gnome-software]
+application-id='org.gnome.Software.desktop'
+
+[desktop/notifications/application/snap-store-ubuntu-software]
+application-id='snap-store_ubuntu-software.desktop'
+enable=false
+
+[desktop/notifications/application/timeshift-gtk]
+application-id='timeshift-gtk.desktop'
+
+[desktop/peripherals/keyboard]
+numlock-state=true
+
+[desktop/peripherals/mouse]
+left-handed=true
+speed=0.5
+
+[desktop/peripherals/touchpad]
+two-finger-scrolling-enabled=true
+
+[desktop/privacy]
+report-technical-problems=true
+
+[desktop/remote-desktop/rdp]
+enable=true
+tls-cert='/home/mc/.local/share/gnome-remote-desktop/rdp-tls.crt'
+tls-key='/home/mc/.local/share/gnome-remote-desktop/rdp-tls.key'
+view-only=false
+
+[desktop/remote-desktop/vnc]
+enable=true
+view-only=false
+
+[desktop/screensaver]
+color-shading-type='solid'
+lock-delay=uint32 0
+picture-options='zoom'
+picture-uri='file:///usr/share/backgrounds/canvas_by_roytanck.jpg'
+primary-color='#000000'
+secondary-color='#000000'
+
+[desktop/search-providers]
+disabled=['org.gnome.Calculator.desktop', 'org.gnome.Characters.desktop']
+sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop']
+
+[desktop/session]
+idle-delay=uint32 300
+
+[desktop/wm/keybindings]
+cycle-group=['<Alt>Escape']
+cycle-group-backward=['<Shift><Alt>Escape']
+cycle-windows=['<Super>j']
+cycle-windows-backward=['<Super>k']
+maximize-horizontally=['<Shift><Super>Up']
+maximize-vertically=['<Shift><Super>Down']
+move-to-monitor-down=@as []
+move-to-monitor-up=@as []
+move-to-workspace-2=['<Shift><Super>m']
+move-to-workspace-3=['<Shift><Super>n']
+move-to-workspace-4=['<Shift><Super>o']
+switch-to-workspace-2=['<Super>m']
+switch-to-workspace-3=['<Super>n']
+switch-to-workspace-4=['<Super>o']
+toggle-fullscreen=['<Super>f']
+
+[evolution-data-server]
+migrated=true
+network-monitor-gio-name=''
+
+[gedit/plugins]
+active-plugins=['modelines', 'sort', 'filebrowser', 'spell', 'docinfo', 'openlinks']
+
+[gedit/plugins/filebrowser]
+root='file:///'
+tree-view=false
+virtual-root='file:///home/mc/ubuntu'
+
+[gedit/preferences/editor]
+scheme='Yaru-dark'
+
+[gedit/preferences/ui]
+show-tabs-mode='auto'
+
+[gedit/state/window]
+bottom-panel-size=140
+side-panel-active-page='GeditWindowDocumentsPanel'
+side-panel-size=200
+size=(900, 700)
+state=87168
+
+[mutter]
+dynamic-workspaces=true
+
+[nautilus/preferences]
+default-folder-viewer='icon-view'
+search-filter-time-type='last_modified'
+
+[nautilus/window-state]
+initial-size=(890, 550)
+maximized=false
+
+[settings-daemon/plugins/color]
+night-light-last-coordinates=(-6.1949985601151907, 106.6284)
+
+[settings-daemon/plugins/media-keys]
+control-center=['<Super>F12']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
+mic-mute=['<Shift><Super>F11']
+terminal=['<Super>Return']
+volume-down=['<Super>F9']
+volume-mute=['<Super>F11']
+volume-up=['<Super>F10']
+
+[settings-daemon/plugins/media-keys/custom-keybindings/custom0]
+binding='Print'
+command='flatpak run org.ksnip.ksnip -r'
+name='printscreen'
+
+[settings-daemon/plugins/power]
+sleep-inactive-ac-timeout=3600
+sleep-inactive-ac-type='nothing'
+
+[settings-daemon/plugins/sharing/rygel]
+enabled-connections=['a5d3f92f-b507-36b1-a750-dde716dce48a', '0a6b19b0-f0c0-30b8-9a12-208eb84364dc']
+
+[shell]
+command-history=['reboot']
+favorite-apps=['firefox_firefox.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.gedit.desktop', 'org.gnome.Nautilus.desktop']
+welcome-dialog-last-shown-version='42.9'
+
+[shell/extensions/dash-to-dock]
+dash-max-icon-size=34
+dock-position='LEFT'
+extend-height=true
+show-mounts=false
+
+[shell/extensions/ding]
+icon-size='standard'
+show-home=false
+
+[shell/keybindings]
+focus-active-notification=['<Super>i']
+open-application-menu=@as []
+screenshot=@as []
+screenshot-window=@as []
+show-screenshot-ui=@as []
+toggle-message-tray=['<Super>u']
+
+[software]
+check-timestamp=int64 1701662385
+install-timestamp=int64 1701660007
+online-updates-timestamp=int64 1701660094
+update-notification-timestamp=int64 1701660094
+
+[system/location]
+enabled=true
