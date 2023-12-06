@@ -32,7 +32,7 @@ automatic-timezone=true
 [desktop/input-sources]
 per-window=false
 sources=[('xkb', 'us')]
-xkb-options=@as []
+xkb-options=['caps:escape_shifted_capslock']
 
 [desktop/interface]
 color-scheme='prefer-dark'
@@ -41,10 +41,14 @@ icon-theme='Yaru'
 toolkit-accessibility=false
 
 [desktop/notifications]
-application-children=['gnome-network-panel', 'snap-store-ubuntu-software', 'org-gnome-gedit', 'firefox-firefox', 'apport-gtk', 'gnome-control-center', 'gnome-datetime-panel']
+application-children=['gnome-network-panel', 'snap-store-ubuntu-software', 'org-gnome-gedit', 'firefox-firefox', 'apport-gtk', 'gnome-control-center', 'gnome-datetime-panel', 'thorium-browser', 'org-gnome-nautilus', 'xdg-desktop-portal-gnome', 'org-mozilla-thunderbird', 'com-skype-client', 'org-gnome-evolution-alarm-notify', 'wps-office-prometheus']
+show-banners=false
 
 [desktop/notifications/application/apport-gtk]
 application-id='apport-gtk.desktop'
+
+[desktop/notifications/application/com-skype-client]
+application-id='com.skype.Client.desktop'
 
 [desktop/notifications/application/firefox-firefox]
 application-id='firefox_firefox.desktop'
@@ -58,6 +62,9 @@ application-id='gnome-datetime-panel.desktop'
 [desktop/notifications/application/gnome-network-panel]
 application-id='gnome-network-panel.desktop'
 
+[desktop/notifications/application/org-gnome-evolution-alarm-notify]
+application-id='org.gnome.Evolution-alarm-notify.desktop'
+
 [desktop/notifications/application/org-gnome-gedit]
 application-id='org.gnome.gedit.desktop'
 
@@ -67,12 +74,24 @@ application-id='org.gnome.Nautilus.desktop'
 [desktop/notifications/application/org-gnome-software]
 application-id='org.gnome.Software.desktop'
 
+[desktop/notifications/application/org-mozilla-thunderbird]
+application-id='org.mozilla.Thunderbird.desktop'
+
 [desktop/notifications/application/snap-store-ubuntu-software]
 application-id='snap-store_ubuntu-software.desktop'
 enable=false
 
+[desktop/notifications/application/thorium-browser]
+application-id='thorium-browser.desktop'
+
 [desktop/notifications/application/timeshift-gtk]
 application-id='timeshift-gtk.desktop'
+
+[desktop/notifications/application/wps-office-prometheus]
+application-id='wps-office-prometheus.desktop'
+
+[desktop/notifications/application/xdg-desktop-portal-gnome]
+application-id='xdg-desktop-portal-gnome.desktop'
 
 [desktop/peripherals/keyboard]
 numlock-state=true
@@ -117,8 +136,8 @@ cycle-group=['<Alt>Escape']
 cycle-group-backward=['<Shift><Alt>Escape']
 cycle-windows=['<Super>j']
 cycle-windows-backward=['<Super>k']
-maximize-horizontally=['<Shift><Super>Up']
-maximize-vertically=['<Shift><Super>Down']
+maximize-horizontally=@as []
+maximize-vertically=@as []
 move-to-monitor-down=@as []
 move-to-monitor-up=@as []
 move-to-workspace-2=['<Shift><Super>m']
@@ -127,11 +146,28 @@ move-to-workspace-4=['<Shift><Super>o']
 switch-to-workspace-2=['<Super>m']
 switch-to-workspace-3=['<Super>n']
 switch-to-workspace-4=['<Super>o']
+switch-to-workspace-left=['<Primary><Super>Left']
+switch-to-workspace-right=['<Primary><Super>Right']
 toggle-fullscreen=['<Super>f']
+
+[eog/view]
+background-color='rgb(0,0,0)'
+use-background-color=true
+
+[evince/default]
+window-ratio=(1.0081699346405228, 0.71212121212121215)
 
 [evolution-data-server]
 migrated=true
 network-monitor-gio-name=''
+
+[evolution-data-server/calendar]
+notify-window-height=836
+notify-window-paned-position=73
+notify-window-width=1384
+notify-window-x=56
+notify-window-y=27
+reminders-past=@as []
 
 [gedit/plugins]
 active-plugins=['modelines', 'sort', 'filebrowser', 'spell', 'docinfo', 'openlinks']
@@ -157,6 +193,9 @@ state=87168
 [mutter]
 dynamic-workspaces=true
 
+[mutter/wayland/keybindings]
+restore-shortcuts=@as []
+
 [nautilus/preferences]
 default-folder-viewer='icon-view'
 search-filter-time-type='last_modified'
@@ -166,12 +205,13 @@ initial-size=(890, 550)
 maximized=false
 
 [settings-daemon/plugins/color]
-night-light-last-coordinates=(-6.1949985601151907, 106.6284)
+night-light-last-coordinates=(-6.1680007199424045, 106.6284)
 
 [settings-daemon/plugins/media-keys]
 control-center=['<Super>F12']
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
 mic-mute=['<Shift><Super>F11']
+screensaver=['<Super>Escape']
 terminal=['<Super>Return']
 volume-down=['<Super>F9']
 volume-mute=['<Super>F11']
@@ -179,8 +219,13 @@ volume-up=['<Super>F10']
 
 [settings-daemon/plugins/media-keys/custom-keybindings/custom0]
 binding='Print'
-command='flatpak run org.ksnip.ksnip -r'
+command='ksnip -r'
 name='printscreen'
+
+[settings-daemon/plugins/media-keys/custom-keybindings/custom1]
+binding='<Shift><Super>Escape'
+command='systemctl suspend -i'
+name='suspend'
 
 [settings-daemon/plugins/power]
 sleep-inactive-ac-timeout=3600
@@ -190,8 +235,8 @@ sleep-inactive-ac-type='nothing'
 enabled-connections=['a5d3f92f-b507-36b1-a750-dde716dce48a', '0a6b19b0-f0c0-30b8-9a12-208eb84364dc']
 
 [shell]
-command-history=['reboot']
-favorite-apps=['firefox_firefox.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.gedit.desktop', 'org.gnome.Nautilus.desktop']
+command-history=['reboot', 'poweroff']
+favorite-apps=['thorium-browser.desktop', 'firefox_firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'org.keepassxc.KeePassXC.desktop', 'com.skype.Client.desktop', 'md.obsidian.Obsidian.desktop', 'org.mozilla.Thunderbird.desktop']
 welcome-dialog-last-shown-version='42.9'
 
 [shell/extensions/dash-to-dock]
@@ -213,7 +258,7 @@ show-screenshot-ui=@as []
 toggle-message-tray=['<Super>u']
 
 [software]
-check-timestamp=int64 1701662385
+check-timestamp=int64 1701829474
 install-timestamp=int64 1701660007
 online-updates-timestamp=int64 1701660094
 update-notification-timestamp=int64 1701660094

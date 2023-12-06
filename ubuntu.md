@@ -132,7 +132,6 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 
 flatpak install -y flathub io.github.shiftey.Desktop
 flatpak install -y flathub com.skype.Client
-flatpak install -y flathub org.ksnip.ksnip
 flatpak install -y flathub md.obsidian.Obsidian
 flatpak install -y flathub net.christianbeier.Gromit-MPX
 flatpak install -y flathub com.wps.Office
