@@ -2,8 +2,7 @@
 
 alias ctt="echo -n 'PT Citra Tubindo Tbk' | xclip -sel c"
 alias ats="echo -n 'PT Atlas Petrochem Indo' | xclip -sel c"
-
-alias rmon="wlr-randr --output HDMI-A-1 --mode 1440x900 --preferred --pos 1920,0 --scale 1 --output eDP-1 --mode 1920x1080 --pos 0,0 --scale 1"
+alias bu="dconf dump /org/gnome/ > ~/marc/GitHub/ubuntu/gnome-backup"
 
 alias caly="cal -m $1"
 alias gcal="gcal -H '\e[31;42m:\e[0m:\e[33;45m:\e[0m' -n -q ID $1"
@@ -14,7 +13,6 @@ alias c24="cat ~/Dropbox/cal2024.txt"
 # script filename.txt
 # caly cal2024
 # exit
-alias off="hyprctl dispatch dpms off"
 
 # unsorted
 alias x="xmodmap ~/.config/.Xmodmap"
@@ -221,7 +219,7 @@ alias jbl='bluetoothctl power on; bluetoothctl connect F4:BC:DA:A4:37:A5'
 alias up="sudo pacman -Syu --noconfirm"
 alias qs="sudo pacman -Qs | grep"
 alias ui="sudo pacman -Rs"
-alias i="sudo pacman --noconfirm -S"
+alias i="sudo apt install"
 alias mki="makepkg -si"
 alias mkw="cdw; rm config.h && sudo make clean install"
 alias mks="cds;rm config.h && sudo make clean install"

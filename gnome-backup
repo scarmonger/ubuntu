@@ -41,8 +41,8 @@ icon-theme='Yaru'
 toolkit-accessibility=false
 
 [desktop/notifications]
-application-children=['gnome-network-panel', 'snap-store-ubuntu-software', 'org-gnome-gedit', 'firefox-firefox', 'apport-gtk', 'gnome-control-center', 'gnome-datetime-panel', 'thorium-browser', 'org-gnome-nautilus', 'xdg-desktop-portal-gnome', 'org-mozilla-thunderbird', 'com-skype-client', 'org-gnome-evolution-alarm-notify', 'wps-office-prometheus']
-show-banners=false
+application-children=['gnome-network-panel', 'snap-store-ubuntu-software', 'org-gnome-gedit', 'firefox-firefox', 'apport-gtk', 'gnome-control-center', 'gnome-datetime-panel', 'thorium-browser', 'org-gnome-nautilus', 'xdg-desktop-portal-gnome', 'org-mozilla-thunderbird', 'com-skype-client', 'org-gnome-evolution-alarm-notify', 'wps-office-prometheus', 'org-mozilla-firefox', 'org-gnome-shell-extensions', 'firefox', 'org-gnome-software']
+show-banners=true
 
 [desktop/notifications/application/apport-gtk]
 application-id='apport-gtk.desktop'
@@ -52,6 +52,9 @@ application-id='com.skype.Client.desktop'
 
 [desktop/notifications/application/firefox-firefox]
 application-id='firefox_firefox.desktop'
+
+[desktop/notifications/application/firefox]
+application-id='firefox.desktop'
 
 [desktop/notifications/application/gnome-control-center]
 application-id='gnome-control-center.desktop'
@@ -71,8 +74,14 @@ application-id='org.gnome.gedit.desktop'
 [desktop/notifications/application/org-gnome-nautilus]
 application-id='org.gnome.Nautilus.desktop'
 
+[desktop/notifications/application/org-gnome-shell-extensions]
+application-id='org.gnome.Shell.Extensions.desktop'
+
 [desktop/notifications/application/org-gnome-software]
 application-id='org.gnome.Software.desktop'
+
+[desktop/notifications/application/org-mozilla-firefox]
+application-id='org.mozilla.firefox.desktop'
 
 [desktop/notifications/application/org-mozilla-thunderbird]
 application-id='org.mozilla.Thunderbird.desktop'
@@ -94,7 +103,9 @@ application-id='wps-office-prometheus.desktop'
 application-id='xdg-desktop-portal-gnome.desktop'
 
 [desktop/peripherals/keyboard]
+delay=uint32 282
 numlock-state=true
+repeat-interval=uint32 18
 
 [desktop/peripherals/mouse]
 left-handed=true
@@ -132,13 +143,17 @@ sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gn
 idle-delay=uint32 300
 
 [desktop/wm/keybindings]
+close=['<Super>q']
 cycle-group=['<Alt>Escape']
 cycle-group-backward=['<Shift><Alt>Escape']
 cycle-windows=['<Super>j']
 cycle-windows-backward=['<Super>k']
 maximize-horizontally=@as []
 maximize-vertically=@as []
+minimize=['<Super>semicolon']
 move-to-monitor-down=@as []
+move-to-monitor-left=['<Shift><Super>h']
+move-to-monitor-right=['<Shift><Super>l']
 move-to-monitor-up=@as []
 move-to-workspace-2=['<Shift><Super>m']
 move-to-workspace-3=['<Shift><Super>n']
@@ -146,8 +161,8 @@ move-to-workspace-4=['<Shift><Super>o']
 switch-to-workspace-2=['<Super>m']
 switch-to-workspace-3=['<Super>n']
 switch-to-workspace-4=['<Super>o']
-switch-to-workspace-left=['<Primary><Super>Left']
-switch-to-workspace-right=['<Primary><Super>Right']
+switch-to-workspace-left=['<Super>h']
+switch-to-workspace-right=['<Super>l']
 toggle-fullscreen=['<Super>f']
 
 [eog/view]
@@ -174,8 +189,8 @@ active-plugins=['modelines', 'sort', 'filebrowser', 'spell', 'docinfo', 'openlin
 
 [gedit/plugins/filebrowser]
 root='file:///'
-tree-view=false
-virtual-root='file:///home/mc/ubuntu'
+tree-view=true
+virtual-root='file:///home/mc/Downloads'
 
 [gedit/preferences/editor]
 scheme='Yaru-dark'
@@ -190,22 +205,37 @@ side-panel-size=200
 size=(900, 700)
 state=87168
 
+[gnome-system-monitor]
+maximized=false
+network-total-in-bits=false
+show-dependencies=false
+show-whose-processes='user'
+window-state=(700, 500, 56, 50)
+
+[gnome-system-monitor/disktreenew]
+col-6-visible=true
+col-6-width=0
+
 [mutter]
 dynamic-workspaces=true
 
 [mutter/wayland/keybindings]
 restore-shortcuts=@as []
 
+[nautilus/icon-view]
+default-zoom-level='small'
+
 [nautilus/preferences]
-default-folder-viewer='icon-view'
+default-folder-viewer='list-view'
 search-filter-time-type='last_modified'
+search-view='list-view'
 
 [nautilus/window-state]
 initial-size=(890, 550)
 maximized=false
 
 [settings-daemon/plugins/color]
-night-light-last-coordinates=(-6.1680007199424045, 106.6284)
+night-light-last-coordinates=(-6.1859992800575947, 106.6284)
 
 [settings-daemon/plugins/media-keys]
 control-center=['<Super>F12']
@@ -236,8 +266,13 @@ enabled-connections=['a5d3f92f-b507-36b1-a750-dde716dce48a', '0a6b19b0-f0c0-30b8
 
 [shell]
 command-history=['reboot', 'poweroff']
-favorite-apps=['thorium-browser.desktop', 'firefox_firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'org.keepassxc.KeePassXC.desktop', 'com.skype.Client.desktop', 'md.obsidian.Obsidian.desktop', 'org.mozilla.Thunderbird.desktop']
+enabled-extensions=['blur-my-shell@aunetx', 'clipboard-indicator@tudmotu.com', 'Vitals@CoreCoding.com']
+favorite-apps=['thorium-browser.desktop', 'firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'org.keepassxc.KeePassXC.desktop', 'com.skype.Client.desktop', 'md.obsidian.Obsidian.desktop', 'org.mozilla.Thunderbird.desktop', 'wps-office-prometheus.desktop', 'org.qutebrowser.qutebrowser.desktop']
 welcome-dialog-last-shown-version='42.9'
+
+[shell/extensions/clipboard-indicator]
+notify-on-copy=false
+strip-text=true
 
 [shell/extensions/dash-to-dock]
 dash-max-icon-size=34
@@ -258,10 +293,10 @@ show-screenshot-ui=@as []
 toggle-message-tray=['<Super>u']
 
 [software]
-check-timestamp=int64 1701829474
+check-timestamp=int64 1701999536
 install-timestamp=int64 1701660007
-online-updates-timestamp=int64 1701660094
-update-notification-timestamp=int64 1701660094
+online-updates-timestamp=int64 1701911068
+update-notification-timestamp=int64 1701911068
 
 [system/location]
 enabled=true

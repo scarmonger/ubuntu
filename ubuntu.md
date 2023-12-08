@@ -28,13 +28,13 @@ ll /dev/disk/by-uuid
 
 nvim /etc/fstab
 
-UUID=8f4825e2-0016-43c2-994a-bb2830ddaea9 /home/mc/marc/               ext4    errors=remount-ro 0       1
+sudo echo "UUID=8f4825e2-0016-43c2-994a-bb2830ddaea9 /home/mc/marc/               ext4    errors=remount-ro 0       1" >> /etc/fstab
 
 sudo mount -a
 
 
 # Install app
-sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar fonts-powerline neofetch xclip ssh lf
+sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar fonts-powerline neofetch xclip ssh fzf mpv qutebrowser tmux dconf-editor
 
 systemctl status ssh
 systemctl start ssh
@@ -129,6 +129,8 @@ Run App : appimagelauncher
 ## Add flatpak to gnome
 sudo apt install -y flatpak gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+**Restart computer before proceeding**
 
 flatpak install -y flathub io.github.shiftey.Desktop
 flatpak install -y flathub com.skype.Client
@@ -246,11 +248,11 @@ ln -ivs ~/marc/GitHub/ubuntu/config/nvim_old ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/config/lf ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/config/sxiv ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/config/castero ~/.config/
-ln -ivs ~/marc/github/dotfiles/local/bin/custom ~/.local/bin
-ln -ivs ~/marc/github/dotfiles/config/lf-ueberzugrc/lf-ueberzug ~/marc/github/dotfiles/local/bin/custom/
-ln -ivs ~/marc/github/dotfiles/config/moc/config ~/.moc/
-ln -ivs ~/marc/github/dotfiles/config/moc/my_keymap ~/.moc/
-ln -s ~/marc/github/dotfiles/bashrc ~/.bashrc
+ln -ivs ~/marc/GitHub/ubuntu/local/bin/custom ~/.local/bin
+ln -ivs ~/marc/github/ubuntu/config/lf-ueberzugrc/lf-ueberzug ~/marc/github/ubuntu/local/bin/custom/
+ln -ivs ~/marc/github/ubuntu/config/moc/config ~/.moc/
+ln -ivs ~/marc/github/ubuntu/config/moc/my_keymap ~/.moc/
+ln -s ~/marc/github/ubuntu/bashrc ~/.bashrc
 cp -iv ~/github/dotfile/.oh-my-zsh/custom/autocomplete.zsh ~/.oh-my-zsh/custom/autocomplete.zsh
 cp -iv ~/github/dotfile/.oh-my-zsh/custom/shortcuts.zsh ~/.oh-my-zsh/custom/shortcuts.zsh
 
@@ -259,12 +261,13 @@ ln -ivs ~/marc/appimagefile/ksnip ~/.local/bin/ksnip
 ln -ivs ~/marc/appimagefile/nvim ~/.local/bin/nvim
 
 mkdir -p ~/.config/tmux-plugins
-ln -ivs ~/marc/github/dotfiles/config/tmux ~/.config/
-rm -Rf ~/marc/github/dotfiles/config/tmux/plugins/
+ln -ivs ~/marc/GitHub/ubuntu/config/tmux ~/.config/
+rm -Rf ~/marc/GitHub/ubuntu/config/tmux/plugins/
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux-plugins/tpm
 ctrl + space + capital I = install plugin
 
 ln -ivs ~/Dropbox/Dataon/.thunderbird ~/
+ln -s ~/marc/appimagefile/yuzu_ccf737910e9e7575365495cddfbb24f8 ~/Desktop
 ```
 
 
@@ -321,7 +324,7 @@ sudo timeshift --create --comments "A new backup" --tags D
 
 sudo timeshift --restore
 
-## Download .deb installer 
+# Download .deb installer 
 sudo dpkg -i ~/Dropbox/Archive/installer/thorium-browser_117.0.5938.157_amd64.deb
 
 realvnc viewer
@@ -333,5 +336,39 @@ virtualbox
 >sudo apt install libqt5help5
 >sudo apt --fix-broken install
 
+# Firefox 
+https://support.mozilla.org/en-US/kb/install-firefox-linux
+
+System Firefox installation (for advanced users)
+To install Firefox with this method, you must be able to log in as root or execute sudo commands.
+
+This installation will have priority over the Firefox version installed through your package manager. To run the version installed with your package manager, you will need to execute the binary from a terminal. To do so in most distributions, open a terminal and type:
+/usr/bin/firefox
+
+1. Go to the Firefox download page and click the Download Now button.
+2. Open a terminal and go to the folder where your download has been saved. For example:
+cd ~/Downloads
+Extract the contents of the downloaded file by typing:
+`tar xjf firefox-*.tar.bz2`
+
+The following commands must be executed as root, or preceded by sudo.
+
+3. Move the uncompressed Firefox folder to /opt:
+`sudo mv firefox /opt`
+
+4. Create a symlink to the Firefox executable:
+sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox
+
+5. Download a copy of the desktop file:
+`sudo wget https://raw.githubusercontent.com/mozilla/sumo-kb/main/install-firefox-linux/firefox.desktop -P /usr/local/share/applications`
+
+Alternatively, if wget is not installed on your computer, go to the URL mentioned above, right-click on the page to open the contextual menu and select Save Page As. After you downloaded the file, move it to /usr/local/share/applications.
+
+To verify that the installation was successful, you can open the Troubleshooting Information page. In the Application Basics section, the value of Application Binary should be /opt/firefox/firefox-bin.
+
+# Gnome extension
+https://extensions.gnome.org/extension/3193/blur-my-shell/
+https://extensions.gnome.org/extension/779/clipboard-indicator/
+https://extensions.gnome.org/extension/1460/vitals/
 
 
