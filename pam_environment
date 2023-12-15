@@ -1,0 +1,2 @@
+G_RESOURCE_OVERLAYS DEFAULT="/org/gnome/nautilus/ui=/home/mc/.config/nautilus/ui"
+

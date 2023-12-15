@@ -34,7 +34,7 @@ sudo mount -a
 
 
 # Install app
-sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar fonts-powerline neofetch xclip ssh fzf mpv qutebrowser tmux dconf-editor
+sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar fonts-powerline neofetch xclip ssh fzf mpv qutebrowser tmux dconf-editor kazam gnome-tweaks
 
 systemctl status ssh
 systemctl start ssh
@@ -212,6 +212,9 @@ Other options are possible:
 
 ```
 
+gsettings set org.gnome.desktop.privacy remember-recent-files false
+gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'focus-minimize-or-previews'
+
 # Backup settings
 
 dconf dump /org/gnome/ > gnome-backup
@@ -244,19 +247,21 @@ ln -ivs ~/marc/GitHub/ubuntu/config/ranger ~/.config/
 rm -Rf ~/.config/nvim
 ln -ivs ~/marc/GitHub/ubuntu/config/nvim ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/config/nvim_old ~/.config/
+ln -ivs ~/marc/GitHub/ubuntu/config/nvim_kick ~/.config/
 
 ln -ivs ~/marc/GitHub/ubuntu/config/lf ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/config/sxiv ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/config/castero ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/local/bin/custom ~/.local/bin
-ln -ivs ~/marc/github/ubuntu/config/lf-ueberzugrc/lf-ueberzug ~/marc/github/ubuntu/local/bin/custom/
+ln -ivs ~/marc/GitHub/ubuntu/config/lf-ueberzugrc/lf-ueberzug ~/marc/GitHub/ubuntu/local/bin/custom/
+ln -ivs ~/go/bin/lf ~/marc/GitHub/ubuntu/local/bin/custom/
 ln -ivs ~/marc/github/ubuntu/config/moc/config ~/.moc/
 ln -ivs ~/marc/github/ubuntu/config/moc/my_keymap ~/.moc/
-ln -s ~/marc/github/ubuntu/bashrc ~/.bashrc
-cp -iv ~/github/dotfile/.oh-my-zsh/custom/autocomplete.zsh ~/.oh-my-zsh/custom/autocomplete.zsh
-cp -iv ~/github/dotfile/.oh-my-zsh/custom/shortcuts.zsh ~/.oh-my-zsh/custom/shortcuts.zsh
+ln -ivs ~/marc/github/ubuntu/bashrc ~/.bashrc
+cp -ivs ~/github/dotfile/.oh-my-zsh/custom/autocomplete.zsh ~/.oh-my-zsh/custom/autocomplete.zsh
+cp -ivs ~/github/dotfile/.oh-my-zsh/custom/shortcuts.zsh ~/.oh-my-zsh/custom/shortcuts.zsh
 
-ln -s ~/marc/GitHub/ubuntu/zshrc ~/.zshrc
+ln -ivs ~/marc/GitHub/ubuntu/zshrc ~/.zshrc
 ln -ivs ~/marc/appimagefile/ksnip ~/.local/bin/ksnip
 ln -ivs ~/marc/appimagefile/nvim ~/.local/bin/nvim
 
@@ -267,7 +272,22 @@ git clone https://github.com/tmux-plugins/tpm ~/.config/tmux-plugins/tpm
 ctrl + space + capital I = install plugin
 
 ln -ivs ~/Dropbox/Dataon/.thunderbird ~/
-ln -s ~/marc/appimagefile/yuzu_ccf737910e9e7575365495cddfbb24f8 ~/Desktop
+ln -ivs ~/marc/appimagefile/yuzu_ccf737910e9e7575365495cddfbb24f8 ~/Desktop
+
+-- Remove recent in nautilus --
+ln -ivs ~/marc/GitHub/ubuntu/config/nautilus ~/.config/
+ln -ivs ~/marc/GitHub/ubuntu/pam_environment ~/.pam_environment
+ln -ivs ~/marc/GitHub/ubuntu/pam_environment ~/.pam_environment
+
+-- Remove starred icon in nautilus --
+ln -ivs ~/marc/GitHub/ubuntu/config/user-dirs.dirs ~/.config/
+sudo ln -ivs ~/marc/GitHub/ubuntu/etc/xdg/user-dirs.defaults /etc/xdg/user-dirs.defaults
+
+-- Change window border color --
+ln -ivs ~/marc/GitHub/ubuntu/config/gtk-3.0/gtk.css ~/.config/gtk-3.0/
+ln -ivs ~/marc/GitHub/ubuntu/config/gtk-4.0/gtk.css ~/.config/gtk-4.0/
+
+
 ```
 
 
@@ -370,5 +390,13 @@ To verify that the installation was successful, you can open the Troubleshooting
 https://extensions.gnome.org/extension/3193/blur-my-shell/
 https://extensions.gnome.org/extension/779/clipboard-indicator/
 https://extensions.gnome.org/extension/1460/vitals/
+https://extensions.gnome.org/extension/5237/rounded-window-corners/
 
+# Remove recent nautilus
+https://askubuntu.com/questions/1194319/can-the-starred-folder-in-the-left-pane-of-files-nautilus-be-removed
 
+# Remove starred nautilus
+https://askubuntu.com/questions/762591/how-to-remove-unwanted-default-bookmarks-in-nautilus
+
+# Change window color border
+https://github.com/lossurdo/yaru-dark-border

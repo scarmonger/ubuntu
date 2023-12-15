@@ -9,11 +9,12 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 export EDITOR="nvr"
-export VISUAL="nvim"
+export VISUAL="nvr"
 export NVIM_LISTEN_ADDRESS="/tmp/nvimsocket"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
+export PATH=$PATH:/usr/local/go/bin
 
 source ~/marc/GitHub/ubuntu/aliases
 
@@ -54,14 +55,14 @@ unsetopt PROMPT_SP
 
 # Nvim switcher
 alias nvim_old="NVIM_APPNAME=nvim_old nvim"
-alias nvim-chris="NVIM_APPNAME=nvim chris"
-alias nvim-kick="NVIM_APPNAME=kickstart nvim"
-alias nvim-chad="NVIM_APPNAME=NvChad nvim"
-alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
+alias nvim_chris="NVIM_APPNAME=chris nvim"
+alias nvim_kick="NVIM_APPNAME=nvim_kick nvim"
+alias nvim_chad="NVIM_APPNAME=NvChad nvim"
+alias nvim_astro="NVIM_APPNAME=AstroNvim nvim"
 
 function nvims() {
-  items=("default" "chrisatmachine" "kickstart" "nvim_old" "NvChad" "AstroNvim")
-  config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
+  items=("nvim_kick" "nvim_old" "default" "chrisatmachine" "NvChad" "AstroNvim")
+  config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=50% --layout=reverse --border --exit-0)
   if [[ -z $config ]]; then
     echo "Nothing selected"
     return 0

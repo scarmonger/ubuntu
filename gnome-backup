@@ -1,5 +1,20 @@
+[calculator]
+accuracy=9
+angle-units='degrees'
+base=10
+button-mode='basic'
+number-format='automatic'
+show-thousands=false
+show-zeroes=false
+source-currency=''
+source-units='degree'
+target-currency=''
+target-units='radian'
+window-position=(626, 307)
+word-size=64
+
 [control-center]
-last-panel='keyboard'
+last-panel='sound'
 
 [desktop/a11y/applications]
 screen-keyboard-enabled=false
@@ -41,8 +56,8 @@ icon-theme='Yaru'
 toolkit-accessibility=false
 
 [desktop/notifications]
-application-children=['gnome-network-panel', 'snap-store-ubuntu-software', 'org-gnome-gedit', 'firefox-firefox', 'apport-gtk', 'gnome-control-center', 'gnome-datetime-panel', 'thorium-browser', 'org-gnome-nautilus', 'xdg-desktop-portal-gnome', 'org-mozilla-thunderbird', 'com-skype-client', 'org-gnome-evolution-alarm-notify', 'wps-office-prometheus', 'org-mozilla-firefox', 'org-gnome-shell-extensions', 'firefox', 'org-gnome-software']
-show-banners=true
+application-children=['gnome-network-panel', 'snap-store-ubuntu-software', 'org-gnome-gedit', 'firefox-firefox', 'apport-gtk', 'gnome-control-center', 'gnome-datetime-panel', 'thorium-browser', 'org-gnome-nautilus', 'xdg-desktop-portal-gnome', 'org-mozilla-thunderbird', 'com-skype-client', 'org-gnome-evolution-alarm-notify', 'wps-office-prometheus', 'org-mozilla-firefox', 'org-gnome-shell-extensions', 'firefox', 'org-gnome-software', 'virtualbox', 'virtualboxvm', 'wps-office-wpp']
+show-banners=false
 
 [desktop/notifications/application/apport-gtk]
 application-id='apport-gtk.desktop'
@@ -96,16 +111,25 @@ application-id='thorium-browser.desktop'
 [desktop/notifications/application/timeshift-gtk]
 application-id='timeshift-gtk.desktop'
 
+[desktop/notifications/application/virtualbox]
+application-id='virtualbox.desktop'
+
+[desktop/notifications/application/virtualboxvm]
+application-id='virtualboxvm.desktop'
+
 [desktop/notifications/application/wps-office-prometheus]
 application-id='wps-office-prometheus.desktop'
+
+[desktop/notifications/application/wps-office-wpp]
+application-id='wps-office-wpp.desktop'
 
 [desktop/notifications/application/xdg-desktop-portal-gnome]
 application-id='xdg-desktop-portal-gnome.desktop'
 
 [desktop/peripherals/keyboard]
-delay=uint32 282
+delay=uint32 329
 numlock-state=true
-repeat-interval=uint32 18
+repeat-interval=uint32 27
 
 [desktop/peripherals/mouse]
 left-handed=true
@@ -115,6 +139,7 @@ speed=0.5
 two-finger-scrolling-enabled=true
 
 [desktop/privacy]
+remember-recent-files=false
 report-technical-problems=true
 
 [desktop/remote-desktop/rdp]
@@ -143,7 +168,7 @@ sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gn
 idle-delay=uint32 300
 
 [desktop/wm/keybindings]
-close=['<Super>q']
+close=['<Alt>F4']
 cycle-group=['<Alt>Escape']
 cycle-group-backward=['<Shift><Alt>Escape']
 cycle-windows=['<Super>j']
@@ -170,7 +195,7 @@ background-color='rgb(0,0,0)'
 use-background-color=true
 
 [evince/default]
-window-ratio=(1.0081699346405228, 0.71212121212121215)
+window-ratio=(1.1624391063329416, 1.0369402541869581)
 
 [evolution-data-server]
 migrated=true
@@ -190,7 +215,7 @@ active-plugins=['modelines', 'sort', 'filebrowser', 'spell', 'docinfo', 'openlin
 [gedit/plugins/filebrowser]
 root='file:///'
 tree-view=true
-virtual-root='file:///home/mc/Downloads'
+virtual-root='file:///home/mc/marc/GitHub/suckless/st'
 
 [gedit/preferences/editor]
 scheme='Yaru-dark'
@@ -235,7 +260,7 @@ initial-size=(890, 550)
 maximized=false
 
 [settings-daemon/plugins/color]
-night-light-last-coordinates=(-6.1859992800575947, 106.6284)
+night-light-last-coordinates=(-6.1949985601151907, 106.6284)
 
 [settings-daemon/plugins/media-keys]
 control-center=['<Super>F12']
@@ -271,10 +296,11 @@ favorite-apps=['thorium-browser.desktop', 'firefox.desktop', 'org.gnome.Nautilus
 welcome-dialog-last-shown-version='42.9'
 
 [shell/extensions/clipboard-indicator]
-notify-on-copy=false
+notify-on-copy=true
 strip-text=true
 
 [shell/extensions/dash-to-dock]
+click-action='focus-minimize-or-previews'
 dash-max-icon-size=34
 dock-position='LEFT'
 extend-height=true
@@ -293,10 +319,10 @@ show-screenshot-ui=@as []
 toggle-message-tray=['<Super>u']
 
 [software]
-check-timestamp=int64 1701999536
-install-timestamp=int64 1701660007
-online-updates-timestamp=int64 1701911068
-update-notification-timestamp=int64 1701911068
+check-timestamp=int64 1702516706
+install-timestamp=int64 1702257319
+online-updates-timestamp=int64 1702516734
+update-notification-timestamp=int64 1702516734
 
 [system/location]
 enabled=true

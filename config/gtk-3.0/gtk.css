@@ -1,0 +1,57 @@
+decoration {
+	border: 1px solid gray;
+	background: gray;
+}
+
+headerbar {
+	border-top:1px solid gray;
+	border-right:1px solid gray;
+	border-bottom:0px solid gray;
+	border-left:1px solid gray;
+}
+
+/* Change windows title color
+
+.titlebar, headerbar {  
+    background: #3d3d3d;  
+    border-color: #3d3d3d;  
+    border-width: 0 0 0px;  
+    border-style: solid;  
+    min-height: 38px;  
+    box-shadow: none;  
+    color:white;   
+}  
+  
+.titlebar:backdrop, headerbar:backdrop {  
+    background: #4c4a48;  
+    border-color: #4c4a48;  
+    box-shadow: none;  
+    color:white;  
+}  
+  
+button.titlebutton:not(.appmenu) {  
+  min-height: 24px;  
+  min-width: 24px;  
+  padding: 2px;  
+  color: #FFFFFF;}  
+  headerbar button.titlebutton.maximize:not(.appmenu):hover, headerbar button.titlebutton.maximize:not(.appmenu):backdrop:hover, headerbar button.titlebutton.minimize:not(.appmenu):hover, headerbar button.titlebutton.minimize:not(.appmenu):backdrop:hover, .titlebar button.titlebutton.maximize:not(.appmenu):hover, .titlebar button.titlebutton.maximize:not(.appmenu):backdrop:hover, .titlebar button.titlebutton.minimize:not(.appmenu):hover, .titlebar button.titlebutton.minimize:not(.appmenu):backdrop:hover, headerbar.selection-mode button.titlebutton.maximize:not(.appmenu):hover, headerbar.selection-mode button.titlebutton.maximize:not(.appmenu):backdrop:hover, headerbar.selection-mode button.titlebutton.minimize:not(.appmenu):hover, headerbar.selection-mode button.titlebutton.minimize:not(.appmenu):backdrop:hover, button.titlebutton.maximize:not(.appmenu):hover, button.titlebutton.maximize:not(.appmenu):backdrop:hover, button.titlebutton.minimize:not(.appmenu):hover, button.titlebutton.minimize:not(.appmenu):backdrop:hover {  
+      color: #FFFFFF;  
+      background-image: -gtk-gradient(radial, center center, 0, center center, 0.3571428571, to(#4f4f4f), to(transparent)); }  
+  headerbar button.titlebutton.maximize:not(.appmenu):active, headerbar button.titlebutton.maximize:not(.appmenu):backdrop:active, headerbar button.titlebutton.minimize:not(.appmenu):active, headerbar button.titlebutton.minimize:not(.appmenu):backdrop:active, .titlebar button.titlebutton.maximize:not(.appmenu):active, .titlebar button.titlebutton.maximize:not(.appmenu):backdrop:active, .titlebar button.titlebutton.minimize:not(.appmenu):active, .titlebar button.titlebutton.minimize:not(.appmenu):backdrop:active, headerbar.selection-mode button.titlebutton.maximize:not(.appmenu):active, headerbar.selection-mode button.titlebutton.maximize:not(.appmenu):backdrop:active, headerbar.selection-mode button.titlebutton.minimize:not(.appmenu):active, headerbar.selection-mode button.titlebutton.minimize:not(.appmenu):backdrop:active, button.titlebutton.maximize:not(.appmenu):active, button.titlebutton.maximize:not(.appmenu):backdrop:active, button.titlebutton.minimize:not(.appmenu):active, button.titlebutton.minimize:not(.appmenu):backdrop:active {  
+      color: #FFFFFF;  
+      background-image: -gtk-gradient(radial, center center, 0, center center, 0.3571428571, to(#5c5c5c), to(transparent)); }  
+  headerbar button.titlebutton.close:not(.appmenu), .titlebar button.titlebutton.close:not(.appmenu), headerbar.selection-mode button.titlebutton.close:not(.appmenu), button.titlebutton.close:not(.appmenu) {  
+    color: #FFFFFF;  
+    background-image: -gtk-gradient(radial, center center, 0, center center, 0.3571428571, to(#E95420), to(transparent)); }  
+    headerbar button.titlebutton.close:not(.appmenu):hover, .titlebar button.titlebutton.close:not(.appmenu):hover, headerbar.selection-mode button.titlebutton.close:not(.appmenu):hover, button.titlebutton.close:not(.appmenu):hover {  
+      background-image: -gtk-gradient(radial, center center, 0, center center, 0.3571428571, to(#f00400), to(transparent));  
+      background-image: -gtk-gradient(radial, center center, 0, center center, 0.3571428571, to(#f00400), to(transparent)); }  
+    headerbar button.titlebutton.close:not(.appmenu):active, .titlebar button.titlebutton.close:not(.appmenu):active, headerbar.selection-mode button.titlebutton.close:not(.appmenu):active, button.titlebutton.close:not(.appmenu):active {  
+      background-image: -gtk-gradient(radial, center center, 0, center center, 0.3571428571, to(#E95420), to(transparent));  
+      background-image: -gtk-gradient(radial, center center, 0, center center, 0.3571428571, to(#E95420), to(transparent)); }  
+    headerbar button.titlebutton.close:not(.appmenu):backdrop, .titlebar button.titlebutton.close:not(.appmenu):backdrop, headerbar.selection-mode button.titlebutton.close:not(.appmenu):backdrop, button.titlebutton.close:not(.appmenu):backdrop {  
+      background-image: -gtk-gradient(radial, center center, 0, center center, 0.3571428571, to(#636363), to(transparent)); }  
+      headerbar button.titlebutton.close:not(.appmenu):backdrop:hover, .titlebar button.titlebutton.close:not(.appmenu):backdrop:hover, headerbar.selection-mode button.titlebutton.close:not(.appmenu):backdrop:hover, button.titlebutton.close:not(.appmenu):backdrop:hover {  
+        background-image: -gtk-gradient(radial, center center, 0, center center, 0.3571428571, to(#707070), to(transparent)); }  
+  
+  */

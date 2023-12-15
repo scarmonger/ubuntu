@@ -1,0 +1,56 @@
+decoration {
+	border: 1px solid gray;
+	background: gray;
+}
+
+headerbar {
+	border-top:1px solid gray;
+	border-right:1px solid gray;
+	border-bottom:0px solid gray;
+	border-left:1px solid gray;
+}
+
+/* Change windows title color
+
+.titlebar, headerbar {  
+  background: #3d3d3d;  
+  border-color: #3d3d3d;  
+  border-width: 0 0 0px;  
+  border-style: solid;  
+  min-height: 38px;  
+  box-shadow: none;  
+  color:white;  
+}
+.titlebar:backdrop, headerbar:backdrop {
+  background: #4c4a48;
+  box-shadow: none;
+  color:white;
+}  
+  
+windowcontrols button {  
+  padding: 2px;  
+  margin: 0 7px;  
+  border: none;  
+  box-shadow: none;  
+  background: transparent;  
+  color: #FFFFFF;}  
+  windowcontrols button.maximize, windowcontrols button.maximize:backdrop, windowcontrols button.minimize, windowcontrols button.minimize:backdrop {  
+    background: transparent; }  
+    windowcontrols button.maximize:hover, windowcontrols button.maximize:backdrop:hover, windowcontrols button.minimize:hover, windowcontrols button.minimize:backdrop:hover {  
+      background: #4f4f4f; }  
+    windowcontrols button.maximize:active, windowcontrols button.maximize:backdrop:active, windowcontrols button.minimize:active, windowcontrols button.minimize:backdrop:active {  
+      background: #5c5c5c; }  
+  windowcontrols button.close {  
+    background: #E95420; }  
+    windowcontrols button.close:hover {  
+      background: #F00400; }  
+    windowcontrols button.close:active {  
+      background: #E95420; }  
+    windowcontrols button.close:backdrop {  
+      background: #636363; }  
+      windowcontrols button.close:backdrop:hover {  
+        background: #707070; }  
+    windowcontrols button.close image {  
+      color: #F7F7F7; }  
+  
+*/
