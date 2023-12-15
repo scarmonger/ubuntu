@@ -391,6 +391,7 @@ https://extensions.gnome.org/extension/3193/blur-my-shell/
 https://extensions.gnome.org/extension/779/clipboard-indicator/
 https://extensions.gnome.org/extension/1460/vitals/
 https://extensions.gnome.org/extension/5237/rounded-window-corners/
+https://extensions.gnome.org/extension/4338/allow-locked-remote-desktop/
 
 # Remove recent nautilus
 https://askubuntu.com/questions/1194319/can-the-starred-folder-in-the-left-pane-of-files-nautilus-be-removed
