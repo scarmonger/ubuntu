@@ -1,3 +1,4 @@
+https://linuxconfig.org/ubuntu-20-04-remote-desktop-access-from-windows-10
 systemctl --user status gnome-remote-desktop.service
 systemctl --user start gnome-remote-desktop.service
 systemctl --user restart gnome-remote-desktop
