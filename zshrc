@@ -55,13 +55,11 @@ unsetopt PROMPT_SP
 
 # Nvim switcher
 alias nvim_old="NVIM_APPNAME=nvim_old nvim"
-alias nvim_chris="NVIM_APPNAME=chris nvim"
-alias nvim_kick="NVIM_APPNAME=nvim_kick nvim"
-alias nvim_chad="NVIM_APPNAME=NvChad nvim"
-alias nvim_astro="NVIM_APPNAME=AstroNvim nvim"
+alias nvim_chris="NVIM_APPNAME=nvim_chris"
+alias nvim_lazy="NVIM_APPNAME=nvim_lazy nvim"
 
 function nvims() {
-  items=("nvim_kick" "nvim_old" "default" "chrisatmachine" "NvChad" "AstroNvim")
+  items=("nvim_lazy" "nvim_old" "nvim_chris" "default")
   config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=50% --layout=reverse --border --exit-0)
   if [[ -z $config ]]; then
     echo "Nothing selected"
