@@ -2,6 +2,13 @@
 vim.keymap.set("n", ";", ":", {})
 vim.keymap.set("n", ":", ";", {})
 
+vim.keymap.set("n", "<leader>ee", ":Neotree position=current<cr>", { desc = "Open Current Folder" })
+vim.keymap.set("n", "<leader>en", ":Neotree<cr>", { desc = "Open Current Folder" })
+
+vim.keymap.set("n", "<C-s>", ":w<cr>", { desc = "Save Progress" })
+vim.keymap.set("i", "<C-s>", "<esc>:w<cr>", { desc = "Save Progress" })
+
+vim.keymap.set("n", "<C-w>t", ":Startify", { desc = "startify" })
 
 -- Primeagen
 vim.keymap.set("x", "<leader>p", '"_dP', { desc = "paste in visual mode, don't yank" })
