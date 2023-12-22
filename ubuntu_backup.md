@@ -249,7 +249,6 @@ rm -Rf ~/.config/nvim
 ln -ivs ~/marc/GitHub/ubuntu/config/nvim ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/config/nvim_old ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/config/nvim_lazy ~/.config/
-ln -ivs ~/marc/GitHub/ubuntu/config/nvim_newlazy ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/config/nvim_chris ~/.config/
 
 ln -ivs ~/marc/GitHub/ubuntu/config/lf ~/.config/

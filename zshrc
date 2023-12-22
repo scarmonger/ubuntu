@@ -57,9 +57,10 @@ unsetopt PROMPT_SP
 alias nvim_old="NVIM_APPNAME=nvim_old nvim"
 alias nvim_chris="NVIM_APPNAME=nvim_chris"
 alias nvim_lazy="NVIM_APPNAME=nvim_lazy nvim"
+alias nvim_newlazy="NVIM_APPNAME=nvim_newlazy nvim"
 
 function nvims() {
-  items=("nvim_lazy" "nvim_old" "nvim_chris" "default")
+  items=("nvim_newlazy" "nvim_lazy" "nvim_old" "nvim_chris" "default")
   config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=50% --layout=reverse --border --exit-0)
   if [[ -z $config ]]; then
     echo "Nothing selected"

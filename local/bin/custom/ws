@@ -1,5 +1,5 @@
-tmux rename-window lf
-lf-ueberzug
+tmux rename-window ranger
+ranger
 
 #tmux new-window -c -n nvim
 #tmux new-window -c 
