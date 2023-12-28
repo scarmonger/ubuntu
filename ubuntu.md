@@ -357,9 +357,11 @@ lsd
 dropbox > python3-gpg libpango1.0-0
 thorium
 vscode
+zoom
 virtualbox
 >sudo apt install libqt5help5
 >sudo apt --fix-broken install
+
 
 # Firefox 
 https://support.mozilla.org/en-US/kb/install-firefox-linux

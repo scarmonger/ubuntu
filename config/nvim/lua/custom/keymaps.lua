@@ -7,11 +7,22 @@ vim.keymap.set("n", "gk", ":tabprevious<cr>", { desc = "tab previous" })
 
 vim.keymap.set("n", "<leader>ee", ":Neotree position=current<cr>", { desc = "Open Current Folder" })
 vim.keymap.set("n", "<leader>en", ":Neotree<cr>", { desc = "Open Current Folder" })
+vim.keymap.set("n", "<leader>ev", ":tabnew ~/marc/GitHub/ubuntu/config/nvim/lua/custom/keymaps.lua<cr>",
+	{ desc = "Edit Vim Keymap" })
+vim.keymap.set("n", "<leader>eo", ":tabnew ~/marc/GitHub/ubuntu/config/nvim/lua/custom/options.lua<cr>",
+	{ desc = "Edit Vim options" })
 
 vim.keymap.set("n", "<C-s>", ":w<cr>", { desc = "Save Progress" })
 vim.keymap.set("i", "<C-s>", "<esc>:w<cr>", { desc = "Save Progress" })
 
-vim.keymap.set("n", "<C-w>t", ":Startify", { desc = "startify" })
+vim.keymap.set("n", "<M-t>", ":Startify<cr>", { desc = "startify" })
+vim.keymap.set("n", "<M-h>", "0", { desc = "" })
+vim.keymap.set("n", "<M-l>", "$", { desc = "" })
+vim.keymap.set("n", "<M-j>", ":tabnext<cr>", { desc = "" })
+vim.keymap.set("n", "<M-k>", ":tabprevious<cr>", { desc = "" })
+
+vim.keymap.set("n", "<leader>sR", require("telescope.builtin").resume, { desc = "[S]earch [R]esume" })
+vim.keymap.set("n", "<leader>sr", require("telescope.builtin").oldfiles, { desc = "[?] Find recently opened files" })
 
 -- Primeagen
 vim.keymap.set("x", "<leader>p", '"_dP', { desc = "paste in visual mode, don't yank" })
