@@ -1,6 +1,9 @@
 -- remap button
 vim.keymap.set("n", ";", ":", {})
 vim.keymap.set("n", ":", ";", {})
+vim.keymap.set("n", "gj", ":tabnext<cr>", { desc = "tab next" })
+vim.keymap.set("n", "gk", ":tabprevious<cr>", { desc = "tab previous" })
+-- vim.keymap.set("n", "gh", ":tabprevious<cr>", { desc = "tab previous" })
 
 vim.keymap.set("n", "<leader>ee", ":Neotree position=current<cr>", { desc = "Open Current Folder" })
 vim.keymap.set("n", "<leader>en", ":Neotree<cr>", { desc = "Open Current Folder" })

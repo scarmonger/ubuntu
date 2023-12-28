@@ -1,15 +1,7 @@
-https://linuxconfig.org/ubuntu-20-04-remote-desktop-access-from-windows-10
-systemctl --user status gnome-remote-desktop.service
-systemctl --user start gnome-remote-desktop.service
-systemctl --user restart gnome-remote-desktop
-
-https://gitlab.gnome.org/GNOME/gnome-control-center/-/issues/1775
-https://bugs.launchpad.net/ubuntu/+source/gnome-control-center/+bug/1969619
-
 systemctl suspend -i
 sudo flatpak override com.wps.Office --filesystem=/home/andry/Downloads
 
-sudo apt update 
+sudo apt update
 
 # change mac address
 sudo apt install macchanger
@@ -20,6 +12,9 @@ sudo EDITOR=nano crontab -e
 @reboot macchanger -m 6c:0b:84:22:be:c4 enp0s31f6
 @reboot tailscale up
 
+sudo dpkg -i thorium
+sudo snap remove --purge firefox
+
 sudo apt upgrade
 
 # Check UUID (blkid)
@@ -29,13 +24,19 @@ ll /dev/disk/by-uuid
 
 nvim /etc/fstab
 
-sudo echo "UUID=8f4825e2-0016-43c2-994a-bb2830ddaea9 /home/mc/marc/               ext4    errors=remount-ro 0       1" >> /etc/fstab
+sudo cp /etc/fstab /etc/fstab_bak
+
+pc:
+echo "UUID=8f4825e2-0016-43c2-994a-bb2830ddaea9 /home/mc/marc/               ext4    errors=remount-ro 0       1" | sudo tee -a /etc/fstab
+
+tp13:
+echo "UUID=3cb910c9-2e1e-4910-a6a9-c114df09d3cd /home/mc/marc/               ext4    errors=remount-ro 0       1" | sudo tee -a /etc/fstab
 
 sudo mount -a
 
 
 # Install app
-sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar fonts-powerline neofetch xclip ssh fzf mpv qutebrowser tmux dconf-editor kazam gnome-tweaks
+sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar fonts-powerline neofetch xclip ssh fzf mpv qutebrowser tmux dconf-editor kazam gnome-tweaks kitty chrome-gnome-shell filezilla
 
 systemctl status ssh
 systemctl start ssh
@@ -137,7 +138,7 @@ flatpak install -y flathub io.github.shiftey.Desktop
 flatpak install -y flathub com.skype.Client
 flatpak install -y flathub md.obsidian.Obsidian
 flatpak install -y flathub net.christianbeier.Gromit-MPX
-flatpak install -y flathub com.wps.Office
+#flatpak install -y flathub com.wps.Office
 flatpak install -y flathub com.obsproject.Studio
 flatpak install -y flathub org.libreoffice.LibreOffice
 flatpak install -y flathub org.mozilla.Thunderbird
@@ -145,6 +146,9 @@ flatpak install -y flathub com.anydesk.Anydesk
 flatpak install -y flathub org.keepassxc.KeePassXC
 flatpak install -y flathub org.remmina.Remmina
 flatpak install -y flathub com.github.tchx84.Flatseal
+
+flatseal > allow home folder
+thunderbird > set profile from Help > Troubleshooting information
 
 # Snapd
 sudo snap install projectlibre
@@ -252,12 +256,11 @@ ln -ivs ~/marc/GitHub/ubuntu/config/nvim_lazy ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/config/nvim_newlazy ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/config/nvim_chris ~/.config/
 
-ln -ivs ~/marc/GitHub/ubuntu/config/lf ~/.config/
+
 ln -ivs ~/marc/GitHub/ubuntu/config/sxiv ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/config/castero ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/local/bin/custom ~/.local/bin
-ln -ivs ~/marc/GitHub/ubuntu/config/lf-ueberzugrc/lf-ueberzug ~/marc/GitHub/ubuntu/local/bin/custom/
-ln -ivs ~/go/bin/lf ~/marc/GitHub/ubuntu/local/bin/custom/
+
 ln -ivs ~/marc/github/ubuntu/config/moc/config ~/.moc/
 ln -ivs ~/marc/github/ubuntu/config/moc/my_keymap ~/.moc/
 ln -ivs ~/marc/github/ubuntu/bashrc ~/.bashrc
@@ -265,21 +268,20 @@ cp -ivs ~/github/dotfile/.oh-my-zsh/custom/autocomplete.zsh ~/.oh-my-zsh/custom/
 cp -ivs ~/github/dotfile/.oh-my-zsh/custom/shortcuts.zsh ~/.oh-my-zsh/custom/shortcuts.zsh
 
 ln -ivs ~/marc/GitHub/ubuntu/zshrc ~/.zshrc
-ln -ivs ~/marc/appimagefile/ksnip ~/.local/bin/ksnip
-ln -ivs ~/marc/appimagefile/nvim ~/.local/bin/nvim
 
 mkdir -p ~/.config/tmux-plugins
 ln -ivs ~/marc/GitHub/ubuntu/config/tmux ~/.config/
 rm -Rf ~/marc/GitHub/ubuntu/config/tmux/plugins/
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux-plugins/tpm
+ctrl + B + capital I = install plugin
 ctrl + space + capital I = install plugin
 
-ln -ivs ~/Dropbox/Dataon/.thunderbird ~/
-ln -ivs ~/marc/appimagefile/yuzu_ccf737910e9e7575365495cddfbb24f8 ~/Desktop
+#ln -ivs ~/Dropbox/Dataon/.thunderbird ~/
+ln -ivs ~/marc/appimagefile/ksnip ~/.local/bin/
+ln -ivs ~/marc/appimagefile/nvim ~/.local/bin/
 
 -- Remove recent in nautilus --
 ln -ivs ~/marc/GitHub/ubuntu/config/nautilus ~/.config/
-ln -ivs ~/marc/GitHub/ubuntu/pam_environment ~/.pam_environment
 ln -ivs ~/marc/GitHub/ubuntu/pam_environment ~/.pam_environment
 
 -- Remove starred icon in nautilus --
@@ -405,3 +407,8 @@ https://askubuntu.com/questions/762591/how-to-remove-unwanted-default-bookmarks-
 
 # Change window color border
 https://github.com/lossurdo/yaru-dark-border
+
+# xfreerdp
+sudo apt install freerdp2-x11
+xfreerdp +clipboard +fonts /sound /mic /smart-sizing /multimon /network:auto /cert-ignore /u:<username> /d:WORKGROUP /v:192.168.x.x
+
