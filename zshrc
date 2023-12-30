@@ -55,7 +55,7 @@ unsetopt PROMPT_SP
 
 # Nvim switcher
 alias nvim_old="NVIM_APPNAME=nvim_old nvim"
-alias nvim_chris="NVIM_APPNAME=nvim_chris"
+alias nvim_chris="NVIM_APPNAME=nvim_chris nvim"
 alias nvim_lazy="NVIM_APPNAME=nvim_lazy nvim"
 alias nvim_newlazy="NVIM_APPNAME=nvim_newlazy nvim"
 
