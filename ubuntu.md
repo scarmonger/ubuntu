@@ -12,12 +12,12 @@ sudo EDITOR=nano crontab -e
 @reboot macchanger -m 6c:0b:84:22:be:c4 enp0s31f6
 @reboot tailscale up
 
-sudo dpkg -i thorium
-sudo snap remove --purge firefox
 
 sudo apt upgrade
 
 # Check UUID (blkid)
+mkdir ~/marc
+
 lsblk
 
 ll /dev/disk/by-uuid
@@ -35,6 +35,9 @@ echo "UUID=3cb910c9-2e1e-4910-a6a9-c114df09d3cd /home/mc/marc/               ext
 sudo mount -a
 
 
+sudo dpkg -i ~/marc/debinstaller/thorium-browser_117.0.5938.157_amd64.deb 
+sudo snap remove --purge firefox
+
 # Install app
 sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar fonts-powerline neofetch xclip ssh fzf mpv qutebrowser tmux dconf-editor kazam gnome-tweaks kitty chrome-gnome-shell filezilla
 
@@ -42,6 +45,7 @@ systemctl status ssh
 systemctl start ssh
 systemctl enable ssh
 
+# Install oh-my-zsh
 ** Rubah bin bash menjadi zsh (harus logout) **
 chsh -s /usr/bin/zsh
 
@@ -80,6 +84,110 @@ https://www.thorsten-hans.com/5-types-of-zsh-aliases
 https://gist.github.com/dogrocker/1efb8fd9427779c827058f873b94df95
 
 
+# symlink
+```
+rm -Rf ~/.config/ranger
+ln -ivs ~/marc/GitHub/ubuntu/config/ranger ~/.config/
+rm -Rf ~/.config/nvim
+ln -ivs ~/marc/GitHub/ubuntu/config/nvim ~/.config/
+ln -ivs ~/marc/GitHub/ubuntu/config/nvim_old ~/.config/
+ln -ivs ~/marc/GitHub/ubuntu/config/nvim_lazy ~/.config/
+ln -ivs ~/marc/GitHub/ubuntu/config/nvim_newlazy ~/.config/
+ln -ivs ~/marc/GitHub/ubuntu/config/nvim_chris ~/.config/
+
+mkdir ~/.config/script
+mkdir ~/.local/bin
+mkdir ~/.moc
+
+ln -ivs ~/marc/GitHub/ubuntu/config/sxiv ~/.config/
+ln -ivs ~/marc/GitHub/ubuntu/config/castero ~/.config/
+ln -ivs ~/marc/GitHub/ubuntu/local/bin/custom ~/.local/bin
+
+ln -ivs ~/marc/GitHub/ubuntu/config/moc/config ~/.moc/
+ln -ivs ~/marc/GitHub/ubuntu/config/moc/my_keymap ~/.moc/
+ln -ivs ~/marc/GitHub/ubuntu/bashrc ~/.bashrc
+cp -ivs ~/marc/GitHub/dotfile/.oh-my-zsh/custom/autocomplete.zsh ~/.oh-my-zsh/custom/autocomplete.zsh
+cp -ivs ~/marc/GitHub/dotfile/.oh-my-zsh/custom/shortcuts.zsh ~/.oh-my-zsh/custom/shortcuts.zsh
+
+ln -ivs ~/marc/GitHub/ubuntu/zshrc ~/.zshrc
+
+mkdir -p ~/.config/tmux-plugins
+ln -ivs ~/marc/GitHub/ubuntu/config/tmux ~/.config/
+rm -Rf ~/marc/GitHub/ubuntu/config/tmux/plugins/
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux-plugins/tpm
+ctrl + B + capital I = install plugin
+ctrl + space + capital I = install plugin
+
+#ln -ivs ~/Dropbox/Dataon/.thunderbird ~/
+ln -ivs ~/marc/appimagefile/ksnip ~/.local/bin/
+ln -ivs ~/marc/appimagefile/nvim ~/.local/bin/
+
+-- Remove recent in nautilus --
+ln -ivs ~/marc/GitHub/ubuntu/config/nautilus ~/.config/
+ln -ivs ~/marc/GitHub/ubuntu/pam_environment ~/.pam_environment
+
+-- Remove starred icon in nautilus --
+ln -ivs ~/marc/GitHub/ubuntu/config/user-dirs.dirs ~/.config/
+sudo ln -ivs ~/marc/GitHub/ubuntu/etc/xdg/user-dirs.defaults /etc/xdg/user-dirs.defaults
+
+-- Change window border color --
+ln -ivs ~/marc/GitHub/ubuntu/config/gtk-3.0/gtk.css ~/.config/gtk-3.0/
+mkdir ~/.config/gtk-4.0
+ln -ivs ~/marc/GitHub/ubuntu/config/gtk-4.0/gtk.css ~/.config/gtk-4.0/
+
+
+```
+
+# Install neovim
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+chmod u+x nvim.appimage
+./nvim.appimage
+
+## AppImageLauncher
+sudo apt install software-properties-common
+sudo add-apt-repository ppa:appimagelauncher-team/stable
+sudo apt update
+sudo apt install appimagelauncher
+
+Run App : appimagelauncher
+
+
+# Backup settings
+dconf dump /org/gnome/ > gnome-backup
+dconf dump / > full-gnome-backup
+
+Load settings:
+dconf load /org/gnome/ < gnome-backup
+dconf load /org/gnome/ < ~/marc/GitHub/ubuntu/gnome-backup
+
+# Gnome extension
+https://extensions.gnome.org/extension/3193/blur-my-shell/
+https://extensions.gnome.org/extension/779/clipboard-indicator/
+https://extensions.gnome.org/extension/1460/vitals/
+https://extensions.gnome.org/extension/5237/rounded-window-corners/
+https://extensions.gnome.org/extension/4338/allow-locked-remote-desktop/
+https://extensions.gnome.org/extension/1160/dash-to-panel/
+
+# Download .deb installer 
+wget https://dl.thorium.rocks/debian/dists/stable/thorium.list
+sudo mv thorium.list /etc/apt/sources.list.d/
+sudo apt update
+sudo apt install thorium-browser
+
+sudo apt install python3-gpg libpango1.0-0
+sudo dpkg -i ~/marc/debinstaller/dropbox_2020.03.04_amd64.deb
+sudo apt --fix-broken install
+
+sudo dpkg -i ~/marc/debinstaller/VNC-Viewer-7.8.0-Linux-x64.deb 
+sudo dpkg -i ~/marc/debinstaller/code_1.84.2-1699528352_amd64.deb
+sudo dpkg -i ~/marc/debinstaller/wps-office_11.1.0.11711.XA_amd64.deb
+sudo dpkg -i ~/marc/debinstaller/lsd-musl_1.0.0_amd64.deb
+
+sudo apt install libqt5help5 libqt5x11extras5
+sudo dpkg -i ~/marc/debinstaller/virtualbox-7.0_7.0.12-159484\~Ubuntu\~jammy_amd64.deb 
+sudo apt --fix-broken install
+
+
 ## Alacritty
 sudo add-apt-repository ppa:aslatter/ppa -y
 sudo apt install alacritty
@@ -90,9 +198,9 @@ sudo apt install -y python3 python3-pip
 pip install selenium
 pip install pyperclip
 pip install castero
+pip3 install neovim-remote
 
 https://github.com/mhinz/neovim-remote
-pip3 install neovim-remote
 pip3 install neovim-remote --break-system-packages
 
 > pyperclip for custom script insys & sfsupport
@@ -115,19 +223,6 @@ sudo apt  install veracrypt
 ksnip
 chmod +x ./*.AppImage
 
-# Install neovim
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-chmod u+x nvim.appimage
-./nvim.appimage
-
-## AppImageLauncher
-sudo apt install software-properties-common
-sudo add-apt-repository ppa:appimagelauncher-team/stable
-sudo apt update
-sudo apt install appimagelauncher
-
-Run App : appimagelauncher
-
 ## Add flatpak to gnome
 sudo apt install -y flatpak gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
@@ -137,15 +232,15 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 flatpak install -y flathub io.github.shiftey.Desktop
 flatpak install -y flathub com.skype.Client
 flatpak install -y flathub md.obsidian.Obsidian
-flatpak install -y flathub net.christianbeier.Gromit-MPX
 #flatpak install -y flathub com.wps.Office
 flatpak install -y flathub com.obsproject.Studio
 flatpak install -y flathub org.libreoffice.LibreOffice
-flatpak install -y flathub org.mozilla.Thunderbird
 flatpak install -y flathub com.anydesk.Anydesk
 flatpak install -y flathub org.keepassxc.KeePassXC
 flatpak install -y flathub org.remmina.Remmina
 flatpak install -y flathub com.github.tchx84.Flatseal
+flatpak install -y flathub net.christianbeier.Gromit-MPX
+flatpak install -y flathub org.mozilla.Thunderbird
 
 flatseal > allow home folder
 thunderbird > set profile from Help > Troubleshooting information
@@ -220,13 +315,6 @@ Other options are possible:
 gsettings set org.gnome.desktop.privacy remember-recent-files false
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'focus-minimize-or-previews'
 
-# Backup settings
-
-dconf dump /org/gnome/ > gnome-backup
-dconf dump / > full-gnome-backup
-
-Load settings:
-dconf load /org/gnome/ < gnome-backup
 
 # Reference
 
@@ -243,58 +331,6 @@ cat /etc/update-manager/release-upgrades - Awal
 
 Remote clients:
 remmina, realvnc viewer
-
-
-# symlink
-```
-rm -Rf ~/.config/ranger
-ln -ivs ~/marc/GitHub/ubuntu/config/ranger ~/.config/
-rm -Rf ~/.config/nvim
-ln -ivs ~/marc/GitHub/ubuntu/config/nvim ~/.config/
-ln -ivs ~/marc/GitHub/ubuntu/config/nvim_old ~/.config/
-ln -ivs ~/marc/GitHub/ubuntu/config/nvim_lazy ~/.config/
-ln -ivs ~/marc/GitHub/ubuntu/config/nvim_newlazy ~/.config/
-ln -ivs ~/marc/GitHub/ubuntu/config/nvim_chris ~/.config/
-
-
-ln -ivs ~/marc/GitHub/ubuntu/config/sxiv ~/.config/
-ln -ivs ~/marc/GitHub/ubuntu/config/castero ~/.config/
-ln -ivs ~/marc/GitHub/ubuntu/local/bin/custom ~/.local/bin
-
-ln -ivs ~/marc/github/ubuntu/config/moc/config ~/.moc/
-ln -ivs ~/marc/github/ubuntu/config/moc/my_keymap ~/.moc/
-ln -ivs ~/marc/github/ubuntu/bashrc ~/.bashrc
-cp -ivs ~/github/dotfile/.oh-my-zsh/custom/autocomplete.zsh ~/.oh-my-zsh/custom/autocomplete.zsh
-cp -ivs ~/github/dotfile/.oh-my-zsh/custom/shortcuts.zsh ~/.oh-my-zsh/custom/shortcuts.zsh
-
-ln -ivs ~/marc/GitHub/ubuntu/zshrc ~/.zshrc
-
-mkdir -p ~/.config/tmux-plugins
-ln -ivs ~/marc/GitHub/ubuntu/config/tmux ~/.config/
-rm -Rf ~/marc/GitHub/ubuntu/config/tmux/plugins/
-git clone https://github.com/tmux-plugins/tpm ~/.config/tmux-plugins/tpm
-ctrl + B + capital I = install plugin
-ctrl + space + capital I = install plugin
-
-#ln -ivs ~/Dropbox/Dataon/.thunderbird ~/
-ln -ivs ~/marc/appimagefile/ksnip ~/.local/bin/
-ln -ivs ~/marc/appimagefile/nvim ~/.local/bin/
-
--- Remove recent in nautilus --
-ln -ivs ~/marc/GitHub/ubuntu/config/nautilus ~/.config/
-ln -ivs ~/marc/GitHub/ubuntu/pam_environment ~/.pam_environment
-
--- Remove starred icon in nautilus --
-ln -ivs ~/marc/GitHub/ubuntu/config/user-dirs.dirs ~/.config/
-sudo ln -ivs ~/marc/GitHub/ubuntu/etc/xdg/user-dirs.defaults /etc/xdg/user-dirs.defaults
-
--- Change window border color --
-ln -ivs ~/marc/GitHub/ubuntu/config/gtk-3.0/gtk.css ~/.config/gtk-3.0/
-ln -ivs ~/marc/GitHub/ubuntu/config/gtk-4.0/gtk.css ~/.config/gtk-4.0/
-
-
-```
-
 
 # Setup Qutebrowser
 
@@ -349,19 +385,6 @@ sudo timeshift --create --comments "A new backup" --tags D
 
 sudo timeshift --restore
 
-# Download .deb installer 
-sudo dpkg -i ~/Dropbox/Archive/installer/thorium-browser_117.0.5938.157_amd64.deb
-
-realvnc viewer
-lsd
-dropbox > python3-gpg libpango1.0-0
-thorium
-vscode
-zoom
-virtualbox
->sudo apt install libqt5help5
->sudo apt --fix-broken install
-
 
 # Firefox 
 https://support.mozilla.org/en-US/kb/install-firefox-linux
@@ -392,14 +415,6 @@ sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox
 Alternatively, if wget is not installed on your computer, go to the URL mentioned above, right-click on the page to open the contextual menu and select Save Page As. After you downloaded the file, move it to /usr/local/share/applications.
 
 To verify that the installation was successful, you can open the Troubleshooting Information page. In the Application Basics section, the value of Application Binary should be /opt/firefox/firefox-bin.
-
-# Gnome extension
-https://extensions.gnome.org/extension/3193/blur-my-shell/
-https://extensions.gnome.org/extension/779/clipboard-indicator/
-https://extensions.gnome.org/extension/1460/vitals/
-https://extensions.gnome.org/extension/5237/rounded-window-corners/
-https://extensions.gnome.org/extension/4338/allow-locked-remote-desktop/
-https://extensions.gnome.org/extension/1160/dash-to-panel/
 
 # Remove recent nautilus
 https://askubuntu.com/questions/1194319/can-the-starred-folder-in-the-left-pane-of-files-nautilus-be-removed

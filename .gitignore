@@ -1,3 +1,4 @@
 config/tmux/plugins
 config/tmux/plugins
 config/tmux/plugins/catppuccin-tmux
+config/nvim/lazy-lock.json
