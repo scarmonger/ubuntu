@@ -429,3 +429,12 @@ https://github.com/lossurdo/yaru-dark-border
 sudo apt install freerdp2-x11
 xfreerdp +clipboard +fonts /sound /mic /smart-sizing /multimon /network:auto /cert-ignore /u:<username> /d:WORKGROUP /v:192.168.x.x
 
+# yt-dlp
+sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+sudo chmod a+rx /usr/local/bin/yt-dlp  # Make executable
+
+# raspberry pi 
+moode.local
+
+# Change root password
+sudo passwd root
