@@ -23,3 +23,6 @@ vim.cmd([[ let g:startify_custom_header = [] ]])
 
 -- Re-open at last position
 vim.cmd([[ au BufReadPost * if line("'\"") >= 1 && line ("'\"") <= line("$") | exe "normal! g`\"" | endif ]])
+
+vim.cmd([[ set noswapfile ]])
+vim.cmd([[ set nobackup ]])
