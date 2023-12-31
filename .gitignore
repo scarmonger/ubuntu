@@ -3,3 +3,6 @@ config/tmux/plugins
 config/tmux/plugins/catppuccin-tmux
 config/nvim/lazy-lock.json
 config/nvim/lua/custom/~/.vim/undodir
+config/nvim_lazy/lua/config/~/.vim/undodir
+config/nvim/~/.vim/undodir
+config/nvim/lua/~/.vim/undodir

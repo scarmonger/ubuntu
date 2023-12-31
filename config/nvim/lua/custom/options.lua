@@ -13,6 +13,7 @@ vim.opt.shiftwidth = 4
 -- vim.opt.nobackup = 1
 vim.opt.undodir = "~/.vim/undodir"
 vim.opt.undofile = true
+vim.opt.hlsearch = true
 
 vim.opt.iskeyword:append("-") -- hyphenated words recognized by searches / "asdf-asdf" is treated as one word
 -- vim.highlight = "CursorLineNr ctermfg=220 ctermbg=25 gui=bold guifg=#ffd700 guibg=#005faf"
