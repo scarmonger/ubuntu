@@ -6,6 +6,8 @@ vim.keymap.set("n", "gj", ":tabnext<cr>", { desc = "tab next" })
 vim.keymap.set("n", "gk", ":tabprevious<cr>", { desc = "tab previous" })
 vim.keymap.set("v", "<leader><Enter>", ":.! bc -l <CR>", { desc = "calculate number" })
 
+vim.keymap.set("n", "Q", "<nop>", {})
+
 -- Edit file
 vim.keymap.set("n", "<leader>ee", ":Neotree position=current<cr>", { desc = "Neotree Current Folder" })
 vim.keymap.set("n", "<leader>en", ":Neotree<cr>", { desc = "Neotree open folder" })
@@ -47,7 +49,7 @@ vim.keymap.set("n", "<leader>tD",
 vim.keymap.set("n", "<C-s>", ":w<cr>", { desc = "Save Progress" })
 vim.keymap.set("i", "<C-s>", "<esc>:w<cr>", { desc = "Save Progress" })
 vim.keymap.set("i", "<C-d>", "<esc>ddi", { desc = "delete line when insert mode" })
-vim.keymap.set("i", "<C-v>", "<esc>pa", { desc = "paste in insert mode" })
+-- vim.keymap.set("i", "<C-v>", "<esc>pa", { desc = "paste in insert mode" })
 
 vim.keymap.set("n", "x", '"_x', { desc = "prevent yank character when deleting" })
 vim.keymap.set("n", "X", '"_x', { desc = "prevent yank character when deleting" })
@@ -71,7 +73,7 @@ vim.keymap.set("n", "<leader>sr", require("telescope.builtin").oldfiles, { desc 
 vim.keymap.set("n", "<leader>sc", require("telescope.builtin").command_history, { desc = "Find command history" })
 vim.keymap.set("n", "<leader>sC", require("telescope.builtin").commands, { desc = "Find available command" })
 
--- vim.keymap.set("n", "<F5>", ":UndotreeToggle<CR>", { desc = "UndotreeToggle" })
+vim.keymap.set("n", "<F5>", ":UndotreeToggle<CR>", { desc = "UndotreeToggle" })
 vim.keymap.set("n", "<F11>", 'a<C-R>=strftime("%c")<CR><Esc>', { desc = "insert date and time" })
 
 vim.keymap.set("n", '<leader>"', 'viw<esc>a"<esc>hbi"<esc>lel<cr>', { desc = "Surround word with double quotes" })
@@ -90,8 +92,12 @@ vim.keymap.set("n", "<leader>3", "3gt", { desc = "go to tab" })
 vim.keymap.set("n", "<leader>4", "4gt", { desc = "go to tab" })
 vim.keymap.set("n", "<leader>5", "5gt", { desc = "go to tab" })
 
-vim.keymap.set("n", "<C-j>", ":cnext<CR>zzzv", { desc = "cnext" })
-vim.keymap.set("n", "<C-j>", ":cprevious<CR>zzzv", { desc = "cprev" })
+-- vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zzzv", { desc = "quickfixlist cnext" })
+-- vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>zzzv", { desc = "quickfixlist cprev" })
+vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zz", { desc = "quickfixlist cnext" })
+vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>zz", { desc = "quickfixlist cprev" })
+vim.keymap.set("n", "<leader>j", "<cmd>lnext<CR>zz", { desc = "quickfixlist lnext" })
+vim.keymap.set("n", "<leader>k", "<cmd>lprev<CR>zz", { desc = "quickfixlist lprev" })
 
 vim.keymap.set("i", "<space>", "<space><c-g>u", { desc = "undo breakpoint" })
 vim.keymap.set("i", "<CR>", "<CR><c-g>u", { desc = "undo breakpoint" })
@@ -101,15 +107,12 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "moving text" })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "moving text" })
 vim.keymap.set("i", "<C-j>", "<esc>:m .+1<CR>==i", { desc = "moving text" })
 vim.keymap.set("i", "<C-k>", "<esc>:m .-2<CR>==i", { desc = "moving text" })
-vim.keymap.set("n", "<leader>j", ":m .+1<CR>==", { desc = "moving text" })
-vim.keymap.set("n", "<leader>k", ":m .-2<CR>==", { desc = "moving text" })
 
 
 vim.keymap.set("n", ",html", ":read $HOME/.config/nvim/snippets/skeleton.html<CR>3jwf>a", { desc = "snippets" })
 vim.keymap.set("n", ",sig", ":read $HOME/.config/nvim/snippets/signature<CR>", { desc = "snippets" })
 
 -- Primeagen
-vim.keymap.set("x", "<leader>p", '"_dP', { desc = "paste in visual mode, don't yank" })
 
 vim.keymap.set("n", "<leader>d", '"_d', { desc = "delete into void" })
 vim.keymap.set("v", "<leader>d", '"_d', { desc = "delete into void" })
@@ -121,6 +124,10 @@ vim.keymap.set("n", "<leader>Y", '"+Y', { desc = "copy into system clipboard(+)"
 
 vim.keymap.set("n", "<leader>p", '"+p', { desc = "paste from system clipboard(+)" })
 vim.keymap.set("v", "<leader>p", '"+p', { desc = "paste from system clipboard(+)" })
+vim.keymap.set("x", "<leader>P", "\"_dP", { desc = "paste in visual mode, don't yank" })
+-- foo
+-- bar
+-- copy foo, visual select bar, <leader>p, and pppp afterwards
 
 -- vim.keymap.set("n", "<F2>", ":let @+= @*<cr>", { desc = "copy * registers to clipboard" })
 -- vim.keymap.set("n", "<F4>", ":dis<cr>", { desc = "check registers" })

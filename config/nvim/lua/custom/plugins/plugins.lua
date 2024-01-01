@@ -5,7 +5,7 @@
 
 return {
 	"mhinz/vim-startify",
-	-- 'mbbill/undotree',
+	'mbbill/undotree',
 	'christoomey/vim-tmux-navigator',
-	-- 'ap/vim-css-color'
+	'ap/vim-css-color'
 }
