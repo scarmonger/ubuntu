@@ -11,17 +11,17 @@ vim.keymap.set("n", "Q", "<nop>", {})
 -- Edit file
 vim.keymap.set("n", "<leader>ee", ":Neotree position=current<cr>", { desc = "Neotree Current Folder" })
 vim.keymap.set("n", "<leader>en", ":Neotree<cr>", { desc = "Neotree open folder" })
-vim.keymap.set("n", "<leader>ev", ":tabnew ~/marc/GitHub/ubuntu/config/nvim/lua/custom/keymaps.lua<cr>",
+vim.keymap.set("n", "<leader>ev", ":e ~/marc/GitHub/ubuntu/config/nvim/lua/custom/keymaps.lua<cr>",
 	{ desc = "Edit Vim Keymap" })
-vim.keymap.set("n", "<leader>eo", ":tabnew ~/marc/GitHub/ubuntu/config/nvim/lua/custom/options.lua<cr>",
+vim.keymap.set("n", "<leader>eo", ":e ~/marc/GitHub/ubuntu/config/nvim/lua/custom/options.lua<cr>",
 	{ desc = "Edit Vim options" })
-vim.keymap.set("n", "<leader>ez", ":tabnew ~/marc/GitHub/ubuntu/zshrc<cr>",
+vim.keymap.set("n", "<leader>ez", ":e ~/marc/GitHub/ubuntu/zshrc<cr>",
 	{ desc = "Edit zshrc" })
-vim.keymap.set("n", "<leader>eu", ":tabnew ~/marc/GitHub/ubuntu/ubuntu.md<cr>",
+vim.keymap.set("n", "<leader>eu", ":e ~/marc/GitHub/ubuntu/ubuntu.md<cr>",
 	{ desc = "Edit ubuntu.md file" })
-vim.keymap.set("n", "<leader>er", ":tabnew ~/marc/GitHub/ubuntu/config/ranger/rc.conf<cr>",
+vim.keymap.set("n", "<leader>er", ":e ~/marc/GitHub/ubuntu/config/ranger/rc.conf<cr>",
 	{ desc = "Edit ranger config file" })
-vim.keymap.set("n", "<leader>ea", ":tabnew ~/marc/GitHub/ubuntu/aliases<cr>",
+vim.keymap.set("n", "<leader>ea", ":e ~/marc/GitHub/ubuntu/aliases<cr>",
 	{ desc = "Edit aliases" })
 
 -- Go to folder
@@ -62,7 +62,7 @@ vim.keymap.set("v", "H", "0", { desc = "" })
 vim.keymap.set("n", "L", "$", { desc = "" })
 vim.keymap.set("v", "L", "$h", { desc = "" })
 
-vim.keymap.set("n", "<M-t>", ":tabnew<cr>:Startify<cr>", { desc = "startify" })
+vim.keymap.set("n", "<M-t>", ":Startify<cr>", { desc = "startify" })
 vim.keymap.set("n", "<M-h>", "0", { desc = "" })
 vim.keymap.set("n", "<M-l>", "$", { desc = "" })
 vim.keymap.set("n", "<M-j>", ":bnext<cr>", { desc = "" })
