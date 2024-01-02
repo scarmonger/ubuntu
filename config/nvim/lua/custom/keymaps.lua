@@ -38,6 +38,8 @@ vim.keymap.set("n", "<leader>tt", ':tabnew<cr>', { desc = "copy to buffer" })
 vim.keymap.set("n", "<leader>tr", ':%s//gc<left><left><left>', { desc = "search and replace" })
 vim.keymap.set("n", "<leader>t\\", ":noh<cr>", { desc = "Remove Highlight" })
 vim.keymap.set("n", "<leader>tm", ":tabm<space>", { desc = "Move tab to [n] input" })
+vim.keymap.set("n", "<leader>tg", "yy:bd<CR>:<C-r>0<CR>", { desc = "go to bookmark selection" })
+-- vim.keymap.set("n", "<leader>tg", "yy:cd <C-r>+:bd<CR>", { desc = "go to bookmark selection" })
 
 vim.keymap.set("n", "<leader>tc", ":let @+ = expand('%:p')<cr>", { desc = "copy filepath" })
 vim.keymap.set("n", "<leader>t.", ":! pwd<enter>", { desc = "check cwd / current working directory" })
@@ -63,10 +65,10 @@ vim.keymap.set("v", "L", "$h", { desc = "" })
 vim.keymap.set("n", "<M-t>", ":tabnew<cr>:Startify<cr>", { desc = "startify" })
 vim.keymap.set("n", "<M-h>", "0", { desc = "" })
 vim.keymap.set("n", "<M-l>", "$", { desc = "" })
-vim.keymap.set("n", "<M-j>", ":tabnext<cr>", { desc = "" })
-vim.keymap.set("n", "<M-k>", ":tabprevious<cr>", { desc = "" })
-vim.keymap.set("i", "<M-j>", "<esc>:tabnext<cr>", { desc = "" })
-vim.keymap.set("i", "<M-k>", "<esc>:tabprevious<cr>", { desc = "" })
+vim.keymap.set("n", "<M-j>", ":bnext<cr>", { desc = "" })
+vim.keymap.set("n", "<M-k>", ":bprevious<cr>", { desc = "" })
+vim.keymap.set("i", "<M-j>", "<esc>:bnext<cr>", { desc = "" })
+vim.keymap.set("i", "<M-k>", "<esc>:bprevious<cr>", { desc = "" })
 
 vim.keymap.set("n", "<leader>sR", require("telescope.builtin").resume, { desc = "[S]earch [R]esume" })
 vim.keymap.set("n", "<leader>sr", require("telescope.builtin").oldfiles, { desc = "[?] Find recently opened files" })
@@ -94,8 +96,8 @@ vim.keymap.set("n", "<leader>5", "5gt", { desc = "go to tab" })
 
 -- vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zzzv", { desc = "quickfixlist cnext" })
 -- vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>zzzv", { desc = "quickfixlist cprev" })
-vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zz", { desc = "quickfixlist cnext" })
-vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>zz", { desc = "quickfixlist cprev" })
+-- vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zz", { desc = "quickfixlist cnext" })
+-- vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>zz", { desc = "quickfixlist cprev" })
 vim.keymap.set("n", "<leader>j", "<cmd>lnext<CR>zz", { desc = "quickfixlist lnext" })
 vim.keymap.set("n", "<leader>k", "<cmd>lprev<CR>zz", { desc = "quickfixlist lprev" })
 
@@ -111,6 +113,7 @@ vim.keymap.set("i", "<C-k>", "<esc>:m .-2<CR>==i", { desc = "moving text" })
 
 vim.keymap.set("n", ",html", ":read $HOME/.config/nvim/snippets/skeleton.html<CR>3jwf>a", { desc = "snippets" })
 vim.keymap.set("n", ",sig", ":read $HOME/.config/nvim/snippets/signature<CR>", { desc = "snippets" })
+vim.keymap.set("n", ",bm", ":tabnew $HOME/.config/nvim/snippets/bm<CR>", { desc = "bookmark" })
 
 -- Primeagen
 

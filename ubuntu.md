@@ -135,7 +135,8 @@ ln -ivs ~/marc/GitHub/ubuntu/config/gtk-3.0/gtk.css ~/.config/gtk-3.0/
 mkdir ~/.config/gtk-4.0
 ln -ivs ~/marc/GitHub/ubuntu/config/gtk-4.0/gtk.css ~/.config/gtk-4.0/
 
-
+ln -ivs ~/marc/GitHub/ubuntu/local/share/nvim/lazy/onedark.nvim/lua/onedark/highlights.lua ~/.local/share/nvim/lazy/onedark.nvim/lua/onedark/highlights.lua
+ln -ivs ~/marc/GitHub/ubuntu/local/share/nvim/lazy/onedark.nvim/lua/onedark/palette.lua ~/.local/share/nvim/lazy/onedark.nvim/lua/onedark/palette.lua
 ```
 
 # Install neovim
@@ -229,6 +230,7 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 
 **Restart computer before proceeding**
 
+flatpak install flathub org.wezfurlong.wezterm
 flatpak install -y flathub io.github.shiftey.Desktop
 flatpak install -y flathub com.skype.Client
 flatpak install -y flathub md.obsidian.Obsidian
