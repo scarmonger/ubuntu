@@ -211,6 +211,7 @@ require("lazy").setup({
       },
       sections = {
         lualine_a = { 'buffers' },
+        -- Marc
         -- lualine_c = { 'filename' },
         -- lualine_x = { 'encoding', 'fileformat', 'filetype' },
         lualine_c = { '' },
@@ -683,3 +684,4 @@ cmp.setup({
 
 require("custom.keymaps")
 require("custom.options")
+require("custom.abbreviation")

@@ -1,8 +1,8 @@
-tmux rename-window ranger
+tmux rename-window -t 1 ranger
+tmux new-window -c ~/marc/GitHub/ubuntu -n nvim nvim
+tmux new-window  
+tmux next-window 
 ranger
-
-#tmux new-window -c -n nvim
-#tmux new-window -c 
 #tmux rename-window nvim
 #nvim
 #tmux new-window -c 

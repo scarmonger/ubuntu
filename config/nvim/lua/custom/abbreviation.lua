@@ -1,0 +1,15 @@
+vim.cmd([[ cabbrev nu Neotree dir=~/marc/GitHub/ubuntu/ ]])
+vim.cmd([[ cabbrev nc Neotree dir=~/.config/ ]])
+vim.cmd([[ cabbrev nn Neotree dir=~/Dropbox/notes/ ]])
+vim.cmd([[ cabbrev nd Neotree dir=~/Dropbox/notes/dataon/ ]])
+vim.cmd([[ cabbrev nt Neotree dir=~/Dropbox/notes/tech/ ]])
+vim.cmd([[ cabbrev np Neotree dir=~/Dropbox/notes/personal/ ]])
+
+vim.cmd([[ cabbrev cu cd ~/marc/GitHub/ubuntu/ ]])
+vim.cmd([[ cabbrev cc cd ~/.config/ ]])
+vim.cmd([[ cabbrev cn cd ~/Dropbox/notes/ ]])
+vim.cmd([[ cabbrev cd cd ~/Dropbox/notes/dataon/ ]])
+vim.cmd([[ cabbrev ct cd ~/Dropbox/notes/tech/ ]])
+vim.cmd([[ cabbrev cp cd ~/Dropbox/notes/personal/ ]])
+
+vim.cmd([[ cabbrev bd bd! ]])

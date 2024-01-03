@@ -45,7 +45,6 @@ vim.cmd([[ let g:startify_custom_header = [] ]])
 -- Re-open at last position
 vim.cmd([[ au BufReadPost * if line("'\"") >= 1 && line ("'\"") <= line("$") | exe "normal! g`\"" | endif ]])
 
-
 -- Primeagen: make transparent background (did not work)
 -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })

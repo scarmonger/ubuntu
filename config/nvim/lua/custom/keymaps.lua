@@ -9,8 +9,8 @@ vim.keymap.set("v", "<leader><Enter>", ":.! bc -l <CR>", { desc = "calculate num
 vim.keymap.set("n", "Q", "<nop>", {})
 
 -- Edit file
-vim.keymap.set("n", "<leader>ee", ":Neotree position=current<cr>", { desc = "Neotree Current Folder" })
-vim.keymap.set("n", "<leader>en", ":Neotree<cr>", { desc = "Neotree open folder" })
+vim.keymap.set("n", "<leader>ee", ":Neotree reveal position=current<cr>", { desc = "Neotree Current Folder" })
+vim.keymap.set("n", "<leader>en", ":Neotree reveal<cr>", { desc = "Neotree open folder" })
 vim.keymap.set("n", "<leader>ev", ":e ~/marc/GitHub/ubuntu/config/nvim/lua/custom/keymaps.lua<cr>",
 	{ desc = "Edit Vim Keymap" })
 vim.keymap.set("n", "<leader>eo", ":e ~/marc/GitHub/ubuntu/config/nvim/lua/custom/options.lua<cr>",
@@ -22,6 +22,8 @@ vim.keymap.set("n", "<leader>eu", ":e ~/marc/GitHub/ubuntu/ubuntu.md<cr>",
 vim.keymap.set("n", "<leader>er", ":e ~/marc/GitHub/ubuntu/config/ranger/rc.conf<cr>",
 	{ desc = "Edit ranger config file" })
 vim.keymap.set("n", "<leader>ea", ":e ~/marc/GitHub/ubuntu/aliases<cr>",
+	{ desc = "Edit aliases" })
+vim.keymap.set("n", "<leader>eb", ":e ~/marc/GitHub/ubuntu/config/nvim/lua/custom/abbreviation.lua<cr>",
 	{ desc = "Edit aliases" })
 
 -- Go to folder
@@ -51,7 +53,7 @@ vim.keymap.set("n", "<leader>tD",
 vim.keymap.set("n", "<C-s>", ":w<cr>", { desc = "Save Progress" })
 vim.keymap.set("i", "<C-s>", "<esc>:w<cr>", { desc = "Save Progress" })
 vim.keymap.set("i", "<C-d>", "<esc>ddi", { desc = "delete line when insert mode" })
--- vim.keymap.set("i", "<C-v>", "<esc>pa", { desc = "paste in insert mode" })
+vim.keymap.set("i", "<C-v>", "<C-r>0", { desc = "paste in insert mode" })
 
 vim.keymap.set("n", "x", '"_x', { desc = "prevent yank character when deleting" })
 vim.keymap.set("n", "X", '"_x', { desc = "prevent yank character when deleting" })
