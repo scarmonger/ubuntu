@@ -9,8 +9,8 @@ vim.keymap.set("v", "<leader><Enter>", ":.! bc -l <CR>", { desc = "calculate num
 vim.keymap.set("n", "Q", "<nop>", {})
 
 -- Edit file
-vim.keymap.set("n", "<leader>ee", ":Neotree reveal position=current<cr>", { desc = "Neotree Current Folder" })
-vim.keymap.set("n", "<leader>en", ":Neotree reveal<cr>", { desc = "Neotree open folder" })
+vim.keymap.set("n", "<leader>en", ":Neotree reveal position=current<cr>", { desc = "Neotree Current Folder" })
+vim.keymap.set("n", "<leader>ee", ":Neotree reveal<cr>", { desc = "Neotree open folder" })
 vim.keymap.set("n", "<leader>ev", ":e ~/marc/GitHub/ubuntu/config/nvim/lua/custom/keymaps.lua<cr>",
 	{ desc = "Edit Vim Keymap" })
 vim.keymap.set("n", "<leader>eo", ":e ~/marc/GitHub/ubuntu/config/nvim/lua/custom/options.lua<cr>",
@@ -24,7 +24,7 @@ vim.keymap.set("n", "<leader>er", ":e ~/marc/GitHub/ubuntu/config/ranger/rc.conf
 vim.keymap.set("n", "<leader>ea", ":e ~/marc/GitHub/ubuntu/aliases<cr>",
 	{ desc = "Edit aliases" })
 vim.keymap.set("n", "<leader>eb", ":e ~/marc/GitHub/ubuntu/config/nvim/lua/custom/abbreviation.lua<cr>",
-	{ desc = "Edit aliases" })
+	{ desc = "Edit abbreviation" })
 
 -- Go to folder
 -- vim.keymap.set("n", "<leader>to", ":Neotree ~/Downloads<cr>", { desc = "Neotree Downloads" })
@@ -36,11 +36,14 @@ vim.keymap.set("n", "<leader>ty", ":let @+= @*<cr>", { desc = "transfer / copy *
 vim.keymap.set("n", "<leader>tU", '"uyy', { desc = "copy to buffer u" })
 vim.keymap.set("v", "<leader>tU", '"uy', { desc = "copy to buffer u" })
 vim.keymap.set("n", "<leader>tu", '"uP', { desc = "paste from u buffer" })
-vim.keymap.set("n", "<leader>tt", ':tabnew<cr>', { desc = "copy to buffer" })
+vim.keymap.set("n", "<leader>tt", ':tabnew<cr>', { desc = "new tab" })
 vim.keymap.set("n", "<leader>tr", ':%s//gc<left><left><left>', { desc = "search and replace" })
 vim.keymap.set("n", "<leader>t\\", ":noh<cr>", { desc = "Remove Highlight" })
 vim.keymap.set("n", "<leader>tm", ":tabm<space>", { desc = "Move tab to [n] input" })
 vim.keymap.set("n", "<leader>tg", "yy:bd<CR>:<C-r>0<CR>", { desc = "go to bookmark selection" })
+vim.keymap.set("n", "<leader>th", ":MarkdownPreviewToggle<CR>", { desc = "preview markdown" })
+-- vim.keymap.set("n", "<leader>th", ":! thorium-browser \"<c-r>%\"<CR>", { desc = "preview markdown" })
+-- vim.keymap.set("n", "<leader>th", ":! qutebrowser \"<c-r>%\" &<CR>", { desc = "open in browser" })
 -- vim.keymap.set("n", "<leader>tg", "yy:cd <C-r>+:bd<CR>", { desc = "go to bookmark selection" })
 
 vim.keymap.set("n", "<leader>tc", ":let @+ = expand('%:p')<cr>", { desc = "copy filepath" })
@@ -98,8 +101,8 @@ vim.keymap.set("n", "<leader>5", "5gt", { desc = "go to tab" })
 
 -- vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zzzv", { desc = "quickfixlist cnext" })
 -- vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>zzzv", { desc = "quickfixlist cprev" })
--- vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zz", { desc = "quickfixlist cnext" })
--- vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>zz", { desc = "quickfixlist cprev" })
+vim.keymap.set("n", "<C-S-j>", "<cmd>cnext<CR>zz", { desc = "quickfixlist cnext" })
+vim.keymap.set("n", "<C-S-k>", "<cmd>cprev<CR>zz", { desc = "quickfixlist cprev" })
 vim.keymap.set("n", "<leader>j", "<cmd>lnext<CR>zz", { desc = "quickfixlist lnext" })
 vim.keymap.set("n", "<leader>k", "<cmd>lprev<CR>zz", { desc = "quickfixlist lprev" })
 
