@@ -41,8 +41,8 @@ vim.keymap.set("n", "<leader>tr", ':%s//gc<left><left><left>', { desc = "search 
 vim.keymap.set("n", "<leader>t\\", ":noh<cr>", { desc = "Remove Highlight" })
 vim.keymap.set("n", "<leader>tm", ":tabm<space>", { desc = "Move tab to [n] input" })
 vim.keymap.set("n", "<leader>tg", "yy:bd<CR>:<C-r>0<CR>", { desc = "go to bookmark selection" })
-vim.keymap.set("n", "<leader>th", ":MarkdownPreviewToggle<CR>", { desc = "preview markdown" })
--- vim.keymap.set("n", "<leader>th", ":! thorium-browser \"<c-r>%\"<CR>", { desc = "preview markdown" })
+-- vim.keymap.set("n", "<leader>th", ":MarkdownPreviewToggle<CR>", { desc = "preview markdown" })
+vim.keymap.set("n", "<leader>th", ":! thorium-browser \"<c-r>%\"<CR>", { desc = "preview markdown" })
 -- vim.keymap.set("n", "<leader>th", ":! qutebrowser \"<c-r>%\" &<CR>", { desc = "open in browser" })
 -- vim.keymap.set("n", "<leader>tg", "yy:cd <C-r>+:bd<CR>", { desc = "go to bookmark selection" })
 
@@ -101,8 +101,8 @@ vim.keymap.set("n", "<leader>5", "5gt", { desc = "go to tab" })
 
 -- vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zzzv", { desc = "quickfixlist cnext" })
 -- vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>zzzv", { desc = "quickfixlist cprev" })
-vim.keymap.set("n", "<C-S-j>", "<cmd>cnext<CR>zz", { desc = "quickfixlist cnext" })
-vim.keymap.set("n", "<C-S-k>", "<cmd>cprev<CR>zz", { desc = "quickfixlist cprev" })
+vim.keymap.set("n", "<M-f>", "<cmd>cnext<CR>zz", { desc = "quickfixlist cnext" })
+vim.keymap.set("n", "<M-d>", "<cmd>cprev<CR>zz", { desc = "quickfixlist cprev" })
 vim.keymap.set("n", "<leader>j", "<cmd>lnext<CR>zz", { desc = "quickfixlist lnext" })
 vim.keymap.set("n", "<leader>k", "<cmd>lprev<CR>zz", { desc = "quickfixlist lprev" })
 
@@ -152,3 +152,6 @@ vim.keymap.set(
 )
 
 vim.keymap.set("n", "<leader>xe", "<cmd>!chmod +x %<CR>", { silent = true, desc = "make this file executable" })
+
+-- markdown
+vim.keymap.set("n", "<leader>cn", "yi(0di[hp", { desc = "change name markdown attachment" })

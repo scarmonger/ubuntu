@@ -418,10 +418,10 @@ Alternatively, if wget is not installed on your computer, go to the URL mentione
 
 To verify that the installation was successful, you can open the Troubleshooting Information page. In the Application Basics section, the value of Application Binary should be /opt/firefox/firefox-bin.
 
-# Remove recent nautilus
+# Remove starred nautilus
 https://askubuntu.com/questions/1194319/can-the-starred-folder-in-the-left-pane-of-files-nautilus-be-removed
 
-# Remove starred nautilus
+# Remove recent nautilus
 https://askubuntu.com/questions/762591/how-to-remove-unwanted-default-bookmarks-in-nautilus
 
 # Change window color border
