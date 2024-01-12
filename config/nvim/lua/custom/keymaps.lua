@@ -11,6 +11,10 @@ vim.keymap.set("n", "Q", "<nop>", {})
 -- Edit file
 vim.keymap.set("n", "<leader>en", ":Neotree reveal position=current<cr>", { desc = "Neotree Current Folder" })
 vim.keymap.set("n", "<leader>ee", ":Neotree reveal<cr>", { desc = "Neotree open folder" })
+vim.keymap.set("n", "<leader>ei", ":e ~/marc/GitHub/ubuntu/config/nvim/init.lua<cr>",
+	{ desc = "Edit init.lua" })
+vim.keymap.set("n", "<leader>ep", ":e ~/marc/GitHub/ubuntu/config/nvim/lua/custom/plugins/plugins.lua<cr>",
+	{ desc = "Edit plugins.lua" })
 vim.keymap.set("n", "<leader>ev", ":e ~/marc/GitHub/ubuntu/config/nvim/lua/custom/keymaps.lua<cr>",
 	{ desc = "Edit Vim Keymap" })
 vim.keymap.set("n", "<leader>eo", ":e ~/marc/GitHub/ubuntu/config/nvim/lua/custom/options.lua<cr>",
@@ -141,7 +145,8 @@ vim.keymap.set("x", "<leader>P", "\"_dP", { desc = "paste in visual mode, don't 
 -- vim.keymap.set("n", "<F4>", ":dis<cr>", { desc = "check registers" })
 -- vim.keymap.set("i", "<F4>", "<ESC>:reg<CR>", { desc = "check registers" })
 
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { desc = "change project" })
+vim.keymap.set("n", "<C-f>", ":Prettier<CR>", { desc = "Prettier" })
+-- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { desc = "change project" })
 -- go back to previous session with <tmux-leader>+L
 
 vim.keymap.set(

@@ -685,3 +685,4 @@ cmp.setup({
 require("custom.keymaps")
 require("custom.options")
 require("custom.abbreviation")
+require("custom.vim-prettier")
