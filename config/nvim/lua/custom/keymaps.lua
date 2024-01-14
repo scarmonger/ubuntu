@@ -85,6 +85,7 @@ vim.keymap.set("n", "<leader>sR", require("telescope.builtin").resume, { desc = 
 vim.keymap.set("n", "<leader>sr", require("telescope.builtin").oldfiles, { desc = "[?] Find recently opened files" })
 vim.keymap.set("n", "<leader>sc", require("telescope.builtin").command_history, { desc = "Find command history" })
 vim.keymap.set("n", "<leader>sC", require("telescope.builtin").commands, { desc = "Find available command" })
+vim.keymap.set("n", "<leader>so", require("telescope.builtin").vim_options, { desc = "Find vim_options" })
 
 vim.keymap.set("n", "<F5>", ":UndotreeToggle<CR>", { desc = "UndotreeToggle" })
 vim.keymap.set("n", "<F11>", 'a<C-R>=strftime("%c")<CR><Esc>', { desc = "insert date and time" })
