@@ -15,7 +15,7 @@ vim.keymap.set("n", "<leader>ei", ":e ~/marc/GitHub/ubuntu/config/nvim/init.lua<
 	{ desc = "Edit init.lua" })
 vim.keymap.set("n", "<leader>ep", ":e ~/marc/GitHub/ubuntu/config/nvim/lua/custom/plugins/plugins.lua<cr>",
 	{ desc = "Edit plugins.lua" })
-vim.keymap.set("n", "<leader>ev", ":e ~/marc/GitHub/ubuntu/config/nvim/lua/custom/keymaps.lua<cr>",
+vim.keymap.set("n", "<leader>ek", ":e ~/marc/GitHub/ubuntu/config/nvim/lua/custom/keymaps.lua<cr>",
 	{ desc = "Edit Vim Keymap" })
 vim.keymap.set("n", "<leader>eo", ":e ~/marc/GitHub/ubuntu/config/nvim/lua/custom/options.lua<cr>",
 	{ desc = "Edit Vim options" })
@@ -73,7 +73,9 @@ vim.keymap.set("v", "L", "$h", { desc = "" })
 
 vim.keymap.set("n", "<M-t>", ":Startify<cr>", { desc = "startify" })
 vim.keymap.set("n", "<M-h>", "0", { desc = "" })
+vim.keymap.set("v", "<M-h>", "0", { desc = "" })
 vim.keymap.set("n", "<M-l>", "$", { desc = "" })
+vim.keymap.set("v", "<M-l>", "$", { desc = "" })
 vim.keymap.set("n", "<M-j>", ":bnext<cr>", { desc = "" })
 vim.keymap.set("n", "<M-k>", ":bprevious<cr>", { desc = "" })
 vim.keymap.set("i", "<M-j>", "<esc>:bnext<cr>", { desc = "" })
@@ -159,4 +161,4 @@ vim.keymap.set(
 vim.keymap.set("n", "<leader>xe", "<cmd>!chmod +x %<CR>", { silent = true, desc = "make this file executable" })
 
 -- markdown
-vim.keymap.set("n", "<leader>cn", "yi(0di[hp", { desc = "change name markdown attachment" })
+vim.keymap.set("n", "<leader>cn", "yi(0di[hpF/dT[x", { desc = "change name markdown attachment" })

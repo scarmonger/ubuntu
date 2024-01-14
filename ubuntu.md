@@ -4,6 +4,7 @@ sudo flatpak override com.wps.Office --filesystem=/home/andry/Downloads
 sudo apt update
 
 # change mac address
+
 sudo apt install macchanger
 sudo macchanger -s enp0s31f6
 sudo macchanger -m 6c:0b:84:22:be:c4 enp0s31f6
@@ -12,10 +13,10 @@ sudo EDITOR=nano crontab -e
 @reboot macchanger -m 6c:0b:84:22:be:c4 enp0s31f6
 @reboot tailscale up
 
-
 sudo apt upgrade
 
 # Check UUID (blkid)
+
 mkdir ~/marc
 
 lsblk
@@ -27,18 +28,18 @@ nvim /etc/fstab
 sudo cp /etc/fstab /etc/fstab_bak
 
 pc:
-echo "UUID=8f4825e2-0016-43c2-994a-bb2830ddaea9 /home/mc/marc/               ext4    errors=remount-ro 0       1" | sudo tee -a /etc/fstab
+echo "UUID=8f4825e2-0016-43c2-994a-bb2830ddaea9 /home/mc/marc/ ext4 errors=remount-ro 0 1" | sudo tee -a /etc/fstab
 
 tp13:
-echo "UUID=3cb910c9-2e1e-4910-a6a9-c114df09d3cd /home/mc/marc/               ext4    errors=remount-ro 0       1" | sudo tee -a /etc/fstab
+echo "UUID=3cb910c9-2e1e-4910-a6a9-c114df09d3cd /home/mc/marc/ ext4 errors=remount-ro 0 1" | sudo tee -a /etc/fstab
 
 sudo mount -a
 
-
-sudo dpkg -i ~/marc/debinstaller/thorium-browser_117.0.5938.157_amd64.deb 
+sudo dpkg -i ~/marc/debinstaller/thorium-browser_117.0.5938.157_amd64.deb
 sudo snap remove --purge firefox
 
 # Install app
+
 sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar fonts-powerline neofetch xclip ssh fzf mpv qutebrowser tmux dconf-editor kazam gnome-tweaks kitty chrome-gnome-shell filezilla
 
 systemctl status ssh
@@ -46,9 +47,9 @@ systemctl start ssh
 systemctl enable ssh
 
 # Install oh-my-zsh
+
 ** Rubah bin bash menjadi zsh (harus logout) **
 chsh -s /usr/bin/zsh
-
 
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -74,6 +75,7 @@ https://github.com/wting/autojump/blob/master/docs/install.md
 > ./install.py
 
 ```
+
 https://christitus.com/zsh/
 https://zsh.sourceforge.io/Guide/zshguide.html
 https://wiki.archlinux.org/title/zsh
@@ -83,8 +85,8 @@ https://github.com/ohmyzsh/ohmyzsh
 https://www.thorsten-hans.com/5-types-of-zsh-aliases
 https://gist.github.com/dogrocker/1efb8fd9427779c827058f873b94df95
 
-
 # symlink
+
 ```
 rm -Rf ~/.config/ranger
 ln -ivs ~/marc/GitHub/ubuntu/config/ranger ~/.config/
@@ -140,11 +142,13 @@ ln -ivs ~/marc/GitHub/ubuntu/local/share/nvim/lazy/onedark.nvim/lua/onedark/pale
 ```
 
 # Install neovim
+
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
 ./nvim.appimage
 
 ## AppImageLauncher
+
 sudo apt install software-properties-common
 sudo add-apt-repository ppa:appimagelauncher-team/stable
 sudo apt update
@@ -152,8 +156,8 @@ sudo apt install appimagelauncher
 
 Run App : appimagelauncher
 
-
 # Backup settings
+
 dconf dump /org/gnome/ > gnome-backup
 dconf dump / > full-gnome-backup
 
@@ -162,6 +166,7 @@ dconf load /org/gnome/ < gnome-backup
 dconf load /org/gnome/ < ~/marc/GitHub/ubuntu/gnome-backup
 
 # Gnome extension
+
 https://extensions.gnome.org/extension/3193/blur-my-shell/
 https://extensions.gnome.org/extension/779/clipboard-indicator/
 https://extensions.gnome.org/extension/1460/vitals/
@@ -169,7 +174,8 @@ https://extensions.gnome.org/extension/5237/rounded-window-corners/
 https://extensions.gnome.org/extension/4338/allow-locked-remote-desktop/
 https://extensions.gnome.org/extension/1160/dash-to-panel/
 
-# Download .deb installer 
+# Download .deb installer
+
 wget https://dl.thorium.rocks/debian/dists/stable/thorium.list
 sudo mv thorium.list /etc/apt/sources.list.d/
 sudo apt update
@@ -179,17 +185,17 @@ sudo apt install python3-gpg libpango1.0-0
 sudo dpkg -i ~/marc/debinstaller/dropbox_2020.03.04_amd64.deb
 sudo apt --fix-broken install
 
-sudo dpkg -i ~/marc/debinstaller/VNC-Viewer-7.8.0-Linux-x64.deb 
+sudo dpkg -i ~/marc/debinstaller/VNC-Viewer-7.8.0-Linux-x64.deb
 sudo dpkg -i ~/marc/debinstaller/code_1.84.2-1699528352_amd64.deb
 sudo dpkg -i ~/marc/debinstaller/wps-office_11.1.0.11711.XA_amd64.deb
 sudo dpkg -i ~/marc/debinstaller/lsd-musl_1.0.0_amd64.deb
 
 sudo apt install libqt5help5 libqt5x11extras5
-sudo dpkg -i ~/marc/debinstaller/virtualbox-7.0_7.0.12-159484\~Ubuntu\~jammy_amd64.deb 
+sudo dpkg -i ~/marc/debinstaller/virtualbox-7.0_7.0.12-159484\~Ubuntu\~jammy_amd64.deb
 sudo apt --fix-broken install
 
-
 ## Alacritty
+
 sudo add-apt-repository ppa:aslatter/ppa -y
 sudo apt install alacritty
 
@@ -206,25 +212,29 @@ pip3 install neovim-remote --break-system-packages
 
 > pyperclip for custom script insys & sfsupport
 
-sudo apt-get install ripgrep fd-find gcc lua5.4 npm 
-sudo apt install -y npm 
+sudo apt-get install ripgrep fd-find gcc lua5.4 npm
+sudo apt install -y npm
 npm install tree-sitter-cli
 
 ## Install lazygit
-LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
-curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+
+LAZYGIT*VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]\*')
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit*${LAZYGIT_VERSION}\_Linux_x86_64.tar.gz"
 tar xf lazygit.tar.gz lazygit
 sudo install lazygit /usr/local/bin
 
 ## Install veracrypt
+
 sudo add-apt-repository ppa:unit193/encryption -y
-sudo apt  install veracrypt
+sudo apt install veracrypt
 
 # appimage
+
 ksnip
-chmod +x ./*.AppImage
+chmod +x ./\*.AppImage
 
 ## Add flatpak to gnome
+
 sudo apt install -y flatpak gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
@@ -248,8 +258,8 @@ flatseal > allow home folder
 thunderbird > set profile from Help > Troubleshooting information
 
 # Snapd
-sudo snap install projectlibre
 
+sudo snap install projectlibre
 
 # github-cli authentication
 
@@ -287,6 +297,7 @@ yang didapat setelah berhasil login di gh auth login:
 `gh config set -h github.com git_protocol https`
 
 # Mount partition to marc directory
+
 mkdir marc
 chown mc:mc marc
 
@@ -300,8 +311,8 @@ gnome-user-docs gnome-user-share grilo-plugins gvfs-google gvfs-nfs gvfs-mtp \
 gvfs-smb loupe nautilus simple-scan snapshot sushi xdg-desktop-portal-gnome \
 xdg-user-dirs-gtk yelp gnome-tweaks
 
-
 # capslock escape
+
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape_shifted_capslock']"
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:swapescape']"
 setxkbmap -option caps:swapescape
@@ -317,7 +328,6 @@ Other options are possible:
 gsettings set org.gnome.desktop.privacy remember-recent-files false
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'focus-minimize-or-previews'
 
-
 # Reference
 
 https://archlinux.org/groups/x86_64/gnome/  
@@ -330,7 +340,6 @@ https://www.anyviewer.com/how-to/how-to-get-out-of-remote-desktop-full-screen-04
 
 cat /etc/update-manager/release-upgrades - Awal
 
-
 Remote clients:
 remmina, realvnc viewer
 
@@ -342,8 +351,8 @@ set auto_save.session true
 bind gh tab-focus last
 https://github.com/sarfraznawaz2005/quran-cli
 
+# connect
 
-# connect 
 sudo tailscale up
 sudo tailscale down
 
@@ -355,19 +364,22 @@ google fonts - Korea
 google fonts - Chinese
 nerdfonts - JetBrains Mono Nerd Font
 
-
 # install vncserver
+
 https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-22-04
 
 # Next
+
 portainer docker
 
 # select editor
+
 sudo select-editor
 select-editor
 sudo update-alternatives --config editor
 
 # Thorium keepassxc
+
 The problem is that Thorium and Chromium are "the same browser" so keepass is detecting the NativeMessagingHosts for chromium, so in Browser integration -> Advanced we need to override the location of the proxy.
 
 Enable "use custom proxy", select browser type: "Chrome", and for the location, put this
@@ -381,14 +393,15 @@ And that's it!
 /home/mc/.config/thorium/NativeMessagingHosts
 
 # Time shift
+
 https://dev.to/rahedmir/how-to-use-timeshift-from-command-line-in-linux-1l9b
 
 sudo timeshift --create --comments "A new backup" --tags D
 
 sudo timeshift --restore
 
+# Firefox
 
-# Firefox 
 https://support.mozilla.org/en-US/kb/install-firefox-linux
 
 System Firefox installation (for advanced users)
@@ -399,44 +412,55 @@ This installation will have priority over the Firefox version installed through 
 
 1. Go to the Firefox download page and click the Download Now button.
 2. Open a terminal and go to the folder where your download has been saved. For example:
-cd ~/Downloads
-Extract the contents of the downloaded file by typing:
-`tar xjf firefox-*.tar.bz2`
+   cd ~/Downloads
+   Extract the contents of the downloaded file by typing:
+   `tar xjf firefox-*.tar.bz2`
 
 The following commands must be executed as root, or preceded by sudo.
 
 3. Move the uncompressed Firefox folder to /opt:
-`sudo mv firefox /opt`
+   `sudo mv firefox /opt`
 
 4. Create a symlink to the Firefox executable:
-sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox
+   sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox
 
 5. Download a copy of the desktop file:
-`sudo wget https://raw.githubusercontent.com/mozilla/sumo-kb/main/install-firefox-linux/firefox.desktop -P /usr/local/share/applications`
+   `sudo wget https://raw.githubusercontent.com/mozilla/sumo-kb/main/install-firefox-linux/firefox.desktop -P /usr/local/share/applications`
 
 Alternatively, if wget is not installed on your computer, go to the URL mentioned above, right-click on the page to open the contextual menu and select Save Page As. After you downloaded the file, move it to /usr/local/share/applications.
 
 To verify that the installation was successful, you can open the Troubleshooting Information page. In the Application Basics section, the value of Application Binary should be /opt/firefox/firefox-bin.
 
 # Remove starred nautilus
+
 https://askubuntu.com/questions/1194319/can-the-starred-folder-in-the-left-pane-of-files-nautilus-be-removed
 
 # Remove recent nautilus
+
 https://askubuntu.com/questions/762591/how-to-remove-unwanted-default-bookmarks-in-nautilus
 
 # Change window color border
+
 https://github.com/lossurdo/yaru-dark-border
 
 # xfreerdp
+
 sudo apt install freerdp2-x11
 xfreerdp +clipboard +fonts /sound /mic /smart-sizing /multimon /network:auto /cert-ignore /u:<username> /d:WORKGROUP /v:192.168.x.x
 
 # yt-dlp
-sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
-sudo chmod a+rx /usr/local/bin/yt-dlp  # Make executable
 
-# raspberry pi 
+sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+sudo chmod a+rx /usr/local/bin/yt-dlp # Make executable
+
+# raspberry pi
+
 moode.local
 
 # Change root password
+
 sudo passwd root
+
+# decoder
+
+sudo apt install ubuntu-restricted-extras
