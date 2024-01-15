@@ -1,5 +1,6 @@
 #!/bin/sh
 
+alias ebi="echo -n 'PT Etana Biotechnologies Indonesia' | xclip -sel c"
 alias ctt="echo -n 'PT Citra Tubindo Tbk' | xclip -sel c"
 alias ats="echo -n 'PT Atlas Petrochem Indo' | xclip -sel c"
 alias bu="dconf dump /org/gnome/ > ~/marc/GitHub/ubuntu/gnome-backup"

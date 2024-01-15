@@ -45,13 +45,11 @@ vim.keymap.set("n", "<leader>tr", ':%s//gc<left><left><left>', { desc = "search 
 vim.keymap.set("n", "<leader>t\\", ":noh<cr>", { desc = "Remove Highlight" })
 vim.keymap.set("n", "<leader>tm", ":tabm<space>", { desc = "Move tab to [n] input" })
 vim.keymap.set("n", "<leader>tg", "yy:bd<CR>:<C-r>0<CR>", { desc = "go to bookmark selection" })
--- vim.keymap.set("n", "<leader>th", ":MarkdownPreviewToggle<CR>", { desc = "preview markdown" })
 vim.keymap.set("n", "<leader>th", ":! thorium-browser \"<c-r>%\"<CR>", { desc = "preview markdown" })
--- vim.keymap.set("n", "<leader>th", ":! qutebrowser \"<c-r>%\" &<CR>", { desc = "open in browser" })
--- vim.keymap.set("n", "<leader>tg", "yy:cd <C-r>+:bd<CR>", { desc = "go to bookmark selection" })
+vim.keymap.set("n", "<leader>tf", ":! firefox view-source:\"<c-r>%\"<CR>", { desc = "preview markdown" })
 
 vim.keymap.set("n", "<leader>tc", ":let @+ = expand('%:p')<cr>", { desc = "copy filepath" })
-vim.keymap.set("n", "<leader>t.", ":! pwd<enter>", { desc = "check cwd / current working directory" })
+vim.keymap.set("n", "<leader>t.", ":pwd<enter>", { desc = "check cwd / current working directory" })
 vim.keymap.set("n", "<leader>tD",
 	":let @+ = expand('%:p')<cr>o<c-r>+<Esc>dF/xv0d:let @+ = @*<cr>i<backspace><esc>:cd <c-r>+<enter>",
 	{ desc = "change cwd to current file location" })
