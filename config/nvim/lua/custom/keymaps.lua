@@ -9,8 +9,8 @@ vim.keymap.set("v", "<leader><Enter>", ":.! bc -l <CR>", { desc = "calculate num
 vim.keymap.set("n", "Q", "<nop>", {})
 
 -- Edit file
-vim.keymap.set("n", "<leader>en", ":Neotree reveal position=current<cr>", { desc = "Neotree Current Folder" })
-vim.keymap.set("n", "<leader>ee", ":Neotree reveal<cr>", { desc = "Neotree open folder" })
+vim.keymap.set("n", "<leader>en", ":Neotree reveal position=current<cr>", { desc = "Neotree Full Window" })
+vim.keymap.set("n", "<leader>ee", ":Neotree reveal<cr>", { desc = "Neotree left pane" })
 vim.keymap.set("n", "<leader>ei", ":e ~/marc/GitHub/ubuntu/config/nvim/init.lua<cr>",
 	{ desc = "Edit init.lua" })
 vim.keymap.set("n", "<leader>ep", ":e ~/marc/GitHub/ubuntu/config/nvim/lua/custom/plugins/plugins.lua<cr>",
