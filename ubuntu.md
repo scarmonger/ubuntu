@@ -40,7 +40,7 @@ sudo snap remove --purge firefox
 
 # Install app
 
-sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar fonts-powerline neofetch xclip ssh fzf mpv qutebrowser tmux dconf-editor kazam gnome-tweaks kitty chrome-gnome-shell filezilla
+sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar fonts-powerline neofetch xclip ssh fzf mpv tmux dconf-editor kazam gnome-tweaks chrome-gnome-shell filezilla vlc ncdu
 
 systemctl status ssh
 systemctl start ssh
@@ -99,14 +99,11 @@ ln -ivs ~/marc/GitHub/ubuntu/config/nvim_chris ~/.config/
 
 mkdir ~/.config/script
 mkdir ~/.local/bin
-mkdir ~/.moc
 
 ln -ivs ~/marc/GitHub/ubuntu/config/sxiv ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/config/castero ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/local/bin/custom ~/.local/bin
 
-ln -ivs ~/marc/GitHub/ubuntu/config/moc/config ~/.moc/
-ln -ivs ~/marc/GitHub/ubuntu/config/moc/my_keymap ~/.moc/
 ln -ivs ~/marc/GitHub/ubuntu/bashrc ~/.bashrc
 cp -ivs ~/marc/GitHub/dotfile/.oh-my-zsh/custom/autocomplete.zsh ~/.oh-my-zsh/custom/autocomplete.zsh
 cp -ivs ~/marc/GitHub/dotfile/.oh-my-zsh/custom/shortcuts.zsh ~/.oh-my-zsh/custom/shortcuts.zsh
@@ -193,6 +190,9 @@ sudo dpkg -i ~/marc/debinstaller/lsd-musl_1.0.0_amd64.deb
 sudo apt install libqt5help5 libqt5x11extras5
 sudo dpkg -i ~/marc/debinstaller/virtualbox-7.0_7.0.12-159484\~Ubuntu\~jammy_amd64.deb
 sudo apt --fix-broken install
+
+Kernel driver not installed (rc=-1908)
+sudo apt install gcc-12
 
 ## Alacritty
 
@@ -464,3 +464,16 @@ sudo passwd root
 # decoder
 
 sudo apt install ubuntu-restricted-extras
+
+# Prettier
+
+https://prettier.io/docs/en/install
+
+# markdown setting firefox
+
+https://francopasut.netlify.app/post/markdown_firefox/
+
+create file mime.types, and insert the following line:
+type=text/plain exts=md,mkd,mkdn,mdwn,mdown,markdown, desc="Markdown document"
+
+open firefox, `about:config`, search for mime, change "helpers.private_mime_types_file" value with the file path of mime.types which newly created
