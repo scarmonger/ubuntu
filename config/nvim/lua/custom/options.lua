@@ -2,12 +2,21 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 -- vim.opt.guicursor = ""
+o = vim.opt
+o.winbar = "%=%m %f"
+o.cursorlineopt = "number,line"
+o.cursorline = true
 
-vim.opt.winbar = "%=%m %f"
-vim.opt.clipboard = "unnamed"
-vim.opt.smartcase = true
-vim.opt.conceallevel = 0
-vim.opt.relativenumber = true
+local options = {
+	clipboard = "unnamed",
+	smartcase = true,
+	conceallevel = 0,
+	relativenumber = true,
+}
+
+for k, v in pairs(options) do
+	vim.opt[k] = v
+end
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -15,7 +24,7 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
 vim.opt.smartindent = true
-vim.opt.wrap = true
+vim.opt.wrap = false
 
 vim.opt.swapfile = false
 vim.opt.backup = false
