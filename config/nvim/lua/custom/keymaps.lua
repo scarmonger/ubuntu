@@ -2,6 +2,7 @@
 vim.keymap.set("n", ";", ":", {})
 vim.keymap.set("n", ":", ";", {})
 vim.keymap.set("i", "jk", "<esc>", { desc = "escape from insert mode" })
+vim.keymap.set("i", "kj", "<esc>", { desc = "escape from insert mode" })
 vim.keymap.set("n", "gj", ":tabnext<cr>", { desc = "tab next" })
 vim.keymap.set("n", "gk", ":tabprevious<cr>", { desc = "tab previous" })
 vim.keymap.set("v", "<leader><Enter>", ":.! bc -l <CR>", { desc = "calculate number" })
@@ -125,6 +126,12 @@ vim.keymap.set("n", ",html", ":read $HOME/.config/nvim/snippets/skeleton.html<CR
 vim.keymap.set("n", ",sig", ":read $HOME/.config/nvim/snippets/signature<CR>", { desc = "snippets" })
 vim.keymap.set("n", ",bm", ":tabnew $HOME/.config/nvim/snippets/bm<CR>", { desc = "bookmark" })
 
+-- Resize with arrows
+vim.keymap.set("n", "<C-Up>", ":resize -2<CR>", {})
+vim.keymap.set("n", "<C-Down>", ":resize +2<CR>", {})
+vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>", {})
+vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", {})
+
 -- Primeagen
 
 vim.keymap.set("n", "<leader>d", '"_d', { desc = "delete into void" })
@@ -146,7 +153,7 @@ vim.keymap.set("x", "<leader>P", "\"_dP", { desc = "paste in visual mode, don't 
 -- vim.keymap.set("n", "<F4>", ":dis<cr>", { desc = "check registers" })
 -- vim.keymap.set("i", "<F4>", "<ESC>:reg<CR>", { desc = "check registers" })
 
-vim.keymap.set("n", "<C-f>", ":Prettier<CR>", { desc = "Prettier" })
+-- vim.keymap.set("n", "<C-f>", ":Prettier<CR>", { desc = "Prettier" })
 -- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { desc = "change project" })
 -- go back to previous session with <tmux-leader>+L
 
