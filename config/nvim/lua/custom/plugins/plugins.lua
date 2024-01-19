@@ -8,9 +8,5 @@ return {
 	'mbbill/undotree',
 	'christoomey/vim-tmux-navigator',
 	'alvan/vim-closetag',
-	-- 'neovim/nvim-lspconfig',
-	-- 'jose-elias-alvarez/null-ls.nvim',
-	-- 'MunifTanjim/prettier.nvim'
-	-- 'ap/vim-css-color'
 	'prettier/vim-prettier'
 }
