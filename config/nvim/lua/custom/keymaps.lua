@@ -79,6 +79,7 @@ vim.keymap.set("n", "<M-j>", ":bnext<cr>", { desc = "" })
 vim.keymap.set("n", "<M-k>", ":bprevious<cr>", { desc = "" })
 vim.keymap.set("i", "<M-j>", "<esc>:bnext<cr>", { desc = "" })
 vim.keymap.set("i", "<M-k>", "<esc>:bprevious<cr>", { desc = "" })
+vim.keymap.set("n", "<M-q>", ":TodoQuickFix", { desc = "To-do quickfixlist" })
 
 vim.keymap.set("n", "<leader>sR", require("telescope.builtin").resume, { desc = "[S]earch [R]esume" })
 vim.keymap.set("n", "<leader>sr", require("telescope.builtin").oldfiles, { desc = "[?] Find recently opened files" })
@@ -122,9 +123,9 @@ vim.keymap.set("i", "<C-j>", "<esc>:m .+1<CR>==i", { desc = "moving text" })
 vim.keymap.set("i", "<C-k>", "<esc>:m .-2<CR>==i", { desc = "moving text" })
 
 
-vim.keymap.set("n", ",html", ":read $HOME/.config/nvim/snippets/skeleton.html<CR>3jwf>a", { desc = "snippets" })
-vim.keymap.set("n", ",sig", ":read $HOME/.config/nvim/snippets/signature<CR>", { desc = "snippets" })
-vim.keymap.set("n", ",bm", ":tabnew $HOME/.config/nvim/snippets/bm<CR>", { desc = "bookmark" })
+vim.keymap.set("n", "\\html", ":read $HOME/.config/nvim/snippets/skeleton.html<CR>3jwf>a", { desc = "snippets" })
+vim.keymap.set("n", "\\sig", ":read $HOME/.config/nvim/snippets/signature<CR>", { desc = "snippets" })
+vim.keymap.set("n", "\\bm", ":tabnew $HOME/.config/nvim/snippets/bm<CR>", { desc = "bookmark" })
 
 -- Resize with arrows
 vim.keymap.set("n", "<C-Up>", ":resize -2<CR>", {})
