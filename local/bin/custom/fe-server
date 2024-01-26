@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Create a new session named "fe-server", split panes and change directory in each
+tmux new-session -d -s fe-server
+tmux send-keys -t fe-server "cd /home/mc/marc/custom/a_source/fe-micro-container" Enter
+tmux split-window -h -p 66 -t fe-server
+tmux send-keys -t fe-server "cd /home/mc/marc/custom/a_source/fe-micro-standard/" Enter
+tmux split-window -h -p 50 -t fe-server
+tmux send-keys -t fe-server "cd /home/mc/marc/custom/a_source/fe-micro-custom/" Enter
+# Set pane synchronization
+tmux set-window-option -t fe-server synchronize-panes on
+# Run command in all panes
+tmux send-keys -t fe-server "npm start" Enter
+# Attach to session named "fe-server"
+tmux attach -t fe-server

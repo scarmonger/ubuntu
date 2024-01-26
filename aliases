@@ -1,6 +1,11 @@
 #!/bin/sh
+alias cdac="cd /home/mc/marc/custom/daikinhr/soulbackend/main/src/web/ && ./box"
+alias cdct="cd /home/mc/marc/custom/vallourec_sea/soulbackend/main/src/web/ && ./box"
 
-alias mdh="Mandaya Hospital Group | xclip -sel c"
+alias subupdate="git submodule update --remote --merge"
+alias clone="sfclone_client --dir /home/mc/marc/custom/$1"
+
+alias mdh="echo -n 'Mandaya Hospital Group' | xclip -sel c"
 alias ebi="echo -n 'PT Etana Biotechnologies Indonesia' | xclip -sel c"
 alias ctt="echo -n 'PT Citra Tubindo Tbk' | xclip -sel c"
 alias ats="echo -n 'PT Atlas Petrochem Indo' | xclip -sel c"
@@ -19,39 +24,15 @@ alias c24="cat ~/Dropbox/cal2024.txt"
 
 # unsorted
 alias x="xmodmap ~/.config/.Xmodmap"
-#alias lf="~/marc/github/dotfiles/config/lf-ueberzug/lf-ueberzug"
 alias lb="lsblk"
 alias cps="rsync -aurviP --backup --suffix=.backup "
-#alias lk="lf-kitty"
-#alias lf="lf-ueberzug"
 alias lo="libreoffice"
 alias phone="ssh u0_a570@192.168.0.7 -p 8022"
-alias cfont="fc-list | grep -i " #query for font installed
+alias qfont="fc-list | grep -i " #query for font installed
 alias cfont="ffc-cache -vf"      #clear font cache
 # Check xdg-mime
 alias xf="xdg-mime query filetype "
 #example: $ xdg-mime query filetype photo.jpeg
-alias setwbg="swaybg -m fill -i "
-# Need Root Privileges Files
-alias esddm="sudo nvim /etc/sddm.conf.d/sddm.conf"
-alias e0="et Dropbox/Cash\ Flow/Expense/2019-1.xlsx &"
-#alias swaylock="swaylock \
-#	--screenshots \
-#	--clock \
-#	--indicator \
-#	--indicator-radius 100 \
-#	--indicator-thickness 7 \
-#	--effect-blur 7x5 \
-#	--effect-vignette 0.5:0.5 \
-#	--ring-color bb00cc \
-#	--key-hl-color 880033 \
-#	--line-color 00000000 \
-#	--inside-color 00000088 \
-#	--separator-color 00000000 \
-#	--grace 2 \
-#	--fade-in 0.2"
-
-alias tsddm="sddm-greeter --test-mode --theme /usr/share/sddm/themes/maldives"
 alias xd="xdg-mime default "
 #example:
 #$ xdg-mime default feh.desktop image/jpeg
@@ -117,8 +98,8 @@ alias tso="tmux source ~/.config/tmux/tmux.conf"
 alias nw="tmux neww"
 alias kw="tmux kill-window"
 alias ks="tmux kill-server"
-alias tr="tmux attach -t tr || tmux new -s tr"
-alias tt="tmux attach -t ide || tmux new -s ide ws"
+alias ts="tmux attach -t fe-server || tmux new -s fe-server"
+alias tt="tmux attach -t workspace || tmux new -s workspace ws"
 alias clf="tmux split -h lf; lf"
 
 alias ya="yt-dlp -o '%(channel)s_%(title)s.%(ex wst)s'\'' -f '\''bestaudio'\'' '"

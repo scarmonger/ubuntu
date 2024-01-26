@@ -194,6 +194,8 @@ sudo apt --fix-broken install
 Kernel driver not installed (rc=-1908)
 sudo apt install gcc-12
 
+https://slack.com/downloads/instructions/ubuntu
+
 ## Alacritty
 
 sudo add-apt-repository ppa:aslatter/ppa -y
@@ -477,3 +479,7 @@ create file mime.types, and insert the following line:
 type=text/plain exts=md,mkd,mkdn,mdwn,mdown,markdown, desc="Markdown document"
 
 open firefox, `about:config`, search for mime, change "helpers.private_mime_types_file" value with the file path of mime.types which newly created
+
+# Emoticon shortcut
+
+ctrl+shift+u
