@@ -172,3 +172,4 @@ vim.keymap.set("n", "<leader>xe", "<cmd>!chmod +x %<CR>", { silent = true, desc 
 
 -- markdown
 vim.keymap.set("n", "<leader>cn", "yi(0di[hpF/dT[x", { desc = "change name markdown attachment" })
+vim.keymap.set("n", "<leader>gg", ":LazyGit<CR>", { desc = "Launch Lazygit" })
