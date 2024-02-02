@@ -32,7 +32,7 @@ vim.opt.backup = false
 vim.opt.undodir = "/home/mc/marc/GitHub/ubuntu/vim/undodir"
 vim.opt.undofile = true
 
--- vim.opt.hlsearch = true
+vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
 vim.opt.termguicolors = true

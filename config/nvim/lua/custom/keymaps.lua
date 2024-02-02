@@ -1,3 +1,6 @@
+-- CHEATSHEET
+-- https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
+
 -- remap button
 vim.keymap.set("n", ";", ":", {})
 vim.keymap.set("n", ":", ";", {})
@@ -31,11 +34,6 @@ vim.keymap.set("n", "<leader>ea", ":e ~/marc/GitHub/ubuntu/aliases<cr>",
 vim.keymap.set("n", "<leader>eb", ":e ~/marc/GitHub/ubuntu/config/nvim/lua/custom/abbreviation.lua<cr>",
 	{ desc = "Edit abbreviation" })
 
--- Go to folder
--- vim.keymap.set("n", "<leader>to", ":Neotree ~/Downloads<cr>", { desc = "Neotree Downloads" })
--- vim.keymap.set("n", "<leader>tc", ":Neotree ~/.config/<cr>", { desc = "Neotree Config Folder" })
--- vim.keymap.set("n", "<leader>tn", ":Neotree ~/Dropbox/notes/<cr>", { desc = "Neotree Notes" })
--- vim.keymap.set("n", "<leader>tN", ":cd ~/Dropbox/notes/<cr>", { desc = ":cd ~/Dropbox/notes/<cr>" })
 vim.keymap.set("n", "<leader>ty", ":let @+= @*<cr>", { desc = "transfer / copy * registers to clipboard" })
 
 vim.keymap.set("n", "<c-u>", '"uyy', { desc = "copy to buffer u" })
@@ -44,11 +42,11 @@ vim.keymap.set("n", "<m-u>", '"uP', { desc = "paste from u buffer" })
 vim.keymap.set("i", "<m-u>", '<c-r>u', { desc = "paste from u buffer" })
 vim.keymap.set("n", "<leader>tt", ':tabnew<cr>', { desc = "new tab" })
 vim.keymap.set("n", "<leader>tr", ':%s//gc<left><left><left>', { desc = "search and replace" })
-vim.keymap.set("n", "<leader>t\\", ":noh<cr>", { desc = "Remove Highlight" })
 vim.keymap.set("n", "<leader>tm", ":tabm<space>", { desc = "Move tab to [n] input" })
 vim.keymap.set("n", "<leader>tg", "yy:bd<CR>:<C-r>0<CR>", { desc = "go to bookmark selection" })
 vim.keymap.set("n", "<leader>th", ":! thorium-browser \"<c-r>%\"<CR>", { desc = "preview markdown" })
 vim.keymap.set("n", "<leader>tf", ":! firefox \"<c-r>%\"<CR>", { desc = "preview markdown" })
+vim.keymap.set("n", "<leader>ts", ":set spell!<cr>", { desc = "Set Wrap" })
 
 vim.keymap.set("n", "<leader>tc", ":let @+ = expand('%:p')<cr>", { desc = "copy filepath" })
 vim.keymap.set("n", "<leader>t.", ":pwd<enter>", { desc = "check cwd / current working directory" })
@@ -56,9 +54,48 @@ vim.keymap.set("n", "<leader>tD",
 	":let @+ = expand('%:p')<cr>o<c-r>+<Esc>dF/xv0d:let @+ = @*<cr>i<backspace><esc>:cd <c-r>+<enter>",
 	{ desc = "change cwd to current file location" })
 
+-- save file
+vim.keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
+
+--keywordprg
+vim.keymap.set("n", "<leader>tk", "<cmd>norm! K<cr>", { desc = "Keywordprg" })
+
+-- better indenting
+vim.keymap.set("v", "<", "<gv")
+vim.keymap.set("v", ">", ">gv")
+
+-- lazy
+vim.keymap.set("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy" })
+
+-- new file
+vim.keymap.set("n", "<leader>fn", "<cmd>enew<cr>", { desc = "New File" })
+
+vim.keymap.set("n", "<leader>xl", "<cmd>lopen<cr>", { desc = "Location List" })
+vim.keymap.set("n", "<leader>xq", "<cmd>copen<cr>", { desc = "Quickfix List" })
+
+-- diagnostic
+local diagnostic_goto = function(next, severity)
+	local go = next and vim.diagnostic.goto_next or vim.diagnostic.goto_prev
+	severity = severity and vim.diagnostic.severity[severity] or nil
+	return function()
+		go({ severity = severity })
+	end
+end
+-- vim.keymap.set("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
+-- vim.keymap.set("n", "]d", diagnostic_goto(true), { desc = "Next Diagnostic" })
+-- vim.keymap.set("n", "[d", diagnostic_goto(false), { desc = "Prev Diagnostic" })
+vim.keymap.set("n", "]e", diagnostic_goto(true, "ERROR"), { desc = "Next Error" })
+vim.keymap.set("n", "[e", diagnostic_goto(false, "ERROR"), { desc = "Prev Error" })
+vim.keymap.set("n", "]w", diagnostic_goto(true, "WARN"), { desc = "Next Warning" })
+vim.keymap.set("n", "[w", diagnostic_goto(false, "WARN"), { desc = "Prev Warning" })
+
+vim.keymap.set("n", "[q", vim.cmd.cprev, { desc = "Previous quickfix" })
+vim.keymap.set("n", "]q", vim.cmd.cnext, { desc = "Next quickfix" })
+
+-- quit
+vim.keymap.set("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all" })
+
 -- Functionality
-vim.keymap.set("n", "<C-s>", ":w<cr>", { desc = "Save Progress" })
-vim.keymap.set("i", "<C-s>", "<esc>:w<cr>", { desc = "Save Progress" })
 vim.keymap.set("i", "<C-d>", "<esc>ddi", { desc = "delete line when insert mode" })
 vim.keymap.set("i", "<C-v>", "<C-r>\"", { desc = "paste in insert mode" })
 vim.keymap.set("n", "<C-q>", ":bd!<cr>", { desc = "Close file" })
@@ -73,12 +110,8 @@ vim.keymap.set("n", "L", "$", { desc = "" })
 vim.keymap.set("v", "L", "$h", { desc = "" })
 
 vim.keymap.set("n", "<M-t>", ":Startify<cr>", { desc = "startify" })
-vim.keymap.set("n", "<M-h>", "0", { desc = "" })
-vim.keymap.set("v", "<M-h>", "0", { desc = "" })
-vim.keymap.set("n", "<M-l>", "$", { desc = "" })
-vim.keymap.set("v", "<M-l>", "$", { desc = "" })
-vim.keymap.set("n", "<M-k>", vim.lsp.buf.hover, { desc = "" })
-vim.keymap.set("n", "<M-j>", "J", { desc = "" })
+vim.keymap.set("n", "<M-h>", vim.lsp.buf.hover, { desc = "" })
+vim.keymap.set("n", "<M-l>", "J", { desc = "" })
 vim.keymap.set("n", "K", ":bnext<cr>", { desc = "" })
 vim.keymap.set("n", "J", ":bprevious<cr>", { desc = "" })
 vim.keymap.set("i", "<M-k>", "<esc>:bnext<cr>", { desc = "" })
@@ -118,15 +151,41 @@ vim.keymap.set("n", "<M-d>", "<cmd>cprev<CR>zz", { desc = "quickfixlist cprev" }
 vim.keymap.set("n", "<leader>j", "<cmd>lnext<CR>zz", { desc = "quickfixlist lnext" })
 vim.keymap.set("n", "<leader>k", "<cmd>lprev<CR>zz", { desc = "quickfixlist lprev" })
 
+-- Add undo break-points
+vim.keymap.set("i", ",", ",<c-g>u")
+vim.keymap.set("i", ".", ".<c-g>u")
+vim.keymap.set("i", ";", ";<c-g>u")
 vim.keymap.set("i", "<space>", "<space><c-g>u", { desc = "undo breakpoint" })
 vim.keymap.set("i", "<CR>", "<CR><c-g>u", { desc = "undo breakpoint" })
 vim.keymap.set("i", "<tab>", "<tab><c-g>u", { desc = "undo breakpoint" })
 
+-- move lines
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "moving text" })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "moving text" })
 vim.keymap.set("i", "<C-j>", "<esc>:m .+1<CR>==i", { desc = "moving text" })
 vim.keymap.set("i", "<C-k>", "<esc>:m .-2<CR>==i", { desc = "moving text" })
+vim.keymap.set("n", "<A-j>", "<cmd>m .+1<cr>==", { desc = "Move down" })
+vim.keymap.set("n", "<A-k>", "<cmd>m .-2<cr>==", { desc = "Move up" })
 
+-- Clear search with <esc>
+vim.keymap.set({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" })
+
+-- Clear search, diff update and redraw
+-- taken from runtime/lua/_editor.lua
+vim.keymap.set(
+	"n",
+	"<leader>ur",
+	"<Cmd>nohlsearch<Bar>diffupdate<Bar>normal! <C-L><CR>",
+	{ desc = "Redraw / clear hlsearch / diff update" }
+)
+
+-- https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
+vim.keymap.set("n", "n", "'Nn'[v:searchforward].'zv'", { expr = true, desc = "Next search result" })
+vim.keymap.set("x", "n", "'Nn'[v:searchforward]", { expr = true, desc = "Next search result" })
+vim.keymap.set("o", "n", "'Nn'[v:searchforward]", { expr = true, desc = "Next search result" })
+vim.keymap.set("n", "N", "'nN'[v:searchforward].'zv'", { expr = true, desc = "Prev search result" })
+vim.keymap.set("x", "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev search result" })
+vim.keymap.set("o", "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev search result" })
 
 vim.keymap.set("n", "\\html", ":read $HOME/.config/nvim/snippets/skeleton.html<CR>3jwf>a", { desc = "snippets" })
 vim.keymap.set("n", "\\sig", ":read $HOME/.config/nvim/snippets/signature<CR>", { desc = "snippets" })
