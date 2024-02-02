@@ -19,5 +19,7 @@ config.color_scheme = 'AdventureTime'
 config.warn_about_missing_glyphs = false
 config.font_size = 13.3
 
+config.check_for_updates = false
+
 -- and finally, return the configuration to wezterm
 return config
