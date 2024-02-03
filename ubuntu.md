@@ -186,6 +186,7 @@ sudo dpkg -i ~/marc/debinstaller/VNC-Viewer-7.8.0-Linux-x64.deb
 sudo dpkg -i ~/marc/debinstaller/code_1.84.2-1699528352_amd64.deb
 sudo dpkg -i ~/marc/debinstaller/wps-office_11.1.0.11711.XA_amd64.deb
 sudo dpkg -i ~/marc/debinstaller/lsd-musl_1.0.0_amd64.deb
+dbeaver
 
 sudo apt install libqt5help5 libqt5x11extras5
 sudo dpkg -i ~/marc/debinstaller/virtualbox-7.0_7.0.12-159484\~Ubuntu\~jammy_amd64.deb

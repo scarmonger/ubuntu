@@ -55,6 +55,13 @@ vim.cmd([[ let g:startify_custom_header = [] ]])
 -- Re-open at last position
 vim.cmd([[ au BufReadPost * if line("'\"") >= 1 && line ("'\"") <= line("$") | exe "normal! g`\"" | endif ]])
 
+-- Add undo break-points
+vim.keymap.set("i", ",", ",<c-g>u")
+vim.keymap.set("i", ".", ".<c-g>u")
+vim.keymap.set("i", ";", ";<c-g>u")
+vim.keymap.set("i", "<space>", "<space><c-g>u", { desc = "undo breakpoint" })
+vim.keymap.set("i", "<CR>", "<CR><c-g>u", { desc = "undo breakpoint" })
+vim.keymap.set("i", "<tab>", "<tab><c-g>u", { desc = "undo breakpoint" })
 
 -- Primeagen: make transparent background (did not work)
 -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
