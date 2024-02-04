@@ -11,6 +11,7 @@ alias ctt="echo -n 'PT Citra Tubindo Tbk' | xclip -sel c"
 alias ats="echo -n 'PT Atlas Petrochem Indo' | xclip -sel c"
 alias bu="dconf dump /org/gnome/ > ~/marc/GitHub/ubuntu/gnome-backup"
 alias wezterm='flatpak run org.wezfurlong.wezterm'
+alias fup='flatpak update'
 
 alias caly="cal -m $1"
 alias gcal="gcal -H '\e[31;42m:\e[0m:\e[33;45m:\e[0m' -n -q ID $1"

@@ -8,5 +8,6 @@ return {
 	'mbbill/undotree',
 	'christoomey/vim-tmux-navigator',
 	'alvan/vim-closetag',
-	'prettier/vim-prettier'
+	'prettier/vim-prettier',
+	'fatih/vim-go'
 }
