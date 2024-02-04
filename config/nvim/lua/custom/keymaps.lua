@@ -22,12 +22,15 @@ vim.keymap.set("n", "<F2>", ":let @+= @*<cr>", { desc = "copy * registers to cli
 
 vim.keymap.set("n", "<leader>tt", ':tabnew<cr>', { desc = "new tab" })
 vim.keymap.set("n", "<leader>tm", ":tabm<space>", { desc = "Move tab to [n] input" })
-vim.keymap.set("n", "<leader>tr", ':%s//gc<left><left><left>', { desc = "search and replace" })
+vim.keymap.set("n", "<leader>tf", ':%s//gc<left><left><left>', { desc = "search and replace" })
 vim.keymap.set("n", "<leader>th", ":! thorium-browser \"<c-r>%\"<CR>", { desc = "preview markdown" })
-vim.keymap.set("n", "<leader>tf", ":! firefox \"<c-r>%\"<CR>", { desc = "preview markdown" })
+vim.keymap.set("n", "<leader>tp", ":! firefox \"<c-r>%\"<CR>", { desc = "preview markdown" })
 vim.keymap.set("n", "<leader>ts", ":set spell!<cr>", { desc = "Set Spell" })
 vim.keymap.set("n", "<leader>tw", ":set wrap!<cr>", { desc = "Set Wrap" })
 vim.keymap.set("n", "<leader>tk", "<cmd>norm! K<cr>", { desc = "Keywordprg" })
+vim.keymap.set("n", "<leader>tr",
+	":let @+ = expand('%:p')<cr>o<c-r>+<Esc>dF/xv0d:let @+ = @*<cr>i<backspace><esc>:!go run <c-r>+<enter>",
+	{ desc = "go run" })
 vim.keymap.set("n", "<leader>tc",
 	":let @+ = expand('%:p')<cr>o<c-r>+<Esc>dF/xv0d:let @+ = @*<cr>i<backspace><esc>:cd <c-r>+<enter>",
 	{ desc = "change cwd to current file location" })
