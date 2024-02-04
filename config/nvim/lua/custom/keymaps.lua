@@ -38,6 +38,7 @@ vim.keymap.set("n", "<leader>xq", "<cmd>copen<cr>", { desc = "Quickfix List" })
 
 -- Functionality
 vim.keymap.set("i", "<C-d>", "<esc>ddi", { desc = "delete line when insert mode" })
+vim.keymap.set("n", "<C-Del>", '"_dw', { desc = "delete line in normal mode" })
 vim.keymap.set("i", "<C-v>", "<C-r>\"", { desc = "paste in insert mode" })
 vim.keymap.set("n", "<C-q>", ":bd!<cr>", { desc = "Close file" })
 
@@ -47,8 +48,8 @@ vim.keymap.set("n", "<M-t>", ":Startify<cr>", { desc = "startify" })
 -- vim.keymap.set("n", "<M-l>", "J", { desc = "" })
 -- vim.keymap.set("n", "K", ":bnext<cr>", { desc = "" })
 -- vim.keymap.set("n", "J", ":bprevious<cr>", { desc = "" })
-vim.keymap.set({ "n", "i" }, "<M-h>", "<esc>:bnext<cr>", { desc = "" })
-vim.keymap.set({ "n", "i" }, "<M-l>", "<esc>:bprevious<cr>", { desc = "" })
+vim.keymap.set({ "n", "i" }, "<M-l>", "<esc>:bnext<cr>", { desc = "" })
+vim.keymap.set({ "n", "i" }, "<M-h>", "<esc>:bprevious<cr>", { desc = "" })
 vim.keymap.set("n", "<M-q>", ":TodoQuickFix", { desc = "To-do quickfixlist" })
 vim.keymap.set("n", "<M-w>", ":set wrap!<cr>", { desc = "Set Wrap" })
 
