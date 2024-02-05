@@ -81,6 +81,7 @@ vim.keymap.set("n", "<leader>gg", ":LazyGit<CR>", { desc = "Launch Lazygit" })
 -- snippets
 vim.keymap.set("n", "\\html", ":read $HOME/.config/nvim/snippets/skeleton.html<CR>3jwf>a", { desc = "snippets" })
 vim.keymap.set("n", "\\sig", ":read $HOME/.config/nvim/snippets/signature<CR>", { desc = "snippets" })
+vim.keymap.set("n", "\\rafce", ":read $HOME/.config/nvim/snippets/rafce<CR>", { desc = "snippets" })
 vim.keymap.set("n", "\\bm", ":tabnew $HOME/.config/nvim/snippets/bm<CR>", { desc = "bookmark" })
 
 -- vim.keymap.set("n", "Q", "<nop>", {})
