@@ -37,7 +37,7 @@ function findfolder(){
 
 bindkey -s ^g "findfile\n"
 bindkey -s ^f "findfolder\n"
-bindkey -s ^l "clear\n"
+bindkey -s ^e "clear\n"
 bindkey -s ^i "ls -p | grep -v"
 bindkey -s ^p "source ~/.zshrc\n"
 

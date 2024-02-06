@@ -97,7 +97,6 @@ alias gp="cd ~/Documents/ && yt-dlp -f '\''bestaudio'\'' "
 
 alias tso="tmux source ~/.config/tmux/tmux.conf"
 alias nw="tmux neww"
-alias kw="tmux kill-window"
 alias ks="tmux kill-server"
 alias ts="tmux attach -t fe-server || tmux new -s fe-server"
 alias tt="tmux attach -t workspace || tmux new -s workspace ws"
@@ -216,9 +215,9 @@ alias cpu10="ps auxf | sort -nr -k 3 | head -10"
 alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -"
 
 alias ls='lsd'
-alias ll='ls -alF'
+alias ll='lsd -alF'
 alias la='lsd -A'
-alias l='ls -CF'
+alias l='lsd -CF'
 
 alias so="source ~/.zshrc"
 alias sox="source ~/.xinitrc"
