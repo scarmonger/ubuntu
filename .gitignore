@@ -7,3 +7,4 @@ config/nvim_lazy/lua/config/~/.vim/undodir
 config/nvim/~/.vim/undodir
 config/nvim/lua/~/.vim/undodir
 vim/undodir
+vim/undodir
