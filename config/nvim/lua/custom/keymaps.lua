@@ -6,8 +6,8 @@ vim.keymap.set("n", ";", ":", {})
 vim.keymap.set("n", ":", ";", {})
 vim.keymap.set("i", "jk", "<esc>", { desc = "escape from insert mode" })
 vim.keymap.set("i", "kj", "<esc>", { desc = "escape from insert mode" })
--- vim.keymap.set("n", "gj", ":tabnext<cr>", { desc = "tab next" })
--- vim.keymap.set("n", "gk", ":tabprevious<cr>", { desc = "tab previous" })
+vim.keymap.set("n", "gj", ":BufferLineMovePrev<cr>", { desc = "move location to prev buffer" })
+vim.keymap.set("n", "gk", ":BufferLineMoveNext<cr>", { desc = "move location to next buffer" })
 vim.keymap.set("n", "gh", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 vim.keymap.set("v", "<leader><Enter>", ":.! bc -l <CR>", { desc = "calculate number" })
 
@@ -20,8 +20,6 @@ vim.keymap.set("n", "<leader>yc", ":let @+= @*<cr>", { desc = "transfer / copy *
 vim.keymap.set("n", "<leader>ty", ":let @+= @*<cr>", { desc = "transfer / copy * registers to clipboard" })
 vim.keymap.set("n", "<F2>", ":let @+= @*<cr>", { desc = "copy * registers to clipboard" })
 
-vim.keymap.set("n", "<leader>tt", ':tabnew<cr>', { desc = "new tab" })
-vim.keymap.set("n", "<leader>tm", ":tabm<space>", { desc = "Move tab to [n] input" })
 vim.keymap.set("n", "<leader>tf", ':%s//gc<left><left><left>', { desc = "search and replace" })
 vim.keymap.set("n", "<leader>th", ":! thorium-browser \"<c-r>%\"<CR>", { desc = "preview markdown" })
 vim.keymap.set("n", "<leader>tp", ":! firefox \"<c-r>%\"<CR>", { desc = "preview markdown" })
@@ -125,14 +123,14 @@ vim.keymap.set("n", "<leader>j", "<cmd>lnext<CR>zz", { desc = "quickfixlist lnex
 vim.keymap.set("n", "<leader>k", "<cmd>lprev<CR>zz", { desc = "quickfixlist lprev" })
 
 -- quit
-vim.keymap.set("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all" })
+vim.keymap.set("n", "<leader>qq", "<cmd>confirm qa<cr>", { desc = "Quit all" })
 
 vim.keymap.set("n", "x", '"_x', { desc = "prevent yank character when deleting" })
 vim.keymap.set("n", "X", '"_x', { desc = "prevent yank character when deleting" })
 vim.keymap.set("n", "<Del>", '"_x', { desc = "prevent yank character when deleting" })
 
-vim.keymap.set("n", "H", "0", { desc = "" })
-vim.keymap.set("v", "H", "0", { desc = "" })
+vim.keymap.set("n", "H", "^", { desc = "" })
+vim.keymap.set("v", "H", "^", { desc = "" })
 vim.keymap.set("n", "L", "$", { desc = "" })
 vim.keymap.set("v", "L", "$h", { desc = "" })
 
@@ -146,11 +144,17 @@ vim.keymap.set("n", "<leader>so", require("telescope.builtin").vim_options, { de
 vim.keymap.set("n", "<F5>", ":UndotreeToggle<CR>", { desc = "UndotreeToggle" })
 vim.keymap.set("n", "<F11>", 'a<C-R>=strftime("%c")<CR><Esc>', { desc = "insert date and time" })
 
-vim.keymap.set("n", "<leader>1", "1gt", { desc = "go to tab" })
-vim.keymap.set("n", "<leader>2", "2gt", { desc = "go to tab" })
-vim.keymap.set("n", "<leader>3", "3gt", { desc = "go to tab" })
-vim.keymap.set("n", "<leader>4", "4gt", { desc = "go to tab" })
-vim.keymap.set("n", "<leader>5", "5gt", { desc = "go to tab" })
+vim.keymap.set("n", "<leader>1", "<cmd>BufferLineGoToBuffer 1<cr>")
+vim.keymap.set("n", "<leader>2", "<cmd>BufferLineGoToBuffer 2<cr>")
+vim.keymap.set("n", "<leader>3", "<cmd>BufferLineGoToBuffer 3<cr>")
+vim.keymap.set("n", "<leader>4", "<cmd>BufferLineGoToBuffer 4<cr>")
+vim.keymap.set("n", "<leader>5", "<cmd>BufferLineGoToBuffer 5<cr>")
+vim.keymap.set("n", "<leader>6", "<cmd>BufferLineGoToBuffer 6<cr>")
+vim.keymap.set("n", "<leader>7", "<cmd>BufferLineGoToBuffer 7<cr>")
+vim.keymap.set("n", "<leader>8", "<cmd>BufferLineGoToBuffer 8<cr>")
+vim.keymap.set("n", "<leader>9", "<cmd>BufferLineGoToBuffer 9<cr>")
+vim.keymap.set("n", "<leader>0", "<cmd>BufferLineGoToBuffer -1<cr>")
+
 
 -- Clear search with <esc>
 vim.keymap.set({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" })
