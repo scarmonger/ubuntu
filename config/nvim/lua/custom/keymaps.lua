@@ -83,7 +83,7 @@ vim.keymap.set(
 )
 
 -- markdown
-vim.keymap.set("n", "<leader>cn", "yi(0di[hpF/dT[x", { desc = "change name markdown attachment" })
+vim.keymap.set("n", "<leader>cn", "yi(0ci[h<c-r>0<esc>F/dT[x", { desc = "change name markdown attachment" })
 vim.keymap.set("n", "<leader>gg", ":LazyGit<CR>", { desc = "Launch Lazygit" })
 
 -- snippets
