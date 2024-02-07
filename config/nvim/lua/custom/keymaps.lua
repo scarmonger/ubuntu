@@ -11,7 +11,7 @@ vim.keymap.set("n", "gk", ":BufferLineMoveNext<cr>", { desc = "move location to 
 vim.keymap.set("n", "gh", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 vim.keymap.set("v", "<leader><Enter>", ":.! bc -l <CR>", { desc = "calculate number" })
 
--- Special copy to buffer n
+-- REGISTERS
 vim.keymap.set({ "n", "v" }, "<c-n>", '"nyy', { desc = "copy to buffer n" })
 vim.keymap.set("n", "<m-n>", '"nP', { desc = "paste from n buffer" })
 vim.keymap.set("i", "<m-n>", '<c-r>n', { desc = "paste from n buffer" })
@@ -19,6 +19,9 @@ vim.keymap.set("n", "<leader>yp", ":let @+ = expand('%:p')<cr>", { desc = "copy 
 vim.keymap.set("n", "<leader>yc", ":let @+= @*<cr>", { desc = "transfer / copy * registers to clipboard" })
 vim.keymap.set("n", "<leader>ty", ":let @+= @*<cr>", { desc = "transfer / copy * registers to clipboard" })
 vim.keymap.set("n", "<F2>", ":let @+= @*<cr>", { desc = "copy * registers to clipboard" })
+vim.keymap.set({ "n", "v" }, "\"0", '"0p', { desc = "paste from last yank" })
+vim.keymap.set("i", "<C-v>", "<C-r>\"", { desc = "paste from the last yank, delete" })
+vim.keymap.set("i", "<C-b>", "<C-r>0", { desc = "paste from last yank" })
 
 vim.keymap.set("n", "<leader>tf", ':%s//gc<left><left><left>', { desc = "search and replace" })
 vim.keymap.set("n", "<leader>th", ":! thorium-browser \"<c-r>%\"<CR>", { desc = "preview markdown" })
@@ -39,8 +42,9 @@ vim.keymap.set("n", "<leader>xq", "<cmd>copen<cr>", { desc = "Quickfix List" })
 
 -- Functionality
 vim.keymap.set("i", "<C-d>", "<esc>ddi", { desc = "delete line when insert mode" })
-vim.keymap.set("n", "<C-Del>", '"_dw', { desc = "delete line in normal mode" })
-vim.keymap.set("i", "<C-v>", "<C-r>\"", { desc = "paste in insert mode" })
+vim.keymap.set("i", "<C-d>", "<esc>ddi", { desc = "delete line when insert mode" })
+vim.keymap.set("n", "<C-Del>", '"_de', { desc = "delete line in normal mode" })
+vim.keymap.set("i", "<C-BS>", '<esc>', { desc = "delete line in normal mode" })
 vim.keymap.set("n", "<C-q>", ":bd!<cr>", { desc = "Close file" })
 
 vim.keymap.set("n", "<M-r>", ":GoRun<cr>", { desc = "GoRun" })
@@ -60,10 +64,16 @@ vim.keymap.set("n", "<leader>fn", "<cmd>enew<cr>", { desc = "New File" })
 -- move lines
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "moving text" })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "moving text" })
-vim.keymap.set("i", "<C-j>", "<esc>:m .+1<CR>==i", { desc = "moving text" })
-vim.keymap.set("i", "<C-k>", "<esc>:m .-2<CR>==i", { desc = "moving text" })
 vim.keymap.set("n", "<A-j>", "<cmd>m .+1<cr>==", { desc = "Move down" })
 vim.keymap.set("n", "<A-k>", "<cmd>m .-2<cr>==", { desc = "Move up" })
+-- vim.keymap.set("i", "<C-j>", "<esc>:m .+1<CR>==i", { desc = "moving text" })
+-- vim.keymap.set("i", "<C-k>", "<esc>:m .-2<CR>==i", { desc = "moving text" })
+
+-- Move to window using the <ctrl> hjkl keys
+vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Go to left window", remap = true })
+vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Go to lower window", remap = true })
+vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Go to upper window", remap = true })
+vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to right window", remap = true })
 
 vim.keymap.set(
 	"n",
