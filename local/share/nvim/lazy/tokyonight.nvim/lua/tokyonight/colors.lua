@@ -62,7 +62,7 @@ M.moon = function()
     -- Marc
     -- comment = "#7a88cf", --
     -- comment = "#b1bdfa", --
-    comment = "#6dfcbe", --
+    comment = "#ee9cff", --
     dark5 = "#737aa2",
     blue0 = "#3e68d7",   --
     blue = "#82aaff",    --
