@@ -47,7 +47,7 @@ vim.keymap.set("n", "<C-Del>", '"_de', { desc = "delete line in normal mode" })
 vim.keymap.set("i", "<C-BS>", '<esc>', { desc = "delete line in normal mode" })
 vim.keymap.set("n", "<C-q>", ":confirm bd<cr>", { desc = "Close file" })
 
-vim.keymap.set("n", "<M-r>", ":GoRun<cr>", { desc = "GoRun" })
+vim.keymap.set("n", "<M-r>", ":w | GoRun<cr>", { desc = "GoRun" })
 vim.keymap.set("n", "<M-t>", ":Startify<cr>", { desc = "startify" })
 -- vim.keymap.set("n", "<M-h>", vim.lsp.buf.hover, { desc = "" })
 -- vim.keymap.set("n", "<M-l>", "J", { desc = "" })

@@ -137,6 +137,7 @@ ln -ivs ~/marc/GitHub/ubuntu/config/gtk-4.0/gtk.css ~/.config/gtk-4.0/
 ln -ivs ~/marc/GitHub/ubuntu/local/share/nvim/lazy/onedark.nvim/lua/onedark/highlights.lua ~/.local/share/nvim/lazy/onedark.nvim/lua/onedark/highlights.lua
 ln -ivs ~/marc/GitHub/ubuntu/local/share/nvim/lazy/onedark.nvim/lua/onedark/palette.lua ~/.local/share/nvim/lazy/onedark.nvim/lua/onedark/palette.lua
 ln -ivs /home/mc/marc/GitHub/ubuntu/local/share/nvim/lazy/tokyonight.nvim/lua/tokyonight/colors.lua /home/mc/.local/share/nvim/lazy/tokyonight.nvim/lua/tokyonight
+ln -ivs /home/mc/marc/GitHub/ubuntu/config/mpv /home/mc/.config
 ```
 
 # Install neovim
