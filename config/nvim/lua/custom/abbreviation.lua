@@ -16,4 +16,5 @@ vim.cmd([[ cabbrev cdt cd ~/Dropbox/notes/tech/ ]])
 vim.cmd([[ cabbrev cdp cd ~/Dropbox/notes/personal/ ]])
 vim.cmd([[ cabbrev cdg cd /home/mc/Dropbox/MyProject/go_tutorial ]])
 
-vim.cmd([[ cabbrev bd confirm bd ]])
+vim.cmd([[ cabbrev cbd confirm bd ]])
+vim.cmd([[ cabbrev help tab help ]])

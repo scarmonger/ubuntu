@@ -8,14 +8,14 @@ o.cursorlineopt = "number,line"
 o.cursorline = true
 
 local options = {
-	clipboard = "unnamed",
-	smartcase = true,
-	conceallevel = 0,
-	relativenumber = true,
+    clipboard = "unnamed",
+    smartcase = true,
+    conceallevel = 0,
+    relativenumber = true,
 }
 
 for k, v in pairs(options) do
-	vim.opt[k] = v
+    vim.opt[k] = v
 end
 
 vim.opt.tabstop = 4
@@ -51,6 +51,10 @@ vim.opt.iskeyword:append("-") -- hyphenated words recognized by searches / "asdf
 
 -- startify_remove mad cow at the top
 vim.cmd([[ let g:startify_custom_header = [] ]])
+
+-- Go completion
+vim.cmd([[ let g:go_def_mode='gopls' ]])
+vim.cmd([[ let g:go_info_mode='gopls' ]])
 
 -- Re-open at last position
 vim.cmd([[ au BufReadPost * if line("'\"") >= 1 && line ("'\"") <= line("$") | exe "normal! g`\"" | endif ]])

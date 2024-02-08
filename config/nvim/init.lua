@@ -188,13 +188,12 @@ require("lazy").setup({
       end,
     },
   },
-
   {
     -- Theme inspired by Atom
     "navarasu/onedark.nvim",
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme("onedark")
+      vim.cmd.colorscheme("tokyonight")
     end,
   },
 
@@ -204,14 +203,15 @@ require("lazy").setup({
     -- See `:help lualine.txt`
     opts = {
       options = {
-        icons_enabled = false,
-        theme = "onedark",
+        icons_enabled = true,
+        theme = "auto",
         component_separators = "|",
         section_separators = "",
       },
       sections = {
-        -- lualine_a = { 'buffers' },
-        lualine_a = {
+        lualine_a = { 'mode' },
+        lualine_b = { 'branch', 'diff', 'diagnostics' },
+        lualine_c = {
           {
             'filename',
             filestatus = true,
@@ -227,7 +227,6 @@ require("lazy").setup({
         -- Marc
         -- lualine_c = { 'filename' },
         -- lualine_x = { 'encoding', 'fileformat', 'filetype' },
-        lualine_c = { '' },
         lualine_x = { '', '', 'filetype' },
 
       }
@@ -584,7 +583,7 @@ local on_attach = function(_, bufnr)
   -- See `:help K` for why this keymap
   nmap("K", vim.lsp.buf.hover, "Hover Documentation")
   -- nmap("<C-k>", vim.lsp.buf.signature_help, "Signature Documentation")
-  nmap("<F1>", vim.lsp.buf.signature_help, "Signature Documentation")
+  nmap("<F9>", vim.lsp.buf.signature_help, "Signature Documentation")
 
   -- Lesser used LSP functionality
   nmap("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")

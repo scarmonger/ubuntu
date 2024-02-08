@@ -11,6 +11,11 @@ return {
 	'prettier/vim-prettier',
 	'fatih/vim-go',
 	{
+		"folke/tokyonight.nvim",
+		lazy = true,
+		opts = { style = "moon" },
+	},
+	{
 		'akinsho/bufferline.nvim',
 		version = "*",
 		dependencies = 'nvim-tree/nvim-web-devicons',
