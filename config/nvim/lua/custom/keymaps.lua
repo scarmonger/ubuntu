@@ -88,10 +88,13 @@ vim.keymap.set("n", "<leader>cn", "yi(0ci[h<c-r>0<esc>F/dT[x", { desc = "change 
 vim.keymap.set("n", "<leader>gg", ":LazyGit<CR>", { desc = "Launch Lazygit" })
 
 -- snippets
-vim.keymap.set("n", "\\html", ":read $HOME/.config/nvim/snippets/skeleton.html<CR>3jwf>a", { desc = "snippets" })
-vim.keymap.set("n", "\\sig", ":read $HOME/.config/nvim/snippets/signature<CR>", { desc = "snippets" })
-vim.keymap.set("n", "\\rafce", ":read $HOME/.config/nvim/snippets/rafce<CR>", { desc = "snippets" })
-vim.keymap.set("n", "\\bm", ":tabnew $HOME/.config/nvim/snippets/bm<CR>", { desc = "bookmark" })
+vim.keymap.set("n", "\\htm", ":read $HOME/.config/nvim/snippets/skeleton.html<CR>3jwf>a")
+vim.keymap.set("n", "\\sig", ":read $HOME/.config/nvim/snippets/signature<CR>")
+vim.keymap.set("n", "\\rfc", ":read $HOME/.config/nvim/snippets/rafce<CR>")
+vim.keymap.set("n", "\\gpf", ":read $HOME/.config/nvim/snippets/go-printf<CR>ci\"")
+vim.keymap.set("n", "\\gpl", ":read $HOME/.config/nvim/snippets/go-println<CR>ci\"")
+vim.keymap.set("n", "\\gmf", ":read $HOME/.config/nvim/snippets/go-mainFunc<CR>3ji<tab>")
+
 
 -- vim.keymap.set("n", "Q", "<nop>", {})
 
