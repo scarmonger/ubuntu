@@ -8,14 +8,14 @@ o.cursorlineopt = "number,line"
 o.cursorline = true
 
 local options = {
-    clipboard = "unnamed",
-    smartcase = true,
-    conceallevel = 0,
-    relativenumber = true,
+	clipboard = "unnamed",
+	smartcase = true,
+	conceallevel = 0,
+	relativenumber = true,
 }
 
 for k, v in pairs(options) do
-    vim.opt[k] = v
+	vim.opt[k] = v
 end
 
 vim.opt.tabstop = 4
@@ -60,6 +60,14 @@ vim.cmd([[ let g:go_info_mode='gopls' ]])
 vim.cmd([[ au BufReadPost * if line("'\"") >= 1 && line ("'\"") <= line("$") | exe "normal! g`\"" | endif ]])
 
 -- Add undo break-points
+vim.keymap.set("i", "<", ",<c-g>u")
+vim.keymap.set("i", ">", ",<c-g>u")
+vim.keymap.set("i", "{", ",<c-g>u")
+vim.keymap.set("i", ")", ",<c-g>u")
+vim.keymap.set("i", "[", ",<c-g>u")
+vim.keymap.set("i", "]", ",<c-g>u")
+vim.keymap.set("i", ")", ",<c-g>u")
+vim.keymap.set("i", ")", ",<c-g>u")
 vim.keymap.set("i", ",", ",<c-g>u")
 vim.keymap.set("i", ".", ".<c-g>u")
 vim.keymap.set("i", ";", ";<c-g>u")
