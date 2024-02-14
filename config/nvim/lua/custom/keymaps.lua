@@ -229,9 +229,9 @@ vim.keymap.set("v", "<leader>'", "<esc>a'<esc>`<i'<esc>`>2l", { desc = "Surround
 
 -- Edit specific file
 -- vim.keymap.set("n", "<leader>er", ":Neotree reveal position=current<cr>", { desc = "Reveal in explorer full" })
-vim.keymap.set("n", "<leader>er", ":Neotree reveal_force_cwd<cr>", { desc = "Reveal in explorer side window" })
-vim.keymap.set("n", "<leader>eE", ":Neotree position=current<cr>", { desc = "Neotree Full Window" })
-vim.keymap.set("n", "<leader>ee", ":Neotree <cr>", { desc = "Neotree left pane" })
+vim.keymap.set("n", "<leader>er", ":Neotree right reveal_force_cwd<cr>", { desc = "Reveal in explorer side window" })
+vim.keymap.set("n", "<leader>eE", ":Neotree right position=current<cr>", { desc = "Neotree Full Window" })
+vim.keymap.set("n", "<leader>ee", ":Neotree right<cr>", { desc = "Neotree right pane" })
 vim.keymap.set("n", "<leader>ei", ":e ~/marc/GitHub/ubuntu/config/nvim/init.lua<cr>",
 	{ desc = "Edit init.lua" })
 vim.keymap.set("n", "<leader>ep", ":e ~/marc/GitHub/ubuntu/config/nvim/lua/custom/plugins/plugins.lua<cr>",
