@@ -17,7 +17,7 @@ vim.keymap.set("n", "<m-n>", '"nP', { desc = "paste from n buffer" })
 vim.keymap.set("i", "<m-n>", '<c-r>n', { desc = "paste from n buffer" })
 vim.keymap.set("n", "<leader>yp", ":let @+ = expand('%:p')<cr>", { desc = "copy filepath" })
 vim.keymap.set("n", "<leader>yc", ":let @+= @*<cr>", { desc = "transfer / copy * registers to clipboard" })
-vim.keymap.set("n", "<leader>ty", ":let @+= @*<cr>", { desc = "transfer / copy * registers to clipboard" })
+-- vim.keymap.set("n", "<leader>ty", ":let @+= @*<cr>", { desc = "transfer / copy * registers to clipboard" })
 -- vim.keymap.set("n", "<F2>", ":let @+= @*<cr>", { desc = "copy * registers to clipboard" })
 vim.keymap.set({ "n", "v" }, "\"0", '"0p', { desc = "paste from last yank" })
 vim.keymap.set("i", "<C-v>", "<C-r>\"", { desc = "paste from the last yank, delete" })
@@ -108,6 +108,9 @@ vim.keymap.set("v", ">", ">gv")
 -- lazy
 vim.keymap.set("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy" })
 
+-- Comment
+vim.keymap.set("n", "<c-c>", "gcc", {})
+vim.keymap.set("v", "<c-c>", "gb")
 
 -- diagnostic
 local diagnostic_goto = function(next, severity)
@@ -225,8 +228,10 @@ vim.keymap.set("v", '<leader>"', '<esc>a"<esc>`<i"<esc>`>2l', { desc = "Surround
 vim.keymap.set("v", "<leader>'", "<esc>a'<esc>`<i'<esc>`>2l", { desc = "Surround word with double quotes" })
 
 -- Edit specific file
-vim.keymap.set("n", "<leader>en", ":Neotree reveal position=current<cr>", { desc = "Neotree Full Window" })
-vim.keymap.set("n", "<leader>ee", ":Neotree reveal<cr>", { desc = "Neotree left pane" })
+-- vim.keymap.set("n", "<leader>er", ":Neotree reveal position=current<cr>", { desc = "Reveal in explorer full" })
+vim.keymap.set("n", "<leader>er", ":Neotree right reveal_force_cwd<cr>", { desc = "Reveal in explorer side window" })
+vim.keymap.set("n", "<leader>eE", ":Neotree right position=current<cr>", { desc = "Neotree Full Window" })
+vim.keymap.set("n", "<leader>ee", ":Neotree right<cr>", { desc = "Neotree right pane" })
 vim.keymap.set("n", "<leader>ei", ":e ~/marc/GitHub/ubuntu/config/nvim/init.lua<cr>",
 	{ desc = "Edit init.lua" })
 vim.keymap.set("n", "<leader>ep", ":e ~/marc/GitHub/ubuntu/config/nvim/lua/custom/plugins/plugins.lua<cr>",
@@ -239,7 +244,7 @@ vim.keymap.set("n", "<leader>ez", ":e ~/marc/GitHub/ubuntu/zshrc<cr>",
 	{ desc = "Edit zshrc" })
 vim.keymap.set("n", "<leader>eu", ":e ~/marc/GitHub/ubuntu/ubuntu.md<cr>",
 	{ desc = "Edit ubuntu.md file" })
-vim.keymap.set("n", "<leader>er", ":e ~/marc/GitHub/ubuntu/config/ranger/rc.conf<cr>",
+vim.keymap.set("n", "<leader>eR", ":e ~/marc/GitHub/ubuntu/config/ranger/rc.conf<cr>",
 	{ desc = "Edit ranger config file" })
 vim.keymap.set("n", "<leader>ea", ":e ~/marc/GitHub/ubuntu/aliases<cr>",
 	{ desc = "Edit aliases" })

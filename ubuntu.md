@@ -40,7 +40,7 @@ sudo snap remove --purge firefox
 
 # Install app
 
-sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar fonts-powerline neofetch xclip ssh fzf mpv tmux dconf-editor kazam gnome-tweaks chrome-gnome-shell filezilla vlc ncdu htop gimp
+sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar fonts-powerline neofetch xclip ssh fzf mpv tmux dconf-editor kazam gnome-tweaks chrome-gnome-shell filezilla vlc ncdu htop gimp mycli
 
 systemctl status ssh
 systemctl start ssh

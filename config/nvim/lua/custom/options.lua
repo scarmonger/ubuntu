@@ -42,7 +42,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
-vim.opt.colorcolumn = "80"
+-- vim.opt.colorcolumn = "80"
 
 vim.opt.iskeyword:append("-") -- hyphenated words recognized by searches / "asdf-asdf" is treated as one word
 
