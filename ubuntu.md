@@ -208,6 +208,7 @@ sudo apt install alacritty
 
 sudo apt install -y python3 python3-pip
 pip install selenium
+pip install mycli
 pip install pyperclip
 pip install castero
 pip3 install neovim-remote
