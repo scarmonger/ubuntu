@@ -6,6 +6,7 @@ vim.cmd([[ cabbrev cdw Neotree right dir=~/Dropbox/notes/sfwp/ ]])
 vim.cmd([[ cabbrev cdt Neotree right dir=~/Dropbox/notes/tech/ ]])
 vim.cmd([[ cabbrev cdp Neotree right dir=~/Dropbox/notes/personal/ ]])
 vim.cmd([[ cabbrev cdg Neotree right dir=/home/mc/Dropbox/MyProject/go_tutorial ]])
+vim.cmd([[ cabbrev beg Neotree right dir=/home/mc/marc/custom/backend/sf7-enterprise-std ]])
 
 -- vim.cmd([[ cabbrev cdu cd ~/marc/GitHub/ubuntu/ ]])
 -- vim.cmd([[ cabbrev cdc cd ~/.config/ ]])

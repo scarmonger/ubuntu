@@ -138,6 +138,12 @@ ln -ivs ~/marc/GitHub/ubuntu/local/share/nvim/lazy/onedark.nvim/lua/onedark/high
 ln -ivs ~/marc/GitHub/ubuntu/local/share/nvim/lazy/onedark.nvim/lua/onedark/palette.lua ~/.local/share/nvim/lazy/onedark.nvim/lua/onedark/palette.lua
 ln -ivs /home/mc/marc/GitHub/ubuntu/local/share/nvim/lazy/tokyonight.nvim/lua/tokyonight/colors.lua /home/mc/.local/share/nvim/lazy/tokyonight.nvim/lua/tokyonight
 ln -ivs /home/mc/marc/GitHub/ubuntu/config/mpv /home/mc/.config
+ln -ivs /home/mc/marc/GitHub/ubuntu/myclirc ~/.myclirc
+ln -ivs /home/mc/marc/appimagefile/loffice ~/.local/bin
+ln -ivs /home/mc/marc/custom/source/commandbox/box ~/.local/bin/
+ln -ivs /home/mc/marc/custom/source/commandbox/jre ~/.local/bin/
+
+cp /home/mc/marc/GitHub/ubuntu/.wezterm.lua ~/
 ```
 
 # Install neovim
@@ -174,6 +180,8 @@ https://extensions.gnome.org/extension/4338/allow-locked-remote-desktop/
 https://extensions.gnome.org/extension/1160/dash-to-panel/
 
 # Download .deb installer
+
+sudo dpkg -i \*.deb
 
 wget https://dl.thorium.rocks/debian/dists/stable/thorium.list
 sudo mv thorium.list /etc/apt/sources.list.d/

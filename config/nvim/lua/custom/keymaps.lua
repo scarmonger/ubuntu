@@ -102,8 +102,8 @@ vim.keymap.set("n", "\\gmf", ":read $HOME/.config/nvim/snippets/go-mainFunc<CR>3
 vim.keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
 
 -- better indenting
-vim.keymap.set("v", "<", "<gv")
-vim.keymap.set("v", ">", ">gv")
+-- vim.keymap.set("v", "<", "<gv")
+-- vim.keymap.set("v", ">", ">gv")
 
 -- lazy
 vim.keymap.set("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy" })
@@ -218,14 +218,16 @@ vim.keymap.set("x", "<leader>P", "\"_dP", { desc = "paste in visual mode, don't 
 -- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { desc = "change project" })
 -- go back to previous session with <tmux-leader>+L
 
-vim.keymap.set("n", '<leader>"', 'viw<esc>a"<esc>hbi"<esc>lel<cr>', { desc = "Surround word with double quotes" })
-vim.keymap.set("n", "<leader>'", "viw<esc>a'<esc>hbi'<esc>lel<cr>", { desc = "Surround word with double quotes" })
-vim.keymap.set("n", "<leader><", "viw<esc>a><esc>hbi<<esc>lel<cr>", { desc = "Surround word with double quotes" })
-vim.keymap.set("n", "<leader><", "viw<esc>a)<esc>hbi(<esc>lel<cr>", { desc = "Surround word with double quotes" })
-vim.keymap.set("n", "<leader>{", "viw<esc>a}<esc>hbi{<esc>lel<cr>", { desc = "Surround word with double quotes" })
+-- Surround word with character
+vim.keymap.set("n", '<leader>"', 'viw<esc>a"<esc>hbi"<esc>lel<cr>')
+vim.keymap.set("n", "<leader>'", "viw<esc>a'<esc>hbi'<esc>lel<cr>")
+vim.keymap.set("n", "<leader><", "viw<esc>a><esc>hbi<<esc>lel<cr>")
+vim.keymap.set("n", "<leader><", "viw<esc>a)<esc>hbi(<esc>lel<cr>")
+vim.keymap.set("n", "<leader>{", "viw<esc>a}<esc>hbi{<esc>lel<cr>")
 
-vim.keymap.set("v", '<leader>"', '<esc>a"<esc>`<i"<esc>`>2l', { desc = "Surround word with double quotes" })
-vim.keymap.set("v", "<leader>'", "<esc>a'<esc>`<i'<esc>`>2l", { desc = "Surround word with double quotes" })
+vim.keymap.set("v", '<leader>"', '<esc>a"<esc>`<i"<esc>`>2l')
+vim.keymap.set("v", "<leader>'", "<esc>a'<esc>`<i'<esc>`>2l")
+vim.keymap.set("v", "<leader>*", "<esc>a*<esc>`<i*<esc>`>2l")
 
 -- Edit specific file
 -- vim.keymap.set("n", "<leader>er", ":Neotree reveal position=current<cr>", { desc = "Reveal in explorer full" })
