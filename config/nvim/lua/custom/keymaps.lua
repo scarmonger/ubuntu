@@ -244,11 +244,10 @@ vim.keymap.set("v", "<leader>'", "<esc>a'<esc>`<i'<esc>`>2l")
 vim.keymap.set("v", "<leader>*", "<esc>a*<esc>`<i*<esc>`>2l")
 
 -- Edit specific file
-vim.keymap.set("n", "<leader>eR", ":Neotree right reveal<cr>", { desc = "Reveal in explorer full" })
-vim.keymap.set("n", "<leader>er", ":Neotree float position=current reveal_force_cwd<cr>",
-	{ desc = "Reveal in explorer side window" })
-vim.keymap.set("n", "<leader>eE", ":Neotree right position=current<cr>", { desc = "Neotree Full Window" })
-vim.keymap.set("n", "<leader>ee", ":Neotree right<cr>", { desc = "Neotree right pane" })
+vim.keymap.set("n", "<leader>er", ":Neotree right reveal<cr>")
+vim.keymap.set("n", "<leader>eR", ":Neotree right position=current reveal_force_cwd<cr>")
+vim.keymap.set("n", "<leader>eE", ":Neotree right position=current<cr>")
+vim.keymap.set("n", "<leader>ee", ":Neotree float reveal<cr>")
 vim.keymap.set("n", "<leader>ei", ":e ~/marc/GitHub/ubuntu/config/nvim/init.lua<cr>",
 	{ desc = "Edit init.lua" })
 vim.keymap.set("n", "<leader>ep", ":e ~/marc/GitHub/ubuntu/config/nvim/lua/custom/plugins/plugins.lua<cr>",
