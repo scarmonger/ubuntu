@@ -8,3 +8,4 @@ config/nvim/~/.vim/undodir
 config/nvim/lua/~/.vim/undodir
 vim/undodir
 vim/undodir
+config/ranger/plugins

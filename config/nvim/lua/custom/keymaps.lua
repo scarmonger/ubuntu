@@ -218,6 +218,20 @@ vim.keymap.set("x", "<leader>P", "\"_dP", { desc = "paste in visual mode, don't 
 -- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { desc = "change project" })
 -- go back to previous session with <tmux-leader>+L
 
+-- Spectre
+vim.keymap.set('n', '<leader>S', '<cmd>lua require("spectre").toggle()<CR>', {
+	desc = "Toggle Spectre"
+})
+--[[ vim.keymap.set('n', '<leader>sw', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', {
+	desc = "Search current word"
+}) ]]
+vim.keymap.set('v', '<leader>sw', '<esc><cmd>lua require("spectre").open_visual()<CR>', {
+	desc = "Search current word"
+})
+vim.keymap.set('n', '<leader>sp', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', {
+	desc = "Search on current file"
+})
+
 -- Surround word with character
 vim.keymap.set("n", '<leader>"', 'viw<esc>a"<esc>hbi"<esc>lel<cr>')
 vim.keymap.set("n", "<leader>'", "viw<esc>a'<esc>hbi'<esc>lel<cr>")
@@ -230,8 +244,9 @@ vim.keymap.set("v", "<leader>'", "<esc>a'<esc>`<i'<esc>`>2l")
 vim.keymap.set("v", "<leader>*", "<esc>a*<esc>`<i*<esc>`>2l")
 
 -- Edit specific file
--- vim.keymap.set("n", "<leader>er", ":Neotree reveal position=current<cr>", { desc = "Reveal in explorer full" })
-vim.keymap.set("n", "<leader>er", ":Neotree right reveal_force_cwd<cr>", { desc = "Reveal in explorer side window" })
+vim.keymap.set("n", "<leader>eR", ":Neotree right reveal<cr>", { desc = "Reveal in explorer full" })
+vim.keymap.set("n", "<leader>er", ":Neotree float position=current reveal_force_cwd<cr>",
+	{ desc = "Reveal in explorer side window" })
 vim.keymap.set("n", "<leader>eE", ":Neotree right position=current<cr>", { desc = "Neotree Full Window" })
 vim.keymap.set("n", "<leader>ee", ":Neotree right<cr>", { desc = "Neotree right pane" })
 vim.keymap.set("n", "<leader>ei", ":e ~/marc/GitHub/ubuntu/config/nvim/init.lua<cr>",
@@ -246,7 +261,7 @@ vim.keymap.set("n", "<leader>ez", ":e ~/marc/GitHub/ubuntu/zshrc<cr>",
 	{ desc = "Edit zshrc" })
 vim.keymap.set("n", "<leader>eu", ":e ~/marc/GitHub/ubuntu/ubuntu.md<cr>",
 	{ desc = "Edit ubuntu.md file" })
-vim.keymap.set("n", "<leader>eR", ":e ~/marc/GitHub/ubuntu/config/ranger/rc.conf<cr>",
+vim.keymap.set("n", "<leader>eg", ":e ~/marc/GitHub/ubuntu/config/ranger/rc.conf<cr>",
 	{ desc = "Edit ranger config file" })
 vim.keymap.set("n", "<leader>ea", ":e ~/marc/GitHub/ubuntu/aliases<cr>",
 	{ desc = "Edit aliases" })

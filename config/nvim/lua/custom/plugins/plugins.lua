@@ -7,8 +7,8 @@ return {
 	"mhinz/vim-startify",
 	'mbbill/undotree',
 	'christoomey/vim-tmux-navigator',
-	'alvan/vim-closetag',
 	'prettier/vim-prettier',
+	'nvim-pack/nvim-spectre',
 	'fatih/vim-go',
 	{
 		"folke/tokyonight.nvim",

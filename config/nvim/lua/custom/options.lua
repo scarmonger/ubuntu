@@ -8,14 +8,14 @@ o.cursorlineopt = "number,line"
 o.cursorline = true
 
 local options = {
-	clipboard = "unnamed",
-	smartcase = true,
-	conceallevel = 0,
-	relativenumber = true,
+    clipboard = "unnamed",
+    smartcase = true,
+    conceallevel = 0,
+    relativenumber = true,
 }
 
 for k, v in pairs(options) do
-	vim.opt[k] = v
+    vim.opt[k] = v
 end
 
 vim.opt.tabstop = 4

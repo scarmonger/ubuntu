@@ -733,3 +733,8 @@ require("custom.keymaps")
 require("custom.options")
 require("custom.abbreviation")
 require("custom.vim-prettier")
+require('nvim-ts-autotag').setup({
+  autotag = {
+    enable = true,
+  }
+})
