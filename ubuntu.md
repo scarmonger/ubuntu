@@ -48,7 +48,7 @@ systemctl enable ssh
 
 # Install oh-my-zsh
 
-** Rubah bin bash menjadi zsh (harus logout) **
+**Rubah bin bash menjadi zsh (harus logout)**
 chsh -s /usr/bin/zsh
 
 ```

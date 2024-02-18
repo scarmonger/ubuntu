@@ -490,6 +490,9 @@ vim.defer_fn(function()
       "vimdoc",
       "vim",
       "bash",
+      "html",
+      "xml",
+      "markdown",
     },
 
     -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
@@ -599,7 +602,7 @@ local on_attach = function(_, bufnr)
   end, { desc = "Format current buffer with LSP" })
 end
 
--- document existing key chains
+--[[ -- document existing key chains
 require("which-key").register({
   ["<leader>c"] = { name = "[C]ode", _ = "which_key_ignore" },
   ["<leader>d"] = { name = "[D]ocument", _ = "which_key_ignore" },
@@ -616,6 +619,11 @@ require("which-key").register({
   ["<leader>"] = { name = "VISUAL <leader>" },
   ["<leader>h"] = { "Git [H]unk" },
 }, { mode = "v" })
+]]
+
+-- require("which-key").setup({
+--   ignore_missing = true,
+-- })
 
 -- mason-lspconfig requires that these setup functions are called in this order
 -- before setting up the servers.

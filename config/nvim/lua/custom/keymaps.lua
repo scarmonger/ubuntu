@@ -1,3 +1,52 @@
+require("which-key").setup({
+	-- ignore_missing = true,
+})
+
+require("which-key").register({
+	["<leader>"] = {
+		name = "",
+		['"'] = { '<esc>a"<esc>`<i"<esc>`>2l', "which_key_ignore" },
+		["'"] = { "<esc>a'<esc>`<i'<esc>`>2l", "which_key_ignore" },
+		["*"] = { "<esc>a**<esc>`<i**<esc>`>2l", "which_key_ignore" },
+	},
+}, { mode = "v" })
+
+-- document existing key chains
+require("which-key").register({
+	["<leader>f"] = {
+		name = "file",
+		f = { "<cmd>Telescope find_files<cr>", "Find File" },
+		r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
+		n = { "<cmd>enew<cr>", "New File" },
+	},
+	["<leader>"] = {
+		name = "",
+		-- Surround word with character
+		['"'] = { 'viw<esc>a"<esc>hbi"<esc>lel<cr>', "which_key_ignore" },
+		["'"] = { "viw<esc>a'<esc>hbi'<esc>lel<cr>", "which_key_ignore" },
+		["<"] = { "viw<esc>a><esc>hbi<<esc>lel<cr>", "which_key_ignore" },
+		["("] = { "viw<esc>a)<esc>hbi(<esc>lel<cr>", "which_key_ignore" },
+		["{"] = { "viw<esc>a}<esc>hbi{<esc>lel<cr>", "which_key_ignore" },
+		["*"] = { "viw<esc>a**<esc>hbi**<esc>lel<cr>", "which_key_ignore" },
+
+		["1"] = { "<cmd>BufferLineGoToBuffer 1<cr>", "which_key_ignore" },
+		["2"] = { "<cmd>BufferLineGoToBuffer 2<cr>", "which_key_ignore" },
+		["3"] = { "<cmd>BufferLineGoToBuffer 3<cr>", "which_key_ignore" },
+		["4"] = { "<cmd>BufferLineGoToBuffer 4<cr>", "which_key_ignore" },
+		["5"] = { "<cmd>BufferLineGoToBuffer 5<cr>", "which_key_ignore" },
+		["6"] = { "<cmd>BufferLineGoToBuffer 6<cr>", "which_key_ignore" },
+		["7"] = { "<cmd>BufferLineGoToBuffer 7<cr>", "which_key_ignore" },
+		["8"] = { "<cmd>BufferLineGoToBuffer 8<cr>", "which_key_ignore" },
+		["9"] = { "<cmd>BufferLineGoToBuffer 9<cr>", "which_key_ignore" },
+		["0"] = { "<cmd>BufferLineGoToBuffer -1<cr>", "which_key_ignore" },
+
+	},
+	["<leader>t"] = { name = "[T]ools/Toggle", _ = "which_key_ignore" },
+
+})
+
+
+
 -- CHEATSHEET
 -- https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
 
@@ -161,16 +210,6 @@ vim.keymap.set("n", "<leader>so", require("telescope.builtin").vim_options, { de
 vim.keymap.set("n", "<F5>", ":UndotreeToggle<CR>", { desc = "UndotreeToggle" })
 vim.keymap.set("n", "<F11>", 'a<C-R>=strftime("%c")<CR><Esc>', { desc = "insert date and time" })
 
-vim.keymap.set("n", "<leader>1", "<cmd>BufferLineGoToBuffer 1<cr>")
-vim.keymap.set("n", "<leader>2", "<cmd>BufferLineGoToBuffer 2<cr>")
-vim.keymap.set("n", "<leader>3", "<cmd>BufferLineGoToBuffer 3<cr>")
-vim.keymap.set("n", "<leader>4", "<cmd>BufferLineGoToBuffer 4<cr>")
-vim.keymap.set("n", "<leader>5", "<cmd>BufferLineGoToBuffer 5<cr>")
-vim.keymap.set("n", "<leader>6", "<cmd>BufferLineGoToBuffer 6<cr>")
-vim.keymap.set("n", "<leader>7", "<cmd>BufferLineGoToBuffer 7<cr>")
-vim.keymap.set("n", "<leader>8", "<cmd>BufferLineGoToBuffer 8<cr>")
-vim.keymap.set("n", "<leader>9", "<cmd>BufferLineGoToBuffer 9<cr>")
-vim.keymap.set("n", "<leader>0", "<cmd>BufferLineGoToBuffer -1<cr>")
 
 
 -- Clear search with <esc>
@@ -204,12 +243,15 @@ vim.keymap.set("n", "<leader>d", '"_d', { desc = "delete into void" })
 vim.keymap.set("v", "<leader>d", '"_d', { desc = "delete into void" })
 vim.keymap.set("x", "<leader>d", '"_d', { desc = "delete into void" })
 
-vim.keymap.set("n", "<leader>y", '"+y', { desc = "copy into system clipboard(+)" })
-vim.keymap.set("v", "<leader>y", '"+y', { desc = "copy into system clipboard(+)" })
-vim.keymap.set("n", "<leader>Y", '"+Y', { desc = "copy into system clipboard(+)" })
+-- copy into system clipboard(+)
+vim.keymap.set("n", "<leader>y", '"+y', { desc = "which_key_ignore" })
+vim.keymap.set("v", "<leader>y", '"+y', { desc = "which_key_ignore" })
+vim.keymap.set("n", "<leader>Y", '"+Y', { desc = "which_key_ignore" })
 
-vim.keymap.set("n", "<leader>p", '"+p', { desc = "paste from system clipboard(+)" })
-vim.keymap.set("v", "<leader>p", '"+p', { desc = "paste from system clipboard(+)" })
+-- paste from system clipboard(+)
+vim.keymap.set("n", "<leader>p", '"+p', { desc = "which_key_ignore" })
+vim.keymap.set("v", "<leader>p", '"+p', { desc = "which_key_ignore" })
+
 vim.keymap.set("x", "<leader>P", "\"_dP", { desc = "paste in visual mode, don't yank" })
 -- foo
 -- bar
@@ -232,16 +274,6 @@ vim.keymap.set('n', '<leader>sp', '<cmd>lua require("spectre").open_file_search(
 	desc = "Search on current file"
 })
 
--- Surround word with character
-vim.keymap.set("n", '<leader>"', 'viw<esc>a"<esc>hbi"<esc>lel<cr>')
-vim.keymap.set("n", "<leader>'", "viw<esc>a'<esc>hbi'<esc>lel<cr>")
-vim.keymap.set("n", "<leader><", "viw<esc>a><esc>hbi<<esc>lel<cr>")
-vim.keymap.set("n", "<leader><", "viw<esc>a)<esc>hbi(<esc>lel<cr>")
-vim.keymap.set("n", "<leader>{", "viw<esc>a}<esc>hbi{<esc>lel<cr>")
-
-vim.keymap.set("v", '<leader>"', '<esc>a"<esc>`<i"<esc>`>2l')
-vim.keymap.set("v", "<leader>'", "<esc>a'<esc>`<i'<esc>`>2l")
-vim.keymap.set("v", "<leader>*", "<esc>a*<esc>`<i*<esc>`>2l")
 
 -- Edit specific file
 vim.keymap.set("n", "<leader>er", ":Neotree right reveal<cr>")
