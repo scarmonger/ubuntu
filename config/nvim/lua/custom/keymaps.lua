@@ -7,6 +7,7 @@ require("which-key").register({
 		name = "",
 		['"'] = { '<esc>a"<esc>`<i"<esc>`>2l', "which_key_ignore" },
 		["'"] = { "<esc>a'<esc>`<i'<esc>`>2l", "which_key_ignore" },
+		["("] = { "<esc>a)<esc>`<i(<esc>`>2l", "which_key_ignore" },
 		["*"] = { "<esc>a**<esc>`<i**<esc>`>2l", "which_key_ignore" },
 	},
 }, { mode = "v" })
