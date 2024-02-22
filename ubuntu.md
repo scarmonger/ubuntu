@@ -40,7 +40,7 @@ sudo snap remove --purge firefox
 
 # Install app
 
-sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar fonts-powerline neofetch xclip ssh fzf mpv tmux dconf-editor kazam gnome-tweaks chrome-gnome-shell filezilla vlc ncdu htop gimp mycli
+sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar fonts-powerline neofetch xclip ssh fzf mpv tmux dconf-editor kazam gnome-tweaks chrome-gnome-shell filezilla vlc ncdu htop gimp mycli xdotool
 
 systemctl status ssh
 systemctl start ssh
@@ -495,3 +495,14 @@ open firefox, `about:config`, search for mime, change "helpers.private_mime_type
 # Emoticon shortcut
 
 ctrl+shift+u
+
+# VPN
+
+https://www.cactusvpn.com/tutorials/how-to-set-up-l2tpipsec-vpn-on-ubuntu/
+sudo add-apt-repository ppa:nm-l2tp/network-manager-l2tp
+sudo apt-get update
+sudo apt-get install network-manager-l2tp-gnome
+
+# Ranger compress
+
+https://github.com/maximtrp/ranger-archives

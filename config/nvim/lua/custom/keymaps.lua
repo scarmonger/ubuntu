@@ -15,7 +15,7 @@ require("which-key").register({
 -- document existing key chains
 require("which-key").register({
 	["<leader>f"] = {
-		name = "file",
+		name = "[F]ile",
 		f = { "<cmd>Telescope find_files<cr>", "Find File" },
 		r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
 		n = { "<cmd>enew<cr>", "New File" },
@@ -42,6 +42,14 @@ require("which-key").register({
 		["0"] = { "<cmd>BufferLineGoToBuffer -1<cr>", "which_key_ignore" },
 
 	},
+	["<leader>b"] = { name = "[B]uffer", _ = "which_key_ignore" },
+	["<leader>c"] = { name = "[C]ode", _ = "which_key_ignore" },
+	["<leader>e"] = { name = "[E]dit", _ = "which_key_ignore" },
+	["<leader>g"] = { name = "[G]it", _ = "which_key_ignore" },
+	["<leader>h"] = { name = "Git [H]unk", _ = "which_key_ignore" },
+	["<leader>w"] = { name = "[W]orkspace", _ = "which_key_ignore" },
+	["<leader>u"] = { name = "[U]i", _ = "which_key_ignore" },
+	["<leader>s"] = { name = "[S]earch", _ = "which_key_ignore" },
 	["<leader>t"] = { name = "[T]ools/Toggle", _ = "which_key_ignore" },
 
 })

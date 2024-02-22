@@ -1,9 +1,11 @@
 #!/bin/sh
-alias sdac="cd /home/mc/marc/custom/daikinhr/soulbackend/main/src/web/ && ./box"
-alias sctt="cd /home/mc/marc/custom/vallourec_sea/soulbackend/main/src/web/ && ./box"
+alias sats="cd /home/mc/marc/custom/backend/atlas/soulbackend/main/src/web/ && box"
+alias sdac="cd /home/mc/marc/custom/backend/daikinhr/soulbackend/main/src/web/ && box"
+alias sctt="cd /home/mc/marc/custom/backend/vallourec_sea/soulbackend/main/src/web/ && box"
 
 alias myctt="mycli -u sfnbc_vallourec_sea_admin -h 192.168.101.70 dbSF_NBC_VALLOUREC_SEA -p 2K4%1e8t187529291929"
 alias mydac="mycli -u sfnbc_daikinhr_admin -h 192.168.102.120 dbSF_NBC_DAIKINHR -p 0151KoV2201172290395"
+alias myatlaspetrochemindo="mycli -u sfnbc_atlaspetrochemindo_fin -h 192.168.102.120 -P 3306 dbSF_NBC_ATLASPETROCHEMINDO -p 'i060)Z5#662831081576'"
 
 alias subupdate="git submodule update --remote --merge"
 alias clone="sfclone_client --dir /home/mc/marc/custom/backend/"
