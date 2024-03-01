@@ -2,16 +2,16 @@
 
 # Create a new session named "fe-start", split panes and change directory in each
 tmux new-session -d -s fe-start
-tmux send-keys -t fe-start "cd /home/mc/marc/custom/a_source/fe-micro-container" Enter
+tmux send-keys -t fe-start "cd /home/mc/marc/custom/fe-micro-container" Enter
 tmux split-window -h -p 66 -t fe-start
-tmux send-keys -t fe-start "cd /home/mc/marc/custom/a_source/fe-micro-standard/" Enter
+tmux send-keys -t fe-start "cd /home/mc/marc/custom/fe-micro-standard/" Enter
 tmux split-window -h -p 50 -t fe-start
-tmux send-keys -t fe-start "cd /home/mc/marc/custom/a_source/fe-micro-custom/" Enter
+tmux send-keys -t fe-start "cd /home/mc/marc/custom/fe-micro-custom/" Enter
 tmux split-window -v -t fe-start
-tmux send-keys -t fe-start "cd /home/mc/marc/custom/a_source/fe-sfreport/" Enter
+tmux send-keys -t fe-start "cd /home/mc/marc/custom/fe-sfreport/" Enter
 tmux selectp -L
 tmux split-window -v -t fe-start
-tmux send-keys -t fe-start "cd /home/mc/marc/custom/a_source/fe-micro-standard-ent/" Enter
+tmux send-keys -t fe-start "cd /home/mc/marc/custom/fe-micro-standard-ent/" Enter
 # Set pane synchronization
 tmux set-window-option -t fe-start synchronize-panes on
 # Run command in all panes
