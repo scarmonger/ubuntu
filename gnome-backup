@@ -1,3 +1,6 @@
+[Characters]
+recent-characters=['😭', '📙', '⛔']
+
 [calculator]
 accuracy=9
 angle-units='degrees'
@@ -14,7 +17,7 @@ window-position=(626, 307)
 word-size=64
 
 [control-center]
-last-panel='sound'
+last-panel='keyboard'
 
 [desktop/a11y/applications]
 screen-keyboard-enabled=false
@@ -37,7 +40,7 @@ translate=true
 color-shading-type='solid'
 picture-options='zoom'
 picture-uri='file:///usr/share/backgrounds/jj_light_by_Hiking93.jpg'
-picture-uri-dark='file:///usr/share/backgrounds/canvas_by_roytanck.jpg'
+picture-uri-dark='file:///usr/share/backgrounds/DSC2943_by_kcpru.jpg'
 primary-color='#000000'
 secondary-color='#000000'
 
@@ -51,16 +54,21 @@ xkb-options=['caps:escape_shifted_capslock']
 
 [desktop/interface]
 color-scheme='prefer-dark'
+font-hinting='slight'
 gtk-theme='Yaru-dark'
 icon-theme='Yaru'
+show-battery-percentage=true
 toolkit-accessibility=false
 
 [desktop/notifications]
-application-children=['gnome-network-panel', 'snap-store-ubuntu-software', 'org-gnome-gedit', 'firefox-firefox', 'apport-gtk', 'gnome-control-center', 'gnome-datetime-panel', 'thorium-browser', 'org-gnome-nautilus', 'xdg-desktop-portal-gnome', 'org-mozilla-thunderbird', 'com-skype-client', 'org-gnome-evolution-alarm-notify', 'wps-office-prometheus', 'org-mozilla-firefox', 'org-gnome-shell-extensions', 'firefox', 'org-gnome-software', 'virtualbox', 'virtualboxvm', 'wps-office-wpp']
-show-banners=false
+application-children=['gnome-network-panel', 'snap-store-ubuntu-software', 'org-gnome-gedit', 'firefox-firefox', 'apport-gtk', 'gnome-control-center', 'gnome-datetime-panel', 'thorium-browser', 'org-gnome-nautilus', 'xdg-desktop-portal-gnome', 'org-mozilla-thunderbird', 'com-skype-client', 'org-gnome-evolution-alarm-notify', 'wps-office-prometheus', 'org-mozilla-firefox', 'org-gnome-shell-extensions', 'firefox', 'org-gnome-software', 'virtualbox', 'virtualboxvm', 'wps-office-wpp', 'gnome-power-panel', 'org-gnome-eog', 'code', 'org-wezfurlong-wezterm', 'vlc', 'org-qbittorrent-qbittorrent', 'update-manager']
+show-banners=true
 
 [desktop/notifications/application/apport-gtk]
 application-id='apport-gtk.desktop'
+
+[desktop/notifications/application/code]
+application-id='code.desktop'
 
 [desktop/notifications/application/com-skype-client]
 application-id='com.skype.Client.desktop'
@@ -79,6 +87,12 @@ application-id='gnome-datetime-panel.desktop'
 
 [desktop/notifications/application/gnome-network-panel]
 application-id='gnome-network-panel.desktop'
+
+[desktop/notifications/application/gnome-power-panel]
+application-id='gnome-power-panel.desktop'
+
+[desktop/notifications/application/org-gnome-eog]
+application-id='org.gnome.eog.desktop'
 
 [desktop/notifications/application/org-gnome-evolution-alarm-notify]
 application-id='org.gnome.Evolution-alarm-notify.desktop'
@@ -101,6 +115,13 @@ application-id='org.mozilla.firefox.desktop'
 [desktop/notifications/application/org-mozilla-thunderbird]
 application-id='org.mozilla.Thunderbird.desktop'
 
+[desktop/notifications/application/org-qbittorrent-qbittorrent]
+application-id='org.qbittorrent.qBittorrent.desktop'
+
+[desktop/notifications/application/org-wezfurlong-wezterm]
+application-id='org.wezfurlong.wezterm.desktop'
+enable=false
+
 [desktop/notifications/application/snap-store-ubuntu-software]
 application-id='snap-store_ubuntu-software.desktop'
 enable=false
@@ -111,11 +132,17 @@ application-id='thorium-browser.desktop'
 [desktop/notifications/application/timeshift-gtk]
 application-id='timeshift-gtk.desktop'
 
+[desktop/notifications/application/update-manager]
+application-id='update-manager.desktop'
+
 [desktop/notifications/application/virtualbox]
 application-id='virtualbox.desktop'
 
 [desktop/notifications/application/virtualboxvm]
 application-id='virtualboxvm.desktop'
+
+[desktop/notifications/application/vlc]
+application-id='vlc.desktop'
 
 [desktop/notifications/application/wps-office-prometheus]
 application-id='wps-office-prometheus.desktop'
@@ -136,6 +163,7 @@ left-handed=true
 speed=0.5
 
 [desktop/peripherals/touchpad]
+speed=0.50735294117647056
 two-finger-scrolling-enabled=true
 
 [desktop/privacy]
@@ -156,7 +184,7 @@ view-only=false
 color-shading-type='solid'
 lock-delay=uint32 0
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/canvas_by_roytanck.jpg'
+picture-uri='file:///usr/share/backgrounds/DSC2943_by_kcpru.jpg'
 primary-color='#000000'
 secondary-color='#000000'
 
@@ -195,7 +223,7 @@ background-color='rgb(0,0,0)'
 use-background-color=true
 
 [evince/default]
-window-ratio=(1.1624391063329416, 1.0369402541869581)
+window-ratio=(1.1624000537526038, 1.0369156214367161)
 
 [evolution-data-server]
 migrated=true
@@ -209,13 +237,25 @@ notify-window-x=56
 notify-window-y=27
 reminders-past=@as []
 
+[file-roller/listing]
+list-mode='as-folder'
+name-column-width=250
+show-path=false
+sort-method='name'
+sort-type='ascending'
+
+[file-roller/ui]
+sidebar-width=200
+window-height=480
+window-width=600
+
 [gedit/plugins]
-active-plugins=['modelines', 'sort', 'filebrowser', 'spell', 'docinfo', 'openlinks']
+active-plugins=['filebrowser', 'openlinks', 'spell', 'modelines', 'docinfo', 'sort']
 
 [gedit/plugins/filebrowser]
 root='file:///'
 tree-view=true
-virtual-root='file:///home/mc/marc/GitHub/suckless/st'
+virtual-root='file:///home/mc/marc/GitHub/ubuntu'
 
 [gedit/preferences/editor]
 scheme='Yaru-dark'
@@ -227,22 +267,29 @@ show-tabs-mode='auto'
 bottom-panel-size=140
 side-panel-active-page='GeditWindowDocumentsPanel'
 side-panel-size=200
-size=(900, 700)
-state=87168
+size=(1920, 985)
+state=43908
 
 [gnome-system-monitor]
-maximized=false
+current-tab='processes'
+maximized=true
 network-total-in-bits=false
 show-dependencies=false
 show-whose-processes='user'
-window-state=(700, 500, 56, 50)
+window-state=(1920, 1037, 0, 0)
 
 [gnome-system-monitor/disktreenew]
 col-6-visible=true
 col-6-width=0
 
+[gnome-system-monitor/proctree]
+columns-order=[0, 1, 2, 3, 4, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
+sort-col=8
+sort-order=0
+
 [mutter]
 dynamic-workspaces=true
+experimental-features=@as []
 
 [mutter/wayland/keybindings]
 restore-shortcuts=@as []
@@ -256,15 +303,15 @@ search-filter-time-type='last_modified'
 search-view='list-view'
 
 [nautilus/window-state]
-initial-size=(890, 550)
+initial-size=(892, 704)
 maximized=false
 
 [settings-daemon/plugins/color]
-night-light-last-coordinates=(-6.1949985601151907, 106.6284)
+night-light-last-coordinates=(-6.1680007199424045, 106.6284)
 
 [settings-daemon/plugins/media-keys]
 control-center=['<Super>F12']
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']
 mic-mute=['<Shift><Super>F11']
 screensaver=['<Super>Escape']
 terminal=['<Super>Return']
@@ -282,6 +329,16 @@ binding='<Shift><Super>Escape'
 command='systemctl suspend -i'
 name='suspend'
 
+[settings-daemon/plugins/media-keys/custom-keybindings/custom2]
+binding='<Primary>Print'
+command='ksnip -m'
+name='printscreen monitor'
+
+[settings-daemon/plugins/media-keys/custom-keybindings/custom3]
+binding='<Shift>Print'
+command='ksnip -a'
+name='printscreen active window'
+
 [settings-daemon/plugins/power]
 sleep-inactive-ac-timeout=3600
 sleep-inactive-ac-type='nothing'
@@ -290,9 +347,9 @@ sleep-inactive-ac-type='nothing'
 enabled-connections=['a5d3f92f-b507-36b1-a750-dde716dce48a', '0a6b19b0-f0c0-30b8-9a12-208eb84364dc']
 
 [shell]
-command-history=['reboot', 'poweroff']
-enabled-extensions=['blur-my-shell@aunetx', 'clipboard-indicator@tudmotu.com', 'Vitals@CoreCoding.com']
-favorite-apps=['thorium-browser.desktop', 'firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'org.keepassxc.KeePassXC.desktop', 'com.skype.Client.desktop', 'md.obsidian.Obsidian.desktop', 'org.mozilla.Thunderbird.desktop', 'wps-office-prometheus.desktop', 'org.qutebrowser.qutebrowser.desktop']
+command-history=['po', 'po', 'po', 'reboot', 'po', 'p', 'poweroff']
+enabled-extensions=['blur-my-shell@aunetx', 'clipboard-indicator@tudmotu.com', 'Vitals@CoreCoding.com', 'rounded-window-corners@yilozt', 'allowlockedremotedesktop@kamens.us', 'dash-to-panel@jderose9.github.com', 'tailscale-status@maxgallup.github.com']
+favorite-apps=['firefox.desktop', 'org.wezfurlong.wezterm.desktop', 'thorium-browser.desktop', 'org.gnome.Nautilus.desktop', 'org.keepassxc.KeePassXC.desktop', 'com.skype.Client.desktop', 'wps-office-prometheus.desktop']
 welcome-dialog-last-shown-version='42.9'
 
 [shell/extensions/clipboard-indicator]
@@ -306,9 +363,61 @@ dock-position='LEFT'
 extend-height=true
 show-mounts=false
 
+[shell/extensions/dash-to-panel]
+animate-appicon-hover=true
+animate-appicon-hover-animation-convexity={'RIPPLE': 2.0, 'PLANK': 1.0, 'SIMPLE': 0.0}
+animate-appicon-hover-animation-extent={'RIPPLE': 4, 'PLANK': 4, 'SIMPLE': 1}
+animate-appicon-hover-animation-type='SIMPLE'
+appicon-margin=2
+appicon-padding=4
+available-monitors=[0]
+click-action='CYCLE-MIN'
+desktop-line-use-custom-color=true
+dot-color-dominant=false
+dot-color-override=false
+dot-color-unfocused-different=false
+dot-position='BOTTOM'
+dot-style-unfocused='SQUARES'
+focus-highlight=true
+focus-highlight-dominant=false
+focus-highlight-opacity=50
+group-apps=true
+hot-keys=true
+hotkeys-overlay-combo='ALWAYS'
+intellihide=false
+leftbox-padding=-1
+middle-click-action='LAUNCH'
+panel-anchors='{"0":"MIDDLE"}'
+panel-element-positions='{"0":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"centered"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedTL"},{"element":"desktopButton","visible":true,"position":"stackedBR"}]}'
+panel-lengths='{"0":100}'
+panel-sizes='{"0":43}'
+primary-monitor=0
+shift-click-action='MINIMIZE'
+shift-middle-click-action='LAUNCH'
+show-appmenu=false
+status-icon-padding=-1
+stockgs-force-hotcorner=false
+stockgs-keep-dash=false
+stockgs-keep-top-panel=false
+stockgs-panelbtn-click-only=false
+trans-use-custom-bg=false
+trans-use-custom-gradient=false
+trans-use-custom-opacity=true
+trans-use-dynamic-opacity=false
+tray-padding=-1
+window-preview-title-position='TOP'
+
 [shell/extensions/ding]
 icon-size='standard'
 show-home=false
+
+[shell/extensions/rounded-window-corners]
+custom-rounded-corner-settings=@a{sv} {}
+global-rounded-corner-settings={'padding': <{'left': <uint32 1>, 'right': <uint32 1>, 'top': <uint32 1>, 'bottom': <uint32 1>}>, 'keep_rounded_corners': <{'maximized': <false>, 'fullscreen': <false>}>, 'border_radius': <uint32 12>, 'smoothing': <uint32 0>}
+settings-version=uint32 5
+
+[shell/extensions/vitals]
+hot-sensors=['_memory_usage_', '_processor_usage_', '__network-tx_max__', '__network-rx_max__', '_temperature_thinkpad_temp1_']
 
 [shell/keybindings]
 focus-active-notification=['<Super>i']
@@ -319,10 +428,10 @@ show-screenshot-ui=@as []
 toggle-message-tray=['<Super>u']
 
 [software]
-check-timestamp=int64 1702516706
-install-timestamp=int64 1702257319
-online-updates-timestamp=int64 1702516734
-update-notification-timestamp=int64 1702516734
+check-timestamp=int64 1708680133
+install-timestamp=int64 1707027334
+online-updates-timestamp=int64 1708680359
+update-notification-timestamp=int64 1708680359
 
 [system/location]
 enabled=true
