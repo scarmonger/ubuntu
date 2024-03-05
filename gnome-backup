@@ -1,5 +1,5 @@
 [Characters]
-recent-characters=['😭', '📙', '⛔']
+recent-characters=['📜', '📝']
 
 [calculator]
 accuracy=9
@@ -57,11 +57,10 @@ color-scheme='prefer-dark'
 font-hinting='slight'
 gtk-theme='Yaru-dark'
 icon-theme='Yaru'
-show-battery-percentage=true
 toolkit-accessibility=false
 
 [desktop/notifications]
-application-children=['gnome-network-panel', 'snap-store-ubuntu-software', 'org-gnome-gedit', 'firefox-firefox', 'apport-gtk', 'gnome-control-center', 'gnome-datetime-panel', 'thorium-browser', 'org-gnome-nautilus', 'xdg-desktop-portal-gnome', 'org-mozilla-thunderbird', 'com-skype-client', 'org-gnome-evolution-alarm-notify', 'wps-office-prometheus', 'org-mozilla-firefox', 'org-gnome-shell-extensions', 'firefox', 'org-gnome-software', 'virtualbox', 'virtualboxvm', 'wps-office-wpp', 'gnome-power-panel', 'org-gnome-eog', 'code', 'org-wezfurlong-wezterm', 'vlc', 'org-qbittorrent-qbittorrent', 'update-manager']
+application-children=['gnome-network-panel', 'snap-store-ubuntu-software', 'org-gnome-gedit', 'firefox-firefox', 'apport-gtk', 'gnome-control-center', 'gnome-datetime-panel', 'thorium-browser', 'org-gnome-nautilus', 'xdg-desktop-portal-gnome', 'org-mozilla-thunderbird', 'com-skype-client', 'org-gnome-evolution-alarm-notify', 'wps-office-prometheus', 'org-mozilla-firefox', 'org-gnome-shell-extensions', 'firefox', 'org-gnome-software', 'virtualbox', 'virtualboxvm', 'wps-office-wpp', 'gnome-printers-panel', 'kazam', 'zoom', 'kitty', 'filezilla', 'org-gnome-evince', 'update-manager', 'wps-office-et', 'slack', 'org-gnome-eog', 'gcr-prompter', 'libreoffice24-2-impress', 'freetube', 'code']
 show-banners=true
 
 [desktop/notifications/application/apport-gtk]
@@ -73,11 +72,20 @@ application-id='code.desktop'
 [desktop/notifications/application/com-skype-client]
 application-id='com.skype.Client.desktop'
 
+[desktop/notifications/application/filezilla]
+application-id='filezilla.desktop'
+
 [desktop/notifications/application/firefox-firefox]
 application-id='firefox_firefox.desktop'
 
 [desktop/notifications/application/firefox]
 application-id='firefox.desktop'
+
+[desktop/notifications/application/freetube]
+application-id='freetube.desktop'
+
+[desktop/notifications/application/gcr-prompter]
+application-id='gcr-prompter.desktop'
 
 [desktop/notifications/application/gnome-control-center]
 application-id='gnome-control-center.desktop'
@@ -88,11 +96,23 @@ application-id='gnome-datetime-panel.desktop'
 [desktop/notifications/application/gnome-network-panel]
 application-id='gnome-network-panel.desktop'
 
-[desktop/notifications/application/gnome-power-panel]
-application-id='gnome-power-panel.desktop'
+[desktop/notifications/application/gnome-printers-panel]
+application-id='gnome-printers-panel.desktop'
+
+[desktop/notifications/application/kazam]
+application-id='kazam.desktop'
+
+[desktop/notifications/application/kitty]
+application-id='kitty.desktop'
+
+[desktop/notifications/application/libreoffice24-2-impress]
+application-id='libreoffice24.2-impress.desktop'
 
 [desktop/notifications/application/org-gnome-eog]
 application-id='org.gnome.eog.desktop'
+
+[desktop/notifications/application/org-gnome-evince]
+application-id='org.gnome.Evince.desktop'
 
 [desktop/notifications/application/org-gnome-evolution-alarm-notify]
 application-id='org.gnome.Evolution-alarm-notify.desktop'
@@ -115,12 +135,8 @@ application-id='org.mozilla.firefox.desktop'
 [desktop/notifications/application/org-mozilla-thunderbird]
 application-id='org.mozilla.Thunderbird.desktop'
 
-[desktop/notifications/application/org-qbittorrent-qbittorrent]
-application-id='org.qbittorrent.qBittorrent.desktop'
-
-[desktop/notifications/application/org-wezfurlong-wezterm]
-application-id='org.wezfurlong.wezterm.desktop'
-enable=false
+[desktop/notifications/application/slack]
+application-id='slack.desktop'
 
 [desktop/notifications/application/snap-store-ubuntu-software]
 application-id='snap-store_ubuntu-software.desktop'
@@ -141,8 +157,8 @@ application-id='virtualbox.desktop'
 [desktop/notifications/application/virtualboxvm]
 application-id='virtualboxvm.desktop'
 
-[desktop/notifications/application/vlc]
-application-id='vlc.desktop'
+[desktop/notifications/application/wps-office-et]
+application-id='wps-office-et.desktop'
 
 [desktop/notifications/application/wps-office-prometheus]
 application-id='wps-office-prometheus.desktop'
@@ -152,6 +168,9 @@ application-id='wps-office-wpp.desktop'
 
 [desktop/notifications/application/xdg-desktop-portal-gnome]
 application-id='xdg-desktop-portal-gnome.desktop'
+
+[desktop/notifications/application/zoom]
+application-id='Zoom.desktop'
 
 [desktop/peripherals/keyboard]
 delay=uint32 329
@@ -163,7 +182,6 @@ left-handed=true
 speed=0.5
 
 [desktop/peripherals/touchpad]
-speed=0.50735294117647056
 two-finger-scrolling-enabled=true
 
 [desktop/privacy]
@@ -211,19 +229,22 @@ move-to-monitor-up=@as []
 move-to-workspace-2=['<Shift><Super>m']
 move-to-workspace-3=['<Shift><Super>n']
 move-to-workspace-4=['<Shift><Super>o']
-switch-to-workspace-2=['<Super>m']
-switch-to-workspace-3=['<Super>n']
+switch-to-workspace-2=@as []
+switch-to-workspace-3=@as []
 switch-to-workspace-4=['<Super>o']
-switch-to-workspace-left=['<Super>h']
-switch-to-workspace-right=['<Super>l']
+switch-to-workspace-left=['<Primary><Super>h']
+switch-to-workspace-right=['<Primary><Super>l']
 toggle-fullscreen=['<Super>f']
 
 [eog/view]
 background-color='rgb(0,0,0)'
 use-background-color=true
 
+[evince]
+document-directory=@ms 'file:///home/mc/Downloads'
+
 [evince/default]
-window-ratio=(1.1624000537526038, 1.0369156214367161)
+window-ratio=(2.0359482613808164, 1.0393158332343508)
 
 [evolution-data-server]
 migrated=true
@@ -250,12 +271,12 @@ window-height=480
 window-width=600
 
 [gedit/plugins]
-active-plugins=['filebrowser', 'openlinks', 'spell', 'modelines', 'docinfo', 'sort']
+active-plugins=['docinfo', 'spell', 'filebrowser', 'openlinks', 'modelines', 'sort']
 
 [gedit/plugins/filebrowser]
 root='file:///'
 tree-view=true
-virtual-root='file:///home/mc/marc/GitHub/ubuntu'
+virtual-root='file:///home/mc/Dropbox/notes/sfwp/attachment'
 
 [gedit/preferences/editor]
 scheme='Yaru-dark'
@@ -267,7 +288,7 @@ show-tabs-mode='auto'
 bottom-panel-size=140
 side-panel-active-page='GeditWindowDocumentsPanel'
 side-panel-size=200
-size=(1920, 985)
+size=(685, 821)
 state=43908
 
 [gnome-system-monitor]
@@ -276,7 +297,7 @@ maximized=true
 network-total-in-bits=false
 show-dependencies=false
 show-whose-processes='user'
-window-state=(1920, 1037, 0, 0)
+window-state=(1440, 868, 0, 0)
 
 [gnome-system-monitor/disktreenew]
 col-6-visible=true
@@ -284,15 +305,17 @@ col-6-width=0
 
 [gnome-system-monitor/proctree]
 columns-order=[0, 1, 2, 3, 4, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
-sort-col=8
+sort-col=15
 sort-order=0
 
 [mutter]
 dynamic-workspaces=true
-experimental-features=@as []
 
 [mutter/wayland/keybindings]
 restore-shortcuts=@as []
+
+[nautilus/compression]
+default-compression-format='zip'
 
 [nautilus/icon-view]
 default-zoom-level='small'
@@ -303,15 +326,19 @@ search-filter-time-type='last_modified'
 search-view='list-view'
 
 [nautilus/window-state]
-initial-size=(892, 704)
+initial-size=(890, 550)
 maximized=false
+
+[nm-applet/eap/669f3f1d-6e65-42a3-9d1b-cd552aa33407]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
 
 [settings-daemon/plugins/color]
 night-light-last-coordinates=(-6.1680007199424045, 106.6284)
 
 [settings-daemon/plugins/media-keys]
 control-center=['<Super>F12']
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/']
 mic-mute=['<Shift><Super>F11']
 screensaver=['<Super>Escape']
 terminal=['<Super>Return']
@@ -321,8 +348,8 @@ volume-up=['<Super>F10']
 
 [settings-daemon/plugins/media-keys/custom-keybindings/custom0]
 binding='Print'
-command='ksnip -r'
-name='printscreen'
+command='ksnip -r -d 1'
+name='Print Area'
 
 [settings-daemon/plugins/media-keys/custom-keybindings/custom1]
 binding='<Shift><Super>Escape'
@@ -330,14 +357,19 @@ command='systemctl suspend -i'
 name='suspend'
 
 [settings-daemon/plugins/media-keys/custom-keybindings/custom2]
-binding='<Primary>Print'
-command='ksnip -m'
-name='printscreen monitor'
+binding='<Primary><Shift><Alt>Print'
+command='kazam'
+name='Screen recording'
 
 [settings-daemon/plugins/media-keys/custom-keybindings/custom3]
+binding='<Primary>Print'
+command='ksnip -m -d 1'
+name='Print current monitor'
+
+[settings-daemon/plugins/media-keys/custom-keybindings/custom4]
 binding='<Shift>Print'
-command='ksnip -a'
-name='printscreen active window'
+command='ksnip -a -d 1'
+name='Print Active Window'
 
 [settings-daemon/plugins/power]
 sleep-inactive-ac-timeout=3600
@@ -347,19 +379,22 @@ sleep-inactive-ac-type='nothing'
 enabled-connections=['a5d3f92f-b507-36b1-a750-dde716dce48a', '0a6b19b0-f0c0-30b8-9a12-208eb84364dc']
 
 [shell]
-command-history=['po', 'po', 'po', 'reboot', 'po', 'p', 'poweroff']
+command-history=['po', 'po', 'power', 'reboot', 'poweroff']
 enabled-extensions=['blur-my-shell@aunetx', 'clipboard-indicator@tudmotu.com', 'Vitals@CoreCoding.com', 'rounded-window-corners@yilozt', 'allowlockedremotedesktop@kamens.us', 'dash-to-panel@jderose9.github.com', 'tailscale-status@maxgallup.github.com']
-favorite-apps=['firefox.desktop', 'org.wezfurlong.wezterm.desktop', 'thorium-browser.desktop', 'org.gnome.Nautilus.desktop', 'org.keepassxc.KeePassXC.desktop', 'com.skype.Client.desktop', 'wps-office-prometheus.desktop']
+favorite-apps=['thorium-browser.desktop', 'org.wezfurlong.wezterm.desktop', 'firefox.desktop', 'org.mozilla.Thunderbird.desktop', 'org.keepassxc.KeePassXC.desktop', 'com.skype.Client.desktop', 'md.obsidian.Obsidian.desktop']
 welcome-dialog-last-shown-version='42.9'
 
 [shell/extensions/clipboard-indicator]
-notify-on-copy=true
+display-mode=0
+history-size=100
+notify-on-copy=false
 strip-text=true
+topbar-preview-size=10
 
 [shell/extensions/dash-to-dock]
 click-action='focus-minimize-or-previews'
 dash-max-icon-size=34
-dock-position='LEFT'
+dock-position='BOTTOM'
 extend-height=true
 show-mounts=false
 
@@ -390,7 +425,7 @@ middle-click-action='LAUNCH'
 panel-anchors='{"0":"MIDDLE"}'
 panel-element-positions='{"0":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"centered"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedTL"},{"element":"desktopButton","visible":true,"position":"stackedBR"}]}'
 panel-lengths='{"0":100}'
-panel-sizes='{"0":43}'
+panel-sizes='{"0":32}'
 primary-monitor=0
 shift-click-action='MINIMIZE'
 shift-middle-click-action='LAUNCH'
@@ -400,6 +435,7 @@ stockgs-force-hotcorner=false
 stockgs-keep-dash=false
 stockgs-keep-top-panel=false
 stockgs-panelbtn-click-only=false
+taskbar-locked=false
 trans-use-custom-bg=false
 trans-use-custom-gradient=false
 trans-use-custom-opacity=true
@@ -417,7 +453,7 @@ global-rounded-corner-settings={'padding': <{'left': <uint32 1>, 'right': <uint3
 settings-version=uint32 5
 
 [shell/extensions/vitals]
-hot-sensors=['_memory_usage_', '_processor_usage_', '__network-tx_max__', '__network-rx_max__', '_temperature_thinkpad_temp1_']
+hot-sensors=['__temperature_avg__', '_processor_usage_', '_memory_usage_', '__network-rx_max__', '__network-tx_max__']
 
 [shell/keybindings]
 focus-active-notification=['<Super>i']
@@ -428,10 +464,9 @@ show-screenshot-ui=@as []
 toggle-message-tray=['<Super>u']
 
 [software]
-check-timestamp=int64 1708680133
-install-timestamp=int64 1707027334
-online-updates-timestamp=int64 1708680359
-update-notification-timestamp=int64 1708680359
+check-timestamp=int64 1709601861
+online-updates-timestamp=int64 1709601898
+update-notification-timestamp=int64 1709601898
 
 [system/location]
 enabled=true
