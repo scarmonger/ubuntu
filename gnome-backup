@@ -17,7 +17,7 @@ window-position=(626, 307)
 word-size=64
 
 [control-center]
-last-panel='keyboard'
+last-panel='display'
 
 [desktop/a11y/applications]
 screen-keyboard-enabled=false
@@ -334,7 +334,7 @@ ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
 [settings-daemon/plugins/color]
-night-light-last-coordinates=(-6.1680007199424045, 106.6284)
+night-light-last-coordinates=(-6.1590014398848085, 106.6284)
 
 [settings-daemon/plugins/media-keys]
 control-center=['<Super>F12']
@@ -379,8 +379,8 @@ sleep-inactive-ac-type='nothing'
 enabled-connections=['a5d3f92f-b507-36b1-a750-dde716dce48a', '0a6b19b0-f0c0-30b8-9a12-208eb84364dc']
 
 [shell]
-command-history=['po', 'po', 'power', 'reboot', 'poweroff']
-enabled-extensions=['blur-my-shell@aunetx', 'clipboard-indicator@tudmotu.com', 'Vitals@CoreCoding.com', 'rounded-window-corners@yilozt', 'allowlockedremotedesktop@kamens.us', 'dash-to-panel@jderose9.github.com', 'tailscale-status@maxgallup.github.com']
+command-history=['po', 'po', 'power', 'poweroff', 'reboot']
+enabled-extensions=['blur-my-shell@aunetx', 'clipboard-indicator@tudmotu.com', 'Vitals@CoreCoding.com', 'rounded-window-corners@yilozt', 'allowlockedremotedesktop@kamens.us', 'dash-to-panel@jderose9.github.com', 'tailscale-status@maxgallup.github.com', 'workspace-isolated-dash@n-yuki']
 favorite-apps=['thorium-browser.desktop', 'org.wezfurlong.wezterm.desktop', 'firefox.desktop', 'org.mozilla.Thunderbird.desktop', 'org.keepassxc.KeePassXC.desktop', 'com.skype.Client.desktop', 'md.obsidian.Obsidian.desktop']
 welcome-dialog-last-shown-version='42.9'
 
@@ -396,6 +396,7 @@ click-action='focus-minimize-or-previews'
 dash-max-icon-size=34
 dock-position='BOTTOM'
 extend-height=true
+isolate-workspaces=true
 show-mounts=false
 
 [shell/extensions/dash-to-panel]
@@ -417,9 +418,12 @@ focus-highlight=true
 focus-highlight-dominant=false
 focus-highlight-opacity=50
 group-apps=true
+hide-overview-on-startup=false
 hot-keys=true
 hotkeys-overlay-combo='ALWAYS'
 intellihide=false
+isolate-monitors=true
+isolate-workspaces=true
 leftbox-padding=-1
 middle-click-action='LAUNCH'
 panel-anchors='{"0":"MIDDLE"}'
@@ -429,6 +433,7 @@ panel-sizes='{"0":32}'
 primary-monitor=0
 shift-click-action='MINIMIZE'
 shift-middle-click-action='LAUNCH'
+shortcut-num-keys='BOTH'
 show-appmenu=false
 status-icon-padding=-1
 stockgs-force-hotcorner=false
@@ -464,9 +469,9 @@ show-screenshot-ui=@as []
 toggle-message-tray=['<Super>u']
 
 [software]
-check-timestamp=int64 1709601861
-online-updates-timestamp=int64 1709601898
-update-notification-timestamp=int64 1709601898
+check-timestamp=int64 1709631808
+online-updates-timestamp=int64 1709631845
+update-notification-timestamp=int64 1709631845
 
 [system/location]
 enabled=true

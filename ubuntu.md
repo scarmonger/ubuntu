@@ -178,6 +178,7 @@ https://extensions.gnome.org/extension/1460/vitals/
 https://extensions.gnome.org/extension/5237/rounded-window-corners/
 https://extensions.gnome.org/extension/4338/allow-locked-remote-desktop/
 https://extensions.gnome.org/extension/1160/dash-to-panel/
+https://extensions.gnome.org/extension/887/workspace-isolated-dash/
 
 # Download .deb installer
 
