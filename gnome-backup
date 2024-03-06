@@ -17,7 +17,7 @@ window-position=(626, 307)
 word-size=64
 
 [control-center]
-last-panel='display'
+last-panel='keyboard'
 
 [desktop/a11y/applications]
 screen-keyboard-enabled=false
@@ -226,11 +226,13 @@ move-to-monitor-down=@as []
 move-to-monitor-left=['<Shift><Super>h']
 move-to-monitor-right=['<Shift><Super>l']
 move-to-monitor-up=@as []
-move-to-workspace-2=['<Shift><Super>m']
-move-to-workspace-3=['<Shift><Super>n']
+move-to-workspace-1=['<Shift><Super>m']
+move-to-workspace-2=['<Shift><Super>u']
+move-to-workspace-3=['<Shift><Super>i']
 move-to-workspace-4=['<Shift><Super>o']
-switch-to-workspace-2=@as []
-switch-to-workspace-3=@as []
+switch-to-workspace-1=['<Super>m']
+switch-to-workspace-2=['<Super>u']
+switch-to-workspace-3=['<Super>i']
 switch-to-workspace-4=['<Super>o']
 switch-to-workspace-left=['<Primary><Super>h']
 switch-to-workspace-right=['<Primary><Super>l']
@@ -334,14 +336,13 @@ ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
 [settings-daemon/plugins/color]
-night-light-last-coordinates=(-6.1590014398848085, 106.6284)
+night-light-last-coordinates=(-6.1680007199424045, 106.6284)
 
 [settings-daemon/plugins/media-keys]
 control-center=['<Super>F12']
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom10/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom11/']
 mic-mute=['<Shift><Super>F11']
 screensaver=['<Super>Escape']
-terminal=['<Super>Return']
 volume-down=['<Super>F9']
 volume-mute=['<Super>F11']
 volume-up=['<Super>F10']
@@ -355,6 +356,16 @@ name='Print Area'
 binding='<Shift><Super>Escape'
 command='systemctl suspend -i'
 name='suspend'
+
+[settings-daemon/plugins/media-keys/custom-keybindings/custom10]
+binding='<Super>t'
+command='flatpak run org.mozilla.Thunderbird'
+name='Thunderbird'
+
+[settings-daemon/plugins/media-keys/custom-keybindings/custom11]
+binding='<Alt><Super>o'
+command='flatpak run md.obsidian.Obsidian'
+name='obsidian'
 
 [settings-daemon/plugins/media-keys/custom-keybindings/custom2]
 binding='<Primary><Shift><Alt>Print'
@@ -371,6 +382,31 @@ binding='<Shift>Print'
 command='ksnip -a -d 1'
 name='Print Active Window'
 
+[settings-daemon/plugins/media-keys/custom-keybindings/custom5]
+binding='<Super>Return'
+command='flatpak run org.wezfurlong.wezterm'
+name='Terminal'
+
+[settings-daemon/plugins/media-keys/custom-keybindings/custom6]
+binding='<Super>w'
+command='thorium'
+name='Thorium'
+
+[settings-daemon/plugins/media-keys/custom-keybindings/custom7]
+binding='<Shift><Super>w'
+command='firefox'
+name='firefox'
+
+[settings-daemon/plugins/media-keys/custom-keybindings/custom8]
+binding='<Super>e'
+command='flatpak run com.skype.Client'
+name='Skype'
+
+[settings-daemon/plugins/media-keys/custom-keybindings/custom9]
+binding='<Shift><Super>e'
+command='flatpak run org.keepassxc.KeePassXC'
+name='Keepass'
+
 [settings-daemon/plugins/power]
 sleep-inactive-ac-timeout=3600
 sleep-inactive-ac-type='nothing'
@@ -379,9 +415,9 @@ sleep-inactive-ac-type='nothing'
 enabled-connections=['a5d3f92f-b507-36b1-a750-dde716dce48a', '0a6b19b0-f0c0-30b8-9a12-208eb84364dc']
 
 [shell]
-command-history=['po', 'po', 'power', 'poweroff', 'reboot']
+command-history=['po', 'po', 'power', 'reboot', 'power', 'poweroff']
 enabled-extensions=['blur-my-shell@aunetx', 'clipboard-indicator@tudmotu.com', 'Vitals@CoreCoding.com', 'rounded-window-corners@yilozt', 'allowlockedremotedesktop@kamens.us', 'dash-to-panel@jderose9.github.com', 'tailscale-status@maxgallup.github.com', 'workspace-isolated-dash@n-yuki']
-favorite-apps=['thorium-browser.desktop', 'org.wezfurlong.wezterm.desktop', 'firefox.desktop', 'org.mozilla.Thunderbird.desktop', 'org.keepassxc.KeePassXC.desktop', 'com.skype.Client.desktop', 'md.obsidian.Obsidian.desktop']
+favorite-apps=@as []
 welcome-dialog-last-shown-version='42.9'
 
 [shell/extensions/clipboard-indicator]
@@ -461,17 +497,12 @@ settings-version=uint32 5
 hot-sensors=['__temperature_avg__', '_processor_usage_', '_memory_usage_', '__network-rx_max__', '__network-tx_max__']
 
 [shell/keybindings]
-focus-active-notification=['<Super>i']
+focus-active-notification=['<Shift><Super>n']
 open-application-menu=@as []
 screenshot=@as []
 screenshot-window=@as []
 show-screenshot-ui=@as []
-toggle-message-tray=['<Super>u']
-
-[software]
-check-timestamp=int64 1709631808
-online-updates-timestamp=int64 1709631845
-update-notification-timestamp=int64 1709631845
+toggle-message-tray=['<Super>n']
 
 [system/location]
 enabled=true
