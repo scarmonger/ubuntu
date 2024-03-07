@@ -60,7 +60,7 @@ icon-theme='Yaru'
 toolkit-accessibility=false
 
 [desktop/notifications]
-application-children=['gnome-network-panel', 'snap-store-ubuntu-software', 'org-gnome-gedit', 'firefox-firefox', 'apport-gtk', 'gnome-control-center', 'gnome-datetime-panel', 'thorium-browser', 'org-gnome-nautilus', 'xdg-desktop-portal-gnome', 'org-mozilla-thunderbird', 'com-skype-client', 'org-gnome-evolution-alarm-notify', 'wps-office-prometheus', 'org-mozilla-firefox', 'org-gnome-shell-extensions', 'firefox', 'org-gnome-software', 'virtualbox', 'virtualboxvm', 'wps-office-wpp', 'gnome-printers-panel', 'kazam', 'zoom', 'kitty', 'filezilla', 'org-gnome-evince', 'update-manager', 'wps-office-et', 'slack', 'org-gnome-eog', 'gcr-prompter', 'libreoffice24-2-impress', 'freetube', 'code']
+application-children=['gnome-network-panel', 'snap-store-ubuntu-software', 'org-gnome-gedit', 'firefox-firefox', 'apport-gtk', 'gnome-control-center', 'gnome-datetime-panel', 'thorium-browser', 'org-gnome-nautilus', 'xdg-desktop-portal-gnome', 'org-mozilla-thunderbird', 'com-skype-client', 'org-gnome-evolution-alarm-notify', 'wps-office-prometheus', 'org-mozilla-firefox', 'org-gnome-shell-extensions', 'firefox', 'org-gnome-software', 'virtualbox', 'virtualboxvm', 'wps-office-wpp', 'gnome-printers-panel', 'kazam', 'zoom', 'kitty', 'filezilla', 'org-gnome-evince', 'update-manager', 'wps-office-et', 'slack', 'org-gnome-eog', 'gcr-prompter', 'libreoffice24-2-impress', 'freetube', 'code', 'org-keepassxc-keepassxc', 'io-snapcraft-sessionagent']
 show-banners=true
 
 [desktop/notifications/application/apport-gtk]
@@ -99,6 +99,9 @@ application-id='gnome-network-panel.desktop'
 [desktop/notifications/application/gnome-printers-panel]
 application-id='gnome-printers-panel.desktop'
 
+[desktop/notifications/application/io-snapcraft-sessionagent]
+application-id='io.snapcraft.SessionAgent.desktop'
+
 [desktop/notifications/application/kazam]
 application-id='kazam.desktop'
 
@@ -128,6 +131,9 @@ application-id='org.gnome.Shell.Extensions.desktop'
 
 [desktop/notifications/application/org-gnome-software]
 application-id='org.gnome.Software.desktop'
+
+[desktop/notifications/application/org-keepassxc-keepassxc]
+application-id='org.keepassxc.KeePassXC.desktop'
 
 [desktop/notifications/application/org-mozilla-firefox]
 application-id='org.mozilla.firefox.desktop'
@@ -336,7 +342,7 @@ ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
 [settings-daemon/plugins/color]
-night-light-last-coordinates=(-6.1680007199424045, 106.6284)
+night-light-last-coordinates=(-6.1949985601151907, 106.6284)
 
 [settings-daemon/plugins/media-keys]
 control-center=['<Super>F12']
@@ -389,7 +395,7 @@ name='Terminal'
 
 [settings-daemon/plugins/media-keys/custom-keybindings/custom6]
 binding='<Super>w'
-command='thorium'
+command='thorium-browser'
 name='Thorium'
 
 [settings-daemon/plugins/media-keys/custom-keybindings/custom7]
