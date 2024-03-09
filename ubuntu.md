@@ -407,14 +407,6 @@ And that's it!
 
 /home/mc/.config/thorium/NativeMessagingHosts
 
-# Time shift
-
-https://dev.to/rahedmir/how-to-use-timeshift-from-command-line-in-linux-1l9b
-
-sudo timeshift --create --comments "A new backup" --tags D
-
-sudo timeshift --restore
-
 # Firefox
 
 https://support.mozilla.org/en-US/kb/install-firefox-linux
@@ -507,3 +499,8 @@ sudo apt-get install network-manager-l2tp-gnome
 # Ranger compress
 
 https://github.com/maximtrp/ranger-archives
+
+# Add typescript/react autoimport to nvim
+
+:Mason
+install eslint, typescript-language-server
