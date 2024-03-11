@@ -500,7 +500,7 @@ sudo apt-get install network-manager-l2tp-gnome
 
 https://github.com/maximtrp/ranger-archives
 
-# Add typescript/react autoimport to nvim
+# Add typescript/react autoimport to nvim config
 
 :Mason
 install eslint, typescript-language-server
