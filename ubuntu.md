@@ -268,6 +268,7 @@ flatpak install -y flathub org.remmina.Remmina
 flatpak install -y flathub com.github.tchx84.Flatseal
 flatpak install -y flathub net.christianbeier.Gromit-MPX
 flatpak install -y flathub org.mozilla.Thunderbird
+flatpak install flathub org.chromium.Chromium
 
 flatseal > allow home folder
 thunderbird > set profile from Help > Troubleshooting information
