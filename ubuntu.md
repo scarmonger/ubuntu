@@ -268,6 +268,7 @@ flatpak install -y flathub org.remmina.Remmina
 flatpak install -y flathub com.github.tchx84.Flatseal
 flatpak install -y flathub net.christianbeier.Gromit-MPX
 flatpak install -y flathub org.mozilla.Thunderbird
+flatpak install flathub org.chromium.Chromium
 
 flatseal > allow home folder
 thunderbird > set profile from Help > Troubleshooting information
@@ -500,7 +501,7 @@ sudo apt-get install network-manager-l2tp-gnome
 
 https://github.com/maximtrp/ranger-archives
 
-# Add typescript/react autoimport to nvim
+# Add typescript/react autoimport to nvim config
 
 :Mason
 install eslint, typescript-language-server

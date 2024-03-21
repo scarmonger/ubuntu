@@ -57,6 +57,7 @@ color-scheme='prefer-dark'
 font-hinting='slight'
 gtk-theme='Yaru-dark'
 icon-theme='Yaru'
+show-battery-percentage=true
 toolkit-accessibility=false
 
 [desktop/notifications]
@@ -95,6 +96,9 @@ application-id='gnome-datetime-panel.desktop'
 
 [desktop/notifications/application/gnome-network-panel]
 application-id='gnome-network-panel.desktop'
+
+[desktop/notifications/application/gnome-power-panel]
+application-id='gnome-power-panel.desktop'
 
 [desktop/notifications/application/gnome-printers-panel]
 application-id='gnome-printers-panel.desktop'
@@ -144,6 +148,13 @@ application-id='org.mozilla.firefox.desktop'
 [desktop/notifications/application/org-mozilla-thunderbird]
 application-id='org.mozilla.Thunderbird.desktop'
 
+[desktop/notifications/application/org-qbittorrent-qbittorrent]
+application-id='org.qbittorrent.qBittorrent.desktop'
+
+[desktop/notifications/application/org-wezfurlong-wezterm]
+application-id='org.wezfurlong.wezterm.desktop'
+enable=false
+
 [desktop/notifications/application/slack]
 application-id='slack.desktop'
 
@@ -166,6 +177,9 @@ application-id='virtualbox.desktop'
 [desktop/notifications/application/virtualboxvm]
 application-id='virtualboxvm.desktop'
 
+[desktop/notifications/application/vlc]
+application-id='vlc.desktop'
+
 [desktop/notifications/application/wps-office-et]
 application-id='wps-office-et.desktop'
 
@@ -174,6 +188,9 @@ application-id='wps-office-prometheus.desktop'
 
 [desktop/notifications/application/wps-office-wpp]
 application-id='wps-office-wpp.desktop'
+
+[desktop/notifications/application/wps-office-wps]
+application-id='wps-office-wps.desktop'
 
 [desktop/notifications/application/xdg-desktop-portal-gnome]
 application-id='xdg-desktop-portal-gnome.desktop'
@@ -191,6 +208,7 @@ left-handed=true
 speed=0.5
 
 [desktop/peripherals/touchpad]
+speed=0.50735294117647056
 two-finger-scrolling-enabled=true
 
 [desktop/privacy]
@@ -239,12 +257,14 @@ move-to-workspace-1=['<Shift><Super>m']
 move-to-workspace-2=['<Shift><Super>u']
 move-to-workspace-3=['<Shift><Super>i']
 move-to-workspace-4=['<Shift><Super>o']
+move-to-workspace-left=['<Alt><Super>h']
+move-to-workspace-right=['<Alt><Super>l']
 switch-to-workspace-1=['<Super>m']
 switch-to-workspace-2=['<Super>u']
 switch-to-workspace-3=['<Super>i']
 switch-to-workspace-4=['<Super>o']
-switch-to-workspace-left=['<Primary><Super>h']
-switch-to-workspace-right=['<Primary><Super>l']
+switch-to-workspace-left=['<Super>h']
+switch-to-workspace-right=['<Super>l']
 toggle-fullscreen=['<Super>f']
 
 [eog/view]
@@ -321,6 +341,7 @@ sort-order=0
 
 [mutter]
 dynamic-workspaces=true
+experimental-features=@as []
 
 [mutter/wayland/keybindings]
 restore-shortcuts=@as []
@@ -345,7 +366,7 @@ ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
 [settings-daemon/plugins/color]
-night-light-last-coordinates=(-6.1949985601151907, 106.6284)
+night-light-last-coordinates=(-7.9915992800575948, 112.63079999999999)
 
 [settings-daemon/plugins/media-keys]
 control-center=['<Super>F12']
@@ -399,7 +420,7 @@ name='Print Active Window'
 [settings-daemon/plugins/media-keys/custom-keybindings/custom5]
 binding='<Super>Return'
 command='flatpak run org.wezfurlong.wezterm'
-name='Terminal'
+name='wezterm'
 
 [settings-daemon/plugins/media-keys/custom-keybindings/custom6]
 binding='<Super>w'
@@ -435,6 +456,7 @@ favorite-apps=@as []
 welcome-dialog-last-shown-version='42.9'
 
 [shell/extensions/clipboard-indicator]
+cache-size=1021
 display-mode=0
 history-size=100
 notify-on-copy=false
@@ -518,6 +540,12 @@ screenshot-window=@as []
 show-screenshot-ui=@as []
 toggle-message-tray=['<Super>n']
 toggle-overview=@as []
+
+[software]
+check-timestamp=int64 1710060807
+install-timestamp=int64 1707027334
+online-updates-timestamp=int64 1709946832
+update-notification-timestamp=int64 1709946832
 
 [system/location]
 enabled=true
