@@ -17,7 +17,7 @@ window-position=(626, 307)
 word-size=64
 
 [control-center]
-last-panel='keyboard'
+last-panel='default-apps'
 
 [desktop/a11y/applications]
 screen-keyboard-enabled=false
@@ -60,7 +60,7 @@ icon-theme='Yaru'
 toolkit-accessibility=false
 
 [desktop/notifications]
-application-children=['gnome-network-panel', 'snap-store-ubuntu-software', 'org-gnome-gedit', 'firefox-firefox', 'apport-gtk', 'gnome-control-center', 'gnome-datetime-panel', 'thorium-browser', 'org-gnome-nautilus', 'xdg-desktop-portal-gnome', 'org-mozilla-thunderbird', 'com-skype-client', 'org-gnome-evolution-alarm-notify', 'wps-office-prometheus', 'org-mozilla-firefox', 'org-gnome-shell-extensions', 'firefox', 'org-gnome-software', 'virtualbox', 'virtualboxvm', 'wps-office-wpp', 'gnome-printers-panel', 'kazam', 'zoom', 'kitty', 'filezilla', 'org-gnome-evince', 'update-manager', 'wps-office-et', 'slack', 'org-gnome-eog', 'gcr-prompter', 'libreoffice24-2-impress', 'freetube', 'code', 'org-keepassxc-keepassxc', 'io-snapcraft-sessionagent']
+application-children=['gnome-network-panel', 'snap-store-ubuntu-software', 'org-gnome-gedit', 'firefox-firefox', 'apport-gtk', 'gnome-control-center', 'gnome-datetime-panel', 'thorium-browser', 'org-gnome-nautilus', 'xdg-desktop-portal-gnome', 'org-mozilla-thunderbird', 'com-skype-client', 'org-gnome-evolution-alarm-notify', 'wps-office-prometheus', 'org-mozilla-firefox', 'org-gnome-shell-extensions', 'firefox', 'org-gnome-software', 'virtualbox', 'virtualboxvm', 'wps-office-wpp', 'gnome-printers-panel', 'kazam', 'zoom', 'kitty', 'filezilla', 'org-gnome-evince', 'update-manager', 'wps-office-et', 'slack', 'org-gnome-eog', 'gcr-prompter', 'libreoffice24-2-impress', 'freetube', 'code', 'org-keepassxc-keepassxc', 'io-snapcraft-sessionagent', 'google-chrome']
 show-banners=true
 
 [desktop/notifications/application/apport-gtk]
@@ -98,6 +98,9 @@ application-id='gnome-network-panel.desktop'
 
 [desktop/notifications/application/gnome-printers-panel]
 application-id='gnome-printers-panel.desktop'
+
+[desktop/notifications/application/google-chrome]
+application-id='google-chrome.desktop'
 
 [desktop/notifications/application/io-snapcraft-sessionagent]
 application-id='io.snapcraft.SessionAgent.desktop'
@@ -284,7 +287,7 @@ active-plugins=['docinfo', 'spell', 'filebrowser', 'openlinks', 'modelines', 'so
 [gedit/plugins/filebrowser]
 root='file:///'
 tree-view=true
-virtual-root='file:///home/mc/Dropbox/notes/sfwp/attachment'
+virtual-root='file:///home/mc/Downloads'
 
 [gedit/preferences/editor]
 scheme='Yaru-dark'
@@ -346,7 +349,7 @@ night-light-last-coordinates=(-6.1949985601151907, 106.6284)
 
 [settings-daemon/plugins/media-keys]
 control-center=['<Super>F12']
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom10/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom11/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom10/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom11/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom12/']
 mic-mute=['<Shift><Super>F11']
 screensaver=['<Super>Escape']
 volume-down=['<Super>F9']
@@ -373,6 +376,11 @@ binding='<Alt><Super>o'
 command='flatpak run md.obsidian.Obsidian'
 name='obsidian'
 
+[settings-daemon/plugins/media-keys/custom-keybindings/custom12]
+binding='<Super>e'
+command='nautilus'
+name='File Explorer'
+
 [settings-daemon/plugins/media-keys/custom-keybindings/custom2]
 binding='<Primary><Shift><Alt>Print'
 command='kazam'
@@ -395,8 +403,8 @@ name='Terminal'
 
 [settings-daemon/plugins/media-keys/custom-keybindings/custom6]
 binding='<Super>w'
-command='thorium-browser'
-name='Thorium'
+command='google-chrome'
+name='Chrome'
 
 [settings-daemon/plugins/media-keys/custom-keybindings/custom7]
 binding='<Shift><Super>w'
@@ -404,7 +412,7 @@ command='firefox'
 name='firefox'
 
 [settings-daemon/plugins/media-keys/custom-keybindings/custom8]
-binding='<Super>e'
+binding='<Super>s'
 command='flatpak run com.skype.Client'
 name='Skype'
 
@@ -421,7 +429,7 @@ sleep-inactive-ac-type='nothing'
 enabled-connections=['a5d3f92f-b507-36b1-a750-dde716dce48a', '0a6b19b0-f0c0-30b8-9a12-208eb84364dc']
 
 [shell]
-command-history=['po', 'po', 'power', 'reboot', 'power', 'poweroff']
+command-history=['po', 'po', 'power', 'power', 'reboot', 'poweroff']
 enabled-extensions=['blur-my-shell@aunetx', 'clipboard-indicator@tudmotu.com', 'Vitals@CoreCoding.com', 'rounded-window-corners@yilozt', 'allowlockedremotedesktop@kamens.us', 'dash-to-panel@jderose9.github.com', 'tailscale-status@maxgallup.github.com', 'workspace-isolated-dash@n-yuki']
 favorite-apps=@as []
 welcome-dialog-last-shown-version='42.9'
@@ -509,6 +517,7 @@ screenshot=@as []
 screenshot-window=@as []
 show-screenshot-ui=@as []
 toggle-message-tray=['<Super>n']
+toggle-overview=@as []
 
 [system/location]
 enabled=true
