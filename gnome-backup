@@ -17,7 +17,7 @@ window-position=(626, 307)
 word-size=64
 
 [control-center]
-last-panel='default-apps'
+last-panel='keyboard'
 
 [desktop/a11y/applications]
 screen-keyboard-enabled=false
@@ -57,7 +57,6 @@ color-scheme='prefer-dark'
 font-hinting='slight'
 gtk-theme='Yaru-dark'
 icon-theme='Yaru'
-show-battery-percentage=true
 toolkit-accessibility=false
 
 [desktop/notifications]
@@ -96,9 +95,6 @@ application-id='gnome-datetime-panel.desktop'
 
 [desktop/notifications/application/gnome-network-panel]
 application-id='gnome-network-panel.desktop'
-
-[desktop/notifications/application/gnome-power-panel]
-application-id='gnome-power-panel.desktop'
 
 [desktop/notifications/application/gnome-printers-panel]
 application-id='gnome-printers-panel.desktop'
@@ -148,13 +144,6 @@ application-id='org.mozilla.firefox.desktop'
 [desktop/notifications/application/org-mozilla-thunderbird]
 application-id='org.mozilla.Thunderbird.desktop'
 
-[desktop/notifications/application/org-qbittorrent-qbittorrent]
-application-id='org.qbittorrent.qBittorrent.desktop'
-
-[desktop/notifications/application/org-wezfurlong-wezterm]
-application-id='org.wezfurlong.wezterm.desktop'
-enable=false
-
 [desktop/notifications/application/slack]
 application-id='slack.desktop'
 
@@ -177,9 +166,6 @@ application-id='virtualbox.desktop'
 [desktop/notifications/application/virtualboxvm]
 application-id='virtualboxvm.desktop'
 
-[desktop/notifications/application/vlc]
-application-id='vlc.desktop'
-
 [desktop/notifications/application/wps-office-et]
 application-id='wps-office-et.desktop'
 
@@ -188,9 +174,6 @@ application-id='wps-office-prometheus.desktop'
 
 [desktop/notifications/application/wps-office-wpp]
 application-id='wps-office-wpp.desktop'
-
-[desktop/notifications/application/wps-office-wps]
-application-id='wps-office-wps.desktop'
 
 [desktop/notifications/application/xdg-desktop-portal-gnome]
 application-id='xdg-desktop-portal-gnome.desktop'
@@ -208,7 +191,6 @@ left-handed=true
 speed=0.5
 
 [desktop/peripherals/touchpad]
-speed=0.50735294117647056
 two-finger-scrolling-enabled=true
 
 [desktop/privacy]
@@ -257,8 +239,6 @@ move-to-workspace-1=['<Shift><Super>m']
 move-to-workspace-2=['<Shift><Super>u']
 move-to-workspace-3=['<Shift><Super>i']
 move-to-workspace-4=['<Shift><Super>o']
-move-to-workspace-left=['<Alt><Super>h']
-move-to-workspace-right=['<Alt><Super>l']
 switch-to-workspace-1=['<Super>m']
 switch-to-workspace-2=['<Super>u']
 switch-to-workspace-3=['<Super>i']
@@ -341,7 +321,6 @@ sort-order=0
 
 [mutter]
 dynamic-workspaces=true
-experimental-features=@as []
 
 [mutter/wayland/keybindings]
 restore-shortcuts=@as []
@@ -366,11 +345,11 @@ ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
 [settings-daemon/plugins/color]
-night-light-last-coordinates=(-7.9915992800575948, 112.63079999999999)
+night-light-last-coordinates=(-6.1949985601151907, 106.6284)
 
 [settings-daemon/plugins/media-keys]
 control-center=['<Super>F12']
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom10/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom11/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom12/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom10/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom11/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom12/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom13/']
 mic-mute=['<Shift><Super>F11']
 screensaver=['<Super>Escape']
 volume-down=['<Super>F9']
@@ -379,7 +358,7 @@ volume-up=['<Super>F10']
 
 [settings-daemon/plugins/media-keys/custom-keybindings/custom0]
 binding='Print'
-command='ksnip -r -d 1'
+command='ksnip -r'
 name='Print Area'
 
 [settings-daemon/plugins/media-keys/custom-keybindings/custom1]
@@ -402,14 +381,19 @@ binding='<Super>e'
 command='nautilus'
 name='File Explorer'
 
+[settings-daemon/plugins/media-keys/custom-keybindings/custom13]
+binding='<Primary>Print'
+command='ksnip -r -d 1'
+name='Print with Delay'
+
 [settings-daemon/plugins/media-keys/custom-keybindings/custom2]
 binding='<Primary><Shift><Alt>Print'
 command='kazam'
 name='Screen recording'
 
 [settings-daemon/plugins/media-keys/custom-keybindings/custom3]
-binding='<Primary>Print'
-command='ksnip -m -d 1'
+binding='<Alt>Print'
+command='ksnip -m'
 name='Print current monitor'
 
 [settings-daemon/plugins/media-keys/custom-keybindings/custom4]
@@ -420,7 +404,7 @@ name='Print Active Window'
 [settings-daemon/plugins/media-keys/custom-keybindings/custom5]
 binding='<Super>Return'
 command='flatpak run org.wezfurlong.wezterm'
-name='wezterm'
+name='Terminal'
 
 [settings-daemon/plugins/media-keys/custom-keybindings/custom6]
 binding='<Super>w'
@@ -456,7 +440,6 @@ favorite-apps=@as []
 welcome-dialog-last-shown-version='42.9'
 
 [shell/extensions/clipboard-indicator]
-cache-size=1021
 display-mode=0
 history-size=100
 notify-on-copy=false
@@ -540,12 +523,6 @@ screenshot-window=@as []
 show-screenshot-ui=@as []
 toggle-message-tray=['<Super>n']
 toggle-overview=@as []
-
-[software]
-check-timestamp=int64 1710060807
-install-timestamp=int64 1707027334
-online-updates-timestamp=int64 1709946832
-update-notification-timestamp=int64 1709946832
 
 [system/location]
 enabled=true
