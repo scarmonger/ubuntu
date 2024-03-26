@@ -81,6 +81,7 @@ vim.keymap.set({ "n", "v" }, "\"0", '"0p', { desc = "paste from last yank" })
 vim.keymap.set("i", "<C-v>", "<C-r>\"", { desc = "paste from the last yank, delete" })
 vim.keymap.set("i", "<C-b>", "<C-r>0", { desc = "paste from last yank" })
 
+vim.keymap.set("n", "<leader>ta", 'ggVG', { desc = "select all" })
 vim.keymap.set("n", "<leader>tf", ':%s//gc<left><left><left>', { desc = "search and replace" })
 vim.keymap.set("n", "<leader>th", ":! thorium-browser \"<c-r>%\"<CR>", { desc = "preview markdown" })
 vim.keymap.set("n", "<leader>tp", ":! firefox \"<c-r>%\"<CR>", { desc = "preview markdown" })
