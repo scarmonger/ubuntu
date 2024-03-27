@@ -8,19 +8,19 @@ o.cursorlineopt = "number,line"
 o.cursorline = true
 
 local options = {
-    clipboard = "unnamed",
-    smartcase = true,
-    conceallevel = 0,
-    relativenumber = true,
+	clipboard = "unnamed",
+	smartcase = true,
+	conceallevel = 0,
+	relativenumber = true,
 }
 
 for k, v in pairs(options) do
-    vim.opt[k] = v
+	vim.opt[k] = v
 end
 
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
 vim.opt.smartindent = true
