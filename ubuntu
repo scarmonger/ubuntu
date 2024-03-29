@@ -1,5 +1,6 @@
-systemctl suspend -i
-sudo flatpak override com.wps.Office --filesystem=/home/andry/Downloads
+#!/bin/zsh
+
+xev
 
 sudo apt update
 
@@ -16,6 +17,12 @@ sudo EDITOR=nano crontab -e
 sudo apt upgrade
 
 # Check UUID (blkid)
+sudo fdisk /dev/nvm0n1
+
+> n (enter until finish)
+> w
+
+sudo mkfs.ext4 /dev/nvme0n1p3
 
 mkdir ~/marc
 
@@ -23,7 +30,7 @@ lsblk
 
 ll /dev/disk/by-uuid
 
-nvim /etc/fstab
+sudo nano /etc/fstab
 
 sudo cp /etc/fstab /etc/fstab_bak
 
@@ -33,14 +40,17 @@ echo "UUID=8f4825e2-0016-43c2-994a-bb2830ddaea9 /home/mc/marc/ ext4 errors=remou
 tp13:
 echo "UUID=3cb910c9-2e1e-4910-a6a9-c114df09d3cd /home/mc/marc/ ext4 errors=remount-ro 0 1" | sudo tee -a /etc/fstab
 
+dell:
+echo "UUID=6b617826-89bc-444c-9b72-9bcf0c44eb73 /home/mc/marc/ ext4 errors=remount-ro 0 1" | sudo tee -a /etc/fstab
+
 sudo mount -a
 
-sudo dpkg -i ~/marc/debinstaller/thorium-browser_117.0.5938.157_amd64.deb
+sudo dpkg -i google-chrome
 sudo snap remove --purge firefox
 
 # Install app
 
-sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar fonts-powerline neofetch xclip ssh fzf mpv tmux dconf-editor kazam gnome-tweaks chrome-gnome-shell filezilla vlc ncdu htop gimp mycli xdotool
+sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar fonts-powerline neofetch xclip ssh fzf mpv tmux dconf-editor kazam gnome-tweaks chrome-gnome-shell filezilla vlc ncdu htop gimp mycli xdotool ripgrep fd-find gcc lua5.4
 
 systemctl status ssh
 systemctl start ssh
@@ -117,15 +127,12 @@ git clone https://github.com/tmux-plugins/tpm ~/.config/tmux-plugins/tpm
 ctrl + B + capital I = install plugin
 ctrl + space + capital I = install plugin
 
-#ln -ivs ~/Dropbox/Dataon/.thunderbird ~/
-ln -ivs ~/marc/appimagefile/ksnip ~/.local/bin/
-ln -ivs ~/marc/appimagefile/nvim ~/.local/bin/
-
--- Remove recent in nautilus --
+# Remove recent in nautilus --
+rm -Rf ~/.config/nautilus
 ln -ivs ~/marc/GitHub/ubuntu/config/nautilus ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/pam_environment ~/.pam_environment
 
--- Remove starred icon in nautilus --
+# Remove starred icon in nautilus --
 ln -ivs ~/marc/GitHub/ubuntu/config/user-dirs.dirs ~/.config/
 sudo ln -ivs ~/marc/GitHub/ubuntu/etc/xdg/user-dirs.defaults /etc/xdg/user-dirs.defaults
 
@@ -134,23 +141,17 @@ ln -ivs ~/marc/GitHub/ubuntu/config/gtk-3.0/gtk.css ~/.config/gtk-3.0/
 mkdir ~/.config/gtk-4.0
 ln -ivs ~/marc/GitHub/ubuntu/config/gtk-4.0/gtk.css ~/.config/gtk-4.0/
 
-ln -ivs ~/marc/GitHub/ubuntu/local/share/nvim/lazy/onedark.nvim/lua/onedark/highlights.lua ~/.local/share/nvim/lazy/onedark.nvim/lua/onedark/highlights.lua
-ln -ivs ~/marc/GitHub/ubuntu/local/share/nvim/lazy/onedark.nvim/lua/onedark/palette.lua ~/.local/share/nvim/lazy/onedark.nvim/lua/onedark/palette.lua
 ln -ivs /home/mc/marc/GitHub/ubuntu/local/share/nvim/lazy/tokyonight.nvim/lua/tokyonight/colors.lua /home/mc/.local/share/nvim/lazy/tokyonight.nvim/lua/tokyonight
 ln -ivs /home/mc/marc/GitHub/ubuntu/config/mpv /home/mc/.config
 ln -ivs /home/mc/marc/GitHub/ubuntu/myclirc ~/.myclirc
-ln -ivs /home/mc/marc/appimagefile/loffice ~/.local/bin
+
 ln -ivs /home/mc/marc/custom/source/commandbox/box ~/.local/bin/
 ln -ivs /home/mc/marc/custom/source/commandbox/jre ~/.local/bin/
 
 cp /home/mc/marc/GitHub/ubuntu/.wezterm.lua ~/
+
+
 ```
-
-# Install neovim
-
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-chmod u+x nvim.appimage
-./nvim.appimage
 
 ## AppImageLauncher
 
@@ -160,6 +161,23 @@ sudo apt update
 sudo apt install appimagelauncher
 
 Run App : appimagelauncher
+
+## Install neovim
+
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+chmod u+x nvim.appimage
+mv ./nvim.appimage ~/marc/appimagefile/nvim
+./nvim.appimage
+
+ln -ivs ~/marc/appimagefile/ksnip ~/.local/bin/
+ln -ivs ~/marc/appimagefile/nvim ~/.local/bin/
+ln -ivs ~/marc/appimagefile/obsidian ~/.local/bin/
+ln -ivs ~/marc/appimagefile/loffice ~/.local/bin
+
+## Add typescript/react autoimport to nvim config
+
+:Mason
+install eslint, typescript-language-server
 
 # Backup settings
 
@@ -227,8 +245,6 @@ pip3 install neovim-remote --break-system-packages
 
 > pyperclip for custom script insys & sfsupport
 
-sudo apt-get install ripgrep fd-find gcc lua5.4 npm
-sudo apt install -y npm
 npm install tree-sitter-cli
 
 ## Install lazygit
@@ -501,7 +517,7 @@ sudo apt-get install network-manager-l2tp-gnome
 
 https://github.com/maximtrp/ranger-archives
 
-# Add typescript/react autoimport to nvim config
+# Instal NVM
 
-:Mason
-install eslint, typescript-language-server
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+nvm.md

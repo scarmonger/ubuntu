@@ -287,7 +287,8 @@ vim.keymap.set('n', '<leader>sp', '<cmd>lua require("spectre").open_file_search(
 
 -- Edit specific file
 vim.keymap.set("n", "<leader>er", ":Neotree right reveal<cr>")
-vim.keymap.set("n", "<leader>eR", ":Neotree right position=current reveal_force_cwd<cr>")
+-- vim.keymap.set("n", "<leader>eR", ":Neotree right position=current reveal_force_cwd<cr>")
+vim.keymap.set("n", "<leader>eR", ":Neotree current %:p:h:h %:p reveal_force_cwd<cr>")
 vim.keymap.set("n", "<leader>eE", ":Neotree right position=current<cr>")
 vim.keymap.set("n", "<leader>ee", ":Neotree float reveal<cr>")
 vim.keymap.set("n", "<leader>ei", ":e ~/marc/GitHub/ubuntu/config/nvim/init.lua<cr>",
@@ -300,7 +301,7 @@ vim.keymap.set("n", "<leader>eo", ":e ~/marc/GitHub/ubuntu/config/nvim/lua/custo
 	{ desc = "Edit Vim options" })
 vim.keymap.set("n", "<leader>ez", ":e ~/marc/GitHub/ubuntu/zshrc<cr>",
 	{ desc = "Edit zshrc" })
-vim.keymap.set("n", "<leader>eu", ":e ~/marc/GitHub/ubuntu/ubuntu.md<cr>",
+vim.keymap.set("n", "<leader>eu", ":e ~/marc/GitHub/ubuntu/ubuntu<cr>",
 	{ desc = "Edit ubuntu.md file" })
 vim.keymap.set("n", "<leader>eg", ":e ~/marc/GitHub/ubuntu/config/ranger/rc.conf<cr>",
 	{ desc = "Edit ranger config file" })
