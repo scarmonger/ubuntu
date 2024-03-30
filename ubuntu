@@ -200,7 +200,7 @@ https://extensions.gnome.org/extension/887/workspace-isolated-dash/
 
 # Download .deb installer
 
-sudo dpkg -i \*.deb
+sudo dpkg -i *.deb
 
 wget https://dl.thorium.rocks/debian/dists/stable/thorium.list
 sudo mv thorium.list /etc/apt/sources.list.d/
@@ -249,8 +249,8 @@ npm install tree-sitter-cli
 
 ## Install lazygit
 
-LAZYGIT*VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]\*')
-curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit*${LAZYGIT_VERSION}\_Linux_x86_64.tar.gz"
+LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
 tar xf lazygit.tar.gz lazygit
 sudo install lazygit /usr/local/bin
 
@@ -260,9 +260,10 @@ sudo add-apt-repository ppa:unit193/encryption -y
 sudo apt install veracrypt
 
 # appimage
-
 ksnip
-chmod +x ./\*.AppImage
+obsidian
+nvim
+chmod +x *.AppImage
 
 ## Add flatpak to gnome
 

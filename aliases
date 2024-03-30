@@ -1,4 +1,5 @@
 #!/bin/sh
+alias fd="fdfind"
 alias sats="cd /home/mc/marc/custom/backend/atlas/soulbackend/main/src/web/ && box"
 alias sdac="cd /home/mc/marc/custom/backend/daikinhr/soulbackend/main/src/web/ && box"
 alias sctt="cd /home/mc/marc/custom/backend/vallourec_sea/soulbackend/main/src/web/ && box"
