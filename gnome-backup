@@ -40,7 +40,7 @@ translate=true
 color-shading-type='solid'
 picture-options='zoom'
 picture-uri='file:///usr/share/backgrounds/jj_light_by_Hiking93.jpg'
-picture-uri-dark='file:///usr/share/backgrounds/DSC2943_by_kcpru.jpg'
+picture-uri-dark='file:///usr/share/backgrounds/Cherry_Tree_in_Lakones_by_elenastravoravdi.jpg'
 primary-color='#000000'
 secondary-color='#000000'
 
@@ -49,6 +49,7 @@ automatic-timezone=true
 
 [desktop/input-sources]
 per-window=false
+show-all-sources=true
 sources=[('xkb', 'us')]
 xkb-options=['caps:escape_shifted_capslock']
 
@@ -57,10 +58,11 @@ color-scheme='prefer-dark'
 font-hinting='slight'
 gtk-theme='Yaru-dark'
 icon-theme='Yaru'
+text-scaling-factor=1.25
 toolkit-accessibility=false
 
 [desktop/notifications]
-application-children=['gnome-network-panel', 'snap-store-ubuntu-software', 'org-gnome-gedit', 'firefox-firefox', 'apport-gtk', 'gnome-control-center', 'gnome-datetime-panel', 'thorium-browser', 'org-gnome-nautilus', 'xdg-desktop-portal-gnome', 'org-mozilla-thunderbird', 'com-skype-client', 'org-gnome-evolution-alarm-notify', 'wps-office-prometheus', 'org-mozilla-firefox', 'org-gnome-shell-extensions', 'firefox', 'org-gnome-software', 'virtualbox', 'virtualboxvm', 'wps-office-wpp', 'gnome-printers-panel', 'kazam', 'zoom', 'kitty', 'filezilla', 'org-gnome-evince', 'update-manager', 'wps-office-et', 'slack', 'org-gnome-eog', 'gcr-prompter', 'libreoffice24-2-impress', 'freetube', 'code', 'org-keepassxc-keepassxc', 'io-snapcraft-sessionagent', 'google-chrome']
+application-children=['gnome-network-panel', 'snap-store-ubuntu-software', 'org-gnome-gedit', 'firefox-firefox', 'apport-gtk', 'gnome-control-center', 'gnome-datetime-panel', 'thorium-browser', 'org-gnome-nautilus', 'xdg-desktop-portal-gnome', 'org-mozilla-thunderbird', 'com-skype-client', 'org-gnome-evolution-alarm-notify', 'wps-office-prometheus', 'org-mozilla-firefox', 'org-gnome-shell-extensions', 'firefox', 'org-gnome-software', 'virtualbox', 'virtualboxvm', 'wps-office-wpp', 'gnome-printers-panel', 'kazam', 'zoom', 'kitty', 'filezilla', 'org-gnome-evince', 'update-manager', 'wps-office-et', 'slack', 'org-gnome-eog', 'gcr-prompter', 'libreoffice24-2-impress', 'freetube', 'code', 'org-keepassxc-keepassxc', 'io-snapcraft-sessionagent', 'google-chrome', 'org-gnome-tweaks']
 show-banners=true
 
 [desktop/notifications/application/apport-gtk]
@@ -71,6 +73,9 @@ application-id='code.desktop'
 
 [desktop/notifications/application/com-skype-client]
 application-id='com.skype.Client.desktop'
+
+[desktop/notifications/application/dropbox]
+application-id='dropbox.desktop'
 
 [desktop/notifications/application/filezilla]
 application-id='filezilla.desktop'
@@ -95,6 +100,9 @@ application-id='gnome-datetime-panel.desktop'
 
 [desktop/notifications/application/gnome-network-panel]
 application-id='gnome-network-panel.desktop'
+
+[desktop/notifications/application/gnome-power-panel]
+application-id='gnome-power-panel.desktop'
 
 [desktop/notifications/application/gnome-printers-panel]
 application-id='gnome-printers-panel.desktop'
@@ -134,6 +142,9 @@ application-id='org.gnome.Shell.Extensions.desktop'
 
 [desktop/notifications/application/org-gnome-software]
 application-id='org.gnome.Software.desktop'
+
+[desktop/notifications/application/org-gnome-tweaks]
+application-id='org.gnome.tweaks.desktop'
 
 [desktop/notifications/application/org-keepassxc-keepassxc]
 application-id='org.keepassxc.KeePassXC.desktop'
@@ -184,13 +195,15 @@ application-id='Zoom.desktop'
 [desktop/peripherals/keyboard]
 delay=uint32 329
 numlock-state=true
-repeat-interval=uint32 27
+repeat-interval=uint32 20
 
 [desktop/peripherals/mouse]
 left-handed=true
+natural-scroll=false
 speed=0.5
 
 [desktop/peripherals/touchpad]
+speed=0.58088235294117641
 two-finger-scrolling-enabled=true
 
 [desktop/privacy]
@@ -211,7 +224,7 @@ view-only=false
 color-shading-type='solid'
 lock-delay=uint32 0
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/DSC2943_by_kcpru.jpg'
+picture-uri='file:///usr/share/backgrounds/Cherry_Tree_in_Lakones_by_elenastravoravdi.jpg'
 primary-color='#000000'
 secondary-color='#000000'
 
@@ -269,6 +282,10 @@ notify-window-x=56
 notify-window-y=27
 reminders-past=@as []
 
+[file-roller/dialogs/extract]
+recreate-folders=true
+skip-newer=false
+
 [file-roller/listing]
 list-mode='as-folder'
 name-column-width=250
@@ -282,18 +299,21 @@ window-height=480
 window-width=600
 
 [gedit/plugins]
-active-plugins=['docinfo', 'spell', 'filebrowser', 'openlinks', 'modelines', 'sort']
+active-plugins=['sort', 'docinfo', 'modelines', 'openlinks', 'spell', 'filebrowser']
 
 [gedit/plugins/filebrowser]
 root='file:///'
 tree-view=true
-virtual-root='file:///home/mc/Downloads'
+virtual-root='file:///home/mc/Dropbox/notes/tech/linux'
 
 [gedit/preferences/editor]
 scheme='Yaru-dark'
 
 [gedit/preferences/ui]
 show-tabs-mode='auto'
+
+[gedit/state/file-chooser]
+open-recent=false
 
 [gedit/state/window]
 bottom-panel-size=140
@@ -340,12 +360,19 @@ search-view='list-view'
 initial-size=(890, 550)
 maximized=false
 
+[nm-applet/eap/3feaf127-92c0-46c7-a6c7-1d54e21e44e0]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
 [nm-applet/eap/669f3f1d-6e65-42a3-9d1b-cd552aa33407]
 ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
+[settings-daemon/peripherals/touchscreen]
+orientation-lock=false
+
 [settings-daemon/plugins/color]
-night-light-last-coordinates=(-6.1949985601151907, 106.6284)
+night-light-last-coordinates=(-7.535301439884809, 110.831)
 
 [settings-daemon/plugins/media-keys]
 control-center=['<Super>F12']
@@ -434,7 +461,7 @@ sleep-inactive-ac-type='nothing'
 enabled-connections=['a5d3f92f-b507-36b1-a750-dde716dce48a', '0a6b19b0-f0c0-30b8-9a12-208eb84364dc']
 
 [shell]
-command-history=['po', 'po', 'power', 'power', 'reboot', 'poweroff']
+command-history=['po', 'po', 'power', 'power', 'r', 'reboot', 'poweroff']
 enabled-extensions=['blur-my-shell@aunetx', 'clipboard-indicator@tudmotu.com', 'Vitals@CoreCoding.com', 'rounded-window-corners@yilozt', 'allowlockedremotedesktop@kamens.us', 'dash-to-panel@jderose9.github.com', 'tailscale-status@maxgallup.github.com', 'workspace-isolated-dash@n-yuki']
 favorite-apps=@as []
 welcome-dialog-last-shown-version='42.9'
@@ -451,7 +478,7 @@ click-action='focus-minimize-or-previews'
 dash-max-icon-size=34
 dock-position='BOTTOM'
 extend-height=true
-isolate-workspaces=true
+isolate-workspaces=false
 show-mounts=false
 
 [shell/extensions/dash-to-panel]
@@ -523,6 +550,10 @@ screenshot-window=@as []
 show-screenshot-ui=@as []
 toggle-message-tray=['<Super>n']
 toggle-overview=@as []
+
+[software]
+check-timestamp=int64 1711894237
+update-notification-timestamp=int64 1711894231
 
 [system/location]
 enabled=true
