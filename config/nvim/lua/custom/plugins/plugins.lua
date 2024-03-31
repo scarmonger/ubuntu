@@ -9,6 +9,8 @@ return {
 	'christoomey/vim-tmux-navigator',
 	'prettier/vim-prettier',
 	'nvim-pack/nvim-spectre',
+	-- { 'echasnovski/mini.nvim', version = '*' },
+
 	'fatih/vim-go',
 	{
 		"folke/tokyonight.nvim",
@@ -128,6 +130,5 @@ return {
 			{ "<leader>bD", function() require("mini.bufremove").delete(0, true) end, desc = "Delete Buffer (Force)" },
 		},
 	},
-	'prettier/vim-prettier'
 
 }
