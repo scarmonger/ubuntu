@@ -515,8 +515,9 @@ sudo apt-get update
 sudo apt-get install network-manager-l2tp-gnome
 
 # Ranger compress
-
-https://github.com/maximtrp/ranger-archives
+mkdir -p ~/.config/ranger/plugins
+cd ~/.config/ranger/plugins
+git clone https://github.com/maximtrp/ranger-archives.git
 
 # Instal NVM
 
