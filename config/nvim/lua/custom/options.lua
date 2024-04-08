@@ -8,14 +8,14 @@ o.cursorlineopt = "number,line"
 o.cursorline = true
 
 local options = {
-	clipboard = "unnamed",
-	smartcase = true,
-	conceallevel = 0,
-	relativenumber = true,
+  clipboard = "unnamed",
+  smartcase = true,
+  conceallevel = 0,
+  relativenumber = true,
 }
 
 for k, v in pairs(options) do
-	vim.opt[k] = v
+  vim.opt[k] = v
 end
 
 vim.opt.tabstop = 2
@@ -55,6 +55,14 @@ vim.cmd([[ let g:startify_custom_header = [] ]])
 -- Go completion
 vim.cmd([[ let g:go_def_mode='gopls' ]])
 vim.cmd([[ let g:go_info_mode='gopls' ]])
+
+-- shortcut
+vim.cmd([[ cmap ;fj Neotree dir=/home/mc/marc/custom/fe-micro-standard<cr> ]])
+vim.cmd([[ cmap ;fk Neotree dir=/home/mc/marc/custom/fe-micro-custom<cr> ]])
+vim.cmd([[ cmap ;fl Neotree dir=/home/mc/marc/custom/fe-micro-standard-ent<cr> ]])
+vim.cmd([[ cmap ;fh Neotree dir=/home/mc/marc/custom/fe-sfreport<cr> ]])
+vim.cmd([[ cmap ;fc Neotree dir=/home/mc/marc/custom/fe-micro-container<cr> ]])
+vim.cmd([[ cmap ;aa Neotree dir=/home/mc/marc/custom/backend/pjlhuillier/soulbackend <cr> ]])
 
 -- Re-open at last position
 vim.cmd([[ au BufReadPost * if line("'\"") >= 1 && line ("'\"") <= line("$") | exe "normal! g`\"" | endif ]])
