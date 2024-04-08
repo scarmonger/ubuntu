@@ -1,5 +1,4 @@
-tmux attach -t workspace || tmux new -s workspace ws
-tmux rename-window -t 1 ranger
+tmux rename-window ranger
 tmux new-window -c ~/marc/GitHub/ubuntu -n nvim nvim
 tmux new-window  
 tmux next-window 
