@@ -61,6 +61,10 @@ require("which-key").register({
 
 -- remap button
 vim.keymap.set("n", ";", ":", {})
+vim.keymap.set("n", ";", ":", {})
+vim.keymap.set("n", "'", '"', {})
+vim.keymap.set("n", '"', "'", {})
+vim.keymap.set("n", ":", ";", {})
 vim.keymap.set("n", ":", ";", {})
 vim.keymap.set("i", "jk", "<esc>", { desc = "escape from insert mode" })
 vim.keymap.set("i", "kj", "<esc>", { desc = "escape from insert mode" })
@@ -70,7 +74,8 @@ vim.keymap.set("n", "gh", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 vim.keymap.set("v", "<leader><Enter>", ":.! bc -l <CR>", { desc = "calculate number" })
 
 -- REGISTERS
-vim.keymap.set({ "n", "v" }, "<c-n>", '"nyy', { desc = "copy to buffer n" })
+-- vim.keymap.set({ "n", "v" }, "<c-n>", '"nyy', { desc = "copy to buffer n" })
+-- vim.keymap.set({ "n", "v" }, "<c-s-n>", '"nyy', { desc = "copy to buffer n" })
 vim.keymap.set("n", "<m-n>", '"nP', { desc = "paste from n buffer" })
 vim.keymap.set("i", "<m-n>", '<c-r>n', { desc = "paste from n buffer" })
 vim.keymap.set("n", "<leader>yp", ":let @+ = expand('%:p')<cr>", { desc = "copy filepath" })
