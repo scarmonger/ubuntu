@@ -17,7 +17,7 @@ window-position=(626, 307)
 word-size=64
 
 [control-center]
-last-panel='keyboard'
+last-panel='bluetooth'
 
 [desktop/a11y/applications]
 screen-keyboard-enabled=false
@@ -40,7 +40,7 @@ translate=true
 color-shading-type='solid'
 picture-options='zoom'
 picture-uri='file:///usr/share/backgrounds/jj_light_by_Hiking93.jpg'
-picture-uri-dark='file:///usr/share/backgrounds/Cherry_Tree_in_Lakones_by_elenastravoravdi.jpg'
+picture-uri-dark='file:///usr/share/backgrounds/Mirror_by_Uday_Nakade.jpg'
 primary-color='#000000'
 secondary-color='#000000'
 
@@ -58,7 +58,6 @@ color-scheme='prefer-dark'
 font-hinting='slight'
 gtk-theme='Yaru-dark'
 icon-theme='Yaru'
-text-scaling-factor=1.25
 toolkit-accessibility=false
 
 [desktop/notifications]
@@ -224,7 +223,7 @@ view-only=false
 color-shading-type='solid'
 lock-delay=uint32 0
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/Cherry_Tree_in_Lakones_by_elenastravoravdi.jpg'
+picture-uri='file:///usr/share/backgrounds/Mirror_by_Uday_Nakade.jpg'
 primary-color='#000000'
 secondary-color='#000000'
 
@@ -237,28 +236,9 @@ idle-delay=uint32 300
 
 [desktop/wm/keybindings]
 close=['<Alt>F4']
-cycle-group=['<Alt>Escape']
-cycle-group-backward=['<Shift><Alt>Escape']
-cycle-windows=['<Super>j']
-cycle-windows-backward=['<Super>k']
 maximize-horizontally=@as []
 maximize-vertically=@as []
 minimize=['<Super>semicolon']
-move-to-monitor-down=@as []
-move-to-monitor-left=['<Shift><Super>h']
-move-to-monitor-right=['<Shift><Super>l']
-move-to-monitor-up=@as []
-move-to-workspace-1=['<Shift><Super>m']
-move-to-workspace-2=['<Shift><Super>u']
-move-to-workspace-3=['<Shift><Super>i']
-move-to-workspace-4=['<Shift><Super>o']
-switch-to-workspace-1=['<Super>m']
-switch-to-workspace-2=['<Super>u']
-switch-to-workspace-3=['<Super>i']
-switch-to-workspace-4=['<Super>o']
-switch-to-workspace-left=['<Super>h']
-switch-to-workspace-right=['<Super>l']
-toggle-fullscreen=['<Super>f']
 
 [eog/view]
 background-color='rgb(0,0,0)'
@@ -299,7 +279,7 @@ window-height=480
 window-width=600
 
 [gedit/plugins]
-active-plugins=['sort', 'docinfo', 'modelines', 'openlinks', 'spell', 'filebrowser']
+active-plugins=['docinfo', 'spell', 'filebrowser', 'openlinks', 'modelines', 'sort']
 
 [gedit/plugins/filebrowser]
 root='file:///'
@@ -372,7 +352,7 @@ ignore-phase2-ca-cert=false
 orientation-lock=false
 
 [settings-daemon/plugins/color]
-night-light-last-coordinates=(-7.535301439884809, 110.831)
+night-light-last-coordinates=(-6.1949985601151907, 106.6284)
 
 [settings-daemon/plugins/media-keys]
 control-center=['<Super>F12']
@@ -469,6 +449,7 @@ welcome-dialog-last-shown-version='42.9'
 [shell/extensions/clipboard-indicator]
 display-mode=0
 history-size=100
+move-item-first=true
 notify-on-copy=false
 strip-text=true
 topbar-preview-size=10
@@ -486,20 +467,21 @@ animate-appicon-hover=true
 animate-appicon-hover-animation-convexity={'RIPPLE': 2.0, 'PLANK': 1.0, 'SIMPLE': 0.0}
 animate-appicon-hover-animation-extent={'RIPPLE': 4, 'PLANK': 4, 'SIMPLE': 1}
 animate-appicon-hover-animation-type='SIMPLE'
-appicon-margin=2
+appicon-margin=0
 appicon-padding=4
-available-monitors=[0]
+available-monitors=[1, 0]
 click-action='CYCLE-MIN'
 desktop-line-use-custom-color=true
 dot-color-dominant=false
 dot-color-override=false
 dot-color-unfocused-different=false
-dot-position='BOTTOM'
-dot-style-unfocused='SQUARES'
+dot-position='TOP'
+dot-style-unfocused='DOTS'
 focus-highlight=true
 focus-highlight-dominant=false
 focus-highlight-opacity=50
 group-apps=true
+group-apps-use-launchers=false
 hide-overview-on-startup=false
 hot-keys=true
 hotkeys-overlay-combo='ALWAYS'
@@ -508,23 +490,34 @@ isolate-monitors=true
 isolate-workspaces=true
 leftbox-padding=-1
 middle-click-action='LAUNCH'
-panel-anchors='{"0":"MIDDLE"}'
-panel-element-positions='{"0":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"centered"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedTL"},{"element":"desktopButton","visible":true,"position":"stackedBR"}]}'
-panel-lengths='{"0":100}'
-panel-sizes='{"0":32}'
-primary-monitor=0
+multi-monitors=false
+overview-click-to-exit=false
+panel-anchors='{"0":"MIDDLE","1":"MIDDLE"}'
+panel-element-positions='{"0":[{"element":"showAppsButton","visible":true,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}],"1":[{"element":"showAppsButton","visible":true,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}]}'
+panel-lengths='{"0":100,"1":100}'
+panel-sizes='{"0":32,"1":32}'
+primary-monitor=1
 shift-click-action='MINIMIZE'
 shift-middle-click-action='LAUNCH'
 shortcut-num-keys='BOTH'
 show-appmenu=false
+show-favorites=true
+show-favorites-all-monitors=true
+show-running-apps=true
 status-icon-padding=-1
 stockgs-force-hotcorner=false
 stockgs-keep-dash=false
 stockgs-keep-top-panel=false
 stockgs-panelbtn-click-only=false
 taskbar-locked=false
+trans-bg-color='#ed333b'
+trans-gradient-bottom-color='#865e3c'
+trans-gradient-bottom-opacity=0.40000000000000002
+trans-gradient-top-color='#c061cb'
+trans-gradient-top-opacity=0.5
+trans-panel-opacity=0.40000000000000002
 trans-use-custom-bg=false
-trans-use-custom-gradient=false
+trans-use-custom-gradient=true
 trans-use-custom-opacity=true
 trans-use-dynamic-opacity=false
 tray-padding=-1
@@ -543,17 +536,15 @@ settings-version=uint32 5
 hot-sensors=['__temperature_avg__', '_processor_usage_', '_memory_usage_', '__network-rx_max__', '__network-tx_max__']
 
 [shell/keybindings]
-focus-active-notification=['<Shift><Super>n']
 open-application-menu=@as []
 screenshot=@as []
 screenshot-window=@as []
 show-screenshot-ui=@as []
-toggle-message-tray=['<Super>n']
 toggle-overview=@as []
 
 [software]
-check-timestamp=int64 1711894237
-update-notification-timestamp=int64 1711894231
+check-timestamp=int64 1713142661
+update-notification-timestamp=int64 1713142627
 
 [system/location]
 enabled=true
