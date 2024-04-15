@@ -61,11 +61,9 @@ require("which-key").register({
 
 -- remap button
 vim.keymap.set("n", ";", ":", {})
-vim.keymap.set("n", ";", ":", {})
-vim.keymap.set("n", "'", '"', {})
-vim.keymap.set("n", '"', "'", {})
 vim.keymap.set("n", ":", ";", {})
-vim.keymap.set("n", ":", ";", {})
+vim.keymap.set({ "i", "x", "n", "s" }, "'", '"', {})
+vim.keymap.set({ "i", "x", "n", "s" }, '"', "'", {})
 vim.keymap.set("i", "jk", "<esc>", { desc = "escape from insert mode" })
 vim.keymap.set("i", "kj", "<esc>", { desc = "escape from insert mode" })
 vim.keymap.set("n", "gj", ":BufferLineMovePrev<cr>", { desc = "move location to prev buffer" })
