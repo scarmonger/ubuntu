@@ -228,6 +228,9 @@ sudo apt --fix-broken install
 Kernel driver not installed (rc=-1908)
 sudo apt install gcc-12
 
+## Install virtualbox alternatif 2 (DELL)
+sudo apt install --reinstall virtualbox-dkms && sudo apt install libelf-dev
+
 https://slack.com/downloads/instructions/ubuntu
 
 ## Alacritty
