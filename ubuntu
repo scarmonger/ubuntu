@@ -352,7 +352,8 @@ gvfs-smb loupe nautilus simple-scan snapshot sushi xdg-desktop-portal-gnome \
 xdg-user-dirs-gtk yelp gnome-tweaks
 
 # capslock escape
-
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Super>Page_Up', '<Super><Alt>Left']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Super>Page_Down', '<Super><Alt>Right']"
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape_shifted_capslock']"
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:swapescape']"
 setxkbmap -option caps:swapescape
