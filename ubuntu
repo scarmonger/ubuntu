@@ -354,6 +354,8 @@ xdg-user-dirs-gtk yelp gnome-tweaks
 # capslock escape
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Super>Page_Up', '<Super><Alt>Left']"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Super>Page_Down', '<Super><Alt>Right']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up "[]"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down "[]"
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape_shifted_capslock']"
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:swapescape']"
 setxkbmap -option caps:swapescape
@@ -533,3 +535,8 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 /home/mc/Dropbox/notes/tech/nvm.md
 
 /home/mc/Dropbox/notes/tech/linux/gpg.md
+
+# Keepass
+sudo apt-add-repository ppa:jtaylor/keepass
+sudo apt-get update
+sudo apt-get install keepass2

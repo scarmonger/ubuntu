@@ -17,7 +17,7 @@ window-position=(626, 307)
 word-size=64
 
 [control-center]
-last-panel='bluetooth'
+last-panel='keyboard'
 
 [desktop/a11y/applications]
 screen-keyboard-enabled=false
@@ -62,7 +62,7 @@ toolkit-accessibility=false
 
 [desktop/notifications]
 application-children=['gnome-network-panel', 'snap-store-ubuntu-software', 'org-gnome-gedit', 'firefox-firefox', 'apport-gtk', 'gnome-control-center', 'gnome-datetime-panel', 'thorium-browser', 'org-gnome-nautilus', 'xdg-desktop-portal-gnome', 'org-mozilla-thunderbird', 'com-skype-client', 'org-gnome-evolution-alarm-notify', 'wps-office-prometheus', 'org-mozilla-firefox', 'org-gnome-shell-extensions', 'firefox', 'org-gnome-software', 'virtualbox', 'virtualboxvm', 'wps-office-wpp', 'gnome-printers-panel', 'kazam', 'zoom', 'kitty', 'filezilla', 'org-gnome-evince', 'update-manager', 'wps-office-et', 'slack', 'org-gnome-eog', 'gcr-prompter', 'libreoffice24-2-impress', 'freetube', 'code', 'org-keepassxc-keepassxc', 'io-snapcraft-sessionagent', 'google-chrome', 'org-gnome-tweaks']
-show-banners=true
+show-banners=false
 
 [desktop/notifications/application/apport-gtk]
 application-id='apport-gtk.desktop'
@@ -199,7 +199,7 @@ repeat-interval=uint32 20
 [desktop/peripherals/mouse]
 left-handed=true
 natural-scroll=false
-speed=0.5
+speed=0.24264705882352944
 
 [desktop/peripherals/touchpad]
 speed=0.58088235294117641
@@ -239,6 +239,10 @@ close=['<Alt>F4']
 maximize-horizontally=@as []
 maximize-vertically=@as []
 minimize=['<Super>semicolon']
+switch-to-workspace-down=@as []
+switch-to-workspace-left=['<Super>Page_Up', '<Super><Alt>Left']
+switch-to-workspace-right=['<Super>Page_Down', '<Super><Alt>Right']
+switch-to-workspace-up=@as []
 
 [eog/view]
 background-color='rgb(0,0,0)'
@@ -352,7 +356,7 @@ ignore-phase2-ca-cert=false
 orientation-lock=false
 
 [settings-daemon/plugins/color]
-night-light-last-coordinates=(-6.1949985601151907, 106.6284)
+night-light-last-coordinates=(-6.1859992800575947, 106.6284)
 
 [settings-daemon/plugins/media-keys]
 control-center=['<Super>F12']
@@ -541,10 +545,6 @@ screenshot=@as []
 screenshot-window=@as []
 show-screenshot-ui=@as []
 toggle-overview=@as []
-
-[software]
-check-timestamp=int64 1713142661
-update-notification-timestamp=int64 1713142627
 
 [system/location]
 enabled=true
