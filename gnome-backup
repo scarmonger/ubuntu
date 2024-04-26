@@ -239,9 +239,13 @@ close=['<Alt>F4']
 maximize-horizontally=@as []
 maximize-vertically=@as []
 minimize=['<Super>semicolon']
+move-to-workspace-down=@as []
+move-to-workspace-left=['<Super><Shift>Page_Up', '<Super><Shift>J']
+move-to-workspace-right=['<Super><Shift>Page_Down', '<Super><Shift>K']
+move-to-workspace-up=@as []
 switch-to-workspace-down=@as []
-switch-to-workspace-left=['<Super>Page_Up', '<Super><Alt>Left']
-switch-to-workspace-right=['<Super>Page_Down', '<Super><Alt>Right']
+switch-to-workspace-left=['<Super>Page_Up', '<Super>J']
+switch-to-workspace-right=['<Super>Page_Down', '<Super>K']
 switch-to-workspace-up=@as []
 
 [eog/view]
@@ -356,7 +360,7 @@ ignore-phase2-ca-cert=false
 orientation-lock=false
 
 [settings-daemon/plugins/color]
-night-light-last-coordinates=(-6.1859992800575947, 106.6284)
+night-light-last-coordinates=(-6.1949985601151907, 106.6284)
 
 [settings-daemon/plugins/media-keys]
 control-center=['<Super>F12']
@@ -545,6 +549,11 @@ screenshot=@as []
 screenshot-window=@as []
 show-screenshot-ui=@as []
 toggle-overview=@as []
+
+[software]
+check-timestamp=int64 1714095271
+online-updates-timestamp=int64 1714095454
+update-notification-timestamp=int64 1714095454
 
 [system/location]
 enabled=true
