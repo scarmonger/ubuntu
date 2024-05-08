@@ -10,7 +10,7 @@ sudo apt update
 
 sudo apt install macchanger
 sudo macchanger -s enp0s31f6
-sudo macchanger -m 6c:0b:84:22:be:c4 enp0s31f6
+sudo macchanger -m 6c:0b:84:22:be:c4 enp0s3g1f6
 
 sudo EDITOR=nano crontab -e
 @reboot macchanger -m 6c:0b:84:22:be:c4 enp0s31f6
