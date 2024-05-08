@@ -1,6 +1,8 @@
 #!/bin/zsh
 
 xev
+xev | grep -i button
+untuk mendeteksi keyboard atau mouse button 
 
 sudo apt update
 
