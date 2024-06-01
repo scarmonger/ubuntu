@@ -243,12 +243,11 @@ sudo apt install --reinstall virtualbox-dkms && sudo apt install libelf-dev
 https://slack.com/downloads/instructions/ubuntu
 
 # Error Installing Windows - Windows cannot read the ProductKey from the unattend answer file
-Guide/Tutorial
-I just tried to install Windows 11 and Windows 10 using VirtualBox in Linux Debian and I came accross this error multiple times while the "setup is starting".
 
 Screenshot of the error: https://imgur.com/cW1GUkh
 
 Found the solution in this video on YT: https://www.youtube.com/watch?v=Y8rzZHscljQ&t=183s
+
 Just so the solution is: 
 1. Power of the VM machine
 2. Go to the settings of your VM - System - Boot Order - Uncheck Floppy
