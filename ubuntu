@@ -223,6 +223,13 @@ sudo dpkg -i ~/marc/debinstaller/wps-office_11.1.0.11711.XA_amd64.deb
 sudo dpkg -i ~/marc/debinstaller/lsd-musl_1.0.0_amd64.deb
 dbeaver
 
+sudo dpkg --purge virtualbox-dkms
+sudo dpkg --purge virtualbox-qt
+sudo dpkg --purge virtualbox
+sudo dpkg --purge virtualbox-7.0
+
+sudo usermod -a -G vboxusers mc
+
 sudo apt install libqt5help5 libqt5x11extras5
 sudo dpkg -i ~/marc/debinstaller/virtualbox-7.0_7.0.12-159484\~Ubuntu\~jammy_amd64.deb
 sudo apt --fix-broken install
@@ -234,6 +241,25 @@ sudo apt install gcc-12
 sudo apt install --reinstall virtualbox-dkms && sudo apt install libelf-dev
 
 https://slack.com/downloads/instructions/ubuntu
+
+# Error Installing Windows - Windows cannot read the ProductKey from the unattend answer file
+Guide/Tutorial
+I just tried to install Windows 11 and Windows 10 using VirtualBox in Linux Debian and I came accross this error multiple times while the "setup is starting".
+
+Screenshot of the error: https://imgur.com/cW1GUkh
+
+Found the solution in this video on YT: https://www.youtube.com/watch?v=Y8rzZHscljQ&t=183s
+Just so the solution is: 
+1. Power of the VM machine
+2. Go to the settings of your VM - System - Boot Order - Uncheck Floppy
+3. Press OK
+4. Go to the folder where your VM is stored (default is Home - VirtualBox VMs)
+5. Delete all 3 files that start with "Unattended"
+6. Power on the VM machine
+7. Click OK on the warning
+8. Press any key to continue
+
+All done, now it should work as normal.
 
 ## Alacritty
 
