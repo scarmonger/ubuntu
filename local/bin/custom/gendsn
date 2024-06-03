@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-firefox --new-tab "http://127.0.0.1:8080/index.cfm?sfid=view.nzone.generatedsn&accname_list=${1}&forcecron&isclient=false"
+firefox --new-tab "http://127.0.0.1:8085/index.cfm?sfid=view.nzone.generatedsn&accname_list=${1}&forcecron&isclient=false"
 
 firefox --new-tab "https://sf7dev-pro.dataon.com/sfpro/index.cfm?sfid=view.nzone.generatedsn&accname_list=${1}&forcecron&isclient=false"
 
