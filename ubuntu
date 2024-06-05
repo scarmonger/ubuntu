@@ -242,7 +242,7 @@ sudo apt install --reinstall virtualbox-dkms && sudo apt install libelf-dev
 
 https://slack.com/downloads/instructions/ubuntu
 
-# Error Installing Windows - Windows cannot read the ProductKey from the unattend answer file
+## Error Installing Windows - Windows cannot read the ProductKey from the unattend answer file
 
 Screenshot of the error: https://imgur.com/cW1GUkh
 
@@ -258,7 +258,27 @@ Just so the solution is:
 7. Click OK on the warning
 8. Press any key to continue
 
+## Setup Perfect windows
 All done, now it should work as normal.
+
+https://www.youtube.com/watch?v=6UQZ5oQg8XA
+
+Install using English (world)
+Setup for work or school
+Sign-in options > Domain join
+Blank password
+
+`irm christitus.com/win | iex`
+Klik Tab Tweaks > Choose Desktop, klik ultimate performance, run tweaks
+
+## Shrink / Decrease virtualbox disk size
+https://www.virtualbox.org/manual/ch08.html#vboxmanage-modifymedium
+
+Run in windows: 
+sdelete64.exe -z
+
+Run in linux
+VBoxManage modifymedium disk win11.vdi --compact
 
 ## Alacritty
 
