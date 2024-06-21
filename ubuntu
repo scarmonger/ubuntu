@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+lsb_release -a
+
 xev
 xev | grep -i button
 untuk mendeteksi keyboard atau mouse button 
@@ -108,6 +110,7 @@ ln -ivs ~/marc/GitHub/ubuntu/config/nvim_old ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/config/nvim_lazy ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/config/nvim_newlazy ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/config/nvim_chris ~/.config/
+ln -ivs ~/marc/virtualbox "/home/mc/VirtualBox VMs"
 
 mkdir ~/.config/script
 mkdir ~/.local/bin
@@ -167,6 +170,19 @@ Run App : appimagelauncher
 hyperkeys
 https://hyperkeys.xureilab.com/
 
+https://publicpost.medium.com/how-to-install-appimage-and-create-searchable-shortcut-on-ubuntu-linux-6542997ef2bd
+
+
+[Desktop Entry]
+Type=Application
+Name=Appname
+GenericName=Video Editor
+Comment=Appname is a free, open-source, and cross-platform video editor
+Categories=VideoEditor
+Exec=/path/to/Appname.AppImage --no-sandbox
+Icon=/path/to/icon.png
+
+update-desktop-database ~/.local/share/applications/
 
 ## Install neovim
 
@@ -278,7 +294,7 @@ Run in windows:
 sdelete64.exe -z
 
 Run in linux
-VBoxManage modifymedium disk win11.vdi --compact
+VBoxManage modifymedium disk /home/mc/marc/virtualbox/win11/win11.vdi --compact
 
 ## Alacritty
 
@@ -318,6 +334,8 @@ ksnip
 obsidian
 nvim
 chmod +x *.AppImage
+
+
 
 ## Add flatpak to gnome
 
@@ -587,3 +605,11 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 sudo apt-add-repository ppa:jtaylor/keepass
 sudo apt-get update
 sudo apt-get install keepass2
+
+# Setting hostname
+hostnamectl set-hostname SGSGHCMIHRISOJA
+
+# Ubuntu Pro
+sudo pro attach C1sTzqTWhHUw5BkW9YjYFDu9HJzNU
+
+

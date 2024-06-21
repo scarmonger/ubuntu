@@ -6,6 +6,7 @@ alias sctt="cd /home/mc/marc/custom/backend/vallourec_sea/soulbackend/main/src/w
 alias spjl="cd /home/mc/marc/custom/backend/pjlhuillier/soulbackend/main/src/web/ && box"
 
 alias remotemypc="xfreerdp +clipboard +fonts /sound /mic /smart-sizing /multimon /network:auto /cert-ignore /u:mc /d:WORKGROUP /v:mc-pc"
+alias vbcompact="VBoxManage modifymedium disk /home/mc/marc/virtualbox/win11/win11.vdi --compact"
 
 alias myctt="mycli -u sfnbc_vallourec_sea_admin -h 192.168.101.70 dbSF_NBC_VALLOUREC_SEA -p 2K4%1e8t187529291929"
 alias mydac="mycli -u sfnbc_daikinhr_admin -h 192.168.102.120 dbSF_NBC_DAIKINHR -p 0151KoV2201172290395"
