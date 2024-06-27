@@ -613,3 +613,11 @@ hostnamectl set-hostname SGSGHCMIHRISOJA
 sudo pro attach C1sTzqTWhHUw5BkW9YjYFDu9HJzNU
 
 
+# Remove ctrl semicolon and ctrl period shortcut for emoji 
+https://unix.stackexchange.com/questions/692237/ctrl-displays-e-character-and-captures-the-keyboard-shortcut
+
+gsettings set org.freedesktop.ibus.panel.emoji hotkey "[]"
+
+Or run in terminal
+
+ibus-setup
