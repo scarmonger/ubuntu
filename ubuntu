@@ -621,3 +621,17 @@ gsettings set org.freedesktop.ibus.panel.emoji hotkey "[]"
 Or run in terminal
 
 ibus-setup
+
+# Keepass2
+https://github.com/pfn/keepasshttp?tab=readme-ov-file
+sudo apt install ./microsoft-edge-stable_126.0.2592.68-1_amd64.deb
+
+sudo apt-get install mono-complete
+
+sudo apt-add-repository ppa:jtaylor/keepass
+sudo apt-get update
+sudo apt-get install keepass2
+
+
+sudo chmod 644 ~/Downloads/KeePassHttp.plgx
+sudo cp ~/Downloads/KeePassHttp.plgx /usr/lib/keepass2
