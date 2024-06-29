@@ -1,0 +1,7 @@
+{
+  "pinned": [
+    "editor:insert-embed",
+    "editor:insert-wikilink",
+    "nuke-orphans:nuke-orphaned-attachments"
+  ]
+}

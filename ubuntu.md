@@ -417,6 +417,7 @@ gvfs-smb loupe nautilus simple-scan snapshot sushi xdg-desktop-portal-gnome \
 xdg-user-dirs-gtk yelp gnome-tweaks
 
 # capslock escape
+```
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Super>Page_Up', '<Super><Alt>Left']"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Super>Page_Down', '<Super><Alt>Right']"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up "[]"
@@ -424,14 +425,13 @@ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down "[]"
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape_shifted_capslock']"
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:swapescape']"
 setxkbmap -option caps:swapescape
-
 ```
+
 Other options are possible:
   caps:none to deactivate
   caps:escape to make it an additional escape
   caps:super to make it an additional super (windows) key.
 
-```
 
 gsettings set org.gnome.desktop.privacy remember-recent-files false
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'focus-minimize-or-previews'
@@ -546,8 +546,9 @@ https://github.com/lossurdo/yaru-dark-border
 # xfreerdp
 
 sudo apt install freerdp2-x11
+```
 xfreerdp +clipboard +fonts /sound /mic /smart-sizing /multimon /network:auto /cert-ignore /u:<username> /d:WORKGROUP /v:192.168.x.x
-
+```
 # yt-dlp
 
 sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
@@ -616,16 +617,15 @@ sudo pro attach C1sTzqTWhHUw5BkW9YjYFDu9HJzNU
 # Remove ctrl semicolon and ctrl period shortcut for emoji 
 https://unix.stackexchange.com/questions/692237/ctrl-displays-e-character-and-captures-the-keyboard-shortcut
 
-gsettings set org.freedesktop.ibus.panel.emoji hotkey "[]"
+`gsettings set org.freedesktop.ibus.panel.emoji hotkey "[]"`
 
 Or run in terminal
 
-ibus-setup
+`ibus-setup`
 
 # Keepass2
 https://github.com/pfn/keepasshttp?tab=readme-ov-file
-sudo apt install ./microsoft-edge-stable_126.0.2592.68-1_amd64.deb
-
+``` sh
 sudo apt-get install mono-complete
 
 sudo apt-add-repository ppa:jtaylor/keepass
@@ -635,3 +635,9 @@ sudo apt-get install keepass2
 
 sudo chmod 644 ~/Downloads/KeePassHttp.plgx
 sudo cp ~/Downloads/KeePassHttp.plgx /usr/lib/keepass2
+```
+
+# Edge
+```sh
+sudo apt install ./microsoft-edge-stable_126.0.2592.68-1_amd64.deb
+```

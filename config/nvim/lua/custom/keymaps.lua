@@ -306,7 +306,7 @@ vim.keymap.set("n", "<leader>eo", ":e ~/marc/GitHub/ubuntu/config/nvim/lua/custo
 	{ desc = "Edit Vim options" })
 vim.keymap.set("n", "<leader>ez", ":e ~/marc/GitHub/ubuntu/zshrc<cr>",
 	{ desc = "Edit zshrc" })
-vim.keymap.set("n", "<leader>eu", ":e ~/marc/GitHub/ubuntu/ubuntu<cr>",
+vim.keymap.set("n", "<leader>eu", ":e ~/marc/GitHub/ubuntu/ubuntu.md<cr>",
 	{ desc = "Edit ubuntu.md file" })
 vim.keymap.set("n", "<leader>eg", ":e ~/marc/GitHub/ubuntu/config/ranger/rc.conf<cr>",
 	{ desc = "Edit ranger config file" })

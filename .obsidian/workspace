@@ -1,0 +1,132 @@
+{
+  "main": {
+    "id": "9a7dc5da4ed6514f",
+    "type": "split",
+    "children": [
+      {
+        "id": "74b1d77849cb0bac",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Kerjasama Usaha - Heri.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "cf6b75283afa4543",
+    "type": "split",
+    "children": [
+      {
+        "id": "e66aa2ae927979b2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fd4632aee56116b3",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "53b89c2943520c31",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "9eb517d0c286918b",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 486.5
+  },
+  "right": {
+    "id": "1ae4547a5151fd72",
+    "type": "split",
+    "children": [
+      {
+        "id": "025996575df78f92",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9826d3e537380fdf",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Kerjasama Usaha - Heri.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "014b9222085e96a9",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "5722a1ed093893a8",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Kerjasama Usaha - Heri.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "74b1d77849cb0bac",
+  "lastOpenFiles": [
+    "Kerjasama Usaha - Heri.md",
+    "islam/iqro.md",
+    "islam/Ahmed Deedat.md",
+    "Memory List.md",
+    "attachment/Pasted image 20211124103554.png",
+    "sunfish6/module_timeAttendance/FAQ Time Att.md",
+    "project/shimano-imp2.md",
+    "project/undp.md",
+    "project/NOOSC Security Global.md",
+    "project/SS - Pangan Sari - Hendra, Anisa.md"
+  ]
+}
