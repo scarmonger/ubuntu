@@ -54,10 +54,8 @@
             "id": "fd4632aee56116b3",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "attachment/z013.png"
-              }
+              "type": "empty",
+              "state": {}
             }
           },
           {
@@ -180,6 +178,8 @@
   },
   "active": "2824e47ce1a2a4c5",
   "lastOpenFiles": [
+    "Untitled.md",
+    "ubuntu.md",
     "config/nvim/lua/custom/keymaps.lua~",
     "docs/DDE Average Performance.doc",
     "docs/FM-DV-DDE-INI-2106-02748_TCK2106-0654237.doc",
@@ -220,11 +220,9 @@
     "technical/backup/Backup Restore Database.md",
     "technical/sf7be-lucee.md",
     "sfrelease.md",
-    "temp/Pertanyaan SF Release.md",
     "docs/pemetaan-JobFamily(JF)-JobFamilyGrade(JFG)-JobFamilyLevel(JFL)-taki.xlsx",
     "docs/pemetaan JobFamily(JF),JobFamilyGrad(JFG),JobFamilyLevel(JFL) -taki.xlsx",
     "docs/OKR-dini/Perhitungan OKR.xlsx",
-    "docs/OKR-dini/OKR-PPT.pptx",
-    "docs/OKR-dini/FM-DV-DDE-INI-2209-03184 - SF7 - Performance - KR check in plan type Target Value - signed.docx"
+    "docs/OKR-dini/OKR-PPT.pptx"
   ]
 }

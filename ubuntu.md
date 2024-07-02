@@ -1,14 +1,31 @@
 #!/bin/zsh
+# Common syntax
 
+## Check ubuntu name release
 lsb_release -a
 
+## Check keymap / button
+
 xev
+
+Check mouse button:
 xev | grep -i button
-untuk mendeteksi keyboard atau mouse button 
+
+## Setting hostname Linux
+hostnamectl set-hostname SGSGHCMIHRISOJA
+
+## Register Ubuntu Pro
+sudo pro attach C1sTzqTWhHUw5BkW9YjYFDu9HJzNU
+
+# New Installation
 
 sudo apt update
-
-# change mac address
+sudo apt upgrade
+sudo apt install git
+mkdir -p ~/marc/GitHub 
+cd ~/marc/GitHub
+git clone https://www.github.com/scarmonger/ubuntu.git
+## change mac address
 
 sudo apt install macchanger
 sudo macchanger -s enp0s31f6
@@ -20,7 +37,12 @@ sudo EDITOR=nano crontab -e
 
 sudo apt upgrade
 
-# Check UUID (blkid)
+> [!NOTE] Notes
+> sudo tailscale up
+sudo tailscale down
+
+
+## Check UUID (blkid)
 sudo fdisk /dev/nvm0n1
 
 > n (enter until finish)
@@ -52,7 +74,7 @@ sudo mount -a
 sudo dpkg -i google-chrome
 sudo snap remove --purge firefox
 
-# Install app
+## Install app
 
 sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar fonts-powerline neofetch xclip ssh fzf mpv tmux dconf-editor kazam gnome-tweaks chrome-gnome-shell filezilla vlc ncdu htop gimp mycli xdotool ripgrep fd-find gcc lua5.4 zathura tldr
 
@@ -60,7 +82,7 @@ systemctl status ssh
 systemctl start ssh
 systemctl enable ssh
 
-# Install oh-my-zsh
+## Install oh-my-zsh
 
 **Rubah bin bash menjadi zsh (harus logout)**
 chsh -s /usr/bin/zsh
@@ -99,7 +121,7 @@ https://github.com/ohmyzsh/ohmyzsh
 https://www.thorsten-hans.com/5-types-of-zsh-aliases
 https://gist.github.com/dogrocker/1efb8fd9427779c827058f873b94df95
 
-# symlink
+## symlink
 
 ```
 rm -Rf ~/.config/ranger
@@ -158,7 +180,13 @@ cp /home/mc/marc/GitHub/ubuntu/.wezterm.lua ~/
 
 ```
 
-## AppImageLauncher
+## appimage
+ksnip
+obsidian
+nvim
+
+`chmod +x *.AppImage`
+### AppImageLauncher
 
 sudo apt install software-properties-common
 sudo add-apt-repository ppa:appimagelauncher-team/stable
@@ -172,7 +200,7 @@ https://hyperkeys.xureilab.com/
 
 https://publicpost.medium.com/how-to-install-appimage-and-create-searchable-shortcut-on-ubuntu-linux-6542997ef2bd
 
-
+## Create application shortcut
 [Desktop Entry]
 Type=Application
 Name=Appname
@@ -196,7 +224,14 @@ ln -ivs ~/marc/appimagefile/nvim ~/.local/bin/
 ln -ivs ~/marc/appimagefile/obsidian ~/.local/bin/
 ln -ivs ~/marc/appimagefile/loffice ~/.local/bin
 
-## Add typescript/react autoimport to nvim config
+### Install lazygit
+
+LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+tar xf lazygit.tar.gz lazygit
+sudo install lazygit /usr/local/bin
+
+### Add typescript/react autoimport to nvim config
 
 :Mason
 install eslint, typescript-language-server
@@ -224,20 +259,17 @@ https://extensions.gnome.org/extension/887/workspace-isolated-dash/
 
 sudo dpkg -i *.deb
 
-wget https://dl.thorium.rocks/debian/dists/stable/thorium.list
-sudo mv thorium.list /etc/apt/sources.list.d/
-sudo apt update
-sudo apt install thorium-browser
+1. code_1.84.2-1699528352_amd64.deb
+2. wps-office_11.1.0.11711.XA_amd64.deb
+3. dbeaver
+4. virtualbox
+## Dropbox
 
 sudo apt install python3-gpg libpango1.0-0
 sudo dpkg -i ~/marc/debinstaller/dropbox_2020.03.04_amd64.deb
 sudo apt --fix-broken install
 
-sudo dpkg -i ~/marc/debinstaller/VNC-Viewer-7.8.0-Linux-x64.deb
-sudo dpkg -i ~/marc/debinstaller/code_1.84.2-1699528352_amd64.deb
-sudo dpkg -i ~/marc/debinstaller/wps-office_11.1.0.11711.XA_amd64.deb
-sudo dpkg -i ~/marc/debinstaller/lsd-musl_1.0.0_amd64.deb
-dbeaver
+## Virtualbox
 
 sudo dpkg --purge virtualbox-dkms
 sudo dpkg --purge virtualbox-qt
@@ -253,12 +285,10 @@ sudo apt --fix-broken install
 Kernel driver not installed (rc=-1908)
 sudo apt install gcc-12
 
-## Install virtualbox alternatif 2 (DELL)
+**Install virtualbox alternatif 2 (DELL Notebook)**
 sudo apt install --reinstall virtualbox-dkms && sudo apt install libelf-dev
 
-https://slack.com/downloads/instructions/ubuntu
-
-## Error Installing Windows - Windows cannot read the ProductKey from the unattend answer file
+### Error Installing Windows - Windows cannot read the ProductKey from the unattend answer file
 
 Screenshot of the error: https://imgur.com/cW1GUkh
 
@@ -274,7 +304,7 @@ Just so the solution is:
 7. Click OK on the warning
 8. Press any key to continue
 
-## Setup Perfect windows
+### Setup Perfect windows
 All done, now it should work as normal.
 
 https://www.youtube.com/watch?v=6UQZ5oQg8XA
@@ -287,7 +317,7 @@ Blank password
 `irm christitus.com/win | iex`
 Klik Tab Tweaks > Choose Desktop, klik ultimate performance, run tweaks
 
-## Shrink / Decrease virtualbox disk size
+### Shrink / Decrease virtualbox disk size
 https://www.virtualbox.org/manual/ch08.html#vboxmanage-modifymedium
 
 Run in windows: 
@@ -296,12 +326,12 @@ sdelete64.exe -z
 Run in linux
 VBoxManage modifymedium disk /home/mc/marc/virtualbox/win11/win11.vdi --compact
 
-## Alacritty
+# Alacritty
 
 sudo add-apt-repository ppa:aslatter/ppa -y
 sudo apt install alacritty
 
-## Install python,pip & selenium
+# Install python,pip & selenium
 
 sudo apt install -y python3 python3-pip
 pip install selenium
@@ -310,6 +340,7 @@ pip install pyperclip
 pip install castero
 pip3 install neovim-remote
 
+## Neovim Remote
 https://github.com/mhinz/neovim-remote
 pip3 install neovim-remote --break-system-packages
 
@@ -317,27 +348,14 @@ pip3 install neovim-remote --break-system-packages
 
 npm install tree-sitter-cli
 
-## Install lazygit
-
-LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
-curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
-tar xf lazygit.tar.gz lazygit
-sudo install lazygit /usr/local/bin
-
-## Install veracrypt
+# Install veracrypt
 
 sudo add-apt-repository ppa:unit193/encryption -y
 sudo apt install veracrypt
 
-# appimage
-ksnip
-obsidian
-nvim
-chmod +x *.AppImage
 
 
-
-## Add flatpak to gnome
+# Add flatpak to gnome
 
 sudo apt install -y flatpak gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
@@ -348,7 +366,7 @@ flatpak install flathub org.wezfurlong.wezterm
 flatpak install -y flathub io.github.shiftey.Desktop
 flatpak install -y flathub com.skype.Client
 flatpak install -y flathub md.obsidian.Obsidian
-#flatpak install -y flathub com.wps.Office
+~~flatpak install -y flathub com.wps.Office~~
 flatpak install -y flathub com.obsproject.Studio
 flatpak install -y flathub org.libreoffice.LibreOffice
 flatpak install -y flathub com.anydesk.Anydesk
@@ -363,7 +381,6 @@ flatseal > allow home folder
 thunderbird > set profile from Help > Troubleshooting information
 
 # Snapd
-
 sudo snap install projectlibre
 
 # github-cli authentication
@@ -432,7 +449,6 @@ Other options are possible:
   caps:escape to make it an additional escape
   caps:super to make it an additional super (windows) key.
 
-
 gsettings set org.gnome.desktop.privacy remember-recent-files false
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'focus-minimize-or-previews'
 
@@ -446,11 +462,6 @@ https://itsfoss.com/flatpak-tips-tweaks/
 https://www.makeuseof.com/disable-automatic-updates-in-ubuntu/
 https://www.anyviewer.com/how-to/how-to-get-out-of-remote-desktop-full-screen-0427.html
 
-cat /etc/update-manager/release-upgrades - Awal
-
-Remote clients:
-remmina, realvnc viewer
-
 # Setup Qutebrowser
 
 set url.searchengines '{"DEFAULT": "https://duckduckgo.com/?q={}", "aw": "https://wiki.archlinux.org/?search={}", "cf": "https://cfdocs.org/{}", "mdb": "https://mariadb.com/kb/en/+search/?q={}", "sf": "https://sfsupport.dataon.com/app/ticket/forms/{}", "yts": "https://www.youtube.com/results?search_query={}", "yu": "https://yufid.com/result_yufid.html?search={}"}'
@@ -459,11 +470,6 @@ set auto_save.session true
 bind gh tab-focus last
 https://github.com/sarfraznawaz2005/quran-cli
 
-# connect
-
-sudo tailscale up
-sudo tailscale down
-
 # fonts
 
 google fonts - Arabic
@@ -471,10 +477,6 @@ google fonts - Single Day
 google fonts - Korea
 google fonts - Chinese
 nerdfonts - JetBrains Mono Nerd Font
-
-# install vncserver
-
-https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-22-04
 
 # Next
 
@@ -531,19 +533,32 @@ Alternatively, if wget is not installed on your computer, go to the URL mentione
 
 To verify that the installation was successful, you can open the Troubleshooting Information page. In the Application Basics section, the value of Application Binary should be /opt/firefox/firefox-bin.
 
-# Remove starred nautilus
+## Setup vertical bar
+https://www.pcworld.com/article/823939/vertical-tabs-in-firefox-yes-its-really-possible.html
+
+## markdown setting firefox
+
+https://francopasut.netlify.app/post/markdown_firefox/
+
+create file mime.types, and insert the following line:
+type=text/plain exts=md,mkd,mkdn,mdwn,mdown,markdown, desc="Markdown document"
+
+open firefox, `about:config`, search for mime, change "helpers.private_mime_types_file" value with the file path of mime.types which newly created
+
+# Nautilus 
+## Remove starred nautilus
 
 https://askubuntu.com/questions/1194319/can-the-starred-folder-in-the-left-pane-of-files-nautilus-be-removed
 
-# Remove recent nautilus
+## Remove recent nautilus
 
 https://askubuntu.com/questions/762591/how-to-remove-unwanted-default-bookmarks-in-nautilus
 
-# Change window color border
+## Change window color border
 
 https://github.com/lossurdo/yaru-dark-border
 
-# xfreerdp
+# xfreerdp - remote desktop cli
 
 sudo apt install freerdp2-x11
 ```
@@ -553,10 +568,6 @@ xfreerdp +clipboard +fonts /sound /mic /smart-sizing /multimon /network:auto /ce
 
 sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
 sudo chmod a+rx /usr/local/bin/yt-dlp # Make executable
-
-# raspberry pi
-
-moode.local
 
 # Change root password
 
@@ -569,15 +580,6 @@ sudo apt install ubuntu-restricted-extras
 # Prettier
 
 https://prettier.io/docs/en/install
-
-# markdown setting firefox
-
-https://francopasut.netlify.app/post/markdown_firefox/
-
-create file mime.types, and insert the following line:
-type=text/plain exts=md,mkd,mkdn,mdwn,mdown,markdown, desc="Markdown document"
-
-open firefox, `about:config`, search for mime, change "helpers.private_mime_types_file" value with the file path of mime.types which newly created
 
 # Emoticon shortcut
 
@@ -595,24 +597,12 @@ mkdir -p ~/.config/ranger/plugins
 cd ~/.config/ranger/plugins
 git clone https://github.com/maximtrp/ranger-archives.git
 
-# Instal NVM
+# Install NVM (Node Version Manager)
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 /home/mc/Dropbox/notes/tech/nvm.md
 
 /home/mc/Dropbox/notes/tech/linux/gpg.md
-
-# Keepass
-sudo apt-add-repository ppa:jtaylor/keepass
-sudo apt-get update
-sudo apt-get install keepass2
-
-# Setting hostname
-hostnamectl set-hostname SGSGHCMIHRISOJA
-
-# Ubuntu Pro
-sudo pro attach C1sTzqTWhHUw5BkW9YjYFDu9HJzNU
-
 
 # Remove ctrl semicolon and ctrl period shortcut for emoji 
 https://unix.stackexchange.com/questions/692237/ctrl-displays-e-character-and-captures-the-keyboard-shortcut
