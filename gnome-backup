@@ -13,7 +13,7 @@ source-currency=''
 source-units='degree'
 target-currency=''
 target-units='radian'
-window-position=(626, 307)
+window-position=(228, 303)
 word-size=64
 
 [control-center]
@@ -44,6 +44,9 @@ picture-uri-dark='file:///usr/share/backgrounds/Mirror_by_Uday_Nakade.jpg'
 primary-color='#000000'
 secondary-color='#000000'
 
+[desktop/calendar]
+show-weekdate=true
+
 [desktop/datetime]
 automatic-timezone=true
 
@@ -54,6 +57,9 @@ sources=[('xkb', 'us')]
 xkb-options=['caps:escape_shifted_capslock']
 
 [desktop/interface]
+clock-show-date=true
+clock-show-seconds=false
+clock-show-weekday=false
 color-scheme='prefer-dark'
 font-hinting='slight'
 gtk-theme='Yaru-dark'
@@ -61,14 +67,17 @@ icon-theme='Yaru'
 toolkit-accessibility=false
 
 [desktop/notifications]
-application-children=['gnome-network-panel', 'snap-store-ubuntu-software', 'org-gnome-gedit', 'firefox-firefox', 'apport-gtk', 'gnome-control-center', 'gnome-datetime-panel', 'thorium-browser', 'org-gnome-nautilus', 'xdg-desktop-portal-gnome', 'org-mozilla-thunderbird', 'com-skype-client', 'org-gnome-evolution-alarm-notify', 'wps-office-prometheus', 'org-mozilla-firefox', 'org-gnome-shell-extensions', 'firefox', 'org-gnome-software', 'virtualbox', 'virtualboxvm', 'wps-office-wpp', 'gnome-printers-panel', 'kazam', 'zoom', 'kitty', 'filezilla', 'org-gnome-evince', 'update-manager', 'wps-office-et', 'slack', 'org-gnome-eog', 'gcr-prompter', 'libreoffice24-2-impress', 'freetube', 'code', 'org-keepassxc-keepassxc', 'io-snapcraft-sessionagent', 'google-chrome', 'org-gnome-tweaks']
-show-banners=false
+application-children=['gnome-network-panel', 'snap-store-ubuntu-software', 'org-gnome-gedit', 'firefox-firefox', 'apport-gtk', 'gnome-control-center', 'gnome-datetime-panel', 'thorium-browser', 'org-gnome-nautilus', 'xdg-desktop-portal-gnome', 'org-mozilla-thunderbird', 'com-skype-client', 'org-gnome-evolution-alarm-notify', 'wps-office-prometheus', 'org-mozilla-firefox', 'org-gnome-shell-extensions', 'firefox', 'org-gnome-software', 'virtualbox', 'virtualboxvm', 'wps-office-wpp', 'gnome-printers-panel', 'kazam', 'zoom', 'kitty', 'filezilla', 'org-gnome-evince', 'update-manager', 'wps-office-et', 'slack', 'org-gnome-eog', 'gcr-prompter', 'libreoffice24-2-impress', 'freetube', 'code', 'org-keepassxc-keepassxc', 'io-snapcraft-sessionagent', 'google-chrome', 'org-gnome-tweaks', 'com-anydesk-anydesk', 'microsoft-edge']
+show-banners=true
 
 [desktop/notifications/application/apport-gtk]
 application-id='apport-gtk.desktop'
 
 [desktop/notifications/application/code]
 application-id='code.desktop'
+
+[desktop/notifications/application/com-anydesk-anydesk]
+application-id='com.anydesk.Anydesk.desktop'
 
 [desktop/notifications/application/com-skype-client]
 application-id='com.skype.Client.desktop'
@@ -120,6 +129,9 @@ application-id='kitty.desktop'
 
 [desktop/notifications/application/libreoffice24-2-impress]
 application-id='libreoffice24.2-impress.desktop'
+
+[desktop/notifications/application/microsoft-edge]
+application-id='microsoft-edge.desktop'
 
 [desktop/notifications/application/org-gnome-eog]
 application-id='org.gnome.eog.desktop'
@@ -199,7 +211,7 @@ repeat-interval=uint32 20
 [desktop/peripherals/mouse]
 left-handed=true
 natural-scroll=false
-speed=0.24264705882352944
+speed=1.0
 
 [desktop/peripherals/touchpad]
 speed=0.58088235294117641
@@ -236,6 +248,8 @@ idle-delay=uint32 300
 
 [desktop/wm/keybindings]
 close=['<Alt>F4']
+cycle-group=@as []
+cycle-group-backward=@as []
 maximize-horizontally=@as []
 maximize-vertically=@as []
 minimize=['<Super>semicolon']
@@ -292,7 +306,7 @@ active-plugins=['docinfo', 'spell', 'filebrowser', 'openlinks', 'modelines', 'so
 [gedit/plugins/filebrowser]
 root='file:///'
 tree-view=true
-virtual-root='file:///home/mc/Dropbox/notes/tech/linux'
+virtual-root='file:///home/mc/Desktop'
 
 [gedit/preferences/editor]
 scheme='Yaru-dark'
@@ -311,12 +325,12 @@ size=(685, 821)
 state=43908
 
 [gnome-system-monitor]
-current-tab='processes'
+current-tab='resources'
 maximized=true
 network-total-in-bits=false
 show-dependencies=false
 show-whose-processes='user'
-window-state=(1440, 868, 0, 0)
+window-state=(1920, 1048, 0, 0)
 
 [gnome-system-monitor/disktreenew]
 col-6-visible=true
@@ -360,11 +374,11 @@ ignore-phase2-ca-cert=false
 orientation-lock=false
 
 [settings-daemon/plugins/color]
-night-light-last-coordinates=(-6.1949985601151907, 106.6284)
+night-light-last-coordinates=(-6.1680007199424045, 106.6284)
 
 [settings-daemon/plugins/media-keys]
 control-center=['<Super>F12']
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom10/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom11/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom12/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom13/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom10/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom11/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom12/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom13/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom14/']
 mic-mute=['<Shift><Super>F11']
 screensaver=['<Super>Escape']
 volume-down=['<Super>F9']
@@ -401,6 +415,11 @@ binding='<Primary>Print'
 command='ksnip -r -d 1'
 name='Print with Delay'
 
+[settings-daemon/plugins/media-keys/custom-keybindings/custom14]
+binding='<Super>period'
+command='keepass2'
+name='Keepass2'
+
 [settings-daemon/plugins/media-keys/custom-keybindings/custom2]
 binding='<Primary><Shift><Alt>Print'
 command='kazam'
@@ -423,8 +442,8 @@ name='Terminal'
 
 [settings-daemon/plugins/media-keys/custom-keybindings/custom6]
 binding='<Super>w'
-command='google-chrome'
-name='Chrome'
+command='microsoft-edge'
+name='Edge'
 
 [settings-daemon/plugins/media-keys/custom-keybindings/custom7]
 binding='<Shift><Super>w'
@@ -437,9 +456,9 @@ command='flatpak run com.skype.Client'
 name='Skype'
 
 [settings-daemon/plugins/media-keys/custom-keybindings/custom9]
-binding='<Shift><Super>e'
+binding='<Super>comma'
 command='flatpak run org.keepassxc.KeePassXC'
-name='Keepass'
+name='KeepassXC'
 
 [settings-daemon/plugins/power]
 sleep-inactive-ac-timeout=3600
@@ -551,9 +570,10 @@ show-screenshot-ui=@as []
 toggle-overview=@as []
 
 [software]
-check-timestamp=int64 1714095271
-online-updates-timestamp=int64 1714095454
-update-notification-timestamp=int64 1714095454
+check-timestamp=int64 1719884027
+install-timestamp=int64 1715842871
+online-updates-timestamp=int64 1719884032
+update-notification-timestamp=int64 1719884032
 
 [system/location]
 enabled=true

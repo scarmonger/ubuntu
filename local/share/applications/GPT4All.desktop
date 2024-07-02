@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Terminal=false
+Exec="/home/mc/gpt4all/bin/chat"
+Name=GPT4All
+Icon=/home/mc/gpt4all/logo-48.png
+Name[en_US]=GPT4All
