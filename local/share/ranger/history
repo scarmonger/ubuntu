@@ -1,29 +1,5 @@
-rename imp-dir.png
-mkdir ttd
-find my
-touch ppr-add-imppor.js
-.png
-rename z036.png
-rename z037.png
-rename z038.png
-rename z039.png
-rename yuzu
-rename citra
-rename libre-office
-rename tsh
-cd 
-cd /media/mc/5EA879226438554C/custom/fe-micro-standard-ent/
-mkdir /media/mc/5EA879226438554C/custom/fe-micro-standard-ent/
-mkdir fe-micro-standard
-mkdir fe-micro-custom
-mkdir fe-micro-container
-mkdir backend
-mkdir sandbox
-shell veracrypt -t -k "" --pim=0 --protect-hidden=no ~/Dropbox/linux/cl ~/.config/script
-open_with 1
 search thund
 rename ImapMail
-rename 
 rename bestart
 rename ws
 rename fereport
@@ -48,3 +24,27 @@ find vir
 trash
 delete
 rename win11x
+search conclu
+find ran
+mkdir archive
+rename TRA2.jpeg
+rename std.jpeg
+find psc
+search fu
+find fu
+find 00
+rename sna
+rename 
+rename snack.png
+find 
+
+rename SRQ-ServiceRequest-20240723.doc_
+rename SRQ-ServiceRequest-20240723.doc
+rename TIM2.pdf
+find sve
+shell veracrypt -t -k "" --pim=0 --protect-hidden=no ~/Dropbox/linux/cl ~/.config/script
+open_with libreoffice24.2
+rename Training sunfish Workplaze ke 2 - 10 .pdf
+rename DMF Final Form Data Migration .pdf
+rename DMF initial.pdf
+find 6
