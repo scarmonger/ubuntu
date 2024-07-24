@@ -126,6 +126,10 @@ https://gist.github.com/dogrocker/1efb8fd9427779c827058f873b94df95
 ```
 rm -Rf ~/.config/ranger
 ln -ivs ~/marc/GitHub/ubuntu/config/ranger ~/.config/
+rm -Rf /home/mc/.local/share/ranger
+ln -ivs ~/marc/GitHub/ubuntu/local/share/ranger/ ~/.local/share/
+
+
 rm -Rf ~/.config/nvim
 ln -ivs ~/marc/GitHub/ubuntu/config/nvim ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/config/nvim_old ~/.config/
