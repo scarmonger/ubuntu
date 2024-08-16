@@ -465,6 +465,7 @@ https://extensions.gnome.org/extension/1460/vitals/
 https://itsfoss.com/flatpak-tips-tweaks/
 https://www.makeuseof.com/disable-automatic-updates-in-ubuntu/
 https://www.anyviewer.com/how-to/how-to-get-out-of-remote-desktop-full-screen-0427.html
+https://extensions.gnome.org/extension/7065/tiling-shell/
 
 # Setup Qutebrowser
 
@@ -635,3 +636,24 @@ sudo cp ~/Downloads/KeePassHttp.plgx /usr/lib/keepass2
 ```sh
 sudo apt install ./microsoft-edge-stable_126.0.2592.68-1_amd64.deb
 ```
+
+# Clamav
+https://linuxcapable.com/how-to-install-clamav-on-ubuntu-linux/
+`sudo apt install clamav clamav-daemon`
+
+Update the ClamAV Virus Database
+```
+sudo systemctl stop clamav-freshclam
+sudo freshclam
+sudo systemctl enable clamav-freshclam --now
+```
+
+Check last modified/ updates
+`ls -l /var/lib/clamav/`
+
+Disable clamav
+`sudo systemctl disable clamav-freshclam --now`
+
+clamscan -r ~/ -l ~/scanresult.txt
+
+
