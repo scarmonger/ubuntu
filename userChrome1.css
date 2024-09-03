@@ -3,8 +3,6 @@
 /*@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* only needed once */
 
 /* Hide main tabs toolbar */
-
-/*
 #main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar {
   opacity: 0;
   pointer-events: none;
@@ -12,7 +10,6 @@
 #main-window:not([tabsintitlebar="true"]) #TabsToolbar {
   visibility: collapse !important;
 }
-*/
 
 /* Sidebar min and max width removal */
 #sidebar {
@@ -56,32 +53,32 @@
 
 /* Esconder barra de marcadores, mostrar al pasar puntero, con retraso de medio segundo */
 /* Pop-up bookmarks toolbar */
-/* #navigator-toolbox #PersonalToolbar { */
-/*   position: absolute; display:block; */
-/*   width: 100%; */
+#navigator-toolbox #PersonalToolbar {
+  position: absolute; display:block;
+  width: 100%;
   /* transition: all 0.1s !important; */
   /* transition-delay:0.5s !important; */
-/*   transform: translateY(-200px); */
-/* } */
+  transform: translateY(-200px);
+}
 
-/* #TabsToolbar, #nav-bar { */
-/*   position: relative; */
-/*   z-index: 99; */
-/* } */
+#TabsToolbar, #nav-bar {
+  position: relative;
+  z-index: 99;
+}
 
-/* #navigator-toolbox #PersonalToolbar { */
-/*   position: absolute; display:block; */
-/*   width: 100%; */
-/*   /* transition: all 0.1s !important; */ */
-/*   /* transition-delay:0.5s !important; */ */
-/*   transform: translateY(-200px); */
-/*   z-index:1; */
-/* } */
+#navigator-toolbox #PersonalToolbar {
+  position: absolute; display:block;
+  width: 100%;
+  /* transition: all 0.1s !important; */
+  /* transition-delay:0.5s !important; */
+  transform: translateY(-200px);
+  z-index:1;
+}
 
 /* full screen toolbars */
-/* #navigator-toolbox[inFullscreen] toolbar:not([collapsed="true"]) { */
-/*   visibility:visible!important; */
-/* } */
+#navigator-toolbox[inFullscreen] toolbar:not([collapsed="true"]) {
+  visibility:visible!important;
+}
 
 /* Wider Pinned Tabs */
 .tabbrowser-tab[pinned] {
@@ -89,8 +86,3 @@
   padding-right: 20px;
 }
 
-#nav-bar {
-  margin-top: -42px;
-  margin-right: 140px;
-  box-shadow: none !important;
-}
