@@ -574,6 +574,12 @@ xfreerdp +clipboard +fonts /sound /mic /smart-sizing /multimon /network:auto /ce
 sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
 sudo chmod a+rx /usr/local/bin/yt-dlp # Make executable
 
+## update yt-dlp
+python3 -m pip install -U "yt-dlp[default]"
+
+## check version
+yt-dlp -U
+
 # Change root password
 
 sudo passwd root
