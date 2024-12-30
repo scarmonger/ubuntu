@@ -384,6 +384,9 @@ flatpak install flathub org.chromium.Chromium
 flatseal > allow home folder
 thunderbird > set profile from Help > Troubleshooting information
 
+flatpak list --app
+flatpak uninstall --delete-data com.anydesk.Anydesk
+
 # Snapd
 sudo snap install projectlibre
 
