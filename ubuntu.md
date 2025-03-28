@@ -76,7 +76,7 @@ sudo snap remove --purge firefox
 
 ## Install app
 
-sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar fonts-powerline neofetch xclip ssh fzf mpv tmux dconf-editor kazam gnome-tweaks chrome-gnome-shell filezilla vlc ncdu htop gimp mycli xdotool ripgrep fd-find gcc lua5.4 zathura tldr
+sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar fonts-powerline neofetch xclip ssh fzf mpv tmux dconf-editor kazam gnome-tweaks chrome-gnome-shell filezilla ncdu htop gimp mycli xdotool ripgrep fd-find gcc lua5.4 zathura tldr
 
 systemctl status ssh
 systemctl start ssh
@@ -141,6 +141,7 @@ ln -ivs ~/marc/virtualbox "/home/mc/VirtualBox VMs"
 mkdir ~/.config/script
 mkdir ~/.local/bin
 
+ln -ivs ~/marc/GitHub/ubuntu/config/mpv ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/config/sxiv ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/config/castero ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/local/bin/custom ~/.local/bin

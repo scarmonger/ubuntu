@@ -16,6 +16,7 @@ alias mypjlhuillier="mycli -u sfnbc_pjlhuillier_fin -h 192.168.102.120 -P 3306 d
 alias subupdate="git submodule update --remote --merge"
 alias clone="sfclone_client --dir /home/mc/marc/custom/backend/"
 
+alias tgu="echo -n 'PT Asuransi Tugu Pratama Indonesia Tbk' | xclip -sel c"
 alias mdh="echo -n 'Mandaya Hospital Group' | xclip -sel c"
 alias ctt="echo -n 'PT Citra Tubindo Tbk' | xclip -sel c"
 alias ats="echo -n 'PT Atlas Petrochem Indo' | xclip -sel c"
