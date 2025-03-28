@@ -1,7 +1,9 @@
 #!/bin/zsh
+
 # Common syntax
 
 ## Check ubuntu name release
+
 lsb_release -a
 
 ## Check keymap / button
@@ -12,9 +14,11 @@ Check mouse button:
 xev | grep -i button
 
 ## Setting hostname Linux
+
 hostnamectl set-hostname SGSGHCMIHRISOJA
 
 ## Register Ubuntu Pro
+
 sudo pro attach C1sTzqTWhHUw5BkW9YjYFDu9HJzNU
 
 # New Installation
@@ -22,9 +26,10 @@ sudo pro attach C1sTzqTWhHUw5BkW9YjYFDu9HJzNU
 sudo apt update
 sudo apt upgrade
 sudo apt install git
-mkdir -p ~/marc/GitHub 
+mkdir -p ~/marc/GitHub
 cd ~/marc/GitHub
 git clone https://www.github.com/scarmonger/ubuntu.git
+
 ## change mac address
 
 sudo apt install macchanger
@@ -39,10 +44,10 @@ sudo apt upgrade
 
 > [!NOTE] Notes
 > sudo tailscale up
-sudo tailscale down
-
+> sudo tailscale down
 
 ## Check UUID (blkid)
+
 sudo fdisk /dev/nvm0n1
 
 > n (enter until finish)
@@ -186,11 +191,13 @@ cp /home/mc/marc/GitHub/ubuntu/.wezterm.lua ~/
 ```
 
 ## appimage
+
 ksnip
 obsidian
 nvim
 
 `chmod +x *.AppImage`
+
 ### AppImageLauncher
 
 sudo apt install software-properties-common
@@ -206,6 +213,7 @@ https://hyperkeys.xureilab.com/
 https://publicpost.medium.com/how-to-install-appimage-and-create-searchable-shortcut-on-ubuntu-linux-6542997ef2bd
 
 ## Create application shortcut
+
 [Desktop Entry]
 Type=Application
 Name=Appname
@@ -231,8 +239,8 @@ ln -ivs ~/marc/appimagefile/loffice ~/.local/bin
 
 ### Install lazygit
 
-LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
-curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+LAZYGIT*VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]\*')
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit*${LAZYGIT_VERSION}\_Linux_x86_64.tar.gz"
 tar xf lazygit.tar.gz lazygit
 sudo install lazygit /usr/local/bin
 
@@ -262,12 +270,13 @@ https://extensions.gnome.org/extension/887/workspace-isolated-dash/
 
 # Download .deb installer
 
-sudo dpkg -i *.deb
+sudo dpkg -i \*.deb
 
 1. code_1.84.2-1699528352_amd64.deb
 2. wps-office_11.1.0.11711.XA_amd64.deb
 3. dbeaver
 4. virtualbox
+
 ## Dropbox
 
 sudo apt install python3-gpg libpango1.0-0
@@ -299,7 +308,8 @@ Screenshot of the error: https://imgur.com/cW1GUkh
 
 Found the solution in this video on YT: https://www.youtube.com/watch?v=Y8rzZHscljQ&t=183s
 
-Just so the solution is: 
+Just so the solution is:
+
 1. Power of the VM machine
 2. Go to the settings of your VM - System - Boot Order - Uncheck Floppy
 3. Press OK
@@ -310,6 +320,7 @@ Just so the solution is:
 8. Press any key to continue
 
 ### Setup Perfect windows
+
 All done, now it should work as normal.
 
 https://www.youtube.com/watch?v=6UQZ5oQg8XA
@@ -323,9 +334,10 @@ Blank password
 Klik Tab Tweaks > Choose Desktop, klik ultimate performance, run tweaks
 
 ### Shrink / Decrease virtualbox disk size
+
 https://www.virtualbox.org/manual/ch08.html#vboxmanage-modifymedium
 
-Run in windows: 
+Run in windows:
 sdelete64.exe -z
 
 Run in linux
@@ -346,6 +358,7 @@ pip install castero
 pip3 install neovim-remote
 
 ## Neovim Remote
+
 https://github.com/mhinz/neovim-remote
 pip3 install neovim-remote --break-system-packages
 
@@ -357,8 +370,6 @@ npm install tree-sitter-cli
 
 sudo add-apt-repository ppa:unit193/encryption -y
 sudo apt install veracrypt
-
-
 
 # Add flatpak to gnome
 
@@ -389,6 +400,7 @@ flatpak list --app
 flatpak uninstall --delete-data com.anydesk.Anydesk
 
 # Snapd
+
 sudo snap install projectlibre
 
 # github-cli authentication
@@ -442,6 +454,7 @@ gvfs-smb loupe nautilus simple-scan snapshot sushi xdg-desktop-portal-gnome \
 xdg-user-dirs-gtk yelp gnome-tweaks
 
 # capslock escape
+
 ```
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Super>Page_Up', '<Super><Alt>Left']"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Super>Page_Down', '<Super><Alt>Right']"
@@ -453,9 +466,9 @@ setxkbmap -option caps:swapescape
 ```
 
 Other options are possible:
-  caps:none to deactivate
-  caps:escape to make it an additional escape
-  caps:super to make it an additional super (windows) key.
+caps:none to deactivate
+caps:escape to make it an additional escape
+caps:super to make it an additional super (windows) key.
 
 gsettings set org.gnome.desktop.privacy remember-recent-files false
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'focus-minimize-or-previews'
@@ -543,6 +556,7 @@ Alternatively, if wget is not installed on your computer, go to the URL mentione
 To verify that the installation was successful, you can open the Troubleshooting Information page. In the Application Basics section, the value of Application Binary should be /opt/firefox/firefox-bin.
 
 ## Setup vertical bar
+
 https://www.pcworld.com/article/823939/vertical-tabs-in-firefox-yes-its-really-possible.html
 
 ## markdown setting firefox
@@ -554,7 +568,8 @@ type=text/plain exts=md,mkd,mkdn,mdwn,mdown,markdown, desc="Markdown document"
 
 open firefox, `about:config`, search for mime, change "helpers.private_mime_types_file" value with the file path of mime.types which newly created
 
-# Nautilus 
+# Nautilus
+
 ## Remove starred nautilus
 
 https://askubuntu.com/questions/1194319/can-the-starred-folder-in-the-left-pane-of-files-nautilus-be-removed
@@ -570,18 +585,22 @@ https://github.com/lossurdo/yaru-dark-border
 # xfreerdp - remote desktop cli
 
 sudo apt install freerdp2-x11
+
 ```
 xfreerdp +clipboard +fonts /sound /mic /smart-sizing /multimon /network:auto /cert-ignore /u:<username> /d:WORKGROUP /v:192.168.x.x
 ```
+
 # yt-dlp
 
 sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
 sudo chmod a+rx /usr/local/bin/yt-dlp # Make executable
 
 ## update yt-dlp
+
 python3 -m pip install -U "yt-dlp[default]"
 
 ## check version
+
 yt-dlp -U
 
 # Change root password
@@ -608,6 +627,7 @@ sudo apt-get update
 sudo apt-get install network-manager-l2tp-gnome
 
 # Ranger compress
+
 mkdir -p ~/.config/ranger/plugins
 cd ~/.config/ranger/plugins
 git clone https://github.com/maximtrp/ranger-archives.git
@@ -619,7 +639,8 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 
 /home/mc/Dropbox/notes/tech/linux/gpg.md
 
-# Remove ctrl semicolon and ctrl period shortcut for emoji 
+# Remove ctrl semicolon and ctrl period shortcut for emoji
+
 https://unix.stackexchange.com/questions/692237/ctrl-displays-e-character-and-captures-the-keyboard-shortcut
 
 `gsettings set org.freedesktop.ibus.panel.emoji hotkey "[]"`
@@ -629,8 +650,10 @@ Or run in terminal
 `ibus-setup`
 
 # Keepass2
+
 https://github.com/pfn/keepasshttp?tab=readme-ov-file
-``` sh
+
+```sh
 sudo apt-get install mono-complete
 
 sudo apt-add-repository ppa:jtaylor/keepass
@@ -643,15 +666,18 @@ sudo cp ~/Downloads/KeePassHttp.plgx /usr/lib/keepass2
 ```
 
 # Edge
+
 ```sh
 sudo apt install ./microsoft-edge-stable_126.0.2592.68-1_amd64.deb
 ```
 
 # Clamav
+
 https://linuxcapable.com/how-to-install-clamav-on-ubuntu-linux/
 `sudo apt install clamav clamav-daemon`
 
 Update the ClamAV Virus Database
+
 ```
 sudo systemctl stop clamav-freshclam
 sudo freshclam
@@ -665,5 +691,3 @@ Disable clamav
 `sudo systemctl disable clamav-freshclam --now`
 
 clamscan -r ~/ -l ~/scanresult.txt
-
-
