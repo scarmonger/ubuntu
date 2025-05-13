@@ -42,6 +42,11 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+bindsym $mod+F9 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym $mod+F10 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym $mod+F11 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym $mod+F12 exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
@@ -55,21 +60,28 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+bindsym $mod+F1 exec playerctl play
+bindsym $mod+F2 exec playerctl pause
+bindsym $mod+F3 exec playerctl next
+bindsym $mod+F4 exec playerctl previous
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
-tiling_drag modifier titlebar
+# tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec flatpak run org.wezfurlong.wezterm
 
 # kill focused window
 bindsym $mod+Shift+q kill
+bindsym $mod3+Shift+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod3+r exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -81,12 +93,21 @@ bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
+bindsym $mod3+a focus left
+bindsym $mod3+s focus down
+bindsym $mod3+d focus up
+bindsym $mod3+f focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
+
+bindsym $mod3+Left focus left
+bindsym $mod3+Down focus down
+bindsym $mod3+Up focus up
+bindsym $mod3+Right focus right
 
 # move focused window
 bindsym $mod+Shift+h move left
@@ -143,12 +164,16 @@ bindsym $mod+Ctrl+Left workspace prev
 bindsym $mod+Ctrl+j workspace next
 bindsym $mod+Ctrl+k workspace prev
 
+# Move the current workspace to the next output
+# (effectively toggles when you only have two outputs)
+bindsym $mod+x move workspace to output next
 
 # focus the child container
 #bindsym $mod+d focus child
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
+# Setup workspace (sws)
 set $ws1 "1: "
 set $ws2 "2: "
 set $ws3 "3: "
@@ -159,7 +184,41 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
-set $ws11 "u. terminal"
+set $wsoffice "o:󱎏 "
+set $wscode "c: "
+set $wsdb "b: "
+
+bindsym $mod +o workspace $wsoffice
+bindsym $mod3+o workspace $wsoffice
+bindsym $mod +c workspace $wscode
+bindsym $mod3+c workspace $wscode
+bindsym $mod +b workspace $wsdb
+bindsym $mod3+b workspace $wsdb
+
+bindsym $mod3+v workspace $ws8
+
+# Open applications on specific workspaces
+assign [class="Microsoft-edge"] $ws1
+assign [class="org.wezfurlong.wezterm"] $ws2
+assign [class="firefox"] $ws3
+assign [class="thunderbird-esr"] $ws4
+assign [class="Rhythmbox"] $ws6
+assign [class="mpv"] $ws6
+assign [class="ksnip"] $ws7
+assign [class="copyq"] $ws8
+assign [class="wpsoffice"] $wsoffice
+assign [class="code"] $wscode
+assign [class="DBeaver"] $wsdb
+
+
+# Automatically putting workspaces on specific screens
+workspace $ws1 output HDMI-1
+workspace $ws2 output HDMI-1
+workspace $ws3 output HDMI-1
+workspace $ws4 output HDMI-1
+workspace $ws6 output DP-1
+workspace $ws7 output DP-1
+workspace $ws8 output DP-1
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -172,7 +231,6 @@ bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
-bindsym $mod+u workspace $ws11
 
 bindsym $mod3+1 workspace number $ws1
 bindsym $mod3+2 workspace number $ws2
@@ -184,8 +242,6 @@ bindsym $mod3+7 workspace number $ws7
 bindsym $mod3+8 workspace number $ws8
 bindsym $mod3+9 workspace number $ws9
 bindsym $mod3+0 workspace number $ws10
-bindsym $mod3+u workspace $ws11
-
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -212,12 +268,7 @@ bindsym $mod3+Shift+9 move container to workspace number $ws9
 bindsym $mod3+Shift+0 move container to workspace number $ws10
 bindsym $mod3+Shift+U move container to workspace $ws11
 
-# Open applications on specific workspaces
-assign [class="Microsoft-edge"] $ws1
-assign [class="Gnome-terminal"] $ws2
-assign [class="firefox"] $ws3
-assign [class="Rhythmbox"] $ws6
-assign [class="mpv"] $ws6
+
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -333,6 +384,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 # finds out, if available)
 bar {
         status_command i3status
+        tray_output primary
         #colors {
         #    background $bg-color
         #    separator #757575
@@ -345,15 +397,22 @@ bar {
 
 exec_always feh --bg-scale /home/mc/marc/GitHub/ubuntu/config/i3/wallpaper.jpeg
 
-bindsym $mod+Esc exec i3-lock
+bindsym $mod+Escape exec i3lock
 bindsym $mod+v exec /usr/bin/diodon
-bindsym $mod3+v exec /usr/bin/diodon
+bindsym $mod3+Shift+v exec copyq show
 
 exec --no-startup-id xset r rate 300 30
 exec --no-startup-id xmodmap ~/.Xmodmap
 exec --no-startup-id xmodmap -e "pointer = 3 2 1"
 exec --no-startup-id setxkbmap -option caps:escape
 exec --no-startup-id setxkbmap -option caps:escape_shifted_capslock
+exec xrandr --output DP-1 --mode 1440x900 --pos 1920x0 --rotate normal --output HDMI-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-2 --off --output HDMI-2 --off
 
 exec --no-startup-id /home/mc/marc/appimagefile/ksnip
 exec --no-startup-id copyq
+exec --no-startup-id microsoft-edge
+exec --no-startup-id firefox
+exec --no-startup-id flatpak run org.wezfurlong.wezterm
+exec --no-startup-id flatpak run org.mozilla.Thunderbird
+exec --no-startup-id flatpak run org.keepassxc.KeePassXC
+
