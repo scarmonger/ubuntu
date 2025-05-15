@@ -50,6 +50,8 @@ bindsym $mod+F12 exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ tog
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec sudo brightnessctl set 5%+ # increase screen brightness
 bindsym XF86MonBrightnessDown exec sudo brightnessctl set 5%- # decrease screen brightness
+#bindsym XF86MonBrightnessUp exec --no-startup-id i3-msg exec "sudo brightnessctl set 5%+"
+
 
 # Touchpad controls
 bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
@@ -205,6 +207,7 @@ assign [class="Microsoft-edge"] $ws1
 assign [class="org.wezfurlong.wezterm"] $ws2
 assign [class="firefox"] $ws3
 assign [class="thunderbird-esr"] $ws4
+assign [class="thunderbird"] $ws4
 assign [class="KeePassXC"] $ws4
 assign [class="obsidian"] $ws4
 assign [class="Rhythmbox"] $ws6
@@ -276,6 +279,8 @@ bindsym $mod3+Shift+U move container to workspace $ws11
 
 
 # Open specific applications in floating mode
+for_window [class="copyq"] floating enable border pixel 1
+
 for_window [title="alsamixer"] floating enable border pixel 1
 for_window [class="calamares"] floating enable border normal
 for_window [class="Clipgrab"] floating enable

@@ -328,3 +328,7 @@ mou() {
 }
 
 alias umo="sudo umount /dev/sd$1"
+
+alias b1="sudo brightnessctl set 10%"
+alias b2="sudo brightnessctl set 50%"
+alias b3="sudo brightnessctl set 100%"
