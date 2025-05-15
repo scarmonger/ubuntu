@@ -485,6 +485,7 @@ https://itsfoss.com/flatpak-tips-tweaks/
 https://www.makeuseof.com/disable-automatic-updates-in-ubuntu/
 https://www.anyviewer.com/how-to/how-to-get-out-of-remote-desktop-full-screen-0427.html
 https://extensions.gnome.org/extension/7065/tiling-shell/
+https://extensions.gnome.org/extension/615/appindicator-support/
 
 # Setup Qutebrowser
 
@@ -701,3 +702,7 @@ sudo apt-get install i3 pulseaudio-utils feh arandr rhythmbox rhythmbox-plugins 
 ln -ivs ~/marc/GitHub/ubuntu/config/i3/config ~/.config/i3/
 ```
 change font in: /home/mc/.config/gtk-3.0/settings.ini, /home/mc/.gtkrc-2.0
+
+Add fonts:
+jetbrain nerd fonts
+https://github.com/FortAwesome/Font-Awesome/releases

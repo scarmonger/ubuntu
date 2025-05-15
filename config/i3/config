@@ -64,6 +64,10 @@ bindsym $mod+F1 exec playerctl play
 bindsym $mod+F2 exec playerctl pause
 bindsym $mod+F3 exec playerctl next
 bindsym $mod+F4 exec playerctl previous
+bindsym $mod+F5 exec flatpak run org.mozilla.Thunderbird
+bindsym $mod+F6 exec flatpak run org.keepassxc.KeePassXC
+bindsym $mod+F7 exec flatpak run md.obsidian.Obsidian
+bindsym $mod+F8 exec 
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -123,8 +127,10 @@ bindsym $mod+Shift+Right move right
 
 # workspace back and forth (with/without active container)
 workspace_auto_back_and_forth yes
-bindsym $mod+Tab workspace back_and_forth
-bindsym $mod+Shift+Tab move container to workspace back_and_forth; workspace back_and_forth
+bindsym $mod +Tab workspace back_and_forth
+bindsym $mod3+Tab workspace back_and_forth
+bindsym $mod +Shift+Tab move container to workspace back_and_forth; workspace back_and_forth
+bindsym $mod3+Shift+Tab move container to workspace back_and_forth; workspace back_and_forth
 
 # split orientation
 #bindsym $mod+semicolon split h;exec notify-send 'tile horizontally'
@@ -184,14 +190,11 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
-set $wsoffice "o:󱎏 "
-set $wscode "c: "
-set $wsdb "b: "
+set $wsoffice "O:󱎏 "
+set $wsdb "B:󰊢 "
 
 bindsym $mod +o workspace $wsoffice
 bindsym $mod3+o workspace $wsoffice
-bindsym $mod +c workspace $wscode
-bindsym $mod3+c workspace $wscode
 bindsym $mod +b workspace $wsdb
 bindsym $mod3+b workspace $wsdb
 
@@ -202,12 +205,14 @@ assign [class="Microsoft-edge"] $ws1
 assign [class="org.wezfurlong.wezterm"] $ws2
 assign [class="firefox"] $ws3
 assign [class="thunderbird-esr"] $ws4
+assign [class="KeePassXC"] $ws4
+assign [class="obsidian"] $ws4
 assign [class="Rhythmbox"] $ws6
 assign [class="mpv"] $ws6
 assign [class="ksnip"] $ws7
 assign [class="copyq"] $ws8
 assign [class="wpsoffice"] $wsoffice
-assign [class="code"] $wscode
+assign [class="Code"] $wsdb
 assign [class="DBeaver"] $wsdb
 
 
@@ -415,4 +420,5 @@ exec --no-startup-id firefox
 exec --no-startup-id flatpak run org.wezfurlong.wezterm
 exec --no-startup-id flatpak run org.mozilla.Thunderbird
 exec --no-startup-id flatpak run org.keepassxc.KeePassXC
+exec --no-startup-id flatpak run md.obsidian.Obsidian
 
