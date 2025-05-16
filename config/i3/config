@@ -69,7 +69,7 @@ bindsym $mod+F4 exec playerctl previous
 bindsym $mod+F5 exec flatpak run org.mozilla.Thunderbird
 bindsym $mod+F6 exec flatpak run org.keepassxc.KeePassXC
 bindsym $mod+F7 exec flatpak run md.obsidian.Obsidian
-bindsym $mod+F8 exec 
+bindsym $mod+F8 exec /home/mc/marc/appimagefile/Telegram/Telegram
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -86,8 +86,12 @@ bindsym $mod+Shift+q kill
 bindsym $mod3+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
-bindsym $mod3+r exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id rofi -modi run#drun#window#filebrowser -show drun
+bindsym $mod3+r exec --no-startup-id rofi -modi run#drun#window#filebrowser -show drun
+
+#bindsym $mod+d exec --no-startup-id /home/mc/.local/bin/custom/dmenu_run_history
+#bindsym $mod3+r exec --no-startup-id /home/mc/.local/bin/custom/dmenu_run_history
+
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -200,8 +204,6 @@ bindsym $mod3+o workspace $wsoffice
 bindsym $mod +b workspace $wsdb
 bindsym $mod3+b workspace $wsdb
 
-bindsym $mod3+v workspace $ws8
-
 # Open applications on specific workspaces
 assign [class="Microsoft-edge"] $ws1
 assign [class="org.wezfurlong.wezterm"] $ws2
@@ -210,10 +212,11 @@ assign [class="thunderbird-esr"] $ws4
 assign [class="thunderbird"] $ws4
 assign [class="KeePassXC"] $ws4
 assign [class="obsidian"] $ws4
+assign [class="TelegramDesktop"] $ws4
 assign [class="Rhythmbox"] $ws6
 assign [class="mpv"] $ws6
+#assign [class="copyq"] $ws8
 assign [class="ksnip"] $ws7
-assign [class="copyq"] $ws8
 assign [class="wpsoffice"] $wsoffice
 assign [class="Code"] $wsdb
 assign [class="DBeaver"] $wsdb
@@ -408,8 +411,11 @@ bar {
 exec_always feh --bg-scale /home/mc/marc/GitHub/ubuntu/config/i3/wallpaper.jpeg
 
 bindsym $mod+Escape exec i3lock
-bindsym $mod+v exec /usr/bin/diodon
-bindsym $mod3+Shift+v exec copyq show
+bindsym $mod+Shift+Escape exec systemctl suspend && i3lock
+
+bindsym $mod+v exec copyq show
+bindsym $mod3+v exec copyq show
+bindsym $mod+Shift+v exec /usr/bin/diodon 
 
 exec --no-startup-id xset r rate 300 30
 exec --no-startup-id xmodmap ~/.Xmodmap
@@ -426,4 +432,4 @@ exec --no-startup-id flatpak run org.wezfurlong.wezterm
 exec --no-startup-id flatpak run org.mozilla.Thunderbird
 exec --no-startup-id flatpak run org.keepassxc.KeePassXC
 exec --no-startup-id flatpak run md.obsidian.Obsidian
-
+exec picom -f -i 0.75

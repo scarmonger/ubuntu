@@ -698,8 +698,9 @@ clamscan -r ~/ -l ~/scanresult.txt
 
 # ubuntu i3
 ```bash
-sudo apt-get install i3 pulseaudio-utils feh arandr rhythmbox rhythmbox-plugins diodon lxappearance copyq
+sudo apt-get install i3 pulseaudio-utils feh arandr rhythmbox rhythmbox-plugins diodon lxappearance copyq numlockx rofi
 ln -ivs ~/marc/GitHub/ubuntu/config/i3/config ~/.config/i3/
+sudo numlockx on
 ```
 change font in: /home/mc/.config/gtk-3.0/settings.ini, /home/mc/.gtkrc-2.0
 
