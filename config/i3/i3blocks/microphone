@@ -3,12 +3,12 @@
 # Check if microphone is muted
 current=$(pactl get-source-mute @DEFAULT_SOURCE@ | awk '{print $2}')
 if [ "$current" = "yes" ]; then
-    echo "🎤 ON"
-    echo "🎤"
-    echo "#00FF00"  # Green color when active
-else
     echo "🎤 OFF"
     echo "🎤"
     echo "#FF0000"  # Red color when inactive
+else
+    echo "🎤 OFF"
+    echo "🎤"
+    echo "#00FF00"  # Green color when active
 fi
 

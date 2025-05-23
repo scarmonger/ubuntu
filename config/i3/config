@@ -42,7 +42,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && changevolumeubuntu mute
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && changevolumeubuntu mutemic
 
-bindsym $mod+m exec --no-startup-id /home/mc/marc/GitHub/ubuntu/local/bin/custom/changevolumeubuntu down
+
 bindsym $mod+F9 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && /home/mc/marc/GitHub/ubuntu/local/bin/custom/changevolumeubuntu down
 bindsym $mod+F10 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && /home/mc/marc/GitHub/ubuntu/local/bin/custom/changevolumeubuntu up
 bindsym $mod+F11 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle &&  /home/mc/marc/GitHub/ubuntu/local/bin/custom/changevolumeubuntu mute
@@ -452,3 +452,7 @@ exec --no-startup-id gnome-terminal -- nvim ~/Dropbox/notes/da\'wah
 #exec --no-startup-id flatpak run md.obsidian.Obsidian
 #exec picom -f -i 0.75
 #exec picom -i 0.85
+
+
+bindsym $mod +BackSpace exec /home/mc/.config/script/otomation/doffice
+bindsym $mod3+BackSpace exec /home/mc/.config/script/otomation/doffice
