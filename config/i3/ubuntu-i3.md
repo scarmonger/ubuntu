@@ -237,6 +237,8 @@ ln -ivs ~/marc/appimagefile/nvim ~/.local/bin/
 --ln -ivs ~/marc/appimagefile/obsidian ~/.local/bin/
 --ln -ivs ~/marc/appimagefile/loffice ~/.local/bin
 
+https://github.com/mhinz/neovim-remote
+https://github.com/mhinz/vim-startify
 ### Install lazygit
 
 LAZYGIT*VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]\*')
@@ -697,13 +699,29 @@ Disable clamav
 clamscan -r ~/ -l ~/scanresult.txt
 
 # ubuntu i3
+https://www.youtube.com/watch?v=ARKIwOlazKI
+
 ```bash
-sudo apt-get install i3 pulseaudio-utils feh arandr rhythmbox rhythmbox-plugins diodon lxappearance copyq numlockx rofi picom
+sudo apt-get install i3 pulseaudio-utils feh arandr rhythmbox rhythmbox-plugins diodon lxappearance copyq numlockx rofi picom xss-lock xautolock i3blocks pavucontrol
 ln -ivs ~/marc/GitHub/ubuntu/config/i3/config ~/.config/i3/
+ln -ivs ~/marc/GitHub/ubuntu/config/i3/i3blocks.conf ~/.config/i3/
+ln -ivs ~/marc/GitHub/ubuntu/config/dunst ~/.config/
 sudo numlockx on
+```
+
+## remove dunst from dbus
+```bash
+sudo mv /usr/share/dbus-1/services/org.knopwob.dunst.service /usr/share/dbus-1/services/org.knopwob.dunst.service.disabled
+systemctl --user start dunst
+systemctl --user stop dunst
+
+pkill -9 dunst
+pgrep -x dunst
+
 ```
 change font in: /home/mc/.config/gtk-3.0/settings.ini, /home/mc/.gtkrc-2.0
 
 Add fonts:
 jetbrain nerd fonts
 https://github.com/FortAwesome/Font-Awesome/releases
+https://fontawesome.com/v4/cheatsheet/

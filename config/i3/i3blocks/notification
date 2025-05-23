@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Check if Dunst is running
+if pgrep -x dunst > /dev/null; then
+    echo "🔔 ON"
+    echo "🔔"
+    echo "#00FF00"  # Green color when active
+else
+    echo "🔔 OFF"
+    echo "🔔"
+    echo "#FF0000"  # Red color when inactive
+fi
+
