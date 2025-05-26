@@ -175,8 +175,8 @@ bindsym $mod+minus scratchpad show
 #navigate workspaces next / previous
 bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
-bindsym $mod+Ctrl+j workspace next
-bindsym $mod+Ctrl+k workspace prev
+bindsym $mod+Ctrl+j workspace prev
+bindsym $mod+Ctrl+k workspace next
 
 # Move the current workspace to the next output
 # (effectively toggles when you only have two outputs)
@@ -454,5 +454,5 @@ exec --no-startup-id gnome-terminal -- nvim ~/Dropbox/notes/da\'wah
 #exec picom -i 0.85
 
 
-bindsym $mod +BackSpace exec /home/mc/.config/script/otomation/doffice
-bindsym $mod3+BackSpace exec /home/mc/.config/script/otomation/doffice
+bindsym $mod +BackSpace exec /home/mc/.config/script/otomation/doffice tgu 
+bindsym $mod3+BackSpace exec /home/mc/.config/script/otomation/doffice tgu p
