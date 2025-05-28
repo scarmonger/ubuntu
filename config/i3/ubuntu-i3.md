@@ -142,6 +142,7 @@ ln -ivs ~/marc/GitHub/ubuntu/config/nvim_lazy ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/config/nvim_newlazy ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/config/nvim_chris ~/.config/
 ln -ivs ~/marc/virtualbox "/home/mc/VirtualBox VMs"
+ln -ivs ~/marc/GitHub/ubuntu/config/wezterm ~/.config/
 
 mkdir ~/.config/script
 mkdir ~/.local/bin

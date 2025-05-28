@@ -454,5 +454,5 @@ exec --no-startup-id gnome-terminal -- nvim ~/Dropbox/notes/da\'wah
 #exec picom -i 0.85
 
 
-bindsym $mod +BackSpace exec /home/mc/.config/script/otomation/doffice tgu 
-bindsym $mod3+BackSpace exec /home/mc/.config/script/otomation/doffice tgu p
+bindsym $mod +BackSpace exec /home/mc/.config/script/otomation/1do tgu p
+bindsym $mod3+BackSpace exec /home/mc/.config/script/otomation/1do tgu p
