@@ -234,7 +234,7 @@ mv ./nvim.appimage ~/marc/appimagefile/nvim
 ./nvim.appimage
 
 ln -ivs ~/marc/appimagefile/ksnip ~/.local/bin/
-ln -ivs ~/marc/appimagefile/nvim ~/.local/bin/
+ln -ivs /home/mc/marc/appimagefile/nvim11/bin/nvim ~/.local/bin/
 --ln -ivs ~/marc/appimagefile/obsidian ~/.local/bin/
 --ln -ivs ~/marc/appimagefile/loffice ~/.local/bin
 
@@ -505,6 +505,7 @@ google fonts - Single Day
 google fonts - Korea
 google fonts - Chinese
 nerdfonts - JetBrains Mono Nerd Font
+wingdings
 
 # Next
 
@@ -708,6 +709,7 @@ ln -ivs ~/marc/GitHub/ubuntu/config/i3/config ~/.config/i3/
 ln -ivs ~/marc/GitHub/ubuntu/config/i3/i3blocks.conf ~/.config/i3/
 ln -ivs ~/marc/GitHub/ubuntu/config/dunst ~/.config/
 sudo numlockx on
+sudo apt install --reinstall groff
 ```
 
 ## remove dunst from dbus
