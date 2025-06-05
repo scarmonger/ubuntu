@@ -194,7 +194,7 @@ set $ws3 "3: "
 set $ws4 "4: "
 set $ws5 "5"
 set $ws6 "6"
-set $ws7 "7"
+set $ws7 "7: "
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
@@ -407,7 +407,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-         status_command i3blocks -c /home/mc/marc/GitHub/ubuntu/config/i3/i3blocks.conf
+        status_command i3blocks -c /home/mc/marc/GitHub/ubuntu/config/i3/i3blocks.conf
         # status_command i3status
         tray_output primary
         #mode hide
@@ -428,9 +428,9 @@ exec_always feh --bg-scale /home/mc/marc/GitHub/ubuntu/config/i3/wallpaper.jpeg
 bindsym $mod+Escape exec i3lock -i /home/mc/Dropbox/Photos/gold_saints_lock.png
 bindsym $mod+Shift+Escape exec systemctl suspend && i3lock -i /home/mc/Dropbox/Photos/gold_saints_lock.png
 
-bindsym $mod+v exec copyq show
-bindsym $mod3+v exec copyq show
-bindsym $mod+Shift+v exec /usr/bin/diodon 
+bindsym $mod+v exec /usr/bin/diodon
+bindsym $mod3+v exec /usr/bin/diodon
+bindsym $mod+Shift+v exec copyq show
 
 exec --no-startup-id xautolock -time 5 -locker /home/mc/.local/bin/custom/lock.sh
 exec --no-startup-id xset r rate 300 30
@@ -438,10 +438,12 @@ exec --no-startup-id xmodmap ~/.Xmodmap
 exec --no-startup-id xmodmap -e "pointer = 3 2 1"
 exec --no-startup-id setxkbmap -option caps:escape
 exec --no-startup-id setxkbmap -option caps:escape_shifted_capslock
-exec xrandr --output DP-1 --mode 1440x900 --pos 1920x0 --rotate normal --output HDMI-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-2 --off --output HDMI-2 --off
+exec xrandr --output DP-1 --off --output HDMI-1 --off --output HDMI-2 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-2 --mode 1440x900 --pos 1920x0 --rotate normal --output HDMI-3 --off
 
 exec --no-startup-id /home/mc/marc/appimagefile/ksnip
 exec --no-startup-id /home/mc/marc/appimagefile/ferdium
+exec --no-startup-id /home/mc/marc/appimagefile/ferdium
+exec --no-startup-id /home/mc/marc/appimagefile/Telegram/Telegram
 exec --no-startup-id copyq
 exec --no-startup-id dunst&
 exec --no-startup-id microsoft-edge
@@ -455,5 +457,5 @@ exec --no-startup-id gnome-terminal -- nvim ~/Dropbox/notes/da\'wah
 #exec picom -i 0.85
 
 
-bindsym $mod +BackSpace exec /home/mc/.config/script/otomation/1do tgu p
-bindsym $mod3+BackSpace exec /home/mc/.config/script/otomation/1do tgu p
+bindsym $mod +BackSpace exec /home/mc/.config/script/otomation/ts tgu 1 
+bindsym $mod3+BackSpace exec /home/mc/.config/script/otomation/ts tgu 1 p
