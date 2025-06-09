@@ -191,11 +191,11 @@ alias syn='rsync -urvP '
 
 # Operating system specific aliases
 if [[ $OSTYPE == darwin* ]]; then
-	alias flush='dscacheutil -flushcache'
-	# Apps
-	alias browse="open -a /Applications/Google\ Chrome.app"
-	# * Browse Azure Portal
-	alias azure="browse https://preview.portal.azure.com"
+  alias flush='dscacheutil -flushcache'
+  # Apps
+  alias browse="open -a /Applications/Google\ Chrome.app"
+  # * Browse Azure Portal
+  alias azure="browse https://preview.portal.azure.com"
 fi
 
 alias -g own="sudo chown -R mc:mc *"
@@ -274,57 +274,57 @@ alias -s {tar.gz}="tar -xvf"
 # Git
 
 gmm() {
-	git add .
-	git commit -m "$1"
+  git add .
+  git commit -m "$1"
 }
 
 gpush() {
-	git add .
-	git commit -m "$1"
-	git push
+  git add .
+  git commit -m "$1"
+  git push
 }
 
 aliasname() {
-	command $firstParam $secondParam
+  command $firstParam $secondParam
 }
 
 rsq() {
-	WINDOW_ID=$(xdotool search --onlyvisible --name qutebrowser)
-	xdotool windowsize $WINDOW_ID 1500 1000
-	xdotool windowmove $WINDOW_ID 10 10
+  WINDOW_ID=$(xdotool search --onlyvisible --name qutebrowser)
+  xdotool windowsize $WINDOW_ID 1500 1000
+  xdotool windowmove $WINDOW_ID 10 10
 }
 
 ex() {
-	if [ -f $1 ]; then
-		case $1 in
-		*.tar.bz2) tar xjf $1 ;;
-		*.tar.gz) tar xzf $1 ;;
-		*.tar.xz) tar xJf $1 ;;
-		*.bz2) bunzip2 $1 ;;
-		*.rar) unrar x $1 ;;
-		*.gz) gunzip $1 ;;
-		*.tar) tar xf $1 ;;
-		*.tbz2) tar xjf $1 ;;
-		*.tgz) tar xzf $1 ;;
-		*.zip) unzip -d $1 ;;
-		*.Z) uncompress $1 ;;
-		*.7z) 7z x $1 ;;
-		*) echo "'$1' cannot be extracted via ex()" ;;
-		esac
-	else
-		echo "'$1' is not a valid file"
-	fi
+  if [ -f $1 ]; then
+    case $1 in
+    *.tar.bz2) tar xjf $1 ;;
+    *.tar.gz) tar xzf $1 ;;
+    *.tar.xz) tar xJf $1 ;;
+    *.bz2) bunzip2 $1 ;;
+    *.rar) unrar x $1 ;;
+    *.gz) gunzip $1 ;;
+    *.tar) tar xf $1 ;;
+    *.tbz2) tar xjf $1 ;;
+    *.tgz) tar xzf $1 ;;
+    *.zip) unzip -d $1 ;;
+    *.Z) uncompress $1 ;;
+    *.7z) 7z x $1 ;;
+    *) echo "'$1' cannot be extracted via ex()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
 }
 
 setbg() {
-	fullpath="$(pwd)/$1"
-	cp "$fullpath" ~/Desktop/wallpaper.jpg
-	feh --bg-scale ~/Desktop/wallpaper.jpg &
-	notify-send -i "~/Desktop/wallpaper.jpg" "Wallpaper Changed."
+  fullpath="$(pwd)/$1"
+  cp "$fullpath" ~/Desktop/wallpaper.jpg
+  feh --bg-scale ~/Desktop/wallpaper.jpg &
+  notify-send -i "~/Desktop/wallpaper.jpg" "Wallpaper Changed."
 }
 
 mou() {
-	sudo mount /dev/sd$1 ~/$2
+  sudo mount /dev/sd$1 ~/$2
 }
 
 alias umo="sudo umount /dev/sd$1"

@@ -269,26 +269,10 @@ vim.keymap.set(
   ":e ~/marc/GitHub/ubuntu/config/nvim/lua/custom/plugins/plugins.lua<cr>",
   { desc = "Edit plugins.lua" }
 )
-vim.keymap.set(
-  "n",
-  "<leader>ek",
-  ":e ~/marc/GitHub/ubuntu/config/nvim/lua/custom/keymaps.lua<cr>",
-  { desc = "Edit Vim Keymap" }
-)
-vim.keymap.set(
-  "n",
-  "<leader>eo",
-  ":e ~/marc/GitHub/ubuntu/config/nvim/lua/custom/options.lua<cr>",
-  { desc = "Edit Vim options" }
-)
+vim.keymap.set("n", "<leader>ek", ":e ~/marc/GitHub/ubuntu/config/nvim/lua/config<cr>", { desc = "Edit Vim Keymap" })
 vim.keymap.set("n", "<leader>ez", ":e ~/marc/GitHub/ubuntu/zshrc<cr>", { desc = "Edit zshrc" })
 vim.keymap.set("n", "<leader>eu", ":e ~/marc/GitHub/ubuntu/ubuntu-i3.md<cr>", { desc = "Edit ubuntu.md file" })
-vim.keymap.set(
-  "n",
-  "<leader>eg",
-  ":e ~/marc/GitHub/ubuntu/config/ranger/rc.conf<cr>",
-  { desc = "Edit ranger config file" }
-)
+vim.keymap.set("n", "<leader>er", ":e ~/marc/GitHub/ubuntu/config/ranger<cr>", { desc = "Edit ranger config file" })
 vim.keymap.set("n", "<leader>ea", ":e ~/marc/GitHub/ubuntu/aliases<cr>", { desc = "Edit aliases" })
 vim.keymap.set(
   "n",

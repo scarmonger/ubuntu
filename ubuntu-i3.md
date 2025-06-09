@@ -136,6 +136,7 @@ ln -ivs ~/marc/GitHub/ubuntu/local/share/ranger/bookmarks ~/.local/share/ranger/
 
 
 rm -Rf ~/.config/nvim
+ln -ivs ~/marc/GitHub/ubuntu/.vimrc ~/
 ln -ivs ~/marc/GitHub/ubuntu/config/nvim ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/config/nvim_old ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/config/nvim_lazy ~/.config/
