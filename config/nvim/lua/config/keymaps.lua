@@ -6,12 +6,12 @@
 vim.keymap.set("n", ";", ":", {})
 vim.keymap.set("n", ":", ";", {})
 
-vim.keymap.set({ "n", "v" }, '"', 'viw<esc>a"<esc>hbi"<esc>lel<cr>', {})
-vim.keymap.set({ "n", "v" }, "'", "viw<esc>a'<esc>hbi'<esc>lel<cr>", {})
-vim.keymap.set({ "n", "v" }, "<", "viw<esc>a><esc>hbi<<esc>lel<cr>", {})
-vim.keymap.set({ "n", "v" }, "(", "viw<esc>a)<esc>hbi(<esc>lel<cr>", {})
-vim.keymap.set({ "n", "v" }, "{", "viw<esc>a}<esc>hbi{<esc>lel<cr>", {})
-vim.keymap.set({ "n", "v" }, "*", "viw<esc>a**<esc>hbi**<esc>lel<cr>", {})
+-- vim.keymap.set({ "n", "v" }, '"', 'viw<esc>a"<esc>hbi"<esc>lel<cr>', {})
+-- vim.keymap.set({ "n", "v" }, "'", "viw<esc>a'<esc>hbi'<esc>lel<cr>", {})
+-- vim.keymap.set({ "n", "v" }, "<", "viw<esc>a><esc>hbi<<esc>lel<cr>", {})
+-- vim.keymap.set({ "n", "v" }, "(", "viw<esc>a)<esc>hbi(<esc>lel<cr>", {})
+-- vim.keymap.set({ "n", "v" }, "{", "viw<esc>a}<esc>hbi{<esc>lel<cr>", {})
+-- vim.keymap.set({ "n", "v" }, "*", "viw<esc>a**<esc>hbi**<esc>lel<cr>", {})
 
 -- Comment
 -- vim.keymap.set("n", "<c-c>", "gc", {})
@@ -49,8 +49,6 @@ vim.keymap.set("i", "<m-n>", "<c-r>n", { desc = "paste from n buffer" })
 vim.keymap.set("n", "<leader>yp", ":let @+ = expand('%:p')<cr>", { desc = "copy filepath" })
 vim.keymap.set("n", "<leader>yd", ":let @+ = expand('%:p:h:h %:p')<cr>", { desc = "copy file's directory" })
 vim.keymap.set("n", "<leader>yc", ":let @+= @*<cr>", { desc = "transfer / copy * registers to clipboard" })
--- vim.keymap.set("n", "<leader>ty", ":let @+= @*<cr>", { desc = "transfer / copy * registers to clipboard" })
--- vim.keymap.set("n", "<F2>", ":let @+= @*<cr>", { desc = "copy * registers to clipboard" })
 vim.keymap.set({ "n", "v" }, '"0', '"0p', { desc = "paste from last yank" })
 vim.keymap.set("i", "<C-v>", '<C-r>"', { desc = "paste from the last yank, delete" })
 vim.keymap.set("i", "<C-b>", "<C-r>0", { desc = "paste from last yank" })
@@ -83,22 +81,26 @@ vim.keymap.set("n", "\\gmf", ":read $HOME/.config/nvim/snippets/go-mainFunc<CR>3
 vim.keymap.set("n", "x", '"_x', { desc = "prevent yank character when deleting" })
 vim.keymap.set("n", "X", '"_x', { desc = "prevent yank character when deleting" })
 vim.keymap.set("n", "<Del>", '"_x', { desc = "prevent yank character when deleting" })
+vim.keymap.set("v", "x", '"_x', { desc = "prevent yank character when deleting" })
+vim.keymap.set("v", "X", '"_x', { desc = "prevent yank character when deleting" })
+vim.keymap.set("v", "<Del>", '"_x', { desc = "prevent yank character when deleting" })
 
 -- Primeagen
 vim.keymap.set("x", "<leader>p", '"_dP', { desc = "paste in visual mode, don't yank" })
 
-vim.keymap.set("n", "<leader>d", '"_d', { desc = "delete into void" })
-vim.keymap.set("v", "<leader>d", '"_d', { desc = "delete into void" })
-vim.keymap.set("x", "<leader>d", '"_d', { desc = "delete into void" })
+-- vim.keymap.set("n", "<leader>d", '"_d', { desc = "delete into void" })
+-- vim.keymap.set("v", "<leader>d", '"_d', { desc = "delete into void" })
+-- vim.keymap.set("x", "<leader>d", '"_d', { desc = "delete into void" })
 
-vim.keymap.set("n", "<leader>y", '"+y', { desc = "copy into system clipboard(+)" })
-vim.keymap.set("v", "<leader>y", '"+y', { desc = "copy into system clipboard(+)" })
-vim.keymap.set("n", "<leader>Y", '"+Y', { desc = "copy into system clipboard(+)" })
+-- vim.keymap.set("n", "<leader>y", '"ry', { desc = "copy into r register" })
+vim.keymap.set("v", "<leader>y", '"ry', { desc = "copy into r register" })
+vim.keymap.set("n", "<leader>Y", '"rY', { desc = "copy into r register" })
 
-vim.keymap.set("n", "<leader>p", '"+p', { desc = "paste from system clipboard(+)" })
-vim.keymap.set("v", "<leader>p", '"+p', { desc = "paste from system clipboard(+)" })
+vim.keymap.set("n", "<leader>p", '"rp', { desc = "paste from r register" })
+vim.keymap.set("v", "<leader>p", '"rp', { desc = "paste from r register" })
 
-vim.keymap.set("n", "<F2>", ":let @+= @*<cr>", { desc = "copy * registers to clipboard" })
+-- vim.keymap.set("n", "<F2>", ":let @+= @*<cr>", { desc = "copy * registers to clipboard" })
+vim.keymap.set("n", "<F2>", ":let @r = @+<cr>", { desc = "copy + registers to r register" })
 vim.keymap.set("n", "<F4>", ":dis<cr>", { desc = "check registers" })
 vim.keymap.set("i", "<F4>", "<ESC>:reg<CR>", { desc = "check registers" })
 
