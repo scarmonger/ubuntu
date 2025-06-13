@@ -705,7 +705,7 @@ clamscan -r ~/ -l ~/scanresult.txt
 https://www.youtube.com/watch?v=ARKIwOlazKI
 
 ```bash
-sudo apt-get install i3 pulseaudio-utils feh arandr rhythmbox rhythmbox-plugins diodon lxappearance copyq numlockx rofi picom xss-lock xautolock i3blocks pavucontrol
+sudo apt-get install i3 pulseaudio-utils feh arandr rhythmbox rhythmbox-plugins diodon lxappearance copyq numlockx rofi picom xss-lock xautolock i3blocks pavucontrol meld
 ln -ivs ~/marc/GitHub/ubuntu/config/i3/config ~/.config/i3/
 ln -ivs ~/marc/GitHub/ubuntu/config/i3/i3blocks.conf ~/.config/i3/
 ln -ivs ~/marc/GitHub/ubuntu/config/dunst ~/.config/
