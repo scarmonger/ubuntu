@@ -1,10 +1,11 @@
 #!/bin/sh
 alias fd="fdfind"
-alias g1="veracrypt -t -k "" --pim=0 --protect-hidden=no ~/Dropbox/linux/cl ~/.config/script"
-alias sats="cd /home/mc/marc/custom/backend/atlas/soulbackend/main/src/web/ && box"
-alias sdac="cd /home/mc/marc/custom/backend/daikinhr/soulbackend/main/src/web/ && box"
-alias sctt="cd /home/mc/marc/custom/backend/vallourec_sea/soulbackend/main/src/web/ && box"
-alias spjl="cd /home/mc/marc/custom/backend/pjlhuillier/soulbackend/main/src/web/ && box"
+alias g1="veracrypt ~/Dropbox/linux/cl ~/.config/script"
+alias npms="NODE_OPTIONS=--max-old-space-size=8096 npm start"
+# alias sats="cd /home/mc/marc/custom/backend/atlas/soulbackend/main/src/web/ && box"
+# alias sdac="cd /home/mc/marc/custom/backend/daikinhr/soulbackend/main/src/web/ && box"
+# alias sctt="cd /home/mc/marc/custom/backend/vallourec_sea/soulbackend/main/src/web/ && box"
+# alias spjl="cd /home/mc/marc/custom/backend/pjlhuillier/soulbackend/main/src/web/ && box"
 
 alias remotemypc="xfreerdp +clipboard +fonts /sound /mic /smart-sizing /multimon /network:auto /cert-ignore /u:mc /d:WORKGROUP /v:mc-pc"
 alias vbcompact="VBoxManage modifymedium disk /home/mc/marc/virtualbox/win11/win11.vdi --compact"
