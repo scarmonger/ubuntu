@@ -55,7 +55,8 @@ vim.keymap.set("i", "<C-b>", "<C-r>0", { desc = "paste from last yank" })
 
 vim.keymap.set("n", "<leader>ta", "ggVG", { desc = "select all" })
 vim.keymap.set("n", "<leader>th", ':! thorium-browser "<c-r>%"<CR>', { desc = "preview markdown" })
-vim.keymap.set("n", "<leader>tp", ':! firefox "<c-r>%"<CR>', { desc = "preview markdown" })
+vim.keymap.set("n", "<leader>tf", ':! firefox "<c-r>%"<CR>', { desc = "preview markdown" })
+vim.keymap.set("n", "<leader>tp", ":let @r = @+<cr>", { desc = "copy to clipboard" })
 -- vim.keymap.set("n", "<leader>tk", "<cmd>norm! K<cr>", { desc = "Keywordprg" })
 vim.keymap.set(
   "n",
@@ -88,9 +89,9 @@ vim.keymap.set("v", "<Del>", '"_x', { desc = "prevent yank character when deleti
 -- Primeagen
 vim.keymap.set("x", "<leader>p", '"_dP', { desc = "paste in visual mode, don't yank" })
 
--- vim.keymap.set("n", "<leader>d", '"_d', { desc = "delete into void" })
--- vim.keymap.set("v", "<leader>d", '"_d', { desc = "delete into void" })
--- vim.keymap.set("x", "<leader>d", '"_d', { desc = "delete into void" })
+vim.keymap.set("n", "<leader>d", '"_d', { desc = "delete into void" })
+vim.keymap.set("v", "<leader>d", '"_d', { desc = "delete into void" })
+vim.keymap.set("x", "<leader>d", '"_d', { desc = "delete into void" })
 
 -- vim.keymap.set("n", "<leader>y", '"ry', { desc = "copy into r register" })
 vim.keymap.set("v", "<leader>y", '"ry', { desc = "copy into r register" })
@@ -100,7 +101,7 @@ vim.keymap.set("n", "<leader>p", '"rp', { desc = "paste from r register" })
 vim.keymap.set("v", "<leader>p", '"rp', { desc = "paste from r register" })
 
 -- vim.keymap.set("n", "<F2>", ":let @+= @*<cr>", { desc = "copy * registers to clipboard" })
-vim.keymap.set("n", "<F2>", ":let @r = @+<cr>", { desc = "copy + registers to r register" })
+-- vim.keymap.set("n", "<F2>", ":let @r = @+<cr>", { desc = "copy + registers to r register" })
 vim.keymap.set("n", "<F4>", ":dis<cr>", { desc = "check registers" })
 vim.keymap.set("i", "<F4>", "<ESC>:reg<CR>", { desc = "check registers" })
 

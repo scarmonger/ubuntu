@@ -1,4 +1,6 @@
 #!/bin/bash
+sfclone_client --dir /home/mc/marc/custom/backend/pjlhuillier/soulbackend --update
+
 # cd /home/mc/marc/custom/fe-micro-custom/
 # git checkout master
 # git pull
@@ -23,4 +25,3 @@
 # cd /home/mc/marc/custom/fe-micro-custom/src/lib
 # git checkout master
 # git pull
-sfclone_client --dir /home/mc/marc/custom/backend/pjlhuillier/soulbackend --update
