@@ -189,6 +189,7 @@ ln -ivs /home/mc/marc/custom/source/commandbox/jre ~/.local/bin/
 
 cp /home/mc/marc/GitHub/ubuntu/.wezterm.lua ~/
 
+ln -ivs ~/marc/appimagefile/ksnip ~/.local/bin/
 
 ```
 
@@ -227,19 +228,10 @@ Icon=/path/to/icon.png
 update-desktop-database ~/.local/share/applications/
 
 ## Install neovim
-
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-chmod u+x nvim.appimage
-mv ./nvim.appimage ~/marc/appimagefile/nvim
-./nvim.appimage
-
-ln -ivs ~/marc/appimagefile/ksnip ~/.local/bin/
-ln -ivs /home/mc/marc/appimagefile/nvim11/bin/nvim ~/.local/bin/
---ln -ivs ~/marc/appimagefile/obsidian ~/.local/bin/
---ln -ivs ~/marc/appimagefile/loffice ~/.local/bin
-
+https://github.com/neovim/neovim/blob/master/INSTALL.md#linux
 https://github.com/mhinz/neovim-remote
 https://github.com/mhinz/vim-startify
+
 ### Install lazygit
 https://github.com/jesseduffield/lazygit?tab=readme-ov-file#debian-and-ubuntu
 
