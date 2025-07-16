@@ -154,7 +154,6 @@ ln -ivs ~/marc/GitHub/ubuntu/config/sxiv ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/config/castero ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/local/bin/custom ~/.local/bin
 
-ln -ivs ~/marc/GitHub/ubuntu/bashrc ~/.bashrc
 cp -ivs ~/marc/GitHub/dotfile/.oh-my-zsh/custom/autocomplete.zsh ~/.oh-my-zsh/custom/autocomplete.zsh
 cp -ivs ~/marc/GitHub/dotfile/.oh-my-zsh/custom/shortcuts.zsh ~/.oh-my-zsh/custom/shortcuts.zsh
 
@@ -190,13 +189,13 @@ ln -ivs /home/mc/marc/custom/source/commandbox/jre ~/.local/bin/
 
 cp /home/mc/marc/GitHub/ubuntu/.wezterm.lua ~/
 
+ln -ivs ~/marc/appimagefile/ksnip ~/.local/bin/
 
 ```
 
 ## appimage
 
 ksnip
-obsidian
 nvim
 
 `chmod +x *.AppImage`
@@ -229,25 +228,12 @@ Icon=/path/to/icon.png
 update-desktop-database ~/.local/share/applications/
 
 ## Install neovim
-
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-chmod u+x nvim.appimage
-mv ./nvim.appimage ~/marc/appimagefile/nvim
-./nvim.appimage
-
-ln -ivs ~/marc/appimagefile/ksnip ~/.local/bin/
-ln -ivs /home/mc/marc/appimagefile/nvim11/bin/nvim ~/.local/bin/
---ln -ivs ~/marc/appimagefile/obsidian ~/.local/bin/
---ln -ivs ~/marc/appimagefile/loffice ~/.local/bin
-
+https://github.com/neovim/neovim/blob/master/INSTALL.md#linux
 https://github.com/mhinz/neovim-remote
 https://github.com/mhinz/vim-startify
-### Install lazygit
 
-LAZYGIT*VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]\*')
-curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit*${LAZYGIT_VERSION}\_Linux_x86_64.tar.gz"
-tar xf lazygit.tar.gz lazygit
-sudo install lazygit /usr/local/bin
+### Install lazygit
+https://github.com/jesseduffield/lazygit?tab=readme-ov-file#debian-and-ubuntu
 
 ### Add typescript/react autoimport to nvim config
 

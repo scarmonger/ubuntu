@@ -1,6 +1,6 @@
-tmux rename-window ranger
+tmux rename-window ranger 
 #tmux new-window -c ~/marc/GitHub/ubuntu -n nvim nvim
-tmux split-window -h -p 66 nvim
+tmux split-window -h -l 66% nvim
 tmux new-window  
 tmux next-window 
 ranger
