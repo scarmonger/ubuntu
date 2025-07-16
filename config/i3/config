@@ -232,6 +232,10 @@ assign [class="DBeaver"] $wsdb
 assign [class="TelegramDesktop"] $wstele
 assign [class="Ferdium"] $wstele
 assign [class="Gnome-terminal"] $wsnote
+assign [class="tm"] $wsoffice
+assign [class="pm"] $wsoffice
+assign [class="pr"] $wsoffice
+assign [class="ONLYOFFICE"] $wsoffice
 
 
 # Automatically putting workspaces on specific screens
@@ -279,6 +283,7 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 bindsym $mod+Shift+U move container to workspace $ws11
+bindsym $mod+Shift+o move container to workspace $wsoffice
 
 bindsym $mod3+Shift+1 move container to workspace number $ws1
 bindsym $mod3+Shift+2 move container to workspace number $ws2
@@ -290,7 +295,7 @@ bindsym $mod3+Shift+7 move container to workspace number $ws7
 bindsym $mod3+Shift+8 move container to workspace number $ws8
 bindsym $mod3+Shift+9 move container to workspace number $ws9
 bindsym $mod3+Shift+0 move container to workspace number $ws10
-bindsym $mod3+Shift+U move container to workspace $ws11
+bindsym $mod3+Shift+o move container to workspace $wsoffice
 
 
 
