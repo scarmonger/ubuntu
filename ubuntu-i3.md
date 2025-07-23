@@ -267,6 +267,7 @@ sudo dpkg -i \*.deb
 2. wps-office_11.1.0.11711.XA_amd64.deb
 3. dbeaver
 4. virtualbox
+5. freeoffice
 
 ## Dropbox
 
