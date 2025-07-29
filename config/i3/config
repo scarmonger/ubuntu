@@ -216,6 +216,7 @@ bindsym $mod3+n workspace $wsnote
 assign [class="Microsoft-edge"] $ws1
 assign [class="org.wezfurlong.wezterm"] $ws2
 assign [class="firefox"] $ws3
+assign [class="Google-chrome"] $ws3
 assign [class="thunderbird-esr"] $ws4
 assign [class="thunderbird"] $ws4
 assign [class="KeePassXC"] $ws4
