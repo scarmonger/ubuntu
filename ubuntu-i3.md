@@ -585,6 +585,8 @@ sudo apt install freerdp2-x11
 
 ```
 xfreerdp +clipboard +fonts /sound /mic /smart-sizing /multimon /network:auto /cert-ignore /u:<username> /d:WORKGROUP /v:192.168.x.x
+
+xfreerdp +clipboard +fonts /sound /mic /smart-sizing /multimon /network:auto /cert-ignore /u:mc /d:WORKGROUP /v:mc-pc
 ```
 
 # yt-dlp
