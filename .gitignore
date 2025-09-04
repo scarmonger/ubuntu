@@ -9,3 +9,4 @@ config/nvim/lua/~/.vim/undodir
 vim/undodir
 vim/undodir
 config/ranger/plugins
+config/nvim/lazyvim.json
