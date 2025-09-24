@@ -1,4 +1,5 @@
 #!/bin/sh
+alias now="date +"%Y%m%d%H%M" | xclip -selection clipboard" # Linux with xclip
 alias fd="fdfind"
 alias g1="veracrypt ~/Dropbox/linux/cl ~/.config/script"
 alias npms="NODE_OPTIONS=--max-old-space-size=8096 npm start"

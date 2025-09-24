@@ -50,7 +50,7 @@ export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
 export PATH="$PATH:${$(find ~/.local/bin -type l -printf %p:)%%:}"
 #export PATH="$PATH:${$(find ~/Documents/GitHub/ubuntu/local/bin/custom -type d -printf %p:)%%:}"
 export PATH="$PATH:${$(find ~/.config/script -type d -printf %p:)%%:}"
-
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 zstyle ':completion:*' completer _expand_alias _complete _ignored
 unsetopt PROMPT_SP
 
