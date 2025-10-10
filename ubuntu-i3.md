@@ -729,3 +729,22 @@ jetbrain nerd fonts
 
 Mason install: prettier, rustywin(jsx)
 LazyExtras
+
+
+# Setup Default apps
+setup for docx
+xdg-mime default libreoffice24.2-writer.desktop application/vnd.openxmlformats-officedocument.wordprocessingml.document
+xdg-mime default libreoffice24.2-writer.desktop application/msword
+xdg-mime default libreoffice24.2-calc.desktop application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+xdg-mime default libreoffice24.2-calc.desktop application/vnd.ms-excel
+xdg-mime default libreoffice24.2-impress.desktop application/vnd.ms-powerpoint
+xdg-mime default libreoffice24.2-impress.desktop application/vnd.openxmlformats-officedocument.presentationml.presentation
+
+check for the setup
+xdg-mime query default application/vnd.openxmlformats-officedocument.wordprocessingml.document
+xdg-mime query default application/msword
+xdg-mime query default application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+xdg-mime query default application/vnd.ms-excel
+xdg-mime query default application/vnd.ms-powerpoint
+xdg-mime query default application/vnd.openxmlformats-officedocument.presentationml.presentation
+
