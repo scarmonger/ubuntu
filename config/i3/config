@@ -72,6 +72,7 @@ bindsym $mod+F5 exec flatpak run md.obsidian.Obsidian
 bindsym $mod+F6 exec "cd ~/Dropbox/notes/da\'wah/ && gnome-terminal -- nvim AhmedDeedat.md"
 bindsym $mod+F7 exec /home/mc/marc/appimagefile/ferdium
 bindsym $mod+F8 exec /home/mc/marc/appimagefile/Telegram/Telegram
+bindsym $mod+m exec kitty -e gpw
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod

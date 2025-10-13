@@ -350,6 +350,9 @@ pip install mycli
 pip install pyperclip
 pip install castero
 pip3 install neovim-remote
+pip install pyinstaller
+
+pyinstaller --onefile loader/run_encrypted.py
 
 ## Neovim Remote
 
