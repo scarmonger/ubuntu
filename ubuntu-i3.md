@@ -352,7 +352,12 @@ pip install castero
 pip3 install neovim-remote
 pip install pyinstaller
 
+## encrypt python file
 pyinstaller --onefile loader/run_encrypted.py
+pyinstaller --onefile /home/mc/.config/script/otomation/ldo
+
+Hasil encryptnya nanti akan muncul di folder ~/dist/
+
 
 ## Neovim Remote
 
