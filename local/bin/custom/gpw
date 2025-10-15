@@ -28,24 +28,25 @@ driver.get('https://mail.dataon.com:3000/')
 
 #userinput = driver.find_element("xpath",'//input[@id="userName"]')
 userinput = driver.find_element("xpath",'/html/body/div/div[1]/div[1]/form/div[2]/div[2]/input')
-userinput.send_keys('marctinius' + Keys.TAB + 'Zimbramail.9' + Keys.RETURN)
+userinput.send_keys('marctinius' + Keys.TAB + 'Zimbramail.1' + Keys.RETURN)
 
 userinput = driver.find_element("xpath",'/html/body/div[4]/div[1]/div/div/div[2]/div/table/tbody/tr[1]/td[3]/div/div/table/tbody/tr/td[2]/div/input')
 userinput.send_keys('daily reset' + Keys.TAB + Keys.RETURN)
 
 
 #userinput = driver.find_element("xpath",'//input[@id="password"]')
-userinput = driver.find_element(By.ID,'zli__CLV-SR-1__-31181')
+userinput = driver.find_element(By.CSS_SELECTOR,'body > div#z_shell.DwtShell > div#zv__CLV-SR-1.ZmConvDoublePaneView > div#zl__CLV-SR-1.DwtListView > table > tbody > tr > td > ul#zl__CLV-SR-1__rows.DwtListView-Rows > li:nth-child(1)')
 userinput.click()
 
 time.sleep(0.5)
 
-iframe = iframe = driver.find_element(By.ID, "SR-1_MSGC31181__body__iframe")
+#iframe = iframe = driver.find_element(By.ID, "body > div#z_shell.DwtShell > div#zv__CLV-SR-1.ZmConvDoublePaneView > div#zv__CLV-SR-1__CV.ZmConvView2.ZmConvView2FullWidth > div#zv__CLV-SR-1__CV_main > div > div > div > div > iframe")
+iframe = iframe = driver.find_element(By.CSS_SELECTOR, "body > iframe")
 
 driver.switch_to.frame(iframe)
 
-# with open("dump.html", "w", encoding="utf-8") as f:
-#     f.write(driver.page_source)
+with open("dump.html", "w", encoding="utf-8") as f:
+    f.write(driver.page_source)
 
 wait = WebDriverWait(driver, 10)
 cell = wait.until(EC.presence_of_element_located((By.XPATH, "//div[contains(@class, 'sf7-email-template-content')]//table//tr[1]/td[4]")))
