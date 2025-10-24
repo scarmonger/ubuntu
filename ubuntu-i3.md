@@ -28,7 +28,7 @@ sudo apt upgrade
 sudo apt install git
 mkdir -p ~/marc/GitHub
 cd ~/marc/GitHub
-git clone <https://www.github.com/scarmonger/ubuntu.git>
+git clone https://www.github.com/scarmonger/ubuntu.git
 
 ## change mac address
 
@@ -81,7 +81,7 @@ sudo snap remove --purge firefox
 
 ## Install app
 
-sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar fonts-powerline neofetch xclip ssh fzf mpv tmux dconf-editor kazam gnome-tweaks chrome-gnome-shell filezilla ncdu htop gimp mycli xdotool ripgrep fd-find gcc lua5.4 zathura tldr
+sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar fonts-powerline neofetch xclip ssh fzf mpv tmux dconf-editor kazam gnome-tweaks chrome-gnome-shell filezilla ncdu htop gimp mycli xdotool ripgrep fd-find gcc lua5.4 zathura tldr gpicview
 
 systemctl status ssh
 systemctl start ssh
@@ -353,11 +353,11 @@ pip3 install neovim-remote
 pip install pyinstaller
 
 ## encrypt python file
+
 pyinstaller --onefile loader/run_encrypted.py
 pyinstaller --onefile /home/mc/.config/script/otomation/ldo
 
 Hasil encryptnya nanti akan muncul di folder ~/dist/
-
 
 ## Neovim Remote
 
@@ -736,10 +736,23 @@ jetbrain nerd fonts
 ## Lazyvim
 
 Mason install: prettier, rustywin(jsx)
-LazyExtras
+:LazyExtras
 
+Enabled Plugins: (6)
+● ai.copilot   blink-copilot  copilot-cmp  copilot.lua  blink.cmp  lualine.nvim  nvim-cmp
+● coding.blink  blink.cmp  friendly-snippets  blink.compat  catppuccin
+● coding.mini-surround  mini.surround
+● editor.snacks_explorer   snacks.nvim
+Snacks File Explorer
+● editor.snacks_picker   nvim-lspconfig  snacks.nvim  alpha-nvim  dashboard-nvim  flash.nvim  mini.starter  todo-comments.nvim
+Fast and modern file picker
+● formatting.prettier  mason.nvim  conform.nvim  none-ls.nvim
+
+Enabled Languages: (1)
+● lang.json  SchemaStore.nvim  nvim-lspconfig  nvim-treesitter
 
 # Setup Default apps
+
 setup for docx
 xdg-mime default libreoffice24.2-writer.desktop application/vnd.openxmlformats-officedocument.wordprocessingml.document
 xdg-mime default libreoffice24.2-writer.desktop application/msword
@@ -756,3 +769,12 @@ xdg-mime query default application/vnd.ms-excel
 xdg-mime query default application/vnd.ms-powerpoint
 xdg-mime query default application/vnd.openxmlformats-officedocument.presentationml.presentation
 
+# Setup default browser
+
+xdg-settings get default-web-browser
+
+xdg-open https://example.com
+
+> to see what command is actually run when opening a URL
+
+xdg-settings set default-web-browser microsoft-edge.desktop
