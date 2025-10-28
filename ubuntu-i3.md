@@ -197,7 +197,7 @@ ln -ivs /home/mc/marc/custom/source/commandbox/jre ~/.local/bin/
 cp /home/mc/marc/GitHub/ubuntu/.wezterm.lua ~/
 
 ln -ivs ~/marc/appimagefile/ksnip ~/.local/bin/
-
+ln -ivs ~/marc/GitHub/ubuntu/.Xmodmap ~/
 ```
 
 ## appimage
