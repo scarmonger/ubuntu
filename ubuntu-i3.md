@@ -1,5 +1,10 @@
 # !/bin/zsh
 
+# backup
+
+cp ~/.fonts ~/marc/fonts
+cp /etc/fstab ~/marc/fstab
+
 # Common syntax
 
 ## Check ubuntu name release
@@ -81,7 +86,7 @@ sudo snap remove --purge firefox
 
 ## Install app
 
-sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar fonts-powerline neofetch xclip ssh fzf mpv tmux dconf-editor kazam gnome-tweaks chrome-gnome-shell filezilla ncdu htop gimp mycli xdotool ripgrep fd-find gcc lua5.4 zathura tldr gpicview
+sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar fonts-powerline neofetch xclip ssh fzf mpv tmux dconf-editor kazam gnome-tweaks chrome-gnome-shell filezilla ncdu htop gimp mycli xdotool ripgrep fd-find gcc lua5.4 zathura tldr gpicview fish
 
 systemctl status ssh
 systemctl start ssh
@@ -109,6 +114,7 @@ echo 'source ~/.config/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 3.) Run the command `fc-cache -fv` to manually rebuild the font cache
 
 check fonts with `fc-list`
+> fc-list | grep -i "Wing"
 
 https://github.com/wting/autojump/blob/master/docs/install.md
 > git clone https://github.com/wting/autojump.git
@@ -117,14 +123,14 @@ https://github.com/wting/autojump/blob/master/docs/install.md
 
 ```
 
-<https://christitus.com/zsh/>
-<https://zsh.sourceforge.io/Guide/zshguide.html>
-<https://wiki.archlinux.org/title/zsh>
-<https://github.com/ChrisTitusTech/zsh/blob/master/aliasrc>
-<https://github.com/sdaschner/dotfiles/blob/master/.aliases>
-<https://github.com/ohmyzsh/ohmyzsh>
-<https://www.thorsten-hans.com/5-types-of-zsh-aliases>
-<https://gist.github.com/dogrocker/1efb8fd9427779c827058f873b94df95>
+https://christitus.com/zsh/
+https://zsh.sourceforge.io/Guide/zshguide.html
+https://wiki.archlinux.org/title/zsh
+https://github.com/ChrisTitusTech/zsh/blob/master/aliasrc
+https://github.com/sdaschner/dotfiles/blob/master/.aliases
+https://github.com/ohmyzsh/ohmyzsh
+https://www.thorsten-hans.com/5-types-of-zsh-aliases
+https://gist.github.com/dogrocker/1efb8fd9427779c827058f873b94df95
 
 ## symlink
 
@@ -154,8 +160,9 @@ ln -ivs ~/marc/GitHub/ubuntu/config/sxiv ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/config/castero ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/local/bin/custom ~/.local/bin
 
-cp -ivs ~/marc/GitHub/dotfile/.oh-my-zsh/custom/autocomplete.zsh ~/.oh-my-zsh/custom/autocomplete.zsh
-cp -ivs ~/marc/GitHub/dotfile/.oh-my-zsh/custom/shortcuts.zsh ~/.oh-my-zsh/custom/shortcuts.zsh
+cp -ivs ~/marc/GitHub/ubuntu/oh-my-zsh/custom/autocomplete.zsh ~/.oh-my-zsh/custom/autocomplete.zsh
+cp -ivs ~/marc/GitHub/ubuntu/oh-my-zsh/custom/shortcuts.zsh ~/.oh-my-zsh/custom/shortcuts.zsh
+cp /home/mc/marc/GitHub/ubuntu/HubApps /home/mc/.config/microsoft-edge/Default/HubApps
 
 ln -ivs ~/marc/GitHub/ubuntu/zshrc ~/.zshrc
 
@@ -195,8 +202,9 @@ ln -ivs ~/marc/appimagefile/ksnip ~/.local/bin/
 
 ## appimage
 
+sudo add-apt-repository universe
+sudo apt install libfuse2t64
 ksnip
-nvim
 
 `chmod +x *.AppImage`
 
@@ -210,9 +218,9 @@ sudo apt install appimagelauncher
 Run App : appimagelauncher
 
 hyperkeys
-<https://hyperkeys.xureilab.com/>
+https://hyperkeys.xureilab.com/
 
-<https://publicpost.medium.com/how-to-install-appimage-and-create-searchable-shortcut-on-ubuntu-linux-6542997ef2bd>
+https://publicpost.medium.com/how-to-install-appimage-and-create-searchable-shortcut-on-ubuntu-linux-6542997ef2bd
 
 ## Create application shortcut
 
@@ -229,13 +237,13 @@ update-desktop-database ~/.local/share/applications/
 
 ## Install neovim
 
-<https://github.com/neovim/neovim/blob/master/INSTALL.md#linux>
-<https://github.com/mhinz/neovim-remote>
-<https://github.com/mhinz/vim-startify>
+https://github.com/neovim/neovim/blob/master/INSTALL.md#linux
+https://github.com/mhinz/neovim-remote
+https://github.com/mhinz/vim-startify
 
 ### Install lazygit
 
-<https://github.com/jesseduffield/lazygit?tab=readme-ov-file#debian-and-ubuntu>
+https://github.com/jesseduffield/lazygit?tab=readme-ov-file#debian-and-ubuntu
 
 ### Add typescript/react autoimport to nvim config
 
@@ -253,13 +261,13 @@ dconf load /org/gnome/ < ~/marc/GitHub/ubuntu/gnome-backup
 
 # Gnome extension
 
-<https://extensions.gnome.org/extension/3193/blur-my-shell/>
-<https://extensions.gnome.org/extension/779/clipboard-indicator/>
-<https://extensions.gnome.org/extension/1460/vitals/>
-<https://extensions.gnome.org/extension/5237/rounded-window-corners/>
-<https://extensions.gnome.org/extension/4338/allow-locked-remote-desktop/>
-<https://extensions.gnome.org/extension/1160/dash-to-panel/>
-<https://extensions.gnome.org/extension/887/workspace-isolated-dash/>
+https://extensions.gnome.org/extension/3193/blur-my-shell/
+https://extensions.gnome.org/extension/779/clipboard-indicator/
+https://extensions.gnome.org/extension/1460/vitals/
+https://extensions.gnome.org/extension/5237/rounded-window-corners/
+https://extensions.gnome.org/extension/4338/allow-locked-remote-desktop/
+https://extensions.gnome.org/extension/1160/dash-to-panel/
+https://extensions.gnome.org/extension/887/workspace-isolated-dash/
 
 # Download .deb installer
 
@@ -270,6 +278,7 @@ sudo dpkg -i \*.deb
 3. dbeaver
 4. virtualbox
 5. freeoffice
+6. ferdium - https://github.com/ferdium/ferdium-app/releases
 
 ## Dropbox
 
@@ -298,9 +307,9 @@ sudo apt install --reinstall virtualbox-dkms && sudo apt install libelf-dev
 
 ### Error Installing Windows - Windows cannot read the ProductKey from the unattend answer file
 
-Screenshot of the error: <https://imgur.com/cW1GUkh>
+Screenshot of the error: https://imgur.com/cW1GUkh
 
-Found the solution in this video on YT: <https://www.youtube.com/watch?v=Y8rzZHscljQ&t=183s>
+Found the solution in this video on YT: https://www.youtube.com/watch?v=Y8rzZHscljQ&t=183s
 
 Just so the solution is:
 
@@ -317,7 +326,7 @@ Just so the solution is:
 
 All done, now it should work as normal.
 
-<https://www.youtube.com/watch?v=6UQZ5oQg8XA>
+https://www.youtube.com/watch?v=6UQZ5oQg8XA
 
 Install using English (world)
 Setup for work or school
@@ -329,7 +338,7 @@ Klik Tab Tweaks > Choose Desktop, klik ultimate performance, run tweaks
 
 ### Shrink / Decrease virtualbox disk size
 
-<https://www.virtualbox.org/manual/ch08.html#vboxmanage-modifymedium>
+https://www.virtualbox.org/manual/ch08.html#vboxmanage-modifymedium
 
 Run in windows:
 sdelete64.exe -z
@@ -345,12 +354,13 @@ sudo apt install alacritty
 # Install python,pip & selenium
 
 sudo apt install -y python3 python3-pip
-pip install selenium
-pip install mycli
-pip install pyperclip
-pip install castero
-pip3 install neovim-remote
-pip install pyinstaller
+
+sudo apt install python3-selenium
+sudo apt install python3-pyperclip
+pip3 install mycli --break-system-packages
+pip3 install pyinstaller --break-system-packages
+
+<!-- pip install castero -->
 
 ## encrypt python file
 
@@ -361,7 +371,7 @@ Hasil encryptnya nanti akan muncul di folder ~/dist/
 
 ## Neovim Remote
 
-<https://github.com/mhinz/neovim-remote>
+https://github.com/mhinz/neovim-remote
 pip3 install neovim-remote --break-system-packages
 
 > pyperclip for custom script insys & sfsupport
@@ -376,30 +386,33 @@ sudo apt install veracrypt
 # Add flatpak to gnome
 
 sudo apt install -y flatpak gnome-software-plugin-flatpak
-flatpak remote-add --if-not-exists flathub <https://dl.flathub.org/repo/flathub.flatpakrepo>
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 **Restart computer before proceeding**
 
-flatpak install flathub org.wezfurlong.wezterm
+flatpak install -y flathub org.wezfurlong.wezterm
 flatpak install -y flathub io.github.shiftey.Desktop
-~~flatpak install -y flathub com.skype.Client~~
 flatpak install -y flathub md.obsidian.Obsidian
-~~flatpak install -y flathub com.wps.Office~~
+flatpak install -y flathub com.wps.Office
 flatpak install -y flathub com.obsproject.Studio
-flatpak install -y flathub org.libreoffice.LibreOffice
+
+# flatpak install -y flathub org.libreoffice.LibreOffice
+
 flatpak install -y flathub com.anydesk.Anydesk
 flatpak install -y flathub org.keepassxc.KeePassXC
 flatpak install -y flathub org.remmina.Remmina
 flatpak install -y flathub com.github.tchx84.Flatseal
 flatpak install -y flathub net.christianbeier.Gromit-MPX
 flatpak install -y flathub org.mozilla.Thunderbird
-flatpak install flathub org.chromium.Chromium
+flatpak install -y flathub org.chromium.Chromium
+flatpak install -y flathub org.telegram.desktop
 
 flatseal > allow home folder
 thunderbird > set profile from Help > Troubleshooting information
 
 flatpak list --app
 flatpak uninstall --delete-data com.anydesk.Anydesk
+flatpak uninstall --delete-data flathub org.mozilla.Thunderbird
 
 # Snapd
 
@@ -407,12 +420,12 @@ sudo snap install projectlibre
 
 # github-cli authentication
 
-<https://cli.github.com/manual/>
+https://cli.github.com/manual/
 
 type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
-curl -fsSL <https://cli.github.com/packages/githubcli-archive-keyring.gpg> | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
 && sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
-&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] <https://cli.github.com/packages> stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
+&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
 && sudo apt update \
 && sudo apt install gh -y
 sudo apt update
@@ -440,21 +453,6 @@ sempat masih belum coba gh auth login lagi, setelah berhasil coba jalanin syntax
 yang didapat setelah berhasil login di gh auth login:
 `gh config set -h github.com git_protocol https`
 
-# Mount partition to marc directory
-
-mkdir marc
-chown mc:mc marc
-
-sudo pacman -S baobab epiphany evince gdm gnome-backgrounds \
-gnome-calculator gnome-calendar gnome-characters gnome-clocks \
-gnome-color-manager gnome-connections gnome-console gnome-control-center \
-gnome-disk-utility gnome-keyring gnome-logs gnome-maps gnome-menus \
-gnome-remote-desktop gnome-session gnome-settings-daemon gnome-shell \
-gnome-shell-extensions gnome-system-monitor gnome-text-editor gnome-tour \
-gnome-user-docs gnome-user-share grilo-plugins gvfs-google gvfs-nfs gvfs-mtp \
-gvfs-smb loupe nautilus simple-scan snapshot sushi xdg-desktop-portal-gnome \
-xdg-user-dirs-gtk yelp gnome-tweaks
-
 # capslock escape
 
 ```
@@ -479,23 +477,23 @@ gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'focus-minimi
 
 # Reference
 
-<https://archlinux.org/groups/x86_64/gnome/>  
-<https://github.com/bk138/gromit-mpx> - Annotation tool
-<https://wiki.archlinux.org/title/NetworkManager> - Install SIM Driver, mobile broadband support
-<https://extensions.gnome.org/extension/1460/vitals/>
-<https://itsfoss.com/flatpak-tips-tweaks/>
-<https://www.makeuseof.com/disable-automatic-updates-in-ubuntu/>
-<https://www.anyviewer.com/how-to/how-to-get-out-of-remote-desktop-full-screen-0427.html>
-<https://extensions.gnome.org/extension/7065/tiling-shell/>
-<https://extensions.gnome.org/extension/615/appindicator-support/>
+https://archlinux.org/groups/x86_64/gnome/  
+https://github.com/bk138/gromit-mpx - Annotation tool
+https://wiki.archlinux.org/title/NetworkManager - Install SIM Driver, mobile broadband support
+https://extensions.gnome.org/extension/1460/vitals/
+https://itsfoss.com/flatpak-tips-tweaks/
+https://www.makeuseof.com/disable-automatic-updates-in-ubuntu/
+https://www.anyviewer.com/how-to/how-to-get-out-of-remote-desktop-full-screen-0427.html
+https://extensions.gnome.org/extension/7065/tiling-shell/
+https://extensions.gnome.org/extension/615/appindicator-support/
 
 # Setup Qutebrowser
 
-set url.searchengines '{"DEFAULT": "<https://duckduckgo.com/?q={}>", "aw": "<https://wiki.archlinux.org/?search={}>", "cf": "<https://cfdocs.org/{}>", "mdb": "<https://mariadb.com/kb/en/+search/?q={}>", "sf": "<https://sfsupport.dataon.com/app/ticket/forms/{}>", "yts": "<https://www.youtube.com/results?search_query={}>", "yu": "<https://yufid.com/result_yufid.html?search={}"}>'
+set url.searchengines '{"DEFAULT": "https://duckduckgo.com/?q={}", "aw": "https://wiki.archlinux.org/?search={}", "cf": "https://cfdocs.org/{}", "mdb": "https://mariadb.com/kb/en/+search/?q={}", "sf": "https://sfsupport.dataon.com/app/ticket/forms/{}", "yts": "https://www.youtube.com/results?search_query={}", "yu": "https://yufid.com/result_yufid.html?search={}"}'
 
 set auto_save.session true
 bind gh tab-focus last
-<https://github.com/sarfraznawaz2005/quran-cli>
+https://github.com/sarfraznawaz2005/quran-cli
 
 # fonts
 
@@ -505,6 +503,17 @@ google fonts - Korea
 google fonts - Chinese
 nerdfonts - JetBrains Mono Nerd Font
 wingdings
+
+https://github.com/FortAwesome/Font-Awesome/releases
+https://fontawesome.com/v4/cheatsheet/
+
+```bash
+cd ~/Downloads/
+git clone https://github.com/IamDH4/ttf-wps-fonts
+cd /home/mc/Downloads/ttf-wps-fonts
+sudo cp *.* /usr/share/fonts/
+sudo fc-cache -r
+```
 
 # Next
 
@@ -532,7 +541,7 @@ And that's it!
 
 # Firefox
 
-<https://support.mozilla.org/en-US/kb/install-firefox-linux>
+https://support.mozilla.org/en-US/kb/install-firefox-linux
 
 System Firefox installation (for advanced users)
 To install Firefox with this method, you must be able to log in as root or execute sudo commands.
@@ -564,11 +573,11 @@ To verify that the installation was successful, you can open the Troubleshooting
 
 ## Setup vertical bar
 
-<https://www.pcworld.com/article/823939/vertical-tabs-in-firefox-yes-its-really-possible.html>
+https://www.pcworld.com/article/823939/vertical-tabs-in-firefox-yes-its-really-possible.html
 
 ## markdown setting firefox
 
-<https://francopasut.netlify.app/post/markdown_firefox/>
+https://francopasut.netlify.app/post/markdown_firefox/
 
 create file mime.types, and insert the following line:
 type=text/plain exts=md,mkd,mkdn,mdwn,mdown,markdown, desc="Markdown document"
@@ -579,15 +588,15 @@ open firefox, `about:config`, search for mime, change "helpers.private_mime_type
 
 ## Remove starred nautilus
 
-<https://askubuntu.com/questions/1194319/can-the-starred-folder-in-the-left-pane-of-files-nautilus-be-removed>
+https://askubuntu.com/questions/1194319/can-the-starred-folder-in-the-left-pane-of-files-nautilus-be-removed
 
 ## Remove recent nautilus
 
-<https://askubuntu.com/questions/762591/how-to-remove-unwanted-default-bookmarks-in-nautilus>
+https://askubuntu.com/questions/762591/how-to-remove-unwanted-default-bookmarks-in-nautilus
 
 ## Change window color border
 
-<https://github.com/lossurdo/yaru-dark-border>
+https://github.com/lossurdo/yaru-dark-border
 
 # xfreerdp - remote desktop cli
 
@@ -601,12 +610,13 @@ xfreerdp +clipboard +fonts /sound /mic /smart-sizing /multimon /network:auto /ce
 
 # yt-dlp
 
-sudo curl -L <https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp> -o /usr/local/bin/yt-dlp
+sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
 sudo chmod a+rx /usr/local/bin/yt-dlp # Make executable
 
 ## update yt-dlp
 
 python3 -m pip install -U "yt-dlp[default]"
+python3 -m pip install -U "yt-dlp[default]" --break-system-packages
 
 ## check version
 
@@ -622,7 +632,7 @@ sudo apt install ubuntu-restricted-extras
 
 # Prettier
 
-<https://prettier.io/docs/en/install>
+https://prettier.io/docs/en/install
 
 # Emoticon shortcut
 
@@ -630,7 +640,7 @@ ctrl+shift+u
 
 # VPN
 
-<https://www.cactusvpn.com/tutorials/how-to-set-up-l2tpipsec-vpn-on-ubuntu/>
+https://www.cactusvpn.com/tutorials/how-to-set-up-l2tpipsec-vpn-on-ubuntu/
 sudo add-apt-repository ppa:nm-l2tp/network-manager-l2tp
 sudo apt-get update
 sudo apt-get install network-manager-l2tp-gnome
@@ -639,18 +649,18 @@ sudo apt-get install network-manager-l2tp-gnome
 
 mkdir -p ~/.config/ranger/plugins
 cd ~/.config/ranger/plugins
-git clone <https://github.com/maximtrp/ranger-archives.git>
+git clone https://github.com/maximtrp/ranger-archives.git
 
 # Install NVM (Node Version Manager)
 
-curl -o- <https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh> | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 /home/mc/Dropbox/notes/tech/nvm.md
 
 /home/mc/Dropbox/notes/tech/linux/gpg.md
 
 # Remove ctrl semicolon and ctrl period shortcut for emoji
 
-<https://unix.stackexchange.com/questions/692237/ctrl-displays-e-character-and-captures-the-keyboard-shortcut>
+https://unix.stackexchange.com/questions/692237/ctrl-displays-e-character-and-captures-the-keyboard-shortcut
 
 `gsettings set org.freedesktop.ibus.panel.emoji hotkey "[]"`
 
@@ -660,7 +670,7 @@ Or run in terminal
 
 # Keepass2
 
-<https://github.com/pfn/keepasshttp?tab=readme-ov-file>
+https://github.com/pfn/keepasshttp?tab=readme-ov-file
 
 ```sh
 sudo apt-get install mono-complete
@@ -680,9 +690,11 @@ sudo cp ~/Downloads/KeePassHttp.plgx /usr/lib/keepass2
 sudo apt install ./microsoft-edge-stable_126.0.2592.68-1_amd64.deb
 ```
 
+/home/mc/.config/microsoft-edge/Default/HubApps > copilot file is missing
+
 # Clamav
 
-<https://linuxcapable.com/how-to-install-clamav-on-ubuntu-linux/>
+https://linuxcapable.com/how-to-install-clamav-on-ubuntu-linux/
 `sudo apt install clamav clamav-daemon`
 
 Update the ClamAV Virus Database
@@ -703,7 +715,7 @@ clamscan -r ~/ -l ~/scanresult.txt
 
 # ubuntu i3
 
-<https://www.youtube.com/watch?v=ARKIwOlazKI>
+https://www.youtube.com/watch?v=ARKIwOlazKI
 
 ```bash
 sudo apt-get install i3 pulseaudio-utils feh arandr rhythmbox rhythmbox-plugins diodon lxappearance copyq numlockx rofi picom xss-lock xautolock i3blocks pavucontrol meld
@@ -728,28 +740,32 @@ pgrep -x dunst
 
 change font in: /home/mc/.config/gtk-3.0/settings.ini, /home/mc/.gtkrc-2.0
 
-Add fonts:
-jetbrain nerd fonts
-<https://github.com/FortAwesome/Font-Awesome/releases>
-<https://fontawesome.com/v4/cheatsheet/>
-
 ## Lazyvim
 
-Mason install: prettier, rustywin(jsx)
+:Mason
+Installed
+◍ json-lsp jsonls
+◍ lua-language-server lua_ls
+◍ prettier
+◍ rustywind
+◍ shfmt
+◍ stylua
+◍ tree-sitter-cli
+◍ vtsls
+
 :LazyExtras
 
 Enabled Plugins: (6)
-● ai.copilot   blink-copilot  copilot-cmp  copilot.lua  blink.cmp  lualine.nvim  nvim-cmp
-● coding.blink  blink.cmp  friendly-snippets  blink.compat  catppuccin
-● coding.mini-surround  mini.surround
-● editor.snacks_explorer   snacks.nvim
-Snacks File Explorer
-● editor.snacks_picker   nvim-lspconfig  snacks.nvim  alpha-nvim  dashboard-nvim  flash.nvim  mini.starter  todo-comments.nvim
-Fast and modern file picker
-● formatting.prettier  mason.nvim  conform.nvim  none-ls.nvim
+● ai.copilot
+● coding.blink
+● coding.mini-surround
+● editor.snacks_explorer
+● editor.snacks_picker
+● formatting.prettier
 
 Enabled Languages: (1)
-● lang.json  SchemaStore.nvim  nvim-lspconfig  nvim-treesitter
+● lang.json
+● lang.typescript
 
 # Setup Default apps
 

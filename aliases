@@ -1,4 +1,10 @@
 #!/bin/sh
+alias obsidian="flatpak run md.obsidian.Obsidian"
+alias wps="flatpak run com.wps.Office"
+alias telegram="flatpak run org.telegram.desktop"
+alias wezterm='flatpak run org.wezfurlong.wezterm'
+
+alias updateyt="python3 -m pip install -U 'yt-dlp[default]'"
 alias now="date +"%Y%m%d%H%M" | xclip -selection clipboard" # Linux with xclip
 alias fd="fdfind"
 alias g1="veracrypt ~/Dropbox/linux/cl ~/.config/script"
@@ -26,20 +32,7 @@ alias ats="echo -n 'PT Atlas Petrochem Indo' | xclip -sel c"
 alias bu="dconf dump /org/gnome/ > ~/marc/GitHub/ubuntu/gnome-backup"
 alias burestore="dconf load /org/gnome/ < ~/marc/GitHub/ubuntu/gnome-backup"
 
-alias wezterm='flatpak run org.wezfurlong.wezterm'
-alias fup='flatpak update'
-
 alias dec="gpg --quiet --use-embedded-filename"
-
-alias caly="cal -m $1"
-alias gcal="gcal -H '\e[31;42m:\e[0m:\e[33;45m:\e[0m' -n -q ID $1"
-alias chol="gcal -n long -q=ID $1"
-alias c23="cat ~/Dropbox/cal2023.txt"
-alias c24="cat ~/Dropbox/cal2024.txt"
-# Creating calendar year file
-# script filename.txt
-# caly cal2024
-# exit
 
 # unsorted
 alias x="xmodmap ~/.config/.Xmodmap"
@@ -176,14 +169,12 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
-alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
-
 # Battery
-alias batstat='sudo tlp-stat -b'
-alias batfull='sudo tlp fullcharge'
-alias bat30='sudo tlp setcharge 25 30 BAT1'
-alias bat90='sudo tlp setcharge 85 90 BAT1'
-alias bat95='sudo tlp setcharge 90 95 BAT1'
+# alias batstat='sudo tlp-stat -b'
+# alias batfull='sudo tlp fullcharge'
+# alias bat30='sudo tlp setcharge 25 30 BAT1'
+# alias bat90='sudo tlp setcharge 85 90 BAT1'
+# alias bat95='sudo tlp setcharge 90 95 BAT1'
 
 alias blkid="sudo blkid"
 alias dd='sudo dd if=~/Downloads/file.iso of=/dev/sdc bs=1M status=progress'

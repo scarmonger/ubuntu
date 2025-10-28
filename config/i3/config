@@ -63,7 +63,7 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-bindsym $mod+Pause exec /home/mc/marc/GitHub/ubuntu/config/i3/i3blocks/toggle_dunst.sh
+bindsym $mod+BackSpace exec /home/mc/marc/GitHub/ubuntu/config/i3/i3blocks/toggle_dunst.sh
 bindsym $mod+F1 exec playerctl play
 bindsym $mod+F2 exec playerctl pause
 bindsym $mod+F3 exec playerctl previous
@@ -438,7 +438,7 @@ bindsym $mod+Escape exec i3lock -i /home/mc/marc/GitHub/ubuntu/config/i3/lockscr
 bindsym $mod+Shift+Escape exec systemctl suspend && i3lock -i /home/mc/marc/GitHub/ubuntu/config/i3/lockscreen.png
 
 bindsym $mod+v exec /usr/bin/diodon
-bindsym $mod3+v exec /usr/bin/diodon
+bindsym $mod3+v exec copyq show
 bindsym $mod+Shift+v exec copyq show
 
 exec --no-startup-id xautolock -time 5 -locker /home/mc/.local/bin/custom/lock.sh
@@ -468,8 +468,8 @@ exec --no-startup-id gnome-terminal -- nvim ~/Dropbox/notes/da\'wah
 #exec picom -i 0.85
 
 
-bindsym $mod +BackSpace exec /home/mc/.config/script/otomation/ts tgu 1 
-bindsym $mod3+BackSpace exec /home/mc/.config/script/otomation/ts tgu 1 p
+# bindsym $mod +BackSpace exec /home/mc/.config/script/otomation/ts tgu 1 
+# bindsym $mod3+BackSpace exec /home/mc/.config/script/otomation/ts tgu 1 p
 
 ## Run this log in shell
 # i3-msg 'debuglog on; shmlog on; reload' > Turn on logging
