@@ -71,7 +71,7 @@ bindsym $mod+F4 exec playerctl next
 bindsym $mod+F5 exec flatpak run md.obsidian.Obsidian
 #bindsym $mod+F6 exec "cd ~/Dropbox/notes/da\'wah/ && gnome-terminal -- nvim AhmedDeedat.md"
 bindsym $mod+F7 exec /home/mc/marc/appimagefile/ferdium
-bindsym $mod+F8 exec telegram
+bindsym $mod+F8 exec flatpak run org.telegram.desktop
 bindsym $mod+m exec kitty -e gpw
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -455,11 +455,11 @@ exec --no-startup-id /home/mc/marc/appimagefile/ksnip
 exec --no-startup-id /home/mc/marc/appimagefile/ferdium
 exec --no-startup-id /home/mc/marc/appimagefile/ferdium
 # exec --no-startup-id /home/mc/marc/appimagefile/Telegram/Telegram
-exec --no-startup-id telegram
 exec --no-startup-id copyq
 exec --no-startup-id dunst&
 exec --no-startup-id microsoft-edge
 exec --no-startup-id firefox
+exec --no-startup-id flatpak run org.telegram.desktop
 exec --no-startup-id flatpak run org.wezfurlong.wezterm
 exec --no-startup-id flatpak run org.mozilla.Thunderbird
 exec --no-startup-id flatpak run org.keepassxc.KeePassXC
