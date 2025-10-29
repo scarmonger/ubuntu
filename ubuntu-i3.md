@@ -86,7 +86,7 @@ sudo snap remove --purge firefox
 
 ## Install app
 
-sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar fonts-powerline neofetch xclip ssh fzf mpv tmux dconf-editor kazam gnome-tweaks chrome-gnome-shell filezilla ncdu htop gimp mycli xdotool ripgrep fd-find gcc lua5.4 zathura tldr gpicview fish
+sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar fonts-powerline neofetch xclip ssh fzf mpv tmux dconf-editor kazam gnome-tweaks chrome-gnome-shell filezilla ncdu htop gimp mycli xdotool ripgrep fd-find gcc lua5.4 zathura tldr gpicview fish lsd brightnessctl
 
 systemctl status ssh
 systemctl start ssh
@@ -794,3 +794,29 @@ xdg-open https://example.com
 > to see what command is actually run when opening a URL
 
 xdg-settings set default-web-browser microsoft-edge.desktop
+
+# Check for certain word in a file in a folder
+
+grep -r 'id.archive.ubuntu.com' /etc/apt/
+
+> searching for 'id.archive'
+
+# Fix Tap-to-Click
+
+Crate new file config:
+sudo mkdir -p /etc/X11/xorg.conf.d
+sudo nano /etc/X11/xorg.conf.d/40-touchpad.conf
+
+Paste this:
+
+```
+Section "InputClass"
+    Identifier "Alps Touchpad"
+    MatchProduct "Alps"
+    MatchIsTouchpad "on"
+    Driver "libinput"
+    Option "Tapping" "on"
+EndSection
+```
+
+Save and reboot your system.
