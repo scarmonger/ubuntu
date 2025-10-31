@@ -801,7 +801,7 @@ grep -r 'id.archive.ubuntu.com' /etc/apt/
 
 > searching for 'id.archive'
 
-# Fix Tap-to-Click
+# Fix Tap-to-Click mousepad Dell Latitude 7200
 
 Crate new file config:
 sudo mkdir -p /etc/X11/xorg.conf.d
