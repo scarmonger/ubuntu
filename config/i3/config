@@ -189,7 +189,7 @@ bindsym $mod+x move workspace to output next
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 # Setup workspace (sws)
-set $ws1 "1: "
+set $ws1 "1: "
 set $ws2 "2: "
 set $ws3 "3: "
 set $ws4 "4: "
@@ -215,9 +215,9 @@ bindsym $mod3+n workspace $wsnote
 
 # Open applications on specific workspaces
 assign [class="Microsoft-edge"] $ws1
+assign [class="Google-chrome"] $ws1
 assign [class="org.wezfurlong.wezterm"] $ws2
 assign [class="firefox"] $ws3
-assign [class="Google-chrome"] $ws3
 assign [class="thunderbird-esr"] $ws4
 assign [class="thunderbird"] $ws4
 assign [class="KeePassXC"] $ws4
@@ -457,7 +457,8 @@ exec --no-startup-id /home/mc/marc/appimagefile/ferdium
 # exec --no-startup-id /home/mc/marc/appimagefile/Telegram/Telegram
 exec --no-startup-id copyq
 exec --no-startup-id dunst&
-exec --no-startup-id microsoft-edge
+#exec --no-startup-id microsoft-edge
+exec --no-startup-id google-chrome
 exec --no-startup-id firefox
 exec --no-startup-id flatpak run org.telegram.desktop
 exec --no-startup-id flatpak run org.wezfurlong.wezterm
