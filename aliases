@@ -3,6 +3,7 @@ alias obsidian="flatpak run md.obsidian.Obsidian"
 alias wps="flatpak run com.wps.Office"
 alias telegram="flatpak run org.telegram.desktop"
 alias wezterm='flatpak run org.wezfurlong.wezterm'
+alias thunderbird='flatpak run org.mozilla.Thunderbird'
 
 alias updateyt="python3 -m pip install -U 'yt-dlp[default]'"
 alias now="date +"%Y%m%d%H%M" | xclip -selection clipboard" # Linux with xclip
@@ -113,7 +114,7 @@ alias tf="tmux attach -t fe-server"
 alias tb="tmux attach -t be-server"
 alias clf="tmux split -h lf; lf"
 
-alias ya="yt-dlp -o '%(channel)s_%(title)s.%(ex wst)s'\'' -f '\''bestaudio'\'' '"
+#alias ya="yt-dlp -o '%(channel)s_%(title)s.%(ex wst)s'\'' -f '\''bestaudio'\'' '"
 #alias ya="yt-dlp -o '~/secondary/youtube/audio/%(channel)s_%(title)s.%(ext)s' -f 'bestaudio' "
 alias ys="yt-dlp -o '~/%(channel)s_%(title)s_%(height)s.%(ext)s' -f 18 "
 alias yh="yt-dlp -o '~/%(channel)s_%(title)s_%(height)s.%(ext)s' -f 22 "

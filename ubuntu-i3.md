@@ -86,7 +86,7 @@ sudo snap remove --purge firefox
 
 ## Install app
 
-sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar fonts-powerline neofetch xclip ssh fzf mpv tmux dconf-editor kazam gnome-tweaks chrome-gnome-shell filezilla ncdu htop gimp mycli xdotool ripgrep fd-find gcc lua5.4 zathura tldr gpicview fish lsd brightnessctl
+sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar fonts-powerline neofetch xclip ssh fzf mpv tmux dconf-editor kazam gnome-tweaks chrome-gnome-shell filezilla ncdu htop gimp mycli xdotool ripgrep fd-find gcc lua5.4 zathura tldr gpicview fish lsd brightnessctl ntfs-3g
 
 systemctl status ssh
 systemctl start ssh
@@ -794,6 +794,7 @@ xdg-open https://example.com
 > to see what command is actually run when opening a URL
 
 xdg-settings set default-web-browser microsoft-edge.desktop
+xdg-settings set default-web-browser google-chrome.desktop
 
 # Check for certain word in a file in a folder
 

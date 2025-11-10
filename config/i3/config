@@ -70,7 +70,8 @@ bindsym $mod+F3 exec playerctl previous
 bindsym $mod+F4 exec playerctl next
 bindsym $mod+F5 exec flatpak run md.obsidian.Obsidian
 #bindsym $mod+F6 exec "cd ~/Dropbox/notes/da\'wah/ && gnome-terminal -- nvim AhmedDeedat.md"
-bindsym $mod+F7 exec /home/mc/marc/appimagefile/ferdium
+# bindsym $mod+F7 exec /home/mc/marc/appimagefile/ferdium
+bindsym $mod+F7 exec gtk-launch whatsapp
 bindsym $mod+F8 exec flatpak run org.telegram.desktop
 bindsym $mod+m exec kitty -e gpw
 
@@ -89,8 +90,8 @@ bindsym $mod+Shift+q kill
 bindsym $mod3+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id rofi -modi run#drun#window#filebrowser -show run -font "System San Francisco Display 12"
-bindsym $mod3+r exec --no-startup-id rofi -modi run#drun#window#filebrowser -show run -font "System San Francisco Display 12"
+bindsym $mod+d exec --no-startup-id rofi -modi drun#run#window#filebrowser -show drun -font "System San Francisco Display 12"
+bindsym $mod3+r exec --no-startup-id rofi -modi drun#run#window#filebrowser -show drun -font "System San Francisco Display 12"
 
 #bindsym $mod+d exec --no-startup-id /home/mc/.local/bin/custom/dmenu_run_history
 #bindsym $mod3+r exec --no-startup-id /home/mc/.local/bin/custom/dmenu_run_history
@@ -203,6 +204,7 @@ set $wsoffice "O:󱎏 "
 set $wsdb "B:󰊢 "
 set $wstele "T: "
 set $wsnote "N: "
+set $wsgemini "G:󰫣 "
 
 bindsym $mod +o workspace $wsoffice
 bindsym $mod3+o workspace $wsoffice
@@ -212,9 +214,10 @@ bindsym $mod +t workspace $wstele
 bindsym $mod3+t workspace $wstele
 bindsym $mod +n workspace $wsnote
 bindsym $mod3+n workspace $wsnote
+bindsym $mod +g workspace $wsgemini
+bindsym $mod3+g workspace $wsgemini
 
 # Open applications on specific workspaces
-assign [class="Microsoft-edge"] $ws1
 assign [class="Google-chrome"] $ws1
 assign [class="org.wezfurlong.wezterm"] $ws2
 assign [class="firefox"] $ws3
@@ -223,7 +226,7 @@ assign [class="thunderbird"] $ws4
 assign [class="KeePassXC"] $ws4
 assign [class="obsidian"] $ws4
 assign [class="Rhythmbox"] $ws6
-assign [class="mpv"] $ws6
+#assign [class="mpv"] $ws6
 #assign [class="copyq"] $ws8
 assign [class="ksnip"] $ws7
 assign [class="wpsoffice"] $wsoffice
@@ -238,6 +241,7 @@ assign [class="tm"] $wsoffice
 assign [class="pm"] $wsoffice
 assign [class="pr"] $wsoffice
 assign [class="ONLYOFFICE"] $wsoffice
+assign [class="Microsoft-edge"] $wsgemini
 
 
 # Automatically putting workspaces on specific screens
@@ -286,6 +290,8 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 bindsym $mod+Shift+U move container to workspace $ws11
 bindsym $mod+Shift+o move container to workspace $wsoffice
+bindsym $mod+Shift+t move container to workspace $wstele
+bindsym $mod+Shift+g move container to workspace $wsgemini
 
 bindsym $mod3+Shift+1 move container to workspace number $ws1
 bindsym $mod3+Shift+2 move container to workspace number $ws2
@@ -298,6 +304,8 @@ bindsym $mod3+Shift+8 move container to workspace number $ws8
 bindsym $mod3+Shift+9 move container to workspace number $ws9
 bindsym $mod3+Shift+0 move container to workspace number $ws10
 bindsym $mod3+Shift+o move container to workspace $wsoffice
+bindsym $mod3+Shift+t move container to workspace $wstele
+bindsym $mod3+Shift+g move container to workspace $wsgemini
 
 
 
@@ -452,13 +460,13 @@ exec --no-startup-id setxkbmap -option caps:escape_shifted_capslock
 exec xrandr --output DP-1 --off --output HDMI-1 --off --output HDMI-2 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-2 --mode 1440x900 --pos 1920x0 --rotate normal --output HDMI-3 --off
 
 exec --no-startup-id /home/mc/marc/appimagefile/ksnip
-exec --no-startup-id /home/mc/marc/appimagefile/ferdium
-exec --no-startup-id /home/mc/marc/appimagefile/ferdium
+# exec --no-startup-id /home/mc/marc/appimagefile/ferdium
 # exec --no-startup-id /home/mc/marc/appimagefile/Telegram/Telegram
 exec --no-startup-id copyq
 exec --no-startup-id dunst&
 #exec --no-startup-id microsoft-edge
 exec --no-startup-id google-chrome
+#exec --no-startup-id gtk-launch whatsapp
 exec --no-startup-id firefox
 exec --no-startup-id flatpak run org.telegram.desktop
 exec --no-startup-id flatpak run org.wezfurlong.wezterm
