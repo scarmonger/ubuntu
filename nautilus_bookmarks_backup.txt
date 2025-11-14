@@ -1,0 +1,11 @@
+smb://192.168.0.85/iso/Active/IM/HR/AT
+file:///home/mc/Dropbox/Dataon/Project
+sftp://redmi13:8022/data/data/com.termux/files/home/storage phone
+file:///home/mc/marc/custom
+file:///home/mc/Dropbox
+file:///home/mc/Dropbox/Dataon
+file:///home/mc/marc/GitHub/ubuntu
+file:///home/mc/marc
+file:///home/mc/Documents
+file:///home/mc/Pictures
+file:///home/mc/Downloads

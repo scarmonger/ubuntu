@@ -86,7 +86,7 @@ sudo snap remove --purge firefox
 
 ## Install app
 
-sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar fonts-powerline neofetch xclip ssh fzf mpv tmux dconf-editor kazam gnome-tweaks chrome-gnome-shell filezilla ncdu htop gimp mycli xdotool ripgrep fd-find gcc lua5.4 zathura tldr gpicview fish lsd brightnessctl ntfs-3g
+sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar fonts-powerline neofetch xclip ssh fzf mpv tmux dconf-editor kazam gnome-tweaks chrome-gnome-shell filezilla ncdu htop gimp mycli xdotool ripgrep fd-find gcc lua5.4 zathura tldr gpicview fish lsd brightnessctl ntfs-3g thunderbird
 
 systemctl status ssh
 systemctl start ssh
@@ -403,7 +403,9 @@ flatpak install -y flathub org.keepassxc.KeePassXC
 flatpak install -y flathub org.remmina.Remmina
 flatpak install -y flathub com.github.tchx84.Flatseal
 flatpak install -y flathub net.christianbeier.Gromit-MPX
-flatpak install -y flathub org.mozilla.Thunderbird
+
+<!-- flatpak install -y flathub org.mozilla.Thunderbird -->
+
 flatpak install -y flathub org.chromium.Chromium
 flatpak install -y flathub org.telegram.desktop
 
@@ -821,3 +823,8 @@ EndSection
 ```
 
 Save and reboot your system.
+
+# Backup & Copy Nautilus bookmarks
+
+cp ~/.config/gtk-3.0/bookmarks ~/nautilus_bookmarks_backup.txt
+cp /home/mc/marc/GitHub/ubuntu/nautilus_bookmarks_backup.txt ~/.config/gtk-3.0/bookmarks
