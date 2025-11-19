@@ -86,7 +86,7 @@ sudo snap remove --purge firefox
 
 ## Install app
 
-sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar fonts-powerline neofetch xclip ssh fzf mpv tmux dconf-editor kazam gnome-tweaks chrome-gnome-shell filezilla ncdu htop gimp mycli xdotool ripgrep fd-find gcc lua5.4 zathura tldr gpicview fish lsd brightnessctl ntfs-3g thunderbird
+sudo apt install -y git btop curl npm zsh ranger python3 python3-pip trash-cli thunar fonts-powerline neofetch xclip ssh fzf mpv tmux dconf-editor kazam gnome-tweaks chrome-gnome-shell filezilla ncdu htop gimp mycli xdotool ripgrep fd-find gcc lua5.4 zathura tldr gpicview fish lsd brightnessctl ntfs-3g thunderbird pinta flameshot
 
 systemctl status ssh
 systemctl start ssh
@@ -148,9 +148,11 @@ ln -ivs ~/marc/GitHub/ubuntu/config/nvim_old ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/config/nvim_lazy ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/config/nvim_newlazy ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/config/nvim_chris ~/.config/
-ln -ivs ~/marc/virtualbox "/home/mc/VirtualBox VMs"
+
 ln -ivs ~/marc/GitHub/ubuntu/config/wezterm ~/.config/
 ln -ivs ~/marc/GitHub/ubuntu/config/zathura ~/.config/
+
+ln -ivs ~/marc/virtualbox "/home/mc/VirtualBox VMs"
 
 mkdir ~/.config/script
 mkdir ~/.local/bin
@@ -187,8 +189,6 @@ ln -ivs ~/marc/GitHub/ubuntu/config/gtk-3.0/gtk.css ~/.config/gtk-3.0/
 mkdir ~/.config/gtk-4.0
 ln -ivs ~/marc/GitHub/ubuntu/config/gtk-4.0/gtk.css ~/.config/gtk-4.0/
 
-ln -ivs /home/mc/marc/GitHub/ubuntu/local/share/nvim/lazy/tokyonight.nvim/lua/tokyonight/colors.lua /home/mc/.local/share/nvim/lazy/tokyonight.nvim/lua/tokyonight
-ln -ivs /home/mc/marc/GitHub/ubuntu/config/mpv /home/mc/.config
 ln -ivs /home/mc/marc/GitHub/ubuntu/myclirc ~/.myclirc
 
 ln -ivs /home/mc/marc/custom/source/commandbox/box ~/.local/bin/

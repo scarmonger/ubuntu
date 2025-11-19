@@ -470,7 +470,7 @@ exec --no-startup-id google-chrome
 exec --no-startup-id firefox
 exec --no-startup-id flatpak run org.telegram.desktop
 exec --no-startup-id flatpak run org.wezfurlong.wezterm
-exec --no-startup-id flatpak run org.mozilla.Thunderbird
+exec --no-startup-id thunderbird
 exec --no-startup-id flatpak run org.keepassxc.KeePassXC
 #exec --no-startup-id gnome-terminal -- nvim ~/Dropbox/notes/da\'wah
 #exec --no-startup-id flatpak run md.obsidian.Obsidian
